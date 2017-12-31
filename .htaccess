@@ -1,0 +1,66 @@
+
+
+### SILVERSTRIPE START ###
+<Files *.ss>
+	Order deny,allow
+	Deny from all
+	Allow from 127.0.0.1
+</Files>
+
+<Files web.config>
+	Order deny,allow
+	Deny from all
+</Files>
+
+ErrorDocument 404 /assets/error-404.html
+ErrorDocument 500 /assets/error-500.html
+
+<IfModule mod_alias.c>
+	RedirectMatch 403 /silverstripe-cache(/|$)
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	SetEnv HTTP_MOD_REWRITE On
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{REQUEST_URI} ^(.*)$
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule .* sapphire/main.php?url=%1&%{QUERY_STRING} [L]
+	
+	Options +FollowSymlinks
+		
+
+</IfModule>
+### SILVERSTRIPE END ###
+
+php_value session.gc_probability 1
+php_value session.gc_divisor 100
+php_value session.gc_maxlifetime 3600
+php_value session.save_path /mnt/stor6-wc2-dfw1/484858/update.skywestcentral.com/web/sessions
+
+php_value display_errors On
+
+php_value memory_limit 128M
+php_value upload_max_filesize 60M
+php_value post_max_size 60M
+
+SetOutputFilter DEFLATE
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault A0
+ExpiresByType text/css "access plus 100 hour"
+ExpiresByType application/x-javascript A2592000
+ExpiresByType image/gif A2592000
+ExpiresByType image/png A2592000
+ExpiresByType image/jpg A2592000
+ExpiresByType image/jpeg A2592000
+ExpiresByType image/ico A2592000
+ExpiresByType image/x-icon A2592000
+</IfModule>
+
+AddType video/ogg  .ogv
+AddType video/mp4  .mp4
+AddType video/webm .webm
+
+
