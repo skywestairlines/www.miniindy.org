@@ -1,13 +1,13 @@
-#
-#
-#
-#
-#
-
-.png
-.jpg
-.pdf
-
-/assets/
-
+# ignore cache folder
 /silverstripe-cache/
+
+# ignore all environment files
+_ss_environment.php
+
+# ignore composer vendor folder
+/vendor/
+/framework/
+/cms/
+/assets/
+/siteconfig/
+/reports/
