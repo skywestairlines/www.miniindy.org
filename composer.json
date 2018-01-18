@@ -39,6 +39,9 @@
         "classmap": [
             "modules/",
             "vendor/"
+        ],
+        "files": [
+            "modules/autoloader.php"
         ]
     },
     "config": {
