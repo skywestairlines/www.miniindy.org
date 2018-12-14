@@ -27,6 +27,11 @@
             "web.config"
         ]
     },
+    "scripts": {
+        "post-update-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
     "config": {
         "process-timeout": 600
     },

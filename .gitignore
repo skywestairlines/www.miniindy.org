@@ -6,3 +6,5 @@
 /resources/
 /public/resources/
 **/_config.php
+
+/.vscode
