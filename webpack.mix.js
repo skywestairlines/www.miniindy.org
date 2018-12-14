@@ -20,12 +20,12 @@ let lib = resolve(__dirname, './themes/')
 fs.readdirSync(lib).forEach(function (mod) {
     var modPath = join(lib, mod)
 
-    var appJs = join(modPath, '_src', 'js', mod.toLowerCase() + '.js')
+    var appJs = join(modPath, 'assets', 'js', 'scripts.js')
     var mixJs = join('js', mod.toLowerCase() + '.js')
 
     if (fs.existsSync(appJs)) mix.js(appJs, mixJs)
 
-    var appScss = join(modPath, '_src', 'sass', mod.toLowerCase() + '.scss')
+    var appScss = join(modPath, 'assets', 'sass', 'styles.scss')
     var mixCss = join('css', mod.toLowerCase() + '.css')
 
     if (fs.existsSync(appScss)) mix.sass(appScss, mixCss)

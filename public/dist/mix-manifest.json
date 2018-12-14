@@ -3,6 +3,8 @@
     "/css/app.css": "/css/app.css",
     "/css/main.css": "/css/main.css",
     "/css/vendor.css": "/css/vendor.css",
-    "/js/main.js": "/js/main.js",
-    "/js/vendor.js": "/js/vendor.js"
+    "/css/simple.css": "/css/simple.css",
+    "/js/simple.js": "/js/simple.js",
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/main.js": "/js/main.js"
 }
