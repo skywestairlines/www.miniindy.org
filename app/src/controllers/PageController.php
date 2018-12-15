@@ -1,7 +1,5 @@
 <?php
 
-namespace {
-
     use SilverStripe\CMS\Controllers\ContentController;
 
     class PageController extends ContentController
@@ -30,4 +28,3 @@ namespace {
             // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
         }
     }
-}
