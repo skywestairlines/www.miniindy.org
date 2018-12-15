@@ -4,5 +4,6 @@
 /node_modules/
 /themes/simple/
 /resources/
+/server/logs/
 /public/resources/
 **/_config.php
