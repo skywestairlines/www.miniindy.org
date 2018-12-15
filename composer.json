@@ -11,6 +11,13 @@
     "require-dev": {
         "phpunit/phpunit": "^5.7"
     },
+    "autoload": {
+        "files": [
+            "app/lib/loader.php",
+            "app/src/pagetypes/Page.php",
+            "app/src/controllers/PageController.php"
+        ]
+    },
     "extra": {
         "project-files-installed": [
             "app/.htaccess",
