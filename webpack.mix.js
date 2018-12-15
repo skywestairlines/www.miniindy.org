@@ -10,6 +10,8 @@ mix.setPublicPath('./public/dist')
     .sass('client/styles/sass/app.scss', 'css')
     .js('client/scripts/js/main.js', 'js')
     .sass('client/styles/sass/main.scss', 'css')
+    .js('client/scripts/js/scripts.js', 'js')
+    .sass('client/styles/sass/styles.scss', 'css')
     .js('client/scripts/js/vendor.js', 'js')
     .sass('client/styles/sass/vendor.scss', 'css');
 
