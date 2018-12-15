@@ -34,14 +34,11 @@
             "install-frameworkmissing.html",
             "install.php",
             "web.config"
-        ],
-        "post-update-cmd": [
-            "@php -r \"file_exists('_ss_environment.php') || copy('_ss_environment.example.php', '_ss_environment.php');\"",
-            "@php -r \"file_exists('app/src/_config.php') || copy('app/src/_config.example.php', 'app/src/_config.php');\""
         ]
     },
     "scripts": {
         "post-update-cmd": [
+            "@php -r \"file_exists('app/src/_config.php') || copy('app/src/_config.example.php', 'app/src/_config.php');\"",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
     },
