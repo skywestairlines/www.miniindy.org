@@ -60,29 +60,29 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 45);
+/******/ 	return __webpack_require__(__webpack_require__.s = 44);
 /******/ })
 /************************************************************************/
 /******/ ({
 
+/***/ 44:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(45);
+
+
+/***/ }),
+
 /***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(46);
-
+var Highcharts = window.Highcharts = __webpack_require__(46);
+// Load module after Highcharts is loaded
+__webpack_require__(47)(Highcharts);
 
 /***/ }),
 
 /***/ 46:
-/***/ (function(module, exports, __webpack_require__) {
-
-var Highcharts = window.Highcharts = __webpack_require__(47);
-// Load module after Highcharts is loaded
-__webpack_require__(48)(Highcharts);
-
-/***/ }),
-
-/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -525,7 +525,7 @@ function(a,d){var r=a.condition;(r.callback||function(){return this.chartWidth<=
 
 /***/ }),
 
-/***/ 48:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*

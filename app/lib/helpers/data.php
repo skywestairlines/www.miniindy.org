@@ -25,10 +25,10 @@ if(!function_exists('minify')){
     function minify($content = null)
     {
         if(is_null($content)){
-            if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) && substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' ) ) {
+            $ENCODING = $_SERVER['HTTP_ACCEPT_ENCODING'] ?? false;
+            if ($ENCODING && substr_count($ENCODING, 'gzip' ) ) {
                 ob_start( "ob_gzhandler" );
-            }
-            else {
+            }  else {
                 ob_start();
             }
             $content = ob_get_clean();
