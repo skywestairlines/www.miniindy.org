@@ -2,16 +2,8 @@ Name: mytheme
 ---
 SilverStripe\View\SSViewer:
   themes:
-<<<<<<< HEAD
     - '$public'
     - 'master'
     - '$default'
 SilverStripe\i18n\i18n:
   default_locale: 'en_US'
-=======
-    - "$public"
-    - "master"
-    - "$default"
-SilverStripe\i18n\i18n:
-  default_locale: "en_US"
->>>>>>> 988685f086cedc4bf97839ed9ad7502a064d6fb5
