@@ -5,8 +5,8 @@
     "/css/main.css": "/css/main.css",
     "/css/styles.css": "/css/styles.css",
     "/css/vendor.css": "/css/vendor.css",
-    "/css/master.css": "/css/master.css",
+    "/master/css/master.css": "/master/css/master.css",
     "/js/vendor.js": "/js/vendor.js",
-    "/js/master.js": "/js/master.js",
+    "/master/javascript/master.js": "/master/javascript/master.js",
     "/js/scripts.js": "/js/scripts.js"
 }

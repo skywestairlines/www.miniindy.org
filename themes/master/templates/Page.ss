@@ -18,7 +18,7 @@
 	<![endif]-->
 	<% require css('dist/css/main.css') %>
     <% require css('dist/css/styles.css') %>
-    <% require css('dist/css/master.css') %>
+    <% require themedCss('master') %>
 </head>
 <body class="$ClassName.ShortName.LowerCase<% if $i18nScriptDirection %>" dir="$i18nScriptDirection<% end_if %>">
 <% include Header %>
@@ -29,6 +29,6 @@
 
 <% require javascript('dist/js/main.js') %>
 <% require javascript('dist/js/scripts.js') %>
-<% require javascript('dist/js/master.js') %>
+<% require themedJavascript('master') %>
 </body>
 </html>
