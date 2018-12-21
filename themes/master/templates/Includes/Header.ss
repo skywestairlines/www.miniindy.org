@@ -8,18 +8,7 @@
                 aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <form id="SearchForm_SearchForm" action="/home/SearchForm" method="get" class="navbar-form" role="search">
-                <p id="SearchForm_SearchForm_error" class="message " style="display: none"></p>
-                <div class="input-group">
-                    <input type="text" name="Search" placeholder="Search..." class="form-control" id="SearchForm_SearchForm_Search">
-                    <span class="input-group-btn">
-                        <button type="submit" name="action_results" value="Go" class="btn btn-default action not-rounded"
-                            id="SearchForm_SearchForm_action_results" title="Search">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </form>
+            $SearchForm
         </div>
     </div>
     <% include Navigation %>

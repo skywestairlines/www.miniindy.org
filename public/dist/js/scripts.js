@@ -76,7 +76,7 @@ module.exports = __webpack_require__(43);
 /***/ 43:
 /***/ (function(module, exports) {
 
-
+(function ($, win) {})(jQuery, window);
 
 /***/ })
 

@@ -15,8 +15,6 @@ mix.setPublicPath('./public/dist')
     .js('client/scripts/js/vendor.js', 'js')
     .sass('client/styles/sass/vendor.scss', 'css');
 
-
-
 let lib = resolve(__dirname, './themes/')
 
 fs.readdirSync(lib).forEach(function (mod) {

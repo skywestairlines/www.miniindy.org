@@ -6,6 +6,7 @@
                 <div class="content">$Content</div>
             </article>
             $Form
+            $CommentsForm
         </div>
         <div class="col">
             <% include SideBar %>
