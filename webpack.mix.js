@@ -33,7 +33,7 @@ fs.readdirSync(lib).forEach(function (mod) {
 
     if (fs.existsSync(appScss)) mix.sass(appScss, mixCss)
 
-    mix.setPublicPath('public');
+    mix.setPublicPath('public/dist');
 });
 
 if (mix.inProduction()) {
