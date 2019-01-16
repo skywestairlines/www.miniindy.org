@@ -1,31 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<!DOCTYPE html>
+<html lang="en" >
 
   <head>
-		<% base_tag %>
-		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
 		$MetaTags(false)
+		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
+		<% base_tag %>
 		<link rel="shortcut icon" href="/favicon.ico" />
-		
-		<% require themedCSS(layout) %> 
-		<% require themedCSS(typography) %> 
-		<% require themedCSS(form) %> 
-		
+
+		<% require themedCSS('layout') %>
+		<% require themedCSS(typography) %>
+		<% require themedCSS(form) %>
+
 		<!--[if IE 6]>
 			<style type="text/css">
 			 @import url(themes/miniindy/css/ie6.css);
-			</style> 
+			</style>
 		<![endif]-->
-		
+
 		<!--[if IE 7]>
 			<style type="text/css">
 			 @import url(themes/miniindy/css/ie7.css);
-			</style> 
+			</style>
 		<![endif]-->
 		<!--[if IE]>
 			<style type="text/css">
 			 @import url(themes/miniindy/css/ie.css);
-			</style> 
+			</style>
 		<![endif]-->
 		<script type="text/javascript"><!--//--><![CDATA[//><!--
 		startList = function() {
@@ -45,7 +45,7 @@
 			}
 		}
 		window.onload=startList;
-		
+
 		//--><!]]></script>
 
 	</head>
@@ -58,19 +58,19 @@
 	   		<div class="RegNavLink">
 	   			<a href="/miniindy-registration/">Registration Is Open!</a>
 	   		</div>
-	   		
+
 		</div>
-		
+
 		<div id="Navigation">
 			<% include Navigation %>
 	  	</div>
-	  	
+
 	  	<div class="clear"><!-- --></div>
-		
+
 		<div id="Layout">
 		  $Layout
 		</div>
-		
+
 	   <div class="clear"><!-- --></div>
 	   <div class="push"></div>
 	</div>
