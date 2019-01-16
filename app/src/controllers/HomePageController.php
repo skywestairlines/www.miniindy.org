@@ -1,6 +1,15 @@
 <?php
 
-class HomePage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use SilverStripe\View\Requirements;
+use SilverStripe\ORM\DataObject;
+use PageController;
+
+
+
+
+class HomePageController extends PageController
 {
 	public function init() {
 		parent::init();

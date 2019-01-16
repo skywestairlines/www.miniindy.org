@@ -1,6 +1,13 @@
 <?php
 
-class RaceReg_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class RaceRegController extends PageController
 {
 	// do individual forms for each type?
 

@@ -1,6 +1,14 @@
 <?php
 
+namespace App\Pagetypes;
+
+use Page;
+
+
 class RulesPage extends Page {
+
+	private static $table_name = 'RulesPage';
+
 	private static $db = array();
 	private static $has_one = array();//'Photo' => 'Image');
 	private static $defaults = array();//'ShowInMenus' => false);

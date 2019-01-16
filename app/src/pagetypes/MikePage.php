@@ -1,6 +1,21 @@
 <?php
 
+namespace App\Pagetypes;
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Security\Permission;
+use Page;
+use HtmlEditorField;
+use ImageDataObjectManager;
+
+
+
 class MikePage extends Page {
+
+	private static $table_name = 'MikePage';
+
 	private static $db = array(
 		'MyFormType' => 'Text',
 		'secondText' => 'HTMLText'
@@ -9,7 +24,7 @@ class MikePage extends Page {
 	private static $has_one = array();
 	
 	private static $has_many = array(
-		'Images' => 'Image'
+		'Images' => Image::class
 	);
 	
 	private static $defaults = array(); //'ShowInMenus' => false);
@@ -27,7 +42,7 @@ class MikePage extends Page {
         $dom = new ImageDataObjectManager(
 			$this,
 			'Images',
-			'Image'
+			Image::class
 		);
 		$dom->setUploadFolder('Uploads/MikeImages');
 		$dom->setAllowedFileTypes($a);

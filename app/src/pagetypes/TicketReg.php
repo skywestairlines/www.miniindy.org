@@ -1,6 +1,17 @@
 <?php
 
+namespace App\Pagetypes;
+
+use SilverStripe\Forms\TextField;
+use Page;
+use HtmlEditorField;
+
+
+
 class TicketReg extends Page {
+
+	private static $table_name = 'TicketReg';
+
 	private static $db = array(
 		'MyFormType' => 'Text',
 		'checkPO' => 'HTMLText'

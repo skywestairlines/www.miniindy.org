@@ -1,6 +1,18 @@
 <?php
 
+namespace App\Pagetypes;
+
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Security\Permission;
+use Page;
+use ManageableDataObject;
+
+
+
 class HomePage extends Page {
+
+	private static $table_name = 'HomePage';
+
 	private static $db = array();
 
 	private static $has_one = array();

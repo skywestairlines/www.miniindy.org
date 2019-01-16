@@ -1,8 +1,18 @@
 <?php
 
-class RulesHolder_Controller extends Page_Controller
+namespace App\Controllers;
+
+use SilverStripe\ORM\DataObject;
+use PageController;
+use App\Pagetypes\RulesPage;
+
+
+
+
+
+class RulesHolderController extends PageController
 {
 	public function GetRulesPages() {
-		return DataObject::get('RulesPage', '', '');
+		return DataObject::get(RulesPage::class, '', '');
 	}
 }

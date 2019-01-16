@@ -1,6 +1,19 @@
 <?php
+use SilverStripe\Assets\File;
+use SilverStripe\Security\Permission;
+use SilverStripe\ORM\FieldType\DBDate;
+use SilverStripe\Forms\DateField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\ORM\DataObject;
+use App\Pagetypes\FlyerPage;
+
+
 
 class FlyerEntry extends DataObject {
+
+	private static $table_name = 'FlyerEntry';
+
 	private static $db = array(
 		'Title' => 'Varchar(100)',
 		'FlyerDate' => 'Date'
@@ -10,8 +23,8 @@ class FlyerEntry extends DataObject {
 	private static $plural_name	= 'Flyer Entries';
 	
 	private static $has_one = array(
-		'PDF' => 'File',
-		'FlyerPage' => 'FlyerPage'
+		'PDF' => File::class,
+		'FlyerPage' => FlyerPage::class
 	);
 	
 	private static $summary_fields = array(
@@ -32,7 +45,7 @@ class FlyerEntry extends DataObject {
 			$pdf->removeFolderSelection();
 		}
 		
-		$d = new DateField('FlyerDate', 'Date');
+		$d = new DateField('FlyerDate', DBDate::class);
 		$d->setConfig('showcalendar', true);
 		
 		$f->addFieldToTab('Root.Main', new TextField('Title', 'Flyer Title'));

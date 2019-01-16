@@ -1,6 +1,17 @@
 <?php
 
+namespace App\Pagetypes;
+
+use SilverStripe\Security\Permission;
+use Page;
+use ImageUploadField;
+
+
+
 class CommitteePage extends Page {
+
+	private static $table_name = 'CommitteePage';
+
 	private static $db = array();
 	
 	private static $has_one = array(

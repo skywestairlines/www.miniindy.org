@@ -1,6 +1,19 @@
 <?php
+use SilverStripe\Assets\File;
+use SilverStripe\Security\Permission;
+use SilverStripe\ORM\FieldType\DBDate;
+use SilverStripe\Forms\DateField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\ORM\DataObject;
+use App\Pagetypes\NewsPage;
+
+
 
 class NewsEntry extends DataObject {
+
+	private static $table_name = 'NewsEntry';
+
 	private static $db = array(
 		'Title' => 'Varchar(100)',
 		'NewsDate' => 'Date'
@@ -10,8 +23,8 @@ class NewsEntry extends DataObject {
 	private static $plural_name	= 'News Entries';
 	
 	private static $has_one = array(
-		'PDF' => 'File',
-		'NewsPage' => 'NewsPage'
+		'PDF' => File::class,
+		'NewsPage' => NewsPage::class
 	);
 	
 	private static $summary_fields = array(
@@ -32,7 +45,7 @@ class NewsEntry extends DataObject {
 			$pdf->removeFolderSelection();
 		}
 		
-		$d = new DateField('NewsDate', 'Date');
+		$d = new DateField('NewsDate', DBDate::class);
 		$d->setConfig('showcalendar', true);
 		
 		$f->addFieldToTab('Root.Main', new TextField('Title', 'News Title'));

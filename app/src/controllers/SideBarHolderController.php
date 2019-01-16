@@ -1,6 +1,13 @@
 <?php
 
-class SideBarHolder_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class SideBarHolderController extends PageController
 {
 	/*public function GetRegPages() {
 		return DataObject::get('RaceReg');

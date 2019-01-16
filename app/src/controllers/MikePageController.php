@@ -1,6 +1,17 @@
 <?php
 
-class MikePage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\Forms\Form;
+use SilverStripe\Control\Director;
+use PageController;
+use MultipleFileUploadField;
+
+
+
+class MikePageController extends PageController
 {
 	public function init() {
 		parent::init();

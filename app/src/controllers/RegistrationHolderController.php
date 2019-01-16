@@ -1,8 +1,18 @@
 <?php
 
-class RegistrationHolder_Controller extends Page_Controller
+namespace App\Controllers;
+
+use SilverStripe\ORM\DataObject;
+use PageController;
+use App\Pagetypes\RaceReg;
+
+
+
+
+
+class RegistrationHolderController extends PageController
 {
 	public function GetRegPages() {
-		return DataObject::get('RaceReg');
+		return DataObject::get(RaceReg::class);
 	}
 }

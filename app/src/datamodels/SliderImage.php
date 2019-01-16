@@ -1,14 +1,22 @@
 <?php
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\ORM\DataObject;
+use App\Pagetypes\HomePage;
+
+
 
 class SliderImage extends DataObject {
+
+	private static $table_name = 'SliderImage';
+
 	private static $db = array(
 		'Caption' => 'Varchar(80)'
 	);
 	
 	private static $has_one = array(
-		'Link' => 'SiteTree',
+		'Link' => SiteTree::class,
 		'Photo' => 'BetterImage',
-		'HomePage' => 'HomePage',
+		'HomePage' => HomePage::class,
 	);
 	
 	public function SlideShowImage() {
@@ -22,7 +30,7 @@ class SliderImage extends DataObject {
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 		
-		$f->addFieldToTab('Root.Main', $dropdown = new SimpleTreeDropdownField('LinkID', 'Page Link', 'SiteTree'));
+		$f->addFieldToTab('Root.Main', $dropdown = new SimpleTreeDropdownField('LinkID', 'Page Link', SiteTree::class));
 		$dropdown->setEmptyString('Select One...');
 		
 		$f->removeFieldFromTab('Root.Main', 'SortOrder');
@@ -32,7 +40,7 @@ class SliderImage extends DataObject {
 	
 	public function getSliderLink() {
 		if($this->LinkID) {
-			$pageLink = DataObject::get_by_id('SiteTree', $this->LinkID);
+			$pageLink = DataObject::get_by_id(SiteTree::class, $this->LinkID);
 			return $pageLink->Link();
 		}
 	}

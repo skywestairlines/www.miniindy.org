@@ -1,6 +1,13 @@
 <?php
 
-class RulesPage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class RulesPageController extends PageController
 {
 	
 }

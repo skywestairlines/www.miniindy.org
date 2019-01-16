@@ -1,4 +1,9 @@
 <?php
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Security\Permission;
+use SilverStripe\CMS\Model\SiteTree;
+
 
 class Page extends SiteTree {
 

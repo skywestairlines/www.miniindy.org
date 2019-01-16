@@ -1,6 +1,18 @@
 <?php
 
+namespace App\Pagetypes;
+
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Security\Permission;
+use Page;
+
+
+
 class MediaPage extends Page {
+
+	private static $table_name = 'MediaPage';
+
 
 	private static $db = array(
 		'ShowInFooter' => 'Boolean',

@@ -1,6 +1,15 @@
 <?php
 
+namespace App\Pagetypes;
+
+use Page;
+use DataObjectManager;
+
+
 class NewsPage extends Page {
+
+	private static $table_name = 'NewsPage';
+
 	private static $db = array();
 	
 	private static $has_many = array(

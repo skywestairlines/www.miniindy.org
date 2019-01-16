@@ -1,6 +1,13 @@
 <?php
 
-class ResultsPage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class ResultsPageController extends PageController
 {
 	
 }

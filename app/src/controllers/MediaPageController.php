@@ -1,6 +1,19 @@
 <?php
 
-class MediaPage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\CMS\Search\SearchForm;
+use SilverStripe\ORM\DataObject;
+use PageController;
+
+
+
+
+class MediaPageController extends PageController
 {
 
 	/**
@@ -73,7 +86,7 @@ class MediaPage_Controller extends Page_Controller
 	      	new FormAction('results', 'Search')
 	  	);
 
-	  	return new SearchForm($this, "SearchForm", $fields, $actions);
+	  	return new SearchForm($this, SearchForm::class, $fields, $actions);
 	}
 	
 	/**

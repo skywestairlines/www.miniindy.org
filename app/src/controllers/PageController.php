@@ -1,6 +1,15 @@
 <?php
+use SilverStripe\Control\Director;
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\CMS\Search\SearchForm;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\CMS\Controllers\ContentController;
 
-class Page_Controller extends ContentController
+
+class PageController extends ContentController
 {
 
 	/**
@@ -68,7 +77,7 @@ class Page_Controller extends ContentController
 	      	new FormAction('results', 'Search')
 	  	);
 
-	  	return new SearchForm($this, "SearchForm", $fields, $actions);
+	  	return new SearchForm($this, SearchForm::class, $fields, $actions);
 	}
 	
 	/**

@@ -1,6 +1,14 @@
 <?php
 
+namespace App\Pagetypes;
+
+use Page;
+
+
 class SideBarHolder extends Page {
+
+	private static $table_name = 'SideBarHolder';
+
 	private static $db = array();
 	private static $has_one = array();
 	

@@ -1,6 +1,13 @@
 <?php
 
-class TicketReg_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class TicketRegController extends PageController
 {
 	function getTicketType() {
 		if($this->MyFormType == 'banquet') {

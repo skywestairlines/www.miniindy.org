@@ -1,6 +1,17 @@
 <?php
 
+namespace App\Pagetypes;
+
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Security\Permission;
+use Page;
+
+
+
 class ClosedRegPage extends Page {
+
+	private static $table_name = 'ClosedRegPage';
 
 	private static $db = array(
 		'ShowInFooter' => 'Boolean',

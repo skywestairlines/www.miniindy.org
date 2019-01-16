@@ -1,6 +1,17 @@
 <?php
 
+namespace App\Pagetypes;
+
+use SilverStripe\Forms\TextField;
+use Page;
+use HtmlEditorField;
+
+
+
 class RaceReg extends Page {
+
+	private static $table_name = 'RaceReg';
+
 	private static $db = array(
 		'MyFormType' => 'Text',
 		'regType'	 => 'Enum("New, Returning, Body, Storage", "New")',

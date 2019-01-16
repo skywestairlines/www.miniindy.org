@@ -1,6 +1,13 @@
 <?php
 
-class VideoPage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class VideoPageController extends PageController
 {
 	
 }

@@ -1,6 +1,13 @@
 <?php
 
-class CommitteePage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class CommitteePageController extends PageController
 {
 	
 }

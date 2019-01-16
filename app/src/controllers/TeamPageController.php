@@ -1,6 +1,13 @@
 <?php
 
-class TeamPage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class TeamPageController extends PageController
 {
 	
 }

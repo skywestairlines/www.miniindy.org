@@ -1,4 +1,9 @@
 <?php
+use SilverStripe\Control\Email\Email;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\ORM\DataExtension;
+
+
 /**
  * ProcessExtForm class.
  *	
@@ -6,11 +11,11 @@
  *	This file processes the script variables and inputs them into the proper 
  *	database table (sponsor) with the correct sponsorType.
  *	
- *	using DataObjectDecorator so this class wont be added to the DB - not sure if this is the best way though
+ *	using DataExtension so this class wont be added to the DB - not sure if this is the best way though
  * 
- * @extends DataObjectDecorator
+ * @extends DataExtension
  */
-class ProcessExtForm extends DataObjectDecorator {
+class ProcessExtForm extends DataExtension {
 	/*
 		 get array of order items
 		 parse them out
@@ -61,7 +66,7 @@ class ProcessExtForm extends DataObjectDecorator {
 		$s = new Sponsor();
 		$s->Name = ($data['p1']) ? $data['p1'] : $data['Company'];
 		$s->cContact = ($data['p2']) ? $data['p2'] : $data['FirstName'] . ' ' . $data['LastName'];
-		$s->cEmail = ($data['p3']) ? $data['p3'] : $data['Email'];
+		$s->cEmail = ($data['p3']) ? $data['p3'] : $data[Email::class];
 		$s->cPhone = ($data['p4']) ? $data['p4'] : $data['Phone'];
 		
 		/*$s->Address = $data['Address'];

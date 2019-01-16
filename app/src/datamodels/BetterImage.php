@@ -1,9 +1,15 @@
 <?php
+use SilverStripe\Control\Director;
+use SilverStripe\Assets\Image;
+
 /**
  * Prevents creation of resized images if the uploaded file already
  * fits the requested dimensions
  */
-class BetterImage extends Image {   
+class BetterImage extends Image {
+
+	private static $table_name = 'BetterImage';
+   
     public function SetWidth($width) {
         if($width == $this->getWidth()){
             return $this;

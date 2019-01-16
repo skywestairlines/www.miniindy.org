@@ -1,6 +1,13 @@
 <?php
 
-class FlyerPage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class FlyerPageController extends PageController
 {
 	
 }

@@ -1,6 +1,15 @@
 <?php
 
+namespace App\Pagetypes;
+
+use Page;
+use DataObjectManager;
+
+
 class FlyerPage extends Page {
+
+	private static $table_name = 'FlyerPage';
+
 	private static $has_many = array(
 		'FlyerEntries' => 'FlyerEntry'
 	);

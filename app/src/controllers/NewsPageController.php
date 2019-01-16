@@ -1,6 +1,13 @@
 <?php
 
-class NewsPage_Controller extends Page_Controller
+namespace App\Controllers;
+
+use PageController;
+
+
+
+
+class NewsPageController extends PageController
 {
 	
 }

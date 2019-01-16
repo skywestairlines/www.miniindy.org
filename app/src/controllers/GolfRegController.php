@@ -1,6 +1,15 @@
 <?php
 
-class GolfReg_Controller extends Page_Controller
+namespace App\Controllers;
+
+use SilverStripe\View\Requirements;
+use SilverStripe\View\ArrayData;
+use PageController;
+
+
+
+
+class GolfRegController extends PageController
 {
 	public function init() {
 		parent::init();

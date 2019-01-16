@@ -1,6 +1,14 @@
 <?php
 
+namespace App\Pagetypes;
+
+use Page;
+
+
 class ResultsPage extends Page {
+
+	private static $table_name = 'ResultsPage';
+
 	private static $db = array();
 	private static $has_one = array();//'Photo' => 'Image');
 	private static $defaults = array();//'ShowInMenus' => false);
