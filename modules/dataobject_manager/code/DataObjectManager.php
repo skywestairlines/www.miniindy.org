@@ -2,12 +2,12 @@
 
 class DataObjectManager extends ComplexTableField
 {
-	
+
 	protected static $allow_assets_override = true;
 	protected static $allow_css_override = false;
 	public static $popup_width = 640;
 	protected static $confirm_delete = true;
-	
+
 	protected $template = "DataObjectManager";
 	protected $start = "0";
 	protected $per_page = "10";
@@ -32,8 +32,8 @@ class DataObjectManager extends ComplexTableField
 	public $singleTitle;
 	public $hasNested = false;
 	public $isNested = false;
-	
-	
+
+
 
 
 	public $actions = array(
@@ -52,11 +52,11 @@ class DataObjectManager extends ComplexTableField
 	static $url_handlers = array(
 		'duplicate/$ID' => 'handleDuplicate'
 	);
-	
-	
+
+
 	public $popupClass = "DataObjectManager_Popup";
 	public $templatePopup = "DataObjectManager_popup";
-	
+
 	public static function allow_assets_override($bool)
 	{
     if($bool) {
@@ -66,27 +66,27 @@ class DataObjectManager extends ComplexTableField
     else
       DataObject::remove_extension("Folder","AssetManagerFolder");
 	}
-	
+
 	public static function allow_css_override($bool)
 	{
 	   self::$allow_css_override = $bool;
 	}
-	
+
 	public static function set_popup_width($width)
 	{
 	   self::$popup_width = $width;
 	}
-	
+
 	public static function set_confirm_delete($bool)
 	{
 	   self::$confirm_delete = $bool;
 	}
-	
-	function __construct($controller, $name = null, $sourceClass = null, $fieldList = null, $detailFormFields = null, $sourceFilter = "", $sourceSort = null, $sourceJoin = "") 
+
+	function __construct($controller, $name = null, $sourceClass = null, $fieldList = null, $detailFormFields = null, $sourceFilter = "", $sourceSort = null, $sourceJoin = "")
 	{
 		if(!class_exists("ComplexTableField_ItemRequest"))
 			die("<strong>"._t('DataObjectManager.ERROR','Error')."</strong>: "._t('DataObjectManager.SILVERSTRIPEVERSION','DataObjectManager requires Silverstripe version 2.3 or higher.'));
-    
+
     // If no name is given, search the has_many for the first relation.
     if($name === null && $sourceClass === null) {
       if($has_manys = $controller->stat('has_many')) {
@@ -98,7 +98,7 @@ class DataObjectManager extends ComplexTableField
       }
     }
     $SNG = singleton($sourceClass);
-    
+
 
     if($fieldList === null) {
       $diff = array_diff($SNG->summaryFields(),singleton('DataObject')->summaryFields());
@@ -119,11 +119,11 @@ class DataObjectManager extends ComplexTableField
 		if(self::$allow_css_override)
   			Requirements::css('dataobject_manager/css/dataobjectmanager_override.css');
 		Requirements::javascript(THIRDPARTY_DIR.'/jquery-livequery/jquery.livequery.js');
-		Requirements::javascript('dataobject_manager/javascript/facebox.js');	
+		Requirements::javascript('dataobject_manager/javascript/facebox.js');
 		Requirements::javascript('dataobject_manager/javascript/dom_jquery_ui.js');
 		Requirements::javascript('dataobject_manager/javascript/tooltip.js');
 		Requirements::javascript('dataobject_manager/javascript/dataobject_manager.js');
-		
+
 		$this->filter_empty_string = '-- '._t('DataObjectManager.NOFILTER','No filter').' --';
 
 		if($this->sourceSort) {
@@ -144,12 +144,12 @@ class DataObjectManager extends ComplexTableField
 			$this->per_page = $_REQUEST['ctf'][$this->Name()]['per_page'];
 			$this->showAll = $_REQUEST['ctf'][$this->Name()]['showall'];
 			$this->search = $_REQUEST['ctf'][$this->Name()]['search'];
-			$this->filter = $_REQUEST['ctf'][$this->Name()]['filter'];			
+			$this->filter = $_REQUEST['ctf'][$this->Name()]['filter'];
 			$this->sort = $_REQUEST['ctf'][$this->Name()]['sort'];
 			$this->sort_dir = $_REQUEST['ctf'][$this->Name()]['sort_dir'];
 		}
-		
-		
+
+
 		$this->setPageSize($this->per_page);
 		$this->loadSort();
 		$this->loadSourceFilter();
@@ -170,27 +170,27 @@ class DataObjectManager extends ComplexTableField
 	public function setClickToToggle($bool) {
 		$this->clickToToggle = $bool;
 	}
-	
+
 	public function setSourceFilter($filter)
 	{
 	   $this->sourceFilter = $filter;
 	}
-	
+
 	public function setUseViewAll($bool)
 	{
 	   $this->use_view_all = $bool;
 	}
-	
+
 	public function setPerPageMap($values)
 	{
 	   $this->per_page_map = $values;
 	}
-	
+
 	public function setPluralTitle($title)
 	{
 		$this->pluralTitle = $title;
 	}
-	
+
 	public function setWideMode($bool)
 	{
 	  $this->hasNested = $bool;
@@ -200,13 +200,13 @@ class DataObjectManager extends ComplexTableField
 	{
 		return $this->pluralTitle ? $this->pluralTitle : $this->AddTitle()."s";
 	}
-	
-		
+
+
 	protected function loadSort()
 	{
-		if($this->ShowAll()) 
+		if($this->ShowAll())
 			$this->setPageSize(999);
-		
+
 		if($this->Sortable() && (!isset($_REQUEST['ctf'][$this->Name()]['sort']) || $_REQUEST['ctf'][$this->Name()]['sort'] == "SortOrder")) {
 			$this->sort = "SortOrder";
 			$this->sourceSort = "\"SortOrder\" ASC";
@@ -222,7 +222,7 @@ class DataObjectManager extends ComplexTableField
 		}
 
 	}
-	
+
 	protected function loadSourceFilter()
 	{
 		$filter_string = "";
@@ -231,14 +231,14 @@ class DataObjectManager extends ComplexTableField
 			$field = substr($this->filter, 0, $break);
 			$value = substr($this->filter, $break+1, strlen($this->filter) - strlen($field));
 			$filter_string = $field . "='$value'";
-		}	
+		}
 
 		$search_string = "";
 		if(!empty($this->search)) {
 			$search = array();
-	        $SNG = singleton($this->sourceClass); 			
+	        $SNG = singleton($this->sourceClass);
 			foreach(parent::Headings() as $field) {
-				if($SNG->hasDatabaseField($field->Name))	
+				if($SNG->hasDatabaseField($field->Name))
 					$search[] = "UPPER({$this->sourceClass}.$field->Name) LIKE '%".Convert::raw2sql(strtoupper($this->search))."%'";
 			}
 			if(!empty($search)) {
@@ -248,15 +248,15 @@ class DataObjectManager extends ComplexTableField
 		$and = (!empty($this->filter) && !empty($this->search)) ? " AND " : "";
 		$source_filter = $filter_string.$and.$search_string;
 		if(!$this->sourceFilter) $this->sourceFilter = $source_filter;
-		else if($this->sourceFilter && !empty($source_filter)) $this->sourceFilter .= " AND " . $source_filter;		
+		else if($this->sourceFilter && !empty($source_filter)) $this->sourceFilter .= " AND " . $source_filter;
 	}
-	
+
 	public function handleItem($request) {
 		return new DataObjectManager_ItemRequest($this, $request->param('ID'));
 	}
 
 	public function getQueryString($params = array())
-	{ 
+	{
 		$start    = isset($params['start'])? $params['start']       : 	$this->start;
 		$per_page = isset($params['per_page'])? $params['per_page'] : 	$this->per_page;
 		$show_all = isset($params['show_all'])? $params['show_all'] : 	$this->showAll;
@@ -266,7 +266,7 @@ class DataObjectManager extends ComplexTableField
 		$search   = isset($params['search'])? $params['search'] 	: 	$this->search;
 		return "ctf[{$this->Name()}][start]={$start}&ctf[{$this->Name()}][per_page]={$per_page}&ctf[{$this->Name()}][showall]={$show_all}&ctf[{$this->Name()}][sort]={$sort}&ctf[{$this->Name()}][sort_dir]={$sort_dir}&ctf[{$this->Name()}][search]={$search}&ctf[{$this->Name()}][filter]={$filter}";
 	}
-	
+
 	public function getSetting($setting)
 	{
 	   if($this->$setting) {
@@ -274,7 +274,7 @@ class DataObjectManager extends ComplexTableField
 	   }
 	   return Object::get_static($this->class,DOMUtil::to_underscore($setting));
 	}
-	
+
 	function FieldHolder($properties = array())
 	{
 		if(!$this->controller->ID && $this->isNested)
@@ -282,7 +282,7 @@ class DataObjectManager extends ComplexTableField
 		return parent::FieldHolder();
 	}
 
-	
+
 	public function HasSearch() {
 		$SNG = singleton($this->sourceClass);
 		foreach(parent::Headings() as $field) {
@@ -292,17 +292,17 @@ class DataObjectManager extends ComplexTableField
 		}
 		return false;
 	}
-	
+
 	public function Headings()
 	{
 		$headings = array();
 		foreach($this->fieldList as $fieldName => $fieldTitle) {
-			if(isset($_REQUEST['ctf'][$this->Name()]['sort_dir'])) 
+			if(isset($_REQUEST['ctf'][$this->Name()]['sort_dir']))
 				$dir = $_REQUEST['ctf'][$this->Name()]['sort_dir'] == "ASC" ? "DESC" : "ASC";
-			else 
-				$dir = "ASC"; 
+			else
+				$dir = "ASC";
 			$headings[] = new ArrayData(array(
-				"Name" => $fieldName, 
+				"Name" => $fieldName,
 				"Title" => ($this->sourceClass) ? singleton($this->sourceClass)->fieldLabel($fieldTitle) : $fieldTitle,
 	      "IsSortable" => singleton($this->sourceClass)->hasDatabaseField($fieldName),
 				"SortLink" => $this->RelativeLink(array(
@@ -316,66 +316,66 @@ class DataObjectManager extends ComplexTableField
 		}
 		return new DataObjectSet($headings);
 	}
-	
+
 	function saveComplexTableField($data, $form, $params) {
 		$className = $this->sourceClass();
 		$childData = new $className();
 		$form->saveInto($childData);
 		try {
 			$childData->write();
-		} 
+		}
 		catch(ValidationException $e) {
 			$form->sessionMessage($e->getResult()->message(), 'bad');
 			return Director::redirectBack();
-		}		
+		}
 		if($childData->many_many()) {
 		  $form->saveInto($childData);
 		  $childData->write();
-		}		
+		}
 		$form->sessionMessage(sprintf(_t('DataObjectManager.ADDEDNEW','Added new %s successfully'),$this->SingleTitle()), 'good');
 
 		if($form->getFileFields() || $form->getNestedDOMs()) {
 			$form->clearMessage();
-      	Director::redirect(Controller::join_links($this->BaseLink(),'item', $childData->ID, 'edit'));		
+      	Director::redirect(Controller::join_links($this->BaseLink(),'item', $childData->ID, 'edit'));
 
     }
 		else Director::redirectBack();
 
 	}
-	
-	function setSourceID($val) { 
-		if (is_numeric($val)) { 
-			$this->sourceID = $val; 
+
+	function setSourceID($val) {
+		if (is_numeric($val)) {
+			$this->sourceID = $val;
 			$this->hasCustomSourceID = true;
-		} 
-	}	
-	
+		}
+	}
+
 	function sourceID() {
 		if ($this->hasCustomSourceID) {
 			return $this->sourceID;
 		}
-	
+
 		if($this->isNested)
-			return $this->controller->ID;				
-		$idField = $this->form->dataFieldByName('ID'); 
-		return ($idField && is_numeric($idField->Value())) ? $idField->Value() : (isset($_REQUEST['ctf']['ID']) ? $_REQUEST['ctf']['ID'] : null); 
- 	} 
-	
-	
+			return $this->controller->ID;
+		$idField = $this->form->dataFieldByName('ID');
+		return ($idField && is_numeric($idField->Value())) ? $idField->Value() : (isset($_REQUEST['ctf']['ID']) ? $_REQUEST['ctf']['ID'] : null);
+ 	}
+
+
   protected function getRawDetailFields($childData)
   {
-		if(is_a($this->detailFormFields,"Fieldset")) 
+		if(is_a($this->detailFormFields,"Fieldset"))
 			$fields = $this->detailFormFields;
 		else {
 			if(!is_string($this->detailFormFields)) $this->detailFormFields = "getCMSFields";
 			$functioncall = $this->detailFormFields;
 			if(!$childData->hasMethod($functioncall)) $functioncall = "getCMSFields";
-			
+
 			$fields = $childData->{$functioncall}($this);
 		}
-    return $fields;  
+    return $fields;
   }
-	
+
 	public function getCustomFieldsFor($childData) {
 		$fields = $this->getRawDetailFields($childData);
 		foreach($fields as $field) {
@@ -384,17 +384,17 @@ class DataObjectManager extends ComplexTableField
 		}
 		return $fields;
 	}
-	
+
 	function AddForm($childID = null)
 	{
 		$form = parent::AddForm($childID);
-		$actions = new FieldSet();	
+		$actions = new FieldSet();
 		$titles = array();
 		if($files = $form->getFileFields()) {
 			foreach($files as $field)	$titles[] = DOMUtil::readable_class($field->Title());
 		}
 		if($doms = $form->getNestedDOMs())
-			foreach($doms as $field) $titles[] = $field->PluralTitle(); 
+			foreach($doms as $field) $titles[] = $field->PluralTitle();
     if(empty($titles))
       $text = _t('DataObjectManager.SAVE','Save');
     elseif(sizeof($titles) > 3) {
@@ -408,7 +408,7 @@ class DataObjectManager extends ComplexTableField
 
 		$actions->push(
 			$saveAction = new FormAction("saveComplexTableField", $text)
-		);	
+		);
 		$saveAction->addExtraClass('save');
 		$form->setActions($actions);
 		$form->Fields()->insertFirst(new LiteralField('open','<div id="field-holder"><div id="fade"></div>'));
@@ -421,56 +421,56 @@ class DataObjectManager extends ComplexTableField
 	public function ClickToToggle() {
 		return $this->clickToToggle;
 	}
-	
+
 	public function Link($action = null)
 	{
     return Controller::join_links(parent::Link($action),'?'.$this->getQueryString());
 	}
-	
+
 	public function BaseLink()
 	{
  		return parent::Link();
 	}
-	
+
 	public function CurrentLink()
 	{
 		return $this->Link();
-	}	
-	
+	}
+
 	public function RelativeLink($params = array())
 	{
     return Controller::join_links(parent::Link(),'?'.$this->getQueryString($params));
-	}	
+	}
 	public function FirstLink()
 	{
 		return parent::FirstLink() ? $this->RelativeLink(array('start' => '0')) : false;
 	}
-	
+
 	public function PrevLink()
 	{
 		$start = ($this->start - $this->pageSize < 0)  ? 0 : $this->start - $this->pageSize;
 		return parent::PrevLink() ? $this->RelativeLink(array('start' => $start)) : false;
 	}
-	
+
 	public function NextLink()
 	{
 		$currentStart = isset($_REQUEST['ctf'][$this->Name()]['start']) ? $_REQUEST['ctf'][$this->Name()]['start'] : 0;
 		$start = ($currentStart + $this->pageSize < $this->TotalCount()) ? $currentStart + $this->pageSize : $this->TotalCount() % $this->pageSize > 0;
 		return parent::NextLink() ? $this->RelativeLink(array('start' => $start)) : false;
 	}
-	
+
 	public function LastLink()
 	{
 		$pageSize = ($this->TotalCount() % $this->pageSize > 0) ? $this->TotalCount() % $this->pageSize : $this->pageSize;
 		$start = $this->TotalCount() - $pageSize;
 		return parent::LastLink() ? $this->RelativeLink(array('start' => $start)) : false;
 	}
-	
+
 	public function ShowAllLink()
 	{
 		return $this->RelativeLink(array('show_all' => '1'));
 	}
-	
+
 	public function PaginatedLink()
 	{
 		return $this->RelativeLink(array('show_all' => '0'));
@@ -479,22 +479,22 @@ class DataObjectManager extends ComplexTableField
 	public function AddLink() {
 	    return Controller::join_links($this->BaseLink(), 'add');
 	}
-		
+
 	public function ShowAll()
 	{
 		return $this->showAll == "1";
 	}
-	
+
 	public function Paginated()
 	{
 		return $this->showAll == "0";
 	}
-		
+
 	public function Sortable()
 	{
 		return DataObject::has_extension($this->sourceClass(), 'SortableDataObject');
 	}
-	
+
 	public function setFilter($field, $label, $map, $default = null)
 	{
 		if(is_array($map)) {
@@ -512,7 +512,7 @@ class DataObjectManager extends ComplexTableField
 	{
 		return !empty($this->filter_map);
 	}
-	
+
 	public function FilterDropdown()
 	{
 		$map = $this->filter_empty_string ? array($this->RelativeLink(array('filter' => '')) => $this->filter_empty_string) : array();
@@ -523,7 +523,7 @@ class DataObjectManager extends ComplexTableField
 		$dropdown = new DropdownField('Filter',$this->filter_label . " (<a href='#' class='refresh'>"._t('DataObjectManager.REFRESH','refresh')."</a>)", $map, $value);
 		return $dropdown->FieldHolder();
 	}
-	
+
 	public function PerPageDropdown()
 	{
 		$map = array();
@@ -542,62 +542,62 @@ class DataObjectManager extends ComplexTableField
 	{
 		return !empty($this->search) ? $this->search : false;
 	}
-	
+
 	public function AddTitle()
 	{
 		return $this->addTitle ? $this->addTitle : DOMUtil::readable_class($this->Title());
 	}
-	
+
 	public function SingleTitle()
 	{
 		return $this->singleTitle ? $this->singleTitle : DOMUtil::readable_class($this->AddTitle());
 	}
-	
+
 	public function setAddTitle($title)
 	{
 		$this->addTitle = $title;
 	}
-	
+
 	public function setSingleTitle($title)
 	{
 		$this->singleTitle = $title;
 	}
-	
+
 	public function getColumnWidths()
 	{
 		return $this->column_widths;
 	}
-	
+
 	public function setColumnWidths($widths)
 	{
 		if(is_array($widths)) {
 			$total = 0;
 			foreach($widths as $name => $value)	$total += $value;
-			if($total != 100) 
+			if($total != 100)
 				die('<strong>DataObjectManager::setColumnWidths()</strong>:' . sprintf(_t('DataObjectManager.TOTALNOT100','Column widths must total 100 and not %s'), $total));
 			else
 				$this->column_widths = $widths;
 		}
 	}
-	
+
 	public function setFilterEmptyString($str)
 	{
 		$this->filter_empty_string = $str;
 	}
-	
+
 	public function addPermission($perm)
 	{
 		if(!in_array($perm,$this->permissions))
 			$this->permissions[] = $perm;
 	}
-	
+
   public function removePermission($perm)
  	{
 		$key = array_search($perm,$this->permissions);
 		if($key !== false)
  			unset($this->permissions[$key]);
  	}
- 	
+
 	public function NestedType()
 	{
 	   if($this->hasNested)
@@ -607,69 +607,69 @@ class DataObjectManager extends ComplexTableField
 	   else
 	     return "";
 	}
-	
+
 	public function handleDuplicate($request)
 	{
 		return new DataObjectManager_ItemRequest($this,$request->param('ID'));
 	}
-	
+
 	public function setPopupWidth($val)
 	{
 	   $this->popupWidth = $val;
 	}
-	
+
 	public function setConfirmDelete($bool)
 	{
 	   $this->confirmDelete = $bool;
 	}
-	
+
 	public function PopupWidth()
 	{
 	   return $this->popupWidth ? $this->popupWidth : self::$popup_width;
 	}
-	
+
 	public function ConfirmDelete()
 	{
 	   return $this->getSetting('confirmDelete');
 	}
-	
-	
+
+
 
 }
 
 class DataObjectManager_Item extends ComplexTableField_Item {
-	function __construct(DataObject $item, DataObjectManager $parent) 
+	function __construct(DataObject $item, DataObjectManager $parent)
 	{
 		parent::__construct($item, $parent);
 	}
-	
-	function Link() {
+
+	function Link($action = NULL) {
     return Controller::join_links($this->parent->BaseLink(), 'item', $this->item->ID);
 	}
-	
-	function Fields() {
-		$fields = parent::Fields();
+
+function Fields($xmlSafe = true) {
+		$fields = parent::Fields($xmlSafe);
 		$widths = $this->parent->getColumnWidths();
 		if(!empty($widths)) {
 			foreach($fields as $field) {
 				$field->ColumnWidthCSS = sprintf("style='width:%f%%;'",($widths[$field->Name] - 0.1));
 			}
 		}
-		return $fields;		
+		return $fields;
 	}
-	
+
 	public function CanViewOrEdit()
 	{
 		return $this->parent->Can('view') || $this->parent->Can('edit');
 	}
-	
+
 	public function ViewOrEdit()
 	{
 		if($this->CanViewOrEdit())
 			return $this->parent->Can('edit') ? "edit" : "view";
 		return false;
 	}
-	
+
 	public function ViewOrEdit_i18n()
 	{
 	  if($res = $this->ViewOrEdit()) {
@@ -677,7 +677,7 @@ class DataObjectManager_Item extends ComplexTableField_Item {
 	  }
 	  return null;
 	}
-	
+
 	public function EditLink()
 	{
 	 	return Controller::join_links($this->Link(), "edit","?".$this->parent->getQueryString());
@@ -695,12 +695,12 @@ class DataObjectManager_Item extends ComplexTableField_Item {
 		}
 		return false;
 	}
-	
+
 	public function PopupWidth()
 	{
 	   return $this->parent->PopupWidth();
 	}
-	
+
 	public function Actions()
 	{
 	   $actions = new DataObjectSet();
@@ -715,10 +715,10 @@ class DataObjectManager_Item extends ComplexTableField_Item {
 	           "popup",
 	           "dataobject_manager/images/page_white_{$this->ViewOrEdit()}.png",
 	           "editlink"	,
-	           $this->parent->PopupWidth()           
+	           $this->parent->PopupWidth()
 	         ));
 	       break;
-	       	       	       
+
 	       case "delete":
 	         $actions->push(new DataObjectManagerAction(
 	           _t('DataObjectManager.DELETE','Delete'),
@@ -729,7 +729,7 @@ class DataObjectManager_Item extends ComplexTableField_Item {
 	           $this->parent->getSetting('confirmDelete') ? "confirm" : null
 	         ));
 	       break;
-	       
+
 	       case "duplicate":
 	         $actions->push(new DataObjectManagerAction(
 	           _t('DataObjectManager.DUPLICATE','Duplicate'),
@@ -765,7 +765,7 @@ class DataObjectManager_Controller extends Controller
 	      foreach($_POST as $group => $map) {
 	        if(substr($group, 0, 7) == "record-") {
 	          if($many_many) {
-	            $controllerID = $this->urlParams['OtherID'];          
+	            $controllerID = $this->urlParams['OtherID'];
 	            $candidates = singleton($ownerClass)->many_many();
 	            if(is_array($candidates)) {
 	              foreach($candidates as $name => $class)
@@ -775,7 +775,7 @@ class DataObjectManager_Controller extends Controller
 	                }
 	            }
 	            if(!isset($relationName)) return false;
-	            list($parentClass, $componentClass, $parentField, $componentField, $table) = singleton($ownerClass)->many_many($relationName);            
+	            list($parentClass, $componentClass, $parentField, $componentField, $table) = singleton($ownerClass)->many_many($relationName);
 	            foreach($map as $sort => $id)
 	              DB::query("UPDATE \"$table\" SET \"SortOrder\" = $sort WHERE \"{$className}ID\" = $id AND \"{$ownerClass}ID\" = $controllerID");
 	          }
@@ -784,7 +784,7 @@ class DataObjectManager_Controller extends Controller
 	              $obj = DataObject::get_by_id($className, $id);
 	              $obj->SortOrder = $sort;
 	              $obj->write();
-	            }           
+	            }
 	          }
 	          break;
 	        }
@@ -813,7 +813,7 @@ class DataObjectManager_Popup extends Form {
 		// added prototype.js to provide support for TreeDropdownField
 		Requirements::javascript(THIRDPARTY_DIR.'/prototype/prototype.js');
 	    Requirements::javascript(THIRDPARTY_DIR.'/jquery/jquery.js');
-		Requirements::javascript(THIRDPARTY_DIR.'/jquery-livequery/jquery.livequery.js');    
+		Requirements::javascript(THIRDPARTY_DIR.'/jquery-livequery/jquery.livequery.js');
 		Requirements::block(THIRDPARTY_DIR.'/behaviour.js');
 		Requirements::block(SAPPHIRE_DIR.'/javascript/Validator.js');
 		Requirements::clear(THIRDPARTY_DIR.'/behavior.js');
@@ -837,30 +837,30 @@ class DataObjectManager_Popup extends Form {
 			$this->dataObject->getRequirementsForPopup();
 		}
 		Requirements::javascript('dataobject_manager/javascript/dataobjectmanager_popup.js');
-		
-		
-		$actions = new FieldSet();	
+
+
+		$actions = new FieldSet();
 		if(!$readonly) {
 			$actions->push(
 				$saveAction = new FormAction("saveComplexTableField", _t('DataObjectManager.SAVE','Save'))
 
-			);	
+			);
 			$saveAction->addExtraClass('save');
 		}
-		
+
 		parent::__construct($controller, $name, $fields, $actions, $validator);
 	    if ($this->validator instanceof Validator) {
         	$this->validator->setJavascriptValidationHandler('none');
-		} 
+		}
 		else {
         	$this->unsetValidator();
       	}
 
-		
+
 	  if($this->getNestedDOMs()) {
 			Requirements::javascript(THIRDPARTY_DIR.'/jquery-livequery/jquery.livequery.js');
 			Requirements::javascript('dataobject_manager/javascript/dom_jquery_ui.js');
-	  		Requirements::javascript('dataobject_manager/javascript/tooltip.js');    
+	  		Requirements::javascript('dataobject_manager/javascript/tooltip.js');
 			Requirements::javascript('dataobject_manager/javascript/dataobject_manager.js');
   	}
     $this->NestedController = $this->controller->isNested;
@@ -869,7 +869,7 @@ class DataObjectManager_Popup extends Form {
 	function FieldHolder($properties = array()) {
 		return $this->renderWith('ComplexTableField_Form');
 	}
-	
+
 	public function getFileFields()
 	{
 		$file_fields = array();
@@ -877,9 +877,9 @@ class DataObjectManager_Popup extends Form {
 			if($field instanceof FileIFrameField || $field instanceof ImageField)
 				$file_fields[] = $field;
 		}
-		return !empty($file_fields)? $file_fields : false;	
+		return !empty($file_fields)? $file_fields : false;
 	}
-	
+
 	public function getNestedDOMs()
 	{
 		$dom_fields = array();
@@ -899,21 +899,21 @@ class DataObjectManager_Popup extends Form {
 		  	}
 		  }
 		}
-		return !empty($dom_fields)? $dom_fields : false;		
+		return !empty($dom_fields)? $dom_fields : false;
 	}
-	
-	
+
+
 }
 
 
 
-class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest 
+class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 {
 	public $isNested = false;
 	protected $itemList;
 	protected $currentIndex;
-	
-	function __construct($ctf, $itemID) 
+
+	function __construct($ctf, $itemID)
 	{
 		parent::__construct($ctf, $itemID);
 		$this->isNested = $this->ctf->isNested;
@@ -923,9 +923,9 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
     }
 	}
 
-	function Link() 
+	function Link($action = NULL)
 	{
-    return Controller::join_links($this->ctf->BaseLink() , 'item', $this->itemID);	
+    return Controller::join_links($this->ctf->BaseLink() , 'item', $this->itemID);
   }
 
 	function saveComplexTableField($data, $form, $request) {
@@ -933,7 +933,7 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 		$form->saveInto($dataObject);
 		try {
 			$dataObject->write();
-		} 
+		}
 		catch(ValidationException $e) {
 			$form->sessionMessage($e->getResult()->message(), 'bad');
 			return Director::redirectBack();
@@ -946,12 +946,12 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 			$componentSet = $parentRecord->getManyManyComponents($relationName);
 			$componentSet->add($dataObject);
 		}
-		
+
 		$form->sessionMessage(sprintf(_t('DataObjectManager.SAVED','Saved %s successfully'),$this->ctf->SingleTitle()), 'good');
 
 		Director::redirectBack();
 	}
-	
+
 	function DetailForm($childID = null)
 	{
 		$form = parent::DetailForm($childID);
@@ -964,7 +964,7 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 		}
 		return $form;
 	}
-	
+
 	function edit() {
 		if(!$this->ctf->Can('view') && !$this->ctf->Can('edit'))
 			return false;
@@ -973,16 +973,16 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 
 		echo $this->renderWith($this->ctf->templatePopup);
 	}
-	
+
 	public function duplicate()
 	{
 		if(!$this->ctf->Can('duplicate'))
 			return false;
 		$this->methodName = "duplicate";
-		
+
 		echo $this->renderWith(array('DataObjectManager_duplicate'));
 	}
-	
+
 	public function DuplicateForm()
 	{
 		return new Form(
@@ -1001,7 +1001,7 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 			)
 		);
 	}
-	
+
 	public function doDuplicate($data,$form)
 	{
 		if($obj = $this->dataObj()) {
@@ -1017,7 +1017,7 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 									if($related_objects = $obj->$name()) {
 										foreach($related_objects as $related_obj) {
 											$o = $related_obj->duplicate(false);
-											$o->$ownerID = $new->ID;	
+											$o->$ownerID = $new->ID;
 											$o->write();
 										}
 									}
@@ -1037,7 +1037,7 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 						}
 						$new->write();
 					}
-				}				
+				}
 			}
 			$ret = "$i " . _t('DataObjectManager.DUPLICATESCREATED','duplicate(s) created');
 			if(isset($data['Relations']) && $data['Relations'] == "1") $ret .= ", " . _t('DataObjectManager.WITHRELATIONS','with relations included');
@@ -1047,13 +1047,13 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 			$form->sessionMessage(_t('DataObjectManager.ERRORDUPLICATING','There was an error duplicating the object.'),'bad');
 		Director::redirectBack();
 	}
-	
-		
+
+
 	protected function getPrevID()
 	{
 	  return $this->itemList[$this->currentIndex - 1];
 	}
-	
+
 	protected function getNextID()
 	{
 	  return $this->itemList[$this->currentIndex + 1];
@@ -1065,40 +1065,40 @@ class DataObjectManager_ItemRequest extends ComplexTableField_ItemRequest
 		if(!$this->itemList || $this->currentIndex == sizeof($this->itemList)-1) return false;
 		return Controller::join_links($this->ctf->BaseLink() , 'item/' . $this->getNextID().'/edit',"?".$this->ctf->getQueryString());
 	}
-	
+
 	function PrevRecordLink()
 	{
 		if(!$this->itemList || $this->currentIndex == 0) return false;
 		return Controller::join_links($this->ctf->BaseLink() , 'item/' . $this->getPrevID().'/edit',"?".$this->ctf->getQueryString());
 	}
-			
-	
+
+
 	function HasPagination()
 	{
 	 return $this->NextRecordLink() || $this->PrevRecordLink();
 	}
-	
+
 	function HasDuplicate()
 	{
 		return $this->ctf->Can('duplicate');
 	}
-	
+
 	function SingleTitle()
 	{
 		return $this->ctf->SingleTitle();
 	}
-	
+
 	function DuplicateLink()
 	{
 		return Controller::join_links($this->ctf->BaseLink(),'duplicate'.$this->itemID);
 	}
-	
+
 	function HasRelated()
 	{
 		$has_many = singleton($this->ctf->SourceClass())->has_many();
 		return is_array($has_many) && !empty($has_many);
 	}
-	
+
 }
 
 class DataObjectManagerAction extends ViewableData
@@ -1109,13 +1109,13 @@ class DataObjectManagerAction extends ViewableData
 		'refresh' => 'refresh-button',
 		'window' => 'window-link'
 	);
-	
+
 	public $Title;
 	public $Behaviour;
 	public $ActionClass;
 	public $Link;
 	public $IconURL;
-	
+
 	public function __construct($title, $link, $behaviour = "popup", $icon = null, $class = null, $rel = null) {
 		parent::__construct();
 		$this->Title = $title;
@@ -1148,12 +1148,12 @@ class DOMUtil
         return implode(', ', $array).", $and $last";
     }
 	}
-	
+
 	public static function readable_class($string)
 	{
-    return ucwords(trim(strtolower(ereg_replace('([A-Z])',' \\1',$string))));	
+    return ucwords(trim(strtolower(preg_replace('([A-Z])',' \\1',$string))));
 	}
-	
+
   /**
    * Translates a camel case string into a string with underscores (e.g. firstName -&gt; first_name)
    * @param    string   $str    String in camel case format
@@ -1164,7 +1164,7 @@ class DOMUtil
     $func = create_function('$c', 'return "_" . strtolower($c[1]);');
     return preg_replace_callback('/([A-Z])/', $func, $str);
   }
- 
+
   /**
    * Translates a string with underscores into camel case (e.g. first_name -&gt; firstName)
    * @param    string   $str                     String in underscore format
@@ -1178,7 +1178,7 @@ class DOMUtil
     $func = create_function('$c', 'return strtoupper($c[1]);');
     return preg_replace_callback('/_([a-z])/', $func, $str);
   }
-	
+
 }
 
 

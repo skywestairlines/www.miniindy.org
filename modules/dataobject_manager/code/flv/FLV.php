@@ -1,13 +1,13 @@
 <?php
 
-class FLV extends File 
+class FLV extends File
 {
 	public static $allowed_file_types = array(
 		'flv','avi','mov','mpeg','mpg','m4a'
 	);
-  
+
   private static $has_ffmpeg = null;
-	private $allow_full_screen = true;	
+	private $allow_full_screen = true;
 	private static $ffmpeg_root = "";
 	private static $termination_code;
 	public static $player_count = 0;
@@ -26,18 +26,18 @@ class FLV extends File
 	public static $play_button_overlay = true;
 	// .gif is also available to support the IE6 world, or specify your own.
 	public static $default_video_icon_path = "dataobject_manager/code/flv/images/default_video.png";
-	
+
 	public static function set_ffmpeg_root($path)
 	{
 		if(substr($path,-1)!="/") $path .= "/";
 		self::$ffmpeg_root = $path;
 	}
-	
+
 	public static function has_ffmpeg()
 	{
 		// Cache this so we don't have to run a shell command every time.
 		if(self::$has_ffmpeg !== null) return self::$has_ffmpeg;
-		
+
 		$success = false;
 		if(extension_loaded('ffmpeg'))
 			$success = true;
@@ -46,18 +46,18 @@ class FLV extends File
 			if(self::$termination_code == 1) $success = true;
 		}
 		self::$has_ffmpeg = $success;
-    return self::$has_ffmpeg;	
+    return self::$has_ffmpeg;
 	}
-	
-	
+
+
 	public static function echo_ffmpeg_test()
 	{
-		
-		echo self::has_ffmpeg() ? "<span style='color:green'>FFMPEG is installed on your server and working properly. Code: ".self::$termination_code."</span>" : 
+
+		echo self::has_ffmpeg() ? "<span style='color:green'>FFMPEG is installed on your server and working properly. Code: ".self::$termination_code."</span>" :
 						"<span class='color:red'>FFMPEG does not appear to be installed on your server. Code: ".self::$termination_code."</span>";
 	}
-	
-	
+
+
 	protected static function ffmpeg($args)
 	{
 	   $descriptorspec = array(
@@ -65,52 +65,52 @@ class FLV extends File
 	       1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
 	       2 => array("pipe", "w") // stderr is a file to write to
 	   );
-	
+
 	   $pipes= array();
 	   $cmd = self::$ffmpeg_root."ffmpeg ".$args;
-	   self::log_command($cmd);	   
+	   self::log_command($cmd);
 	   $process = proc_open($cmd, $descriptorspec, $pipes);
-	
+
 	   $output= "";
-	
+
 	   if (!is_resource($process)) return false;
-	
+
 	   #close child's input immediately
 	   fclose($pipes[0]);
-	
+
 	   stream_set_blocking($pipes[1],false);
 	   stream_set_blocking($pipes[2],false);
-	
+
 	   $todo= array($pipes[1],$pipes[2]);
-	
+
 	   while( true ) {
 	       $read= array();
 	       if( !feof($pipes[1]) ) $read[]= $pipes[1];
 	       if( !feof($pipes[2]) ) $read[]= $pipes[2];
-	
+
 	       if (!$read) break;
-	
+
 	       $ready= stream_select($read, $write=NULL, $ex= NULL, 2);
-	
+
 	       if ($ready === false) {
 	           break; #should never happen - something died
 	       }
-	
+
 	       foreach ($read as $r) {
 	           $s= fread($r,1024);
 	           $output.= $s;
 	       }
 	   }
-	
+
 	   fclose($pipes[1]);
 	   fclose($pipes[2]);
-	
+
 	   self::$termination_code = proc_close($process);
 	   self::log_command($output);
 	   return $output;
-		
+
 	}
-	
+
 	private static function log_command($cmd)
 	{
     if(self::$log_file_path) {
@@ -121,79 +121,79 @@ class FLV extends File
       @fclose($f);
     }
 	}
-	
+
 	private function default_thumbnail()
 	{
 	   $img = new Image_Cached(self::$default_video_icon_path);
 	   $img->ID = $this->ID;
 	   return $img;
 	}
-		
+
 	private function SWFLink()
 	{
 		return Director::absoluteURL('dataobject_manager/code/flv/shadowbox/libraries/mediaplayer/player.swf');
 	}
-	
+
 	private function AllowFullScreen()
 	{
 		return $this->allow_full_screen ? "true" : "false";
 	}
-	
+
 	private static function remove_file_extension($filename)
 	{
-		$ext = strrchr($filename, '.');  
-		if($ext !== false)  
-			$filename = substr($filename, 0, -strlen($ext));  
+		$ext = strrchr($filename, '.');
+		if($ext !== false)
+			$filename = substr($filename, 0, -strlen($ext));
 		return $filename;
 	}
-	
+
 	private static function clean_file($str)
 	{
 		$t = strtolower($str);
 		$t = str_replace('&amp;','-and-',$t);
 		$t = str_replace('&','-and-',$t);
-		$t = ereg_replace('[^A-Za-z0-9]+','-',$t);
-		$t = ereg_replace('-+','-',$t);
+		$t = preg_replace('[^A-Za-z0-9]+','-',$t);
+		$t = preg_replace('-+','-',$t);
 		return $t;
 	}
-	
+
 	public function Icon()
 	{
 		return SAPPHIRE_DIR."/images/app_icons/mov_32.gif";
 	}
-	
+
 	public function FLVPath()
 	{
-		return self::remove_file_extension($this->Filename).".flv";		
+		return self::remove_file_extension($this->Filename).".flv";
 	}
-	
+
 	public function FLVLink()
 	{
 		return Director::absoluteURL($this->FLVPath());
 	}
-	
+
 	private function absoluteRawVideoLink()
 	{
-		return Director::baseFolder()."/".$this->Filename;	
+		return Director::baseFolder()."/".$this->Filename;
 	}
-	
+
 	private function absoluteFLVPath()
 	{
 		return Director::baseFolder()."/".$this->FLVPath();
 	}
-	
+
 	private function hasFLV()
 	{
 		return Director::fileExists($this->FLVPath());
 	}
-	
+
 	public function getThumbnail()
 	{
 	 if($img = DataObject::get_one("Image","\"Title\" = 'flv_thumb_{$this->ID}'"))
 	   return Director::fileExists($img->Filename) ? $img : false;
 	 return false;
 	}
-	
+
 	private function createFLV()
 	{
 		$args = sprintf("-i %s -ar %d -ab %d -f flv %s",
@@ -202,10 +202,10 @@ class FLV extends File
 			self::$audio_bit_rate,
 			$this->absoluteFLVPath()
 		);
-		
-		$output = self::ffmpeg($args);	
+
+		$output = self::ffmpeg($args);
 	}
-	
+
 	private function createThumbnail()
 	{
       $img_title = "flv_thumb_".$this->ID;
@@ -221,7 +221,7 @@ class FLV extends File
 				self::$thumbnail_seconds,
 				$abs_thumb
 			);
-			self::ffmpeg($args);	
+			self::ffmpeg($args);
 
 			$img = new Image();
 			$img->setField('ParentID',$folder->ID);
@@ -229,7 +229,7 @@ class FLV extends File
 			$img->Title = $img_title;
 			$img->write();
 	}
-	
+
 	public function onBeforeWrite()
 	{
 		parent::onBeforeWrite();
@@ -238,8 +238,8 @@ class FLV extends File
 		if(!$this->getThumbnail())
 		  $this->createThumbnail();
 	}
-	
-	
+
+
 	public function Player($width = null, $height = null)
 	{
 		if($width === null) $width = self::$video_width;
@@ -260,30 +260,30 @@ class FLV extends File
 		);
 		return "<div id='player-".self::$player_count."'>Loading...</div>";
 	}
-	
-	
+
+
 	public function forTemplate()
 	{
 		return $this->Player();
 	}
-	
+
 	public function VideoThumbnail()
 	{
 	  if(self::has_ffmpeg() && !$img = $this->getThumbnail())
 	    $this->createThumbnail();
     $img = $this->getThumbnail();
 	  return $img ? $img : $this->default_thumbnail();
-	  
+
 	}
-	
+
 	/**
 	 * SSViewer doesn't accept more than two arguments for template
 	 * functions. Here's a hack. If an arg is, e.g. 200x400 it will
 	 * split that into width/height for thumb for first arg, and popup
 	 * for second arg.
 	 *
-	 * Examples: 
-	 * $VideoPopup(450,200) : Returns a video popup with thumbnail 
+	 * Examples:
+	 * $VideoPopup(450,200) : Returns a video popup with thumbnail
 	 *                        450 width, 200 height. Popup is default dimensions
 	 *
 	 * $VideoPopup(450x200,800x600) : Returns a video popup with thumbnail
@@ -291,7 +291,7 @@ class FLV extends File
 	 *
 	 * $VideoPopup(450x200) : Same as first example.
 	 *
-	 */ 
+	 */
 	public function VideoPopup($arg1 = null, $arg2 = null)
 	{
 		$popup_width = null;
@@ -300,15 +300,15 @@ class FLV extends File
 		  list($thumb_width,$thumb_height) = explode("x",$arg1);
 		else
 		  $thumb_width = $arg1;
-		
+
 		if($arg2 !== null && stristr($arg2,"x"))
 		  list($popup_width,$popup_height) = explode("x",$arg2);
 		else
 		  $thumb_height = $arg2;
-		  
+
 		if($popup_width === null) $popup_width = self::$default_popup_width;
 		if($popup_height === null) $popup_height = self::$default_popup_height;
-		
+
 		return $this->customise(array(
 			'PopupWidth' => $popup_width,
 			'PopupHeight' => $popup_height,
@@ -319,7 +319,7 @@ class FLV extends File
 			'Thumbnail' => $this->VideoThumbnail()->CroppedImage($thumb_width, $thumb_height),
 			'PlayButton' => self::$play_button_overlay
 		))->renderWith(array('FLVpopup'));
-		
+
 	}
 }
 
