@@ -13,9 +13,9 @@ class HomePageController extends PageController
 {
 	public function init() {
 		parent::init();
-		Requirements::javascript('mysite/javascript/slides.min.jquery.js');
-		Requirements::javascript('mysite/javascript/homeCommon.js');
-		Requirements::CSS('sponsers/css/sponsor.css');
+		// Requirements::javascript('mysite/javascript/slides.min.jquery.js');
+		// Requirements::javascript('mysite/javascript/homeCommon.js');
+		// Requirements::CSS('sponsers/css/sponsor.css');
     }
 
     public function getAllSponsors()

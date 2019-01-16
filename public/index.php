@@ -5,6 +5,8 @@ use SilverStripe\Control\HTTPRequestBuilder;
 use SilverStripe\Core\CoreKernel;
 use SilverStripe\Core\Startup\ErrorControlChainMiddleware;
 
+define('TEMP_FOLDER', realpath(__DIR__.'/../server'));
+
 // Find autoload.php
 if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require __DIR__ . '/vendor/autoload.php';

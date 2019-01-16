@@ -10,6 +10,7 @@
 		<% require themedCSS('layout') %>
 		<% require themedCSS(typography) %>
 		<% require themedCSS(form) %>
+        <% require themedCSS('miniindy') %>
 
 		<!--[if IE 6]>
 			<style type="text/css">
@@ -27,26 +28,7 @@
 			 @import url(themes/miniindy/css/ie.css);
 			</style>
 		<![endif]-->
-		<script type="text/javascript"><!--//--><![CDATA[//><!--
-		startList = function() {
-			if (document.all&&document.getElementById) {
-				navRoot = document.getElementById("nav");
-				for (i=0; i<navRoot.childNodes.length; i++) {
-					node = navRoot.childNodes[i];
-					if (node.nodeName=="LI") {
-						node.onmouseover=function() {
-							this.className+=" over";
-						}
-						node.onmouseout=function() {
-							this.className=this.className.replace(" over", "");
-						}
-					}
-				}
-			}
-		}
-		window.onload=startList;
 
-		//--><!]]></script>
 
 	</head>
 <body>
@@ -77,5 +59,25 @@
 	<div id="Footer">
 		<% include Footer %>
 	</div>
+    <script type="text/javascript">
+        <% require themedJavascript('miniindy') %>
+		startList = function() {
+			if (document.all&&document.getElementById) {
+				navRoot = document.getElementById("nav");
+				for (i=0; i<navRoot.childNodes.length; i++) {
+					node = navRoot.childNodes[i];
+					if (node.nodeName=="LI") {
+						node.onmouseover=function() {
+							this.className+=" over";
+						}
+						node.onmouseout=function() {
+							this.className=this.className.replace(" over", "");
+						}
+					}
+				}
+			}
+		}
+		window.onload=startList;
+    </script>
 </body>
 </html>

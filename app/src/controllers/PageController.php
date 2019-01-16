@@ -56,10 +56,10 @@ class PageController extends ContentController
 			foreach ($ThemedCSS as $css) Requirements::themedCSS($css);
 		}
 
-		Requirements::javascript("//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
-		Requirements::javascript("mysite/javascript/jquery.color.fade.js");
-		Requirements::javascript("mysite/javascript/jquery.expanding.menu.js");
-		Requirements::javascript("mysite/javascript/expandCustom.js");
+		// Requirements::javascript("//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
+		// Requirements::javascript("mysite/javascript/jquery.color.fade.js");
+		// Requirements::javascript("mysite/javascript/jquery.expanding.menu.js");
+		// Requirements::javascript("mysite/javascript/expandCustom.js");
 	}
 	
 	/**
@@ -105,7 +105,7 @@ class PageController extends ContentController
 	 * @return void
 	 */
 	public function GetStaticSidebar() {
-		return DataObject::get('StaticSidebar');
+		// return DataObject::get('StaticSidebar');
 	}
 	
 	public function showFooterLinks() {
