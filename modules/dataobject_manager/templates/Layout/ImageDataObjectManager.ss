@@ -16,7 +16,7 @@
 	<div class="top-controls">
 		<div class="rounded_table_top_right">
 			<div class="rounded_table_top_left">
-				
+
 				<div id="size-control-wrap" class="position{$SliderPosition}"><img src="dataobject_manager/images/zoom_out.gif" class="out" /><div class="size-control"></div><img src="dataobject_manager/images/zoom_in.gif" class="in"/></div>
 				<div class="Pagination">
 					<% if FirstLink %><a class="First" href="$FirstLink" title="<% _t('DataObjectManager.VIEWFIRST', 'View first') %> $PageSize"><img src="dataobject_manager/images/resultset_first.png" alt="" /></a>
@@ -76,8 +76,8 @@
 										<% end_control %>
 									</span>
 								</div>
-						
-	
+
+
 					</li>
 				<% end_control %>
 				<% else %>
@@ -97,7 +97,7 @@
 				<div class="per-page-control">
 					<% if ShowAll %><% else %>$PerPageDropdown<% end_if %>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
