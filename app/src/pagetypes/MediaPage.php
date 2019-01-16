@@ -1,6 +1,6 @@
 <?php
 
-class Page extends SiteTree {
+class MediaPage extends Page {
 
 	private static $db = array(
 		'ShowInFooter' => 'Boolean',

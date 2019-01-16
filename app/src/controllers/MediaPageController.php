@@ -1,6 +1,6 @@
 <?php
 
-class Page_Controller extends ContentController
+class MediaPage_Controller extends Page_Controller
 {
 
 	/**
@@ -36,21 +36,26 @@ class Page_Controller extends ContentController
 	 */
 	public function init() {
 		parent::init();
-		$ThemedCSS = array(
-			'layout', 'typography', 'form', 'dropdown'
-		);
 
-		if(Director::isLive()){
-			Requirements::combine_files('css/styles.css', $ThemedCSS);
-		}
-		else{
-			foreach ($ThemedCSS as $css) Requirements::themedCSS($css);
-		}
-
-		Requirements::javascript("//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
+		// Note: you should use SS template require tags inside your templates 
+		// instead of putting Requirements calls here.  However these are 
+		// included so that our older themes still work
+		Requirements::themedCSS('layout'); 
+		Requirements::themedCSS('typography'); 
+		Requirements::themedCSS('form');
+		Requirements::themedCSS('dropdown');
+		//$themeFolder . '/css/dropdown.css',
+		
+		// clearing search box when user clicks in it
+		// this conflicts with FlickrServices
+		Requirements::javascript("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
 		Requirements::javascript("mysite/javascript/jquery.color.fade.js");
 		Requirements::javascript("mysite/javascript/jquery.expanding.menu.js");
 		Requirements::javascript("mysite/javascript/expandCustom.js");
+		#Requirements::javascript("gallery/javascript/prototype.js");
+		//Requirements::javascript("http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js");
+		#Requirements::javascript( "gallery/javascript/effects.js" );
+		#Requirements::javascript( "gallery/javascript/lightwindow.js" );
 	}
 	
 	/**

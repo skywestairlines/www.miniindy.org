@@ -1,6 +1,6 @@
 <?php
 
-class Page extends SiteTree {
+class ClosedRegPage extends Page {
 
 	private static $db = array(
 		'ShowInFooter' => 'Boolean',
@@ -8,17 +8,17 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array();
-	
+
 	private static $icon = 'mysite/icons/page';
-	
+
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 		$f->addFieldToTab("Root.Behaviour", new TextField("FooterSortOrder", "Sort Order in Footer"), 'ProvideComments');
 		$f->addFieldToTab("Root.Behaviour", new CheckboxField("ShowInFooter", "Show in footer menu?"), 'FooterSortOrder');
-		
+
 		//$fields->addFieldToTab('Root.FeedbackForm', new CheckboxField('ShowFeedbackForm', 'Show Feedback Form on this page?'));
 		//$fields->addFieldToTab('Root.FeedbackForm', new WidgetAreaEditor('myWidgets'));
-		
+
 		// remove tabs if user is NOT admin!
 		if(!Permission::check('ADMIN')) {
         	$f->removeByName('Behaviour');

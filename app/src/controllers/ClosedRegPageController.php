@@ -1,6 +1,6 @@
 <?php
 
-class Page_Controller extends ContentController
+class ClosedRegPage_Controller extends Page_Controller
 {
 
 	/**
@@ -20,7 +20,7 @@ class Page_Controller extends ContentController
 	 */
 	/**
 	 * allowed_actions
-	 * 
+	 *
 	 * @var mixed
 	 * @access public
 	 * @static
@@ -30,32 +30,37 @@ class Page_Controller extends ContentController
 
 	/**
 	 * init function.
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
 	public function init() {
 		parent::init();
-		$ThemedCSS = array(
-			'layout', 'typography', 'form', 'dropdown'
-		);
 
-		if(Director::isLive()){
-			Requirements::combine_files('css/styles.css', $ThemedCSS);
-		}
-		else{
-			foreach ($ThemedCSS as $css) Requirements::themedCSS($css);
-		}
+		// Note: you should use SS template require tags inside your templates
+		// instead of putting Requirements calls here.  However these are
+		// included so that our older themes still work
+		Requirements::themedCSS('layout');
+		Requirements::themedCSS('typography');
+		Requirements::themedCSS('form');
+		Requirements::themedCSS('dropdown');
+		//$themeFolder . '/css/dropdown.css',
 
-		Requirements::javascript("//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
+		// clearing search box when user clicks in it
+		// this conflicts with FlickrServices
+		Requirements::javascript("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
 		Requirements::javascript("mysite/javascript/jquery.color.fade.js");
 		Requirements::javascript("mysite/javascript/jquery.expanding.menu.js");
 		Requirements::javascript("mysite/javascript/expandCustom.js");
+		#Requirements::javascript("gallery/javascript/prototype.js");
+		//Requirements::javascript("http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js");
+		#Requirements::javascript( "gallery/javascript/effects.js" );
+		#Requirements::javascript( "gallery/javascript/lightwindow.js" );
 	}
-	
+
 	/**
 	 * SearchForm function.
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
@@ -70,10 +75,10 @@ class Page_Controller extends ContentController
 
 	  	return new SearchForm($this, "SearchForm", $fields, $actions);
 	}
-	
+
 	/**
 	 * Process and render search results function.
-	 * 
+	 *
 	 * @access public
 	 * @param mixed $data
 	 * @param mixed $form
@@ -88,17 +93,17 @@ class Page_Controller extends ContentController
 
 	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
 	}
-	
+
 	/**
 	 * GetStaticSidebar function. custom side bars for Reg & hotels
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
 	public function GetStaticSidebar() {
 		return DataObject::get('StaticSidebar');
 	}
-	
+
 	public function showFooterLinks() {
 		return DataObject::get('Page', 'ShowInFooter = 1', 'FooterSortOrder ASC');
 	}
