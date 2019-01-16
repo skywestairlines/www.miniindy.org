@@ -6,11 +6,11 @@
 _ss_environment.php
 
 # ignore composer vendor folder
-/vendor/
-/framework/
-/cms/
-/siteconfig/
-/reports/
+/vendor
+/framework
+/cms
+/siteconfig
+/reports
 .phpintel
 /themes/simple
 
