@@ -48,7 +48,8 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "@php \"file_exists('_ss_environment.php') || copy('_ss_environment.example.php','_ss_environment.php');\""
+            "@php -r \"file_exists('_ss_environment.php') || copy('_ss_environment.example.php','_ss_environment.php');\"",
+            "@php -r \"file_exists('mysite/_config.php') || copy('mysite/_config.example.php','mysite/_config.php');\""
         ]
     },
     "config": {
