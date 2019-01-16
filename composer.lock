@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44416c520a2e56d7a37106c9a25ca941",
+    "content-hash": "ffc2f2854cf91dec6fece63619672d03",
     "packages": [
         {
             "name": "composer/installers",
@@ -127,6 +127,48 @@
             "time": "2018-08-27T06:10:37+00:00"
         },
         {
+            "name": "hudhaifas/silverstripe-dataobject-manager",
+            "version": "3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hudhaifas/silverstripe-dataobject-manager.git",
+                "reference": "772aca70f2436b4f1d3769309baee8b64ab3c239"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hudhaifas/silverstripe-dataobject-manager/zipball/772aca70f2436b4f1d3769309baee8b64ab3c239",
+                "reference": "772aca70f2436b4f1d3769309baee8b64ab3c239",
+                "shasum": ""
+            },
+            "require": {
+                "samthejarvis/silverstripe-watermarking": "dev-master",
+                "silverstripe/cms": "~3.0",
+                "silverstripe/framework": "~3.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "dataobject-manager"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hudhaifa Shatnawi",
+                    "email": "me@hudhaifa.com"
+                }
+            ],
+            "description": "Wrap any Silverstripe DataObject in a page.",
+            "homepage": "https://github.com/hudhaifas/silverstripe-dataobject-manager",
+            "keywords": [
+                "dataobject",
+                "page",
+                "silverstripe"
+            ],
+            "time": "2018-04-10T01:37:17+00:00"
+        },
+        {
             "name": "mustangostang/spyc",
             "version": "0.6.2",
             "source": {
@@ -175,6 +217,46 @@
                 "yml"
             ],
             "time": "2017-02-24T16:06:33+00:00"
+        },
+        {
+            "name": "samthejarvis/silverstripe-watermarking",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samthejarvis/silverstripe-watermarking.git",
+                "reference": "348cda6bd1c615cd7f25855bb3ce4128fbfb1832"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samthejarvis/silverstripe-watermarking/zipball/348cda6bd1c615cd7f25855bb3ce4128fbfb1832",
+                "reference": "348cda6bd1c615cd7f25855bb3ce4128fbfb1832",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "watermarking"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Jarvis",
+                    "email": "sam@samjarv.is"
+                }
+            ],
+            "description": "Watermarking for images in SilverStripe",
+            "keywords": [
+                "images",
+                "silverstripe",
+                "watermark",
+                "watermarking"
+            ],
+            "time": "2016-02-19T23:27:33+00:00"
         },
         {
             "name": "silverstripe-labs/googleanalytics",

@@ -12,7 +12,8 @@
         "silverstripe-labs/googleanalytics": "*",
         "wilr/silverstripe-googlesitemaps": "*",
         "tractorcow/silverstripe-imagegallery": "*",
-        "silverstripe/forum": "*"
+        "silverstripe/forum": "*",
+        "hudhaifas/silverstripe-dataobject-manager": "3"
 
     },
     "require-dev": {
@@ -30,7 +31,9 @@
                 "tractorcow/silverstripe-imagegallery",
                 "silverstripe-labs/youtubeservice",
                 "silverstripe/forum",
-                "lekoala/silverstripe-debugbar"
+                "lekoala/silverstripe-debugbar",
+                "hudhaifas/silverstripe-dataobject-manager",
+                "samthejarvis/silverstripe-watermarking"
             ]
         }
     },

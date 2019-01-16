@@ -18,7 +18,7 @@ class HomePage extends Page {
 
         $f = parent::getCMSFields();
 
-        $dom = new ImageDataObjectManager(
+        $dom = new ManageableDataObject(
 			$this,
 			'SliderImages',
 			'SliderImage'
