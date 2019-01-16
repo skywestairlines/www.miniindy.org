@@ -15,7 +15,7 @@
  */
 
 // This is the URL of the script that everything must be viewed with.
-define('BASE_SCRIPT_URL', 'index.php/');
+define('BASE_SCRIPT_URL', '');
 
 $ruLen = strlen($_SERVER['REQUEST_URI']);
 $snLen = strlen($_SERVER['SCRIPT_NAME']);

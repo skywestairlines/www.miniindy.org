@@ -1,10 +1,10 @@
 <?php
 /**
- * 
+ *
  * @todo Remove customized dependencies on js-libraries (lightwindow, scriptaculous, prototype)
  */
 class YoutubeGallery extends Page {
- 
+
    // define your database fields here - for example we have author
    static $db = array(
    		"Method" => "Int",
@@ -16,15 +16,15 @@ class YoutubeGallery extends Page {
    		"ShowVideoInPopup" => "Boolean", // either show thumbs (default) or video objects
 		"Sortby" => "Varchar"
    );
-   
+
    static $defaults = array(
 		"Method" => 1,
 		"PerPage" => 10,
 		"Sortby" => 'relevance'
 	);
-   
+
   static $icon = "youtubeservice/images/youtube";
-  
+
 	/**
 	 * Internal cache to avoid hitting the API more than once
 	 * per page-rendering.
@@ -32,14 +32,14 @@ class YoutubeGallery extends Page {
 	 * @var DataObjectSet
 	 */
 	protected $_cachedVideos = null;
- 
+
    // add custom fields for this youtube gallery page
-   function getCMSFields($cms) {
+   function getCMSFields() {
    	  // We should uncomment this when you can load and unload javascript files dynamically at any time via Javascript
    	  // See http://open.silverstripe.com/ticket/594
    	  //Requirements::javascript( 'youtubeservice/javascript/YoutubeGallery_CMS.js' );
-   	  
-      $fields = parent::getCMSFields($cms);
+
+      $fields = parent::getCMSFields();
       $fields->addFieldToTab("Root.Content.Videos", new DropdownField("Method", "Select ", array(
 				'1' => 'Videos containing phrase',
 				'2' => 'Videos by Category or Tag',
@@ -49,7 +49,7 @@ class YoutubeGallery extends Page {
       $fields->addFieldToTab("Root.Content.Videos", new TextField("User","Youtube Username"));
       $fields->addFieldToTab("Root.Content.Videos", new TextField("Query","Search for"));
       $fields->addFieldToTab("Root.Content.Videos", new TextField("CategoryTag", "Category or Tag"));
-      $fields->addFieldToTab("Root.Content.Videos", new TextField("Playlist", "Playlist ID"));      
+      $fields->addFieldToTab("Root.Content.Videos", new TextField("Playlist", "Playlist ID"));
       $fields->addFieldToTab("Root.Content.Videos", new CheckboxField("ShowVideoInPopup", "Show videos in a popup (rather than external link)"));
       $fields->addFieldToTab("Root.Content.Videos", new NumericField("PerPage", "Per Page", 10));
       $fields->addFieldToTab("Root.Content.Videos", new DropdownField("Sortby", "Sort by (descending)", array(
@@ -60,13 +60,13 @@ class YoutubeGallery extends Page {
 				'rating' => 'Most Rated',
 				'daterecorded' => 'Date Recorded',
       )));
-      
+
       return $fields;
    }
-   
+
    function YoutubeVideos(){
 		if($this->_cachedVideos) return $this->_cachedVideos;
-   	
+
    		$youtube = new YoutubeService();
 		$page = isset($_GET['page'])? (int)$_GET['page']: 1;
 		$start_index = (($page-1) * $this->PerPage) + 1 ;
@@ -88,16 +88,16 @@ class YoutubeGallery extends Page {
 				$videos = $youtube->getPlaylist($this->Playlist, $this->PerPage, $start_index, $this->Sortby);
 				break;
 		}
-		
+
 		// caching
 		$this->_cachedVideos = $videos;
-			
+
 		return $videos;
 	}
 
-	function flushCache() {
-		parent::flushCache();
-		
+	function flushCache($persistent = true) {
+		parent::flushCache($persistent);
+
 		unset($this->_cachedVideos);
 	}
 }
@@ -122,12 +122,12 @@ class YoutubeGallery_Controller extends Page_Controller {
 			Requirements::javascript("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
 			Requirements::javascript("youtubeservice/javascript/jquery.prettyPhoto.js");
 			Requirements::javascript("youtubeservice/javascript/prettyphoto_init.js");
-			
+
 			//Requirements::css("youtubeservice/css/lightwindow.css");
 			Requirements::css("youtubeservice/css/prettyPhoto.css");
 		}
-      
-      parent::init();	
+
+      parent::init();
    }
 
 }

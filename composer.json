@@ -3,21 +3,21 @@
     "description": "The SilverStripe Framework Installer",
     "require": {
         "php": ">=5.3.3",
-        "silverstripe/cms": "3.6.3@stable",
-        "silverstripe/framework": "3.6.3@stable",
-        "silverstripe/reports": "3.6.3@stable",
-        "silverstripe/siteconfig": "3.6.3@stable",
+        "silverstripe/cms": "^3.7",
+        "silverstripe/framework": "^3.7",
+        "silverstripe/reports": "^3.7",
+        "silverstripe/siteconfig": "^3.7",
         "silverstripe-themes/simple": "3.1.*",
 
-        "silverstripe-labs/googleanalytics": "dev-master",
-        "wilr/silverstripe-googlesitemaps": "^1.6",
-        "tractorcow/silverstripe-imagegallery": "^3",
-        "silverstripe/forum": "dev-master"
+        "silverstripe-labs/googleanalytics": "*",
+        "wilr/silverstripe-googlesitemaps": "*",
+        "tractorcow/silverstripe-imagegallery": "*",
+        "silverstripe/forum": "*"
 
     },
     "require-dev": {
         "phpunit/phpunit": "^3 || ^4 || ^5",
-        "lekoala/silverstripe-debugbar": "^1"
+        "lekoala/silverstripe-debugbar": "*"
     },
     "extra": {
         "branch-alias": {
@@ -30,7 +30,6 @@
                 "tractorcow/silverstripe-imagegallery",
                 "silverstripe-labs/youtubeservice",
                 "silverstripe/forum",
-
                 "lekoala/silverstripe-debugbar"
             ]
         }
