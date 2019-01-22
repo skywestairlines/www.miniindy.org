@@ -9,6 +9,9 @@ _ss_environment.php
 /framework
 /cms
 /siteconfig
+themes/simple
 /reports
 /.phpintel
 /.vscode
+
+*.sql
