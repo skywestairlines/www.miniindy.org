@@ -1,4 +1,4 @@
-<% include menu2 %>
+<% include Menu(2) %>
 <% include SideBar %>
 <div id="Content" class="typography">
 	<% include Breadcrumbs %>

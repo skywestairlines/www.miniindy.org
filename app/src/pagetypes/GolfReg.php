@@ -2,9 +2,10 @@
 
 namespace App\Pagetypes;
 
-use SilverStripe\Forms\DropdownField;
 use Page;
-use HtmlEditorField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\HtmlEditor\HtmlEditorField;
 
 
 

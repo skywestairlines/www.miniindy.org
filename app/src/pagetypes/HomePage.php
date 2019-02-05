@@ -4,8 +4,8 @@ namespace App\Pagetypes;
 
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Security\Permission;
+use SilverStripe\Forms\GridField\GridField;
 use Page;
-use ManageableDataObject;
 
 
 
@@ -30,14 +30,14 @@ class HomePage extends Page {
 
         $f = parent::getCMSFields();
 
-        $dom = new ManageableDataObject(
-			$this,
+        $dom = new GridField(
 			'SliderImages',
-			'SliderImage'
+			'SliderImages',
+			$this->SliderImages()
 		);
-		$dom->setUploadFolder('Uploads/HomePageHeroImages');
-		$dom->setAllowedFileTypes($a);
-		$dom->setPageSize(20);
+		// $dom->setUploadFolder('Uploads/HomePageHeroImages');
+		// $dom->setAllowedFileTypes($a);
+		// $dom->setPageSize(20);
 
         // this should be a drop down from the Files & Images tab!
         $f->addFieldToTab('Root.SliderImages', new LiteralField('ImageFolder', '<p>Hero Images need to be 620x294 or at that ratio if larger.</p>'));

@@ -60,6 +60,7 @@
 		<% include Footer %>
 	</div>
     <script type="text/javascript">
+		<%-- <% require themedJavascript('miniindy') %> --%>
         <% require themedJavascript('miniindy') %>
 		startList = function() {
 			if (document.all&&document.getElementById) {
