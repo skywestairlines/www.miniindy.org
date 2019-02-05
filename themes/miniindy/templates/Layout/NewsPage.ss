@@ -6,12 +6,12 @@
 		<% end_if %>
 		<h2>$Title</h2>
 		$Content
-		<% if NewsEntries %><% loop NewsEntries %>
+		<% if NewsEntries %><% control NewsEntries %>
 		<p>
 			<strong>$NewsDate.Format(F d), $NewsDate.Format(Y)</strong>
 			<br />
 			$Title &nbsp;<a href="$PDF.link" target="_blank">Click here for more details.</a>
 		</p>
-		<% end_loop %><% end_if %>
+		<% end_control %><% end_if %>
 	</div><%-- END CONTENT --%>
 </div>

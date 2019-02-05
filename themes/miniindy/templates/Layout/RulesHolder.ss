@@ -11,13 +11,13 @@
 		<h2>$Title</h2>
 	
 		<ul id="RulesList">
-			<% loop GetRulesPages %>
+			<% control GetRulesPages %>
 				<li><a href="javascript:void(0);" class="holder" id="Section$ID">$Title</a>
 					<ul class="bobo" style="display:none;">
 						<li class="ruleContent">$Content</li>
 					</ul>
 				</li>
-			<% end_loop %>
+			<% end_control %>
 		</ul>
 		
 	<% if Menu(2) %>

@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
 
   <head>
-		$MetaTags(false)
-		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
 		<% base_tag %>
+		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
+		$MetaTags(false)
 		<link rel="shortcut icon" href="/favicon.ico" />
 
-		<% require themedCSS('layout') %>
+		<% require themedCSS(layout) %>
 		<% require themedCSS(typography) %>
 		<% require themedCSS(form) %>
 
@@ -58,7 +58,6 @@
 	   		<div class="RegNavLink">
 	   			<a href="/miniindy-registration/">Registration Is Open!</a>
 	   		</div>
-
 		</div>
 
 		<div id="Navigation">

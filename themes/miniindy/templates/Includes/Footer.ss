@@ -7,7 +7,7 @@
 </p>
 <p class="middle">
 	<a href="site-map/">Site Map</a> | 
-	<% loop showFooterLinks %><a href="$Link">$MenuTitle.XML</a><% if Last %><% else %> | <% end_if %><% end_loop %>
+	<% control showFooterLinks %><a href="$Link">$MenuTitle.XML</a><% if Last %><% else %> | <% end_if %><% end_control %>
 	<!-- <a href="miniindy-teams/">Teams</a> | 
 	<a href="about-miniindy/">About</a> | 
 	<a href="contact-miniindy/">Contact</a> -->

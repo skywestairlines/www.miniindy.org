@@ -13,11 +13,11 @@
 		<!--$Content-->
 		
 		<ul id="TeamList">
-			<% loop GetResultsPages %>
+			<% control GetResultsPages %>
 				<li>
 					<div class="teamName"><a href="$Link">$Title</a></div>
 				</li>
-			<% end_loop %>
+			<% end_control %>
 		</ul>
 		
 	<% if Menu(2) %>
