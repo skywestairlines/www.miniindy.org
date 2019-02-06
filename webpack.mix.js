@@ -18,22 +18,19 @@ mix.setPublicPath('./public/dist')
 let lib = resolve(__dirname, './themes/');
 
 fs.readdirSync(lib).forEach(function(mod) {
-    var modPath = join(lib, mod)
-    // mix.setPublicPath('themes');
+    var modPath = join(lib, mod);
 
-    var appJs = join(modPath, 'assets', 'js', 'scripts.js')
-    var mixJs = join(mod, 'javascript', mod.toLowerCase() + '.js')
+    var appJs = join(modPath, 'assets', 'js', 'scripts.js');
+    var mixJs = join('js', mod.toLowerCase() + '.js');
 
-    if (fs.existsSync(appJs)) mix.setPublicPath('themes').js(appJs, mixJs)
+    if (fs.existsSync(appJs)) mix.js(appJs, mixJs);
 
-    var appScss = join(modPath, 'assets', 'sass', 'styles.scss')
-    var mixCss = join(mod, 'css', mod.toLowerCase() + '.css')
+    var appScss = join(modPath, 'assets', 'sass', 'styles.scss');
+    var mixCss = join('css', mod.toLowerCase() + '.css');
 
-    if (fs.existsSync(appScss)) mix.setPublicPath('themes').sass(appScss, mixCss)
-
-    mix.setPublicPath('public/dist');
+    if (fs.existsSync(appScss)) mix.sass(appScss, mixCss);
 });
 
-if (mix.inProduction()) {
-    mix.version();
-}
+// if (mix.inProduction()) {
+//     mix.version();
+// }

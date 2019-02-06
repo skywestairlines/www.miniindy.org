@@ -6,11 +6,7 @@
 		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
 		<% base_tag %>
 		<link rel="shortcut icon" href="/favicon.ico" />
-
-		<% require themedCSS('layout') %>
-		<% require themedCSS(typography) %>
-		<% require themedCSS(form) %>
-        <% require themedCSS('miniindy') %>
+        <% require css('dist/css/miniindy.css') %>
 
 		<!--[if IE 6]>
 			<style type="text/css">
@@ -59,9 +55,9 @@
 	<div id="Footer">
 		<% include Footer %>
 	</div>
+    <%-- <% require themedJavascript('miniindy') %> --%>
+    <% require javascript('dist/js/miniindy.js') %>
     <script type="text/javascript">
-		<%-- <% require themedJavascript('miniindy') %> --%>
-        <% require themedJavascript('miniindy') %>
 		startList = function() {
 			if (document.all&&document.getElementById) {
 				navRoot = document.getElementById("nav");

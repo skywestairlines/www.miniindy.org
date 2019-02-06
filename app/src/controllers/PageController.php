@@ -29,7 +29,7 @@ class PageController extends ContentController
 	 */
 	/**
 	 * allowed_actions
-	 * 
+	 *
 	 * @var mixed
 	 * @access public
 	 * @static
@@ -39,32 +39,32 @@ class PageController extends ContentController
 
 	/**
 	 * init function.
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
 	public function init() {
 		parent::init();
-		$ThemedCSS = array(
-			'layout', 'typography', 'form', 'dropdown'
-		);
+		// $ThemedCSS = array(
+		// 	'layout', 'typography', 'form', 'dropdown'
+		// );
 
-		if(Director::isLive()){
-			Requirements::combine_files('css/styles.css', $ThemedCSS);
-		}
-		else{
-			foreach ($ThemedCSS as $css) Requirements::themedCSS($css);
-		}
+		// if(Director::isLive()){
+		// 	Requirements::combine_files('css/styles.css', $ThemedCSS);
+		// }
+		// else{
+		// 	foreach ($ThemedCSS as $css) Requirements::themedCSS($css);
+		// }
 
 		// Requirements::javascript("//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
 		// Requirements::javascript("mysite/javascript/jquery.color.fade.js");
 		// Requirements::javascript("mysite/javascript/jquery.expanding.menu.js");
 		// Requirements::javascript("mysite/javascript/expandCustom.js");
 	}
-	
+
 	/**
 	 * SearchForm function.
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
@@ -79,10 +79,10 @@ class PageController extends ContentController
 
 	  	return new SearchForm($this, SearchForm::class, $fields, $actions);
 	}
-	
+
 	/**
 	 * Process and render search results function.
-	 * 
+	 *
 	 * @access public
 	 * @param mixed $data
 	 * @param mixed $form
@@ -97,17 +97,17 @@ class PageController extends ContentController
 
 	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
 	}
-	
+
 	/**
 	 * GetStaticSidebar function. custom side bars for Reg & hotels
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
 	public function GetStaticSidebar() {
 		// return DataObject::get('StaticSidebar');
 	}
-	
+
 	public function showFooterLinks() {
 		return DataObject::get('Page', 'ShowInFooter = 1', 'FooterSortOrder ASC');
 	}

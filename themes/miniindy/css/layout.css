@@ -90,33 +90,33 @@ caption, th, td {
 	overflow: hidden;
 	/*border: 1px solid green;*/
 	/*background: #58ade1 url(../images/header.gif) repeat-x left center;*/
-}
- 	#Header h1 { 
+ 	h1 { 
 	  	color: #fff; 
 		font-size: 3.2em; 
 		font-family: Tahoma, Verdana, sans-serif;
 		font-weight: 300;
 		padding: 20px 0 0 30px;
 	}
-	#Header p {
+	p {
 		font-size: 1.4em;
 		color: #fff;
 		clear: left;
 		margin: 0 0 0 100px;
-	}
+    }
+}
 .RegNavLink {
 	float: right;
 	margin: -35px 20px 0 0;
 	font: 36px/36px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
-}
-.RegNavLink a {
-	color: #1c305d;
-	text-decoration: none;
-}
-.RegNavLink a:hover {
-	color: #b2d45e;
-	text-decoration: none;
-}
+    a {
+        color: #1c305d;
+        text-decoration: none;
+        
+    a:hover {
+        color: #b2d45e;
+        text-decoration: none;
+    }
+  }
 .rightLogo{
 	float:right;
 	margin:-80px 20px 0 0;

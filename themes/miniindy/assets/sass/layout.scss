@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'impact';
+    src: url('../fonts/321impact-webfont.eot');
+    src: url('../fonts/321impact-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/321impact-webfont.woff') format('woff'),url('../fonts/321impact-webfont.ttf') format('truetype'),url('../fonts/321impact-webfont.svg#321impactRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #333;
+    font-size: 62.5%;
+    margin-bottom: 40px;
+    font-family: Verdana,Lucida,sans-serif;
+    height: 100%;
+}
+html {
+    background: #626467 url(../images/bg.jpg) repeat fixed;
+    height: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.homeTable td {
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+.clear {
+    clear: both;
+}
+.tuneIn {
+    font-weight: bold;
+    color: black;
+    font-size: x-large;
+}
+#BgContainer {
+    width: 1024px;
+    margin: 0 auto;
+}
+#Container {
+    width: 960px;
+    padding-bottom: 15px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 20px auto -190px;
+}
+#Layout {
+    width: 960px;
+    clear: both;
+    overflow: hidden;
+    margin: 15px auto;
+}
+#Content {
+    width: 630px;
+    float: left;
+    margin: 0 0 0 10px;
+    text-align: left;
+}
+#Header {
+    width: 925px;
+    margin: 0 auto;
+    overflow: hidden;
+    h1 {
+        color: #fff;
+        font-size: 3.2em;
+        font-family: Tahoma,Verdana,sans-serif;
+        font-weight: 300;
+        padding: 20px 0 0 30px;
+    }
+    p {
+        font-size: 1.4em;
+        color: #fff;
+        clear: left;
+        margin: 0 0 0 100px;
+    }
+}
