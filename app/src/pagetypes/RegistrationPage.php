@@ -1,11 +1,12 @@
 <?php
 
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CurrencyField;
-use SilverStripe\Forms\HtmlEditor\HTMLEditorField;
+use SilverStripe\ORM\FieldType\DBText;
+use SilverStripe\ORM\FieldType\DBMoney;
 use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\ORM\FieldType\DBHTMLText;
-use SilverStripe\ORM\FieldType\DBMoney;
-use SilverStripe\ORM\FieldType\DBText;
+use SilverStripe\Forms\HtmlEditor\HTMLEditorField;
 
 class RegistrationPage extends Page
 {
@@ -45,7 +46,7 @@ class RegistrationPage extends Page
         ], 'Metadata');
 
         $fields->addFieldsToTab('Root.ChecksAndPO', [
-            $fields->getFieldByName("Root.Main.Content"),
+            new HTMLEditorField('Content', 'Registration Info'),
             new HTMLEditorField('checkPO', 'Checks & P.O.s')
         ]);
 
