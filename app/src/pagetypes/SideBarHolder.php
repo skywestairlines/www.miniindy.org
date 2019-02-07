@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
+
+
 
 
 class SideBarHolder extends Page {
@@ -14,5 +14,5 @@ class SideBarHolder extends Page {
 	
 	private static $allowed_children = array('StaticSidebar');
 	
-	private static $icon = 'mysite/icons/zones';
+	private static $icon = 'client/icons/zones';
 }

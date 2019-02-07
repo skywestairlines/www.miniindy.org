@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Pagetypes;
+
 
 use SilverStripe\Security\Permission;
-use Page;
-use ImageUploadField;
+
+
 
 
 

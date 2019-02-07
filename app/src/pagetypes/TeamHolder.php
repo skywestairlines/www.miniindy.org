@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
+
+
 use App\Pagetypes\TeamPage;
 
 
@@ -16,5 +16,5 @@ class TeamHolder extends Page {
 	
 	private static $allowed_children = array(TeamPage::class, 'Forum');
 	
-	private static $icon = 'mysite/icons/users';
+	private static $icon = 'client/icons/users';
 }

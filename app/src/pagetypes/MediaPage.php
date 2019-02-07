@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Pagetypes;
+
 
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Security\Permission;
-use Page;
+
 
 
 
@@ -21,7 +21,7 @@ class MediaPage extends Page {
 
 	private static $has_one = array();
 	
-	private static $icon = 'mysite/icons/page';
+	private static $icon = 'client/icons/page';
 	
 	public function getCMSFields() {
 		$f = parent::getCMSFields();

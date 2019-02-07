@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
+
+
 
 
 class ResultsPage extends Page {
@@ -13,7 +13,7 @@ class ResultsPage extends Page {
 	private static $has_one = array();//'Photo' => 'Image');
 	private static $defaults = array();//'ShowInMenus' => false);
 	
-	private static $icon = 'mysite/icons/trophy';
+	private static $icon = 'client/icons/trophy';
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

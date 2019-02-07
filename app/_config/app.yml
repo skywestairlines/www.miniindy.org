@@ -1,9 +1,13 @@
-use SilverStripe\ORM\FieldType\DBDate;
 ---
 Name: myapp
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
+  
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtension
+    
+SilverStripe\Assets\Image:
+  extensions:
+    - ImageExtension

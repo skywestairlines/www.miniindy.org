@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
-use DataObjectManager;
+
+
+
 
 
 class FlyerPage extends Page {
@@ -18,7 +18,7 @@ class FlyerPage extends Page {
 	private static $can_be_root = false;
 	private static $allowed_children = 'none';
 	
-	private static $icon = 'mysite/icons/flyer';
+	private static $icon = 'client/icons/flyer';
 	
 	public function getCMSFields() {
 		$f = parent::getCMSFields();

@@ -19,10 +19,9 @@ class SliderImage extends DataObject {
 		'HomePage' => HomePage::class,
 	);
 
-	// private static $summary_fields = [
-	// 	"Photo" => "Photo.CMSThumbnail",
-	// 	'Link' => "Link",
-	// ];
+	private static $summary_fields = [
+        "Photo.CMSThumbnail" => "Photo"
+	];
 
 	public function SlideShowImage() {
 		return $this->Photo()->SetRatioSize('437', '263');

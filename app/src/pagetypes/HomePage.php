@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Pagetypes;
-
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Security\Permission;
 use SilverStripe\Forms\GridField\GridField;
-use Page;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
 
 
@@ -13,17 +11,13 @@ class HomePage extends Page {
 
 	private static $table_name = 'HomePage';
 
-	private static $db = array();
-
-	private static $has_one = array();
-
 	private static $has_many = array(
-		'SliderImages' => 'SliderImage'
+		'SliderImages' => SliderImage::class
 	);
 
 	private static $defaults = array(); //'ShowInMenus' => false);
 
-	private static $icon = 'mysite/icons/home';
+	private static $icon = 'client/icons/home';
 
 	public function getCMSFields() {
         $a = array('png', 'jpg', 'jpeg', 'gif');
@@ -33,14 +27,12 @@ class HomePage extends Page {
         $dom = new GridField(
 			'SliderImages',
 			'SliderImages',
-			$this->SliderImages()
+            $this->SliderImages(),
+            GridFieldConfig_RecordEditor::create()
 		);
-		// $dom->setUploadFolder('Uploads/HomePageHeroImages');
-		// $dom->setAllowedFileTypes($a);
-		// $dom->setPageSize(20);
 
         // this should be a drop down from the Files & Images tab!
-        $f->addFieldToTab('Root.SliderImages', new LiteralField('ImageFolder', '<p>Hero Images need to be 620x294 or at that ratio if larger.</p>'));
+        $f->addFieldToTab('Root.SliderImages', new LiteralField('ImageFolder', '<p>Slider Images need to be at least 620x294 or at that ratio if larger.</p>'));
         $f->addFieldToTab('Root.SliderImages', $dom);
 
         // show only for admins! hide to everyone else

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
+
+
 use App\Pagetypes\ResultsPage;
 
 
@@ -16,5 +16,5 @@ class ResultsHolder extends Page {
 	
 	private static $allowed_children = array(ResultsPage::class);
 	
-	private static $icon = 'mysite/icons/trophySilver';
+	private static $icon = 'client/icons/trophySilver';
 }

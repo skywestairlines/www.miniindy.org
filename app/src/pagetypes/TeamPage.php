@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Pagetypes;
+
 
 use SilverStripe\Assets\Image;
-use Page;
-use ImageField;
+
+
 
 
 

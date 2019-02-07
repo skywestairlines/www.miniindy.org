@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Pagetypes;
 
 use SilverStripe\Assets\Image;
-use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 
 
-class StaticSidebar extends DataObject 
+class StaticSidebar extends Page 
 {
 
     private static $table_name = "StaticSidebar";
@@ -23,7 +22,7 @@ class StaticSidebar extends DataObject
 		"InternalLink" => SiteTree::class
 	);
 	
-	private static $icon = 'mysite/icons/zone';
+	private static $icon = 'client/icons/zone';
 	
 	private static $allowed_children = array("none");
 	
@@ -33,10 +32,10 @@ class StaticSidebar extends DataObject
 	
 		$fields->addFieldToTab("Root.Content.Main", new TextField("ExternalLink"), "Content");
 		$fields->addFieldToTab("Root.Content.Main", new TreeDropdownField("InternalLinkID", "InternalLink", SiteTree::class), "Content");
-		$fields->addFieldToTab("Root.Content.Main", new ImageField(Image::class), "Content");
+		$fields->addFieldToTab("Root.Content.Main", new UploadField('Image', 'Image'), "Content");
 	
 		return $fields;
-	}	
+    }
 	
 	
 } 

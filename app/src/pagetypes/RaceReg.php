@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Pagetypes;
+
+
 
 use SilverStripe\Forms\TextField;
-use Page;
-use HtmlEditorField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 
 
@@ -25,13 +25,14 @@ class RaceReg extends Page {
 		'none'
 	);
 
-	private static $icon = 'mysite/icons/car';
+	private static $icon = 'client/icons/car';
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->addFieldToTab('Root.Content.Main', new TextField('MyFormType', 'Form Type'));
-		$fields->addFieldToTab('Root.Content.ChecksAndPO', new HtmlEditorField('checkPO', 'Checks & P.O.s'));
+		$fields->addFieldToTab('Root.Content.ChecksAndPO', new HTMLEditorField('checkPO', 'Checks & P.O.s'));
+		$fields->addFieldToTab('Root.Content.Main', new TextField('MyFormType', 'Form Type'));
 
 		return $fields;
 	}

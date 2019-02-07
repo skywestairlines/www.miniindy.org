@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Pagetypes;
+
 
 use SilverStripe\CMS\Model\VirtualPage;
 use SilverStripe\CMS\Model\RedirectorPage;
-use Page;
+
 use App\Pagetypes\RaceReg;
 use App\Pagetypes\GolfReg;
 use App\Pagetypes\TicketReg;
@@ -20,12 +20,13 @@ class RegistrationHolder extends Page {
 	private static $has_one = array();
 	
 	private static $allowed_children = array(
-		RaceReg::class,
-		GolfReg::class,
-		TicketReg::class,
-		VirtualPage::class,
-		RedirectorPage::class
+		'Race Registration' => RaceReg::class,
+		'Golf Registration' => GolfReg::class,
+		'Ticket Registration' => TicketReg::class,
+		'Virtual Page' => VirtualPage::class,
+        'Redirector Page' => RedirectorPage::class,
+        'Registration Page' => RegistrationPage::class
 	);
 	
-	private static $icon = 'mysite/icons/register';
+	private static $icon = 'client/icons/register';
 }

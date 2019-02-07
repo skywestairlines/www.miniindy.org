@@ -3,14 +3,15 @@
 <input type="hidden" name="Qty" value="1" size="3">
 <input type="hidden" name="Price" value="$GolfPrice">
 <input type="hidden" name="Extra" value="$XtraPrice">
+<input type="hidden" name="item" value="$Title">
 <input type="hidden" name="sponsorType" value="Golf">
-<input type="hidden" name="other" value=" with Race Car">
+
 <table border="0" cellpadding="3" class="main">
   <tr>
     <td style="text-align:right;width:auto;whitespace:nowrap;">Company Name:</td>
     <td><input name="p1" type="text" size="30"></td>
   </tr>
- 
+
   <tr>
     <td>Company Contact:</td>
     <td><input name="p2" type="text" size="30"></td>
@@ -60,23 +61,23 @@
     <td></td>
     <td>
       <input name="Price2" type="checkbox" size="3" value="$RacePrice" id="addPrice" checked>
-      Include Race/Car ($XtraTag)
+      Include Race/Car ($XtraPrice.Nice)
     </td>
   </tr>
 <tr>
   <td width="50px"></td>
-  
+
 </td>
 <tr id="t-price1" style="display:none">
 <td></td>
 <td>
-  <span><strong>Total Price:</strong></span> <span style="font-size:125%">$PriceTag</span><br /><br /><br />
+  <span><strong>Total Price:</strong></span> <span style="font-size:125%">$RacePrice.Nice</span><br /><br /><br />
   <input type="submit" value="Submit" name="submit"></td>
 </tr>
 <tr id="t-price2" style="display:table-row">
 <td></td>
 <td>
-  <span><strong>Total Price:</strong></span> <span style="font-size:125%">$Price2Tag</span><br /><br /><br />
+  <span><strong>Total Price:</strong></span> <span style="font-size:125%">$XtraPrice.Nice</span><br /><br /><br />
   <input type="submit" value="Submit" name="submit">
 </td>
 </tr>

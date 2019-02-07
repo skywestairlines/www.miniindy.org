@@ -6,7 +6,8 @@
 		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
 		<% base_tag %>
 		<link rel="shortcut icon" href="/favicon.ico" />
-        <% require css('dist/css/miniindy.css') %>
+        <% require css('dist/css/main.css') %>
+		<% require css('dist/css/miniindy.css') %>
 
 		<!--[if IE 6]>
 			<style type="text/css">
@@ -30,32 +31,32 @@
 <body>
 	<div id="Container">
 		<div id="Header">
-			$SearchForm
-	   		<a href="home/" border="0"><img src="assets/Uploads/logo.png" border="0" /></a>
-	   		<!--  COMMENT OUT WHEN REGISTRATION IS CLOSED  -->
-	   		<div class="RegNavLink">
-	   			<a href="/miniindy-registration/">Registration Is Open!</a>
-	   		</div>
-
+			<% include Header %>
 		</div>
-
 		<div id="Navigation">
 			<% include Navigation %>
 	  	</div>
-
 	  	<div class="clear"><!-- --></div>
-
 		<div id="Layout">
 		  $Layout
 		</div>
-
 	   <div class="clear"><!-- --></div>
 	   <div class="push"></div>
 	</div>
 	<div id="Footer">
 		<% include Footer %>
 	</div>
-    <%-- <% require themedJavascript('miniindy') %> --%>
+	<% if $CurrentMember %>
+	<div class="page-settings">
+		<div class="edit">
+            <a href="$CMSEditLink" class="btn btn-primary">
+                <i class="fa fa-edit"></i>
+            </a>
+		</div>
+	</div>
+	<% end_if %>
+
+    <% require javascript('dist/js/main.js') %>
     <% require javascript('dist/js/miniindy.js') %>
     <script type="text/javascript">
 		startList = function() {

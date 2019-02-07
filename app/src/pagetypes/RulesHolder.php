@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
+
+
 use App\Pagetypes\RulesPage;
 
 
@@ -16,5 +16,5 @@ class RulesHolder extends Page {
 	
 	private static $allowed_children = array(RulesPage::class);
 	
-	private static $icon = 'mysite/icons/books';
+	private static $icon = 'client/icons/books';
 }

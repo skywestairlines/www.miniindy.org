@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
-use DataObjectManager;
+
+
+
 
 
 class NewsPage extends Page {
@@ -19,7 +19,7 @@ class NewsPage extends Page {
 	private static $default_parent = 'media';
 	private static $can_be_root = false;
 	
-	private static $icon = 'mysite/icons/news';
+	private static $icon = 'client/icons/news';
 	
 	public function getCMSFields() {
 		$f = parent::getCMSFields();

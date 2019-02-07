@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Pagetypes;
 
-use Page;
+
+
 
 
 class RulesPage extends Page {
@@ -13,7 +13,7 @@ class RulesPage extends Page {
 	private static $has_one = array();//'Photo' => 'Image');
 	private static $defaults = array();//'ShowInMenus' => false);
 	
-	private static $icon = 'mysite/icons/book';
+	private static $icon = 'client/icons/book';
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

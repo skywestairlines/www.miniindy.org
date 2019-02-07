@@ -13,6 +13,17 @@ class RaceRegController extends PageController
 
 
 	function getRaceType() {
+        $MyFormType = $this->MyFormType;
+        switch ($MyFormType) {
+            case 'first':
+                $template = 'hilkiah';
+                break;
+
+            default:
+                $template = 'makemo';
+                break;
+        }
+        return (new ArrayData([]))->renderWith($template);
 		if($this->MyFormType == 'first') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 
