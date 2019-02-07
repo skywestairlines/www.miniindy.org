@@ -29,23 +29,25 @@
 
 	</head>
 <body>
-	<div id="Container">
-		<div id="Header">
+	<div class="container py-3">
+		<header id="Header">
 			<% include Header %>
-		</div>
-		<div id="Navigation">
+		</header>
+		<nav id="Navigation">
 			<% include Navigation %>
-	  	</div>
-	  	<div class="clear"><!-- --></div>
-		<div id="Layout">
-		  $Layout
-		</div>
-	   <div class="clear"><!-- --></div>
-	   <div class="push"></div>
+	  	</nav>
+		<section class="card-deck">
+            <main class="card card-trans">
+            $Layout
+            </main>
+            <aside class="col-md-4 card px-0 mx-0">
+                <% include SideBar %>
+            </aside>
+        </section>
 	</div>
-	<div id="Footer">
+	<footer id="Footer">
 		<% include Footer %>
-	</div>
+	</footer>
 	<% if $CurrentMember %>
 	<div class="page-settings">
 		<div class="edit">

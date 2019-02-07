@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Admin\ModelAdmin;
+
 abstract class DataModelAdmin extends ModelAdmin
 {
     public function getEditForm($id = null, $fields = null)

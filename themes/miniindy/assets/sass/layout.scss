@@ -17,16 +17,14 @@
   padding: 0;
 }
 
+html {
+  background: #626467 url(../images/bg.jpg) repeat fixed;
+  height: 100vh;
+}
 body {
   color: #333;
   font-size: 62.5%;
-  margin-bottom: 40px;
   font-family: Verdana, Lucida, sans-serif;
-  height: 100%;
-}
-
-html {
-  background: #626467 url(../images/bg.jpg) repeat fixed;
   height: 100%;
 }
 
@@ -82,17 +80,13 @@ caption, th, td {
 }
 
 #Content {
-  width: 630px;
-  float: left;
-  margin: 0 0 0 10px;
-  text-align: left;
 }
 
 /* HEADER
 ----------------------------------------- */
 
 #Header {
-  width: 925px;
+  
   margin: 0 auto;
   overflow: hidden;
   /*border: 1px solid green;*/

@@ -107,7 +107,7 @@
 -------------------------------------------- */
 .typography ul, 
 .typography ol {
-	margin: 0 0 18px 24px;
+	/* margin: 0 0 18px 24px; */
 	color: #333;
 }
 	.typography li {
@@ -268,7 +268,6 @@
 #top #Logo a {
 	background-image: none;
 }
-#Content ul,
 #album-list ul{
 margin:0px;
 }
@@ -316,7 +315,7 @@ margin:0px;
 	border:1px solid #999;
 	border-radius:4px;
 	background: #fff;
-}/** 
+}/**
  * SilverStripe Black Candy Theme
  * http://www.silverstripe.com
  *
@@ -326,113 +325,135 @@ margin:0px;
 
 /* FIELDSETS
 ---------------------------------------- */
+
 fieldset {
-	border: 0;
-	font-size: 1.2em;
+    border: 0;
+    font-size: 1.2em;
 }
+
 
 /* ACTION BUTTONS
 ---------------------------------------- */
+
 input.action {
-	padding: 2px;
-	font-size: 1em;
-	font-family: Verdana, Tahoma, Sans-serif;
+    padding: 2px;
+    font-size: 1em;
+    font-family: Verdana, Tahoma, Sans-serif;
 }
+
 input.action:hover,
 input.action:focus {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 
 /* FIELD FORMATING
 ---------------------------------------- */
+
 form ul {
-	list-style: none;
+    list-style: none;
 }
+
 .middleColumn {
- 	display: block;
- 	margin: 15px 10px 10px 0;
-	background: #E9E9E9;
-	padding: 4px;
-	width: 306px;
-	clear: left;
+    display: block;
+    margin: 15px 10px 10px 0;
+    background: #E9E9E9;
+    padding: 4px;
+    width: 306px;
+    clear: left;
 }
-	#Sidebar .middleColumn {
-		margin: 0 0 0 8px;
-		display: inline;
-	}
-	
-	div.tab .field .middleColumn {
-		clear: none !important;
- 		margin: 0 !important;
-		width: auto;
-	}
-	
-	.middleColumn .middleColumn {
-		margin-left: 0;
-		margin-right: 0;
-		padding: 0;
-	}
-	
-	.middleColumn .message {
-		margin: 0;
-	}
+
+#Sidebar .middleColumn {
+    margin: 0 0 0 8px;
+    display: inline;
+}
+
+div.tab .field .middleColumn {
+    clear: none !important;
+    margin: 0 !important;
+    width: auto;
+}
+
+.middleColumn .middleColumn {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+.middleColumn .message {
+    margin: 0;
+}
+
+
 /* INPUT BOXS
 ---------------------------------------- */
 
-input.text, textarea, select {
-	padding: 2px;
-	border: 1px solid #A7A7A7;
-	color: #000;
-	font-size: 1.1em;
-	font-weight: bold;
-	width: 300px;
+input.text,
+textarea,
+select {
+    padding: 2px;
+    border: 1px solid #A7A7A7;
+    color: #000;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 300px;
 }
 
 textarea {
-	font-family: Verdana, Tahoma, sans-serif;
-	font-size: 1.2em;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 1.2em;
 }
-input:focus span, textarea:focus span {
-	border: 3px solid #000;
+
+input:focus span,
+textarea:focus span {
+    border: 3px solid #000;
 }
+
 
 /* SELECT DROPDOWN
 ---------------------------------------- */
 
 select {
-	width: auto;
+    width: auto;
 }
+
 
 /* LABELS
 ---------------------------------------- */
-.typography label {
- 	display: block;
-	margin: 10px 0 -10px 0;
-	color: #777;
-	font-size: 1em;
-}
+
+
+/* .typography :not(.form-row) label {
+    display: block;
+    margin: 10px 0 -10px 0;
+    color: #777;
+    font-size: 1em;
+} */
 
 label.right {
-	display:inline;
+    display: inline;
 }
-/* SEARCH BOX 
+
+
+/* SEARCH BOX
 ---------------------------------------- */
+
 #Search {
-	width: 105px;
+    width: 105px;
 }
-	input#Search_Form_SearchForm_Search {
-		width: 110px;
-		padding: 3px;
-		margin-left: -4px;
-		font-size: 1.2em;
-	}
+
+input#Search_Form_SearchForm_Search {
+    width: 110px;
+    padding: 3px;
+    margin-left: -4px;
+    font-size: 1.2em;
+}
+
 #Sidebar input.action {
-	font-size: 1.2em;
-	float: right;
-	padding: 1px;
-	margin: -22px 10px 0 0;
-}
-@charset "UTF-8";
+    font-size: 1.2em;
+    float: right;
+    padding: 1px;
+    margin: -22px 10px 0 0;
+}@charset "UTF-8";
 ul.dropdown,
 ul.dropdown li,
 ul.dropdown ul {
@@ -507,16 +528,15 @@ ul.dropdown ul li a {
   padding: 0;
 }
 
+html {
+  background: #626467 url(/images/bg.jpg?711fb7631c36468de5d8896f27c5a3ff) repeat fixed;
+  height: 100vh;
+}
+
 body {
   color: #333;
   font-size: 62.5%;
-  margin-bottom: 40px;
   font-family: Verdana, Lucida, sans-serif;
-  height: 100%;
-}
-
-html {
-  background: #626467 url(/images/bg.jpg?711fb7631c36468de5d8896f27c5a3ff) repeat fixed;
   height: 100%;
 }
 
@@ -573,18 +593,10 @@ td {
   margin: 15px auto;
 }
 
-#Content {
-  width: 630px;
-  float: left;
-  margin: 0 0 0 10px;
-  text-align: left;
-}
-
 /* HEADER
 ----------------------------------------- */
 
 #Header {
-  width: 925px;
   margin: 0 auto;
   overflow: hidden;
   /*border: 1px solid green;*/
@@ -1492,5 +1504,9 @@ p#Remember label {
 #Footer a:hover {
   color: #dbdfe8;
   text-decoration: underline;
+}
+
+.bg-trans {
+  background-color: transparent;
 }
 

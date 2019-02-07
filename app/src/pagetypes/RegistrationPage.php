@@ -3,7 +3,7 @@
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CurrencyField;
 use SilverStripe\ORM\FieldType\DBText;
-use SilverStripe\ORM\FieldType\DBMoney;
+use SilverStripe\ORM\FieldType\DBCurrency;
 use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Forms\HtmlEditor\HTMLEditorField;
@@ -16,12 +16,12 @@ class RegistrationPage extends Page
     private static $db = array(
         'MyFormType' => DBText::class,
         'checkPO' => DBHTMLText::class,
-        'EntryPrice' => DBMoney::class,
-        'GolfPrice' => DBMoney::class,
+        'EntryPrice' => DBCurrency::class,
+        'GolfPrice' => DBCurrency::class,
         'GolfIncluded' => DBBoolean::class,
-        'RacePrice' => DBMoney::class,
+        'RacePrice' => DBCurrency::class,
         'RaceIncluded' => DBBoolean::class,
-        'CarPrice' => DBMoney::class,
+        'CarPrice' => DBCurrency::class,
         'CarIncluded' => DBBoolean::class,
         'ExtraTeam' => DBBoolean::class,
     );
@@ -34,7 +34,7 @@ class RegistrationPage extends Page
     {
         $fields = parent::getCMSFields();
 
-        $fields->addFieldsToTab('Root.Main', [
+        $fields->addFieldsToTab('Root.PackageInfo', [
             new CurrencyField("EntryPrice", "Main Price"),
             new CheckboxField("GolfIncluded", "Golf will be included in this package"),
             new CurrencyField("GolfPrice", " Golf Price"),
@@ -43,23 +43,33 @@ class RegistrationPage extends Page
             new CheckboxField("CarIncluded", "New Car will included in this package"),
             new CurrencyField("CarPrice", "Car Price"),
             new CheckboxField("ExtraTeam", "Allow Extra Team with this Package"),
-        ], 'Metadata');
+        ], 'Comments');
 
-        $fields->addFieldsToTab('Root.ChecksAndPO', [
+        $fields->addFieldsToTab('Root.Main', [
             new HTMLEditorField('Content', 'Registration Info'),
             new HTMLEditorField('checkPO', 'Checks & P.O.s')
         ]);
 
-
-
         return $fields;
+    }
+
+    public function getRegForm()
+    {
+        return $this->renderWith("Includes/Forms/Registration");
+
     }
 
     public function getGolfType()
     {
+        $template = 'Includes/Forms/GolfRegistration';
 
-        $template = 'Includes/Forms/Registration';
+        return $this->renderWith($template);
+    }
 
+    public function getRaceType()
+    {
+
+        $template = 'Includes/Forms/RaceRegistration';
 
         return $this->renderWith($template);
     }

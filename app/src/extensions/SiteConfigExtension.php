@@ -11,7 +11,8 @@ class SiteConfigExtension extends DataExtension
     private static $db = [
         "EventStart" => DBDate::class,
         "EventFinish" => DBDate::class,
-        "RegOpenDate" => DBDate::class
+        "RegOpenDate" => DBDate::class,
+        "RegCloseDate" => DBDate::class,
     ];
 
     private static $has_one = [
@@ -20,12 +21,19 @@ class SiteConfigExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldsToTab("Root.Main", new DateField("EventStart", "Event Start Date"));
-        $fields->addFieldsToTab("Root.Main", new DateField("EventFinish", "Event End Date"));
-        $fields->addFieldsToTab("Root.Main", new DateField("RegOpenDate", "Registration Open Date"));
-
         $fields->addFieldsToTab("Root.Main", $LOGO =  new UploadField("Logo", "MiniIndy Logo"));
+
+        $fields->addFieldsToTab("Root.Event", new DateField("EventStart", "Event Start Date"));
+        $fields->addFieldsToTab("Root.Event", new DateField("EventFinish", "Event End Date"));
+        $fields->addFieldsToTab("Root.Event", new DateField("RegOpenDate", "Registration Open"));
+        $fields->addFieldsToTab("Root.Event", new DateField("RegCloseDate", "Registration Close"));
+        
         $LOGO->setFolderName("Website/Images");
 
+    }
+
+    public function getRegIsOpen()
+    {
+        return true;
     }
 }

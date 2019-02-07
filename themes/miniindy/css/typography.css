@@ -107,7 +107,7 @@
 -------------------------------------------- */
 .typography ul, 
 .typography ol {
-	margin: 0 0 18px 24px;
+	/* margin: 0 0 18px 24px; */
 	color: #333;
 }
 	.typography li {
@@ -268,7 +268,6 @@
 #top #Logo a {
 	background-image: none;
 }
-#Content ul,
 #album-list ul{
 margin:0px;
 }
