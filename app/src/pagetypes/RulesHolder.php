@@ -1,13 +1,12 @@
 <?php
 
 
-
-
-use App\Pagetypes\RulesPage;
+use SilverStripe\ORM\DataObject;
 
 
 
-class RulesHolder extends Page {
+class RulesHolder extends Page 
+{
 
 	private static $table_name = 'RulesHolder';
 
@@ -16,5 +15,10 @@ class RulesHolder extends Page {
 	
 	private static $allowed_children = array(RulesPage::class);
 	
-	private static $icon = 'client/icons/books';
+    private static $icon = 'client/icons/books';
+    
+    public function GetRulesPages() 
+    {
+		return DataObject::get(RulesPage::class, '', '');
+	}
 }

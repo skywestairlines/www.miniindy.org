@@ -104,11 +104,5 @@ class PageController extends ContentController
 	 * @access public
 	 * @return void
 	 */
-	public function GetStaticSidebar() {
-		// return DataObject::get('StaticSidebar');
-	}
-
-	public function showFooterLinks() {
-		return DataObject::get('Page', 'ShowInFooter = 1', 'FooterSortOrder ASC');
-	}
+	
 }

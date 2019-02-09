@@ -33,14 +33,14 @@
 		<header id="Header">
 			<% include Header %>
 		</header>
-		<nav id="Navigation">
+		<nav id="navigation">
 			<% include Navigation %>
 	  	</nav>
 		<section class="card-deck">
             <main class="card card-trans">
             $Layout
             </main>
-            <aside class="col-md-4 card px-0 mx-0">
+            <aside class="col-md-4 card px-0">
                 <% include SideBar %>
             </aside>
         </section>
@@ -51,7 +51,7 @@
 	<% if $CurrentMember %>
 	<div class="page-settings">
 		<div class="edit">
-            <a href="$CMSEditLink" class="btn btn-primary">
+            <a href="$CMSEditLink" class="btn btn-primary" target="_blank">
                 <i class="fa fa-edit"></i>
             </a>
 		</div>
@@ -59,6 +59,7 @@
 	<% end_if %>
 
     <% require javascript('dist/js/main.js') %>
+    <% require javascript('dist/js/vendor.js') %>
     <% require javascript('dist/js/miniindy.js') %>
     <script type="text/javascript">
 		startList = function() {

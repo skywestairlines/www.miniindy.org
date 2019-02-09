@@ -1,6 +1,6 @@
 <div class="typography">
 	<% if Menu(2) %>
-		<% include SideBar %>
+		
 		<div id="Content">
 	<% end_if %>
 			

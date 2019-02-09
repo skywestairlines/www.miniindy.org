@@ -1,15 +1,12 @@
 
-<% include SideBar %>
-<div id="Content" class="typography">
-	<% include Breadcrumbs %>
-    <hr>
-	<h2>$Title :: $EntryPrice.Nice</h2>
-    <hr>
-	$Content
 
+<div id="Content" class="typography">
+	<h1 class="main-title">$Title</h1>
+	<% include Breadcrumbs %>
+	$Content
 	<% if $SiteConfig.RegIsOpen %>
 		$RegForm
-		$checkPO
+		$SiteConfig.CheckAndPO
 	<% else %>
 		<p>Registration is currently closed</p>
 	<% end_if %>

@@ -1,16 +1,11 @@
 <% include Menu2 %>
-<% include SideBar %>
 <div id="Content" class="typography">
 	<% include Breadcrumbs %>
 
 	<h2>$Title</h2>
 
-    $Debug
-
-	$Content
-
-	<% if getRaceType %>
-		$getRaceType
+	<% if $RegForm %>
+		$RegForm
 		$checkPO
 	<% else %>
 		<p>Registration is currently closed</p>

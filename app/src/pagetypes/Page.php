@@ -6,6 +6,7 @@ use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Security\Permission;
 use SilverStripe\Forms\CompositeField;
+use Silverstripe\ORM\DataObject;
 
 
 class Page extends SiteTree {
@@ -45,5 +46,13 @@ class Page extends SiteTree {
         // $f->addFieldToTab("Root.Settings", new CheckboxField("ShowInFooter", "Show in footer menu?"), 'FooterSortOrder');
         return $f;
     }
+
+    public function GetStaticSidebar() {
+		return DataObject::get('StaticSidebar');
+	}
+
+	public function showFooterLinks() {
+		return DataObject::get('Page', 'ShowInFooter = 1', 'FooterSortOrder ASC');
+	}
 
 }

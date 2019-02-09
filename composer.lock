@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f34ede7eb495b754ae671dd5e757dec5",
+    "content-hash": "804d29c29bc0a67c6e145e2bc84bf846",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -2697,6 +2697,63 @@
             "time": "2018-07-31T09:26:32+00:00"
         },
         {
+            "name": "symbiote/silverstripe-multivaluefield",
+            "version": "5.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symbiote/silverstripe-multivaluefield.git",
+                "reference": "03e335d427359520d51d581218aa873d6a2753ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-multivaluefield/zipball/03e335d427359520d51d581218aa873d6a2753ac",
+                "reference": "03e335d427359520d51d581218aa873d6a2753ac",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~4.0"
+            },
+            "replace": {
+                "silverstripe/multivaluefield": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client"
+                ],
+                "installer-name": "multivaluefield",
+                "branch-alias": {
+                    "dev-master": "5.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symbiote\\MultiValueField\\": "src/",
+                    "Symbiote\\MultiValueField\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@symbiote.com.au"
+                }
+            ],
+            "description": "A DB field + form fields for storing multiple values in a single property (serialized).",
+            "keywords": [
+                "dbfield",
+                "formfield",
+                "silverstripe"
+            ],
+            "time": "2018-03-20T23:12:43+00:00"
+        },
+        {
             "name": "symfony/cache",
             "version": "v3.4.22",
             "source": {
@@ -3265,6 +3322,47 @@
             "time": "2012-10-13T17:59:41+00:00"
         },
         {
+            "name": "tractorcow/silverstripe-imagegallery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tractorcow/ImageGallery.git",
+                "reference": "2d687702c6a1fed640cb280eb60c9b88ab505b62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tractorcow/ImageGallery/zipball/2d687702c6a1fed640cb280eb60c9b88ab505b62",
+                "reference": "2d687702c6a1fed640cb280eb60c9b88ab505b62",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "image_gallery"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian.mooyman@gmail.com"
+                },
+                {
+                    "name": "Aaron Carlino",
+                    "email": "unclecheese@leftandmain.com",
+                    "homepage": "http://leftandmain.com"
+                }
+            ],
+            "description": "Simple image gallery module for Silverstripe",
+            "keywords": [
+                "gallery",
+                "image",
+                "silverstripe"
+            ],
+            "time": "2017-05-25T11:05:44+00:00"
+        },
+        {
             "name": "webonyx/graphql-php",
             "version": "v0.8.0",
             "source": {
@@ -3361,6 +3459,179 @@
                 "instantiate"
             ],
             "time": "2017-07-22T11:58:36+00:00"
+        },
+        {
+            "name": "jdorn/sql-formatter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "7ef9b85961956aa572413693e1194b60f50ab9ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/7ef9b85961956aa572413693e1194b60f50ab9ab",
+                "reference": "7ef9b85961956aa572413693e1194b60f50ab9ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "bin/sql-formatter"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dorn",
+                    "email": "jeremy@jeremydorn.com",
+                    "homepage": "http://jeremydorn.com/"
+                }
+            ],
+            "description": "a PHP SQL highlighting library",
+            "homepage": "https://github.com/jdorn/sql-formatter/",
+            "keywords": [
+                "highlight",
+                "sql"
+            ],
+            "time": "2015-08-30T16:36:01+00:00"
+        },
+        {
+            "name": "lekoala/silverstripe-debugbar",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lekoala/silverstripe-debugbar.git",
+                "reference": "7058480c77b4265d832ff1a4b430ad606192129a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lekoala/silverstripe-debugbar/zipball/7058480c77b4265d832ff1a4b430ad606192129a",
+                "reference": "7058480c77b4265d832ff1a4b430ad606192129a",
+                "shasum": ""
+            },
+            "require": {
+                "jdorn/sql-formatter": "1.3.x-dev",
+                "maximebf/debugbar": "^1.13",
+                "php": ">=5.6",
+                "silverstripe/admin": "^1.0",
+                "silverstripe/framework": "^4.0",
+                "silverstripe/siteconfig": "^4.0",
+                "tractorcow/silverstripe-proxy-db": "^0.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "assets",
+                    "javascript"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "LeKoala\\DebugBar\\": "code/",
+                    "LeKoala\\DebugBar\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "LeKoala",
+                    "email": "thomas@lekoala.be"
+                }
+            ],
+            "description": "DebugBar for SilverStripe CMS",
+            "keywords": [
+                "cms",
+                "debugbar",
+                "module",
+                "silverstripe"
+            ],
+            "time": "2018-11-16T12:38:35+00:00"
+        },
+        {
+            "name": "maximebf/debugbar",
+            "version": "v1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximebf/php-debugbar.git",
+                "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
+                "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "^1.0",
+                "symfony/var-dumper": "^2.6|^3.0|^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0"
+            },
+            "suggest": {
+                "kriswallsmith/assetic": "The best way to manage assets",
+                "monolog/monolog": "Log using Monolog",
+                "predis/predis": "Redis storage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.14-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DebugBar\\": "src/DebugBar/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxime Bouroumeau-Fuseau",
+                    "email": "maxime.bouroumeau@gmail.com",
+                    "homepage": "http://maximebf.com"
+                },
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Debug bar in the browser for php application",
+            "homepage": "https://github.com/maximebf/php-debugbar",
+            "keywords": [
+                "debug",
+                "debugbar"
+            ],
+            "time": "2017-12-15T11:13:46+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4529,6 +4800,218 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "223bda89f9be41cf7033eeaf11bc61a280489c17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/223bda89f9be41cf7033eeaf11bc61a280489c17",
+                "reference": "223bda89f9be41cf7033eeaf11bc61a280489c17",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php72": "~1.5"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
+            },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2019-01-30T11:44:30+00:00"
+        },
+        {
+            "name": "tractorcow/classproxy",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tractorcow/classproxy.git",
+                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tractorcow/classproxy/zipball/95e988a37917a3d44805ab907f79778f24e6bf8e",
+                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e",
+                "shasum": ""
+            },
+            "require": {
+                "phpspec/prophecy": "^1.7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TractorCow\\ClassProxy\\": "src/",
+                    "TractorCow\\ClassProxy\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                }
+            ],
+            "time": "2018-03-20T01:57:54+00:00"
+        },
+        {
+            "name": "tractorcow/silverstripe-proxy-db",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tractorcow/silverstripe-proxy-db.git",
+                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tractorcow/silverstripe-proxy-db/zipball/9850a12fbf229c7ee576064be89b875aa65bdcbc",
+                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4@dev",
+                "silverstripe/vendor-plugin": "^1.0",
+                "tractorcow/classproxy": "^0.1.1"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "TractorCow\\SilverStripeProxyDB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                }
+            ],
+            "keywords": [
+                "db",
+                "proxy",
+                "silverstripe"
+            ],
+            "time": "2018-02-16T01:16:44+00:00"
+        },
+        {
             "name": "webmozart/assert",
             "version": "1.4.0",
             "source": {
@@ -4583,7 +5066,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "silverstripe/recipe-cms": 0
+        "silverstripe/recipe-cms": 0,
+        "tractorcow/silverstripe-imagegallery": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

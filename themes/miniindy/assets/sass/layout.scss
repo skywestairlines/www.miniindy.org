@@ -113,6 +113,7 @@ caption, th, td {
   a {
     color: #1c305d;
     text-decoration: none;
+    font-size: 1.5rem;
     &:hover {
       color: #b2d45e;
       text-decoration: none;
@@ -128,15 +129,7 @@ caption, th, td {
 /* MAIN NAVIGATION - TABS
 ----------------------------------------- */
 
-#Navigation {
-  width: 952px;
-  margin: 0 auto;
-  background: transparent url(../images/menuBG.png) no-repeat center bottom;
-  height: 73px;
-  padding-top: 5px;
-  color: white;
-  text-shadow: 0 1px black;
-}
+
 
 #dateTemp {
   float: left;
@@ -149,12 +142,22 @@ caption, th, td {
 
 
 
-#Navigation ul {
+#navigation{
+  margin: 0 auto;
+  background: transparent url(../images/menuBG.png) no-repeat center bottom;
+  height: 73px;
+  padding-top: 0.5rem;
+  color: white;
+  text-shadow: 0 1px black;
+  ul {
   /*float: right; */
-  margin: 10px 0;
-  .nav-link {
-    font: 24px/27px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
-}
+    margin: 10px 0;
+    .nav-item {      
+      .nav-link, .brand {
+        font: 24px/27px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
+          font-size: 1rem;
+      }
+    }
 
   li {
     list-style: none;
@@ -209,6 +212,7 @@ caption, th, td {
       padding-top: 10px;
     }
   }
+}
 }
 
 /* BREADCRUMBS
@@ -330,19 +334,6 @@ caption, th, td {
 
 /* SIDEBAR
 -------------------------------------- */
-
-#Sidebar {
-  /*width: 265px;*/
-  width: 265px;
-  float: right;
-  padding: 0;
-  background: url(../images/sidebarBG.jpg) no-repeat left 0 #FBFBFB;
-  margin: 0 10px;
-  height: auto;
-  position: relative;
-  top: 55px;
-}
-
 #Accomodations {
   width: 183px;
   height: 24px;
@@ -357,7 +348,7 @@ caption, th, td {
   background: url(../images/lodging.png) no-repeat 10px 20px;
 }
 
-#Results {
+#results {
     /*width: 160px;
 	height: 30px;
 	text-indent: -9999px;
@@ -365,15 +356,18 @@ caption, th, td {
   font: 30px/27px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif !important;
   position: relative;
   top: -5px;
+  font-size: 2rem;
 }
 
-#Sidebar {
-  .sidebarBox {
-    margin: 0 0 5px 0;
-    padding-bottom: 2px;
-    background: transparent url(../images/sidebarHeader.png) no-repeat left top;
-    position: relative;
-    top: -55px;
+#sidebar {
+   padding: 0;
+    background: url(../images/sidebarBG.jpg) repeat-x left 0 #FBFBFB;
+    background-size: 100% auto;
+  .sidebar-box {
+    background: transparent url(../images/sidebarHeader.png) repeat-x left top;
+    background-size: 100% 4rem;
+    top: -0.5rem;
+    position:relative;
   }
   ul {
     margin: 0 0 5px 3px;

@@ -1,5 +1,5 @@
-<% include Menu(2) %>
-<% include SideBar %>
+<% include Menu2 %>
+
 <div id="Content" class="typography">
 	<% if Level(2) %>
 	  	<% include BreadCrumbs %>

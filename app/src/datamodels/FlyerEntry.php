@@ -24,7 +24,7 @@ class FlyerEntry extends DataObject {
 	
 	private static $has_one = array(
 		'PDF' => File::class,
-		'FlyerPage' => FlyerPage::class
+		FlyerPage::class
 	);
 	
 	private static $summary_fields = array(

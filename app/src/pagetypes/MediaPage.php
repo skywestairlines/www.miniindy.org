@@ -20,26 +20,21 @@ class MediaPage extends Page {
 	);
 
 	private static $has_one = array();
-	
+
 	private static $icon = 'client/icons/page';
-	
-	public function getCMSFields() {
-		$f = parent::getCMSFields();
-		$f->addFieldToTab("Root.Behaviour", new TextField("FooterSortOrder", "Sort Order in Footer"), 'ProvideComments');
-		$f->addFieldToTab("Root.Behaviour", new CheckboxField("ShowInFooter", "Show in footer menu?"), 'FooterSortOrder');
-		
-		//$fields->addFieldToTab('Root.FeedbackForm', new CheckboxField('ShowFeedbackForm', 'Show Feedback Form on this page?'));
-		//$fields->addFieldToTab('Root.FeedbackForm', new WidgetAreaEditor('myWidgets'));
-		
-		// remove tabs if user is NOT admin!
-		if(!Permission::check('ADMIN')) {
-        	$f->removeByName('Behaviour');
-        	$f->removeByName('Access');
-        	$f->removeByName('GoogleSitemap');
-        	//$fields->removeByName('Metadata');
-        	//$fields->removeByName('FeedbackForm');
-        }
-		return $f;
-	}
+
+	// public function getCMSFields() {
+	// 	$f = parent::getCMSFields();
+
+	// 	// remove tabs if user is NOT admin!
+	// 	if(!Permission::check('ADMIN')) {
+    //     	$f->removeByName('Behaviour');
+    //     	$f->removeByName('Access');
+    //     	$f->removeByName('GoogleSitemap');
+    //     	//$fields->removeByName('Metadata');
+    //     	//$fields->removeByName('FeedbackForm');
+    //     }
+	// 	return $f;
+	// }
 
 }

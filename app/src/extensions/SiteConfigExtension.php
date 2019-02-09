@@ -5,6 +5,8 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\FieldType\DBDate;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\ORM\FieldType\DBHTMLText;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class SiteConfigExtension extends DataExtension
 {
@@ -13,6 +15,7 @@ class SiteConfigExtension extends DataExtension
         "EventFinish" => DBDate::class,
         "RegOpenDate" => DBDate::class,
         "RegCloseDate" => DBDate::class,
+        "CheckAndPO" => DBHTMLText::class,
     ];
 
     private static $has_one = [
@@ -27,7 +30,8 @@ class SiteConfigExtension extends DataExtension
         $fields->addFieldsToTab("Root.Event", new DateField("EventFinish", "Event End Date"));
         $fields->addFieldsToTab("Root.Event", new DateField("RegOpenDate", "Registration Open"));
         $fields->addFieldsToTab("Root.Event", new DateField("RegCloseDate", "Registration Close"));
-        
+        $fields->addFieldsToTab("Root.Event", new HTMLEditorField("CheckAndPO", "Check & Payment Options"));
+
         $LOGO->setFolderName("Website/Images");
 
     }

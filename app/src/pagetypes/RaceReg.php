@@ -8,7 +8,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 
 
-class RaceReg extends Page {
+class RaceReg extends RegistrationPage {
 
 	private static $table_name = 'RaceReg';
 

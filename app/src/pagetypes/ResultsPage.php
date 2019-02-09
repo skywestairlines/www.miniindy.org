@@ -15,7 +15,7 @@ class ResultsPage extends Page {
 	
 	private static $icon = 'client/icons/trophy';
 	
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		
 		//$fields->addFieldToTab("Root.Content.Images", new ImageField('Photo'));

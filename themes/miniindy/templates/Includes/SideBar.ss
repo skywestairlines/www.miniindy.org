@@ -1,8 +1,8 @@
 <% if GetStaticSidebar %>
 	<% loop GetStaticSidebar %>
-	<div id="Sidebar" class="typography">
-			<div class="sidebarBox">
-		 		<h3 id="$Title">$MenuTitle.XML</h3>
+	<div id="sidebar" class="typography sidebar">
+			<div class="sidebar-box">
+		 		<h3 id="results">$MenuTitle.XML</h3>
 		  		$Content
 				<div class="clear"></div>
 			</div>

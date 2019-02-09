@@ -7,7 +7,6 @@ use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
-
 class StaticSidebar extends Page 
 {
 
@@ -32,7 +31,7 @@ class StaticSidebar extends Page
 	
 		$fields->addFieldToTab("Root.Content.Main", new TextField("ExternalLink"), "Content");
 		$fields->addFieldToTab("Root.Content.Main", new TreeDropdownField("InternalLinkID", "InternalLink", SiteTree::class), "Content");
-		$fields->addFieldToTab("Root.Content.Main", new UploadField('Image', 'Image'), "Content");
+		$fields->addFieldToTab("Root.Content.Main", new UploadField(Image::class, Image::class), "Content");
 	
 		return $fields;
     }

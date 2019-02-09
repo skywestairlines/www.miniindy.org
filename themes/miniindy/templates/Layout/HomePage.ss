@@ -1,5 +1,4 @@
 <div class="typography">
-<% include SideBar %>
 
 <div id="Content">
 <div id="slides">

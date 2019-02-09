@@ -4,8 +4,12 @@ use SilverStripe\Admin\ModelAdmin;
 class SponsorAdmin extends ModelAdmin
 {
 	private static $managed_models = array(
-		'Sponsor',
-		'SponsorType'
+		Sponsor::class => [
+            "title" => "Sponsors List"
+        ],
+		SponsorType::class => [
+            "title", "Sponsor types"
+        ]
 	);
 
 	private static $url_segment = 'sponsors';

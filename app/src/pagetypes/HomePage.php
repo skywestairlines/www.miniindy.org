@@ -1,5 +1,6 @@
 <?php
 
+use Silverstripe\ORM\DataObject;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Security\Permission;
 use SilverStripe\Forms\GridField\GridField;
@@ -42,4 +43,18 @@ class HomePage extends Page {
 
        	return $f;
     }
+
+    public function getAllSponsors()
+    {
+        return DataObject::get('Sponsor', "", "Sponsor.SortOrder ASC")
+                         ->leftJoin("Sponsor_SponsorTypes", '"Sponsor_SponsorTypes"."SponsorID" = "Sponsor"."ID"')
+                         ->leftJoin("SponsorType",'"SponsorType"."ID" = "Sponsor_SponsorTypes"."SponsorTypeID"');
+    }
+
+	public function getMainSponsors() {
+        return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Major' AND Approved = '1'");
+	}
+	public function getBenefitingSponsors() {
+        return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Benefiting' AND Approved = '1'");
+	}
 }

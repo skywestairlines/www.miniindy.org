@@ -1,5 +1,6 @@
 <?php
 
+use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CurrencyField;
@@ -10,23 +11,23 @@ use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Forms\HtmlEditor\HTMLEditorField;
 
-class GolfReg extends Page
+class GolfReg extends RegistrationPage
 {
 
     private static $table_name = 'GolfReg';
 
-    private static $db = array(
-        'MyFormType'=> DBText::class,
-        'checkPO'   => DBHTMLText::class,
-        'EntryPrice' => DBMoney::class,
-        'GolfPrice' => DBMoney::class,
-        'GolfIncluded' => DBBoolean::class,
-        'RacePrice' => DBMoney::class,
-        'RaceIncluded' => DBBoolean::class,
-        'CarPrice' => DBMoney::class,
-        'CarIncluded' => DBBoolean::class,
-        'ExtraTeam' => DBBoolean::class,
-    );
+    // private static $db = array(
+    //     'MyFormType'=> DBText::class,
+    //     'checkPO'   => DBHTMLText::class,
+    //     'EntryPrice' => DBMoney::class,
+    //     'GolfPrice' => DBMoney::class,
+    //     'GolfIncluded' => DBBoolean::class,
+    //     'RacePrice' => DBMoney::class,
+    //     'RaceIncluded' => DBBoolean::class,
+    //     'CarPrice' => DBMoney::class,
+    //     'CarIncluded' => DBBoolean::class,
+    //     'ExtraTeam' => DBBoolean::class,
+    // );
     private static $has_one = array();
     private static $defaults = array(); //'ShowInMenus' => false);
 

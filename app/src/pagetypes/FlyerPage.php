@@ -1,17 +1,11 @@
 <?php
 
-
-
-
-
-
-
 class FlyerPage extends Page {
 
 	private static $table_name = 'FlyerPage';
 
 	private static $has_many = array(
-		'FlyerEntries' => 'FlyerEntry'
+		'FlyerEntries' => FlyerEntry::class
 	);
 	
 	private static $default_parent = 'media';

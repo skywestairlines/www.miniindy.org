@@ -2,6 +2,7 @@
 use SilverStripe\View\ArrayData;
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Convert;
+use SilverStripe\Control\RSS\RSSFeed;
 
 
 /**
@@ -11,7 +12,8 @@ use SilverStripe\Core\Convert;
  * @todo Fix SimpleXML parsing for PHP <5.2.5
  */
  
-class YoutubeService {
+class YoutubeService extends RSSFeed
+{
 	
 	/**
 	 * Youtube default video width.
@@ -70,10 +72,9 @@ class YoutubeService {
  	* Creates a new YoutubeService object.
  	* @param expiry - Set the cache expiry time or TTL of the response
  	*/
-	function __construct($expiry=NULL){
-		parent::__construct(self::$api_base_url, $expiry);
+    public function __construct()
+    {
 		
-		$this->checkErrors = true; //set this to call errorCatch function on response
 	}
 	
 	/**

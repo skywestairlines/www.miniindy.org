@@ -1,24 +1,35 @@
-<?php 
-use SilverStripe\ORM\FieldType\DBBoolean;
-use SilverStripe\Forms\DropdownField;
+<?php
+
+use SilverStripe\ORM\DataList;
 use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\NumericField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\ORM\FieldType\DBInt;
+use SilverStripe\ORM\FieldType\DBBoolean;
+use SilverStripe\ORM\FieldType\DBVarchar;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
 
 class VideoGallery extends Page {
 
    // define your database fields here - for example we have author
    private static $db = array(
-   		"Method" => "Int",
-		"User" => "Varchar",
-		"Query" => "Varchar",
-		"CategoryTag" => "Varchar",
-		"Playlist" => "Varchar",
-		"PerPage" => "Int",
+   		"Method" => DBInt::class,
+		"User" => DBVarchar::class,
+		"Query" => DBVarchar::class,
+		"CategoryTag" => DBVarchar::class,
+		"Playlist" => DBVarchar::class,
+		"PerPage" => DBInt::class,
    		"ShowVideoInPopup" => DBBoolean::class, // either show thumbs (default) or video objects
-		"Sortby" => "Varchar"
+        "Sortby" => DBVarchar::class,
+        "VideoSize" => DBVarchar::class,
    );
+
+   private static $has_many = [
+       "Videos" => Video::class,
+   ];
 
    private static $defaults = array(
 		"Method" => 1,
@@ -34,7 +45,8 @@ class VideoGallery extends Page {
 	 *
 	 * @var DataObjectSet
 	 */
-	protected $_cachedVideos = null;
+    protected $_cachedVideos = null;
+    
 
    // add custom fields for this youtube gallery page
    public function getCMSFields() {
@@ -43,34 +55,43 @@ class VideoGallery extends Page {
    	  //Requirements::javascript( 'youtubeservice/javascript/YoutubeGallery_CMS.js' );
 
       $fields = parent::getCMSFields();
-      $fields->addFieldToTab("Root.Content.Videos", new DropdownField("Method", "Select ", array(
+      $fields->addFieldsToTab("Root.VideoSettings", [
+        new DropdownField("Method", "Select ", array(
 				'1' => 'Videos containing phrase',
 				'2' => 'Videos by Category or Tag',
 				'3' => 'Videos uploaded by',
 				'4' => 'Favorite videos of',
-				'5' => 'Videos from playlist')));
-      $fields->addFieldToTab("Root.Content.Videos", new TextField("User","Youtube Username"));
-      $fields->addFieldToTab("Root.Content.Videos", new TextField("Query","Search for"));
-      $fields->addFieldToTab("Root.Content.Videos", new TextField("CategoryTag", "Category or Tag"));
-      $fields->addFieldToTab("Root.Content.Videos", new TextField("Playlist", "Playlist ID"));
-      $fields->addFieldToTab("Root.Content.Videos", new CheckboxField("ShowVideoInPopup", "Show videos in a popup (rather than external link)"));
-      $fields->addFieldToTab("Root.Content.Videos", new NumericField("PerPage", "Per Page", 10));
-      $fields->addFieldToTab("Root.Content.Videos", new DropdownField("Sortby", "Sort by (descending)", array(
+				'5' => 'Videos from playlist')),
+        new TextField("User","Youtube Username"),
+        new TextField("Query","Search for"),
+        new TextField("CategoryTag", "Category or Tag"),
+        new TextField("Playlist", "Playlist ID"),
+        new CheckboxField("ShowVideoInPopup", "Show videos in a popup (rather than external link)"),
+        new NumericField("PerPage", "Per Page", 10),
+        new DropdownField("Sortby", "Sort by (descending)", [
 				'relevance' => 'Relevance',
 				'updated' => 'Most recently updated',
 				'published' => 'Most recently published',
 				'viewCount' => 'Most Viewed',
 				'rating' => 'Most Rated',
 				'daterecorded' => 'Date Recorded',
-      )));
+        ])
+      ]);
+
+    $fields->addFieldToTab("Root.VideosList", new GridField(
+        "Videos", "Videos", $this->Videos(),
+        GridFieldConfig_RecordEditor::create()
+    ));
 
       return $fields;
    }
 
-   private function YoutubeVideos(){
+   public function VideosFeed(){
 		if($this->_cachedVideos) return $this->_cachedVideos;
 
-   		$youtube = new YoutubeService();
+   		$youtube = new VideoFeed(
+            new DataList(Video::class), "youtube-videos", "Youtube Videos"
+        );
 		$page = isset($_GET['page'])? (int)$_GET['page']: 1;
 		$start_index = (($page-1) * $this->PerPage) + 1 ;
 
@@ -89,10 +110,12 @@ class VideoGallery extends Page {
 				break;
 			case 5:
 				$videos = $youtube->getPlaylist($this->Playlist, $this->PerPage, $start_index, $this->Sortby);
-				break;
+                break;
+            default:
+                $videos = $youtube;
 		}
 
-		// caching
+        // caching
 		$this->_cachedVideos = $videos;
 
 		return $videos;
