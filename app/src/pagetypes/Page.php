@@ -1,4 +1,5 @@
 <?php
+use Silverstripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\LabelField;
 use SilverStripe\CMS\Model\SiteTree;
@@ -6,7 +7,7 @@ use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Security\Permission;
 use SilverStripe\Forms\CompositeField;
-use Silverstripe\ORM\DataObject;
+use SilverStripe\Forms\OptionsetField;
 
 
 class Page extends SiteTree {
@@ -38,6 +39,11 @@ class Page extends SiteTree {
         $f->addFieldToTab("Root.Settings", $Footer = new CompositeField([
             CheckboxField::create("ShowInFooter", "Show in footer menu?"),
             NumericField::create("FooterSortOrder", "Sort Order in Footer"),
+            OptionsetField::create("ShowSideBar", "Side Bar", [
+                "main" => 'Main Side Bar',
+                "page" => 'Page Specific',
+                "hide" => 'Don\'t Show'
+            ]),
         ]));
         // $Footer->setTitle("Footer");
 
@@ -53,6 +59,11 @@ class Page extends SiteTree {
 
 	public function showFooterLinks() {
 		return DataObject::get('Page', 'ShowInFooter = 1', 'FooterSortOrder ASC');
-	}
+    }
+
+    public function ShowSearchForm()
+    {
+        return $this->renderWith("Includes/Forms/SearchForm");
+    }
 
 }

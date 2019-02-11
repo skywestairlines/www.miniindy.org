@@ -33,16 +33,18 @@
 		<header id="Header">
 			<% include Header %>
 		</header>
-		<nav id="navigation">
+		<nav id="navigation" class="navbar navbar-expand-md bg-trans">
 			<% include Navigation %>
 	  	</nav>
 		<section class="card-deck">
             <main class="card card-trans">
             $Layout
             </main>
+            <% if $ShowSideBar != 'hide' %>
             <aside class="col-md-4 card px-0">
                 <% include SideBar %>
             </aside>
+            <% end_if %>
         </section>
 	</div>
 	<footer id="Footer">

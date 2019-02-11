@@ -1,5 +1,5 @@
-require('../../vendor/prettyPhoto/js/jquery.prettyPhoto');
-require('../../vendor/js/slides.min.jquery');
+// require('../../vendor/js/slides.min.jquery');
+// require('../../vendor/prettyPhoto/js/jquery.prettyPhoto');
 
 
 (function($) {

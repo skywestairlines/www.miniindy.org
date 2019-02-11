@@ -1,0 +1,354 @@
+/* MAIN NAVIGATION - TABS
+----------------------------------------- */
+
+
+
+#navigation{
+    #dateTemp {
+      font: 24px/27px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
+      color: white;
+    }
+  margin: 0 auto;
+  background: transparent url(../images/menuBG.png) no-repeat center bottom;
+  height: 75px;
+  padding-top: 0;
+  color: white;
+  text-shadow: 0 1px black;
+  ul {
+  /*float: right; */
+    // margin: 10px 0;
+    .nav-item {      
+      .nav-link, .nav-brand {
+        font: 24px/28px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
+        //   font-size: 1rem;
+      }
+    }
+
+  li {
+    list-style: none;
+    // margin: 0 5px;
+    // float: left;
+    // line-height: 1em;
+    // display: block;
+    font-size: 12px;
+    a {
+      // float: left;
+      text-decoration: none;
+      display: block;
+      // padding: 0 0 0 10px;
+      color: #fff;
+      span, .nav-brand {
+        text-align: left;
+        // float: left;
+        padding-right: 10px;
+        // height: 35px;
+      }
+      &:hover {
+        color: $success;
+        cursor: pointer;
+        span {
+          cursor: pointer;
+        }
+      }
+      &.current {
+        color: $success;
+      }
+      &.section {
+        color: $success;
+        &:hover {
+          color: $success;
+        }
+      }
+      &.current {
+        &:hover, span {
+          color: $success;
+        }
+      }
+      &.section {
+        span, &:hover span {
+          color: $success;
+        }
+      }
+      &.current:hover span {
+        color: $success;
+      }
+    }
+    
+    ul li:first-child {
+      // padding-top: 10px;
+    }
+    .dropdown:hover, .dropdown:hover > .dropdown-menu {
+        display: inline-block;
+    }
+    .dropdown-toggle{
+        &::after{
+            display:none;
+        }
+    }
+    .dropdown-menu{
+      background-color: $primary;
+      .dropdown-item{
+        &:hover{
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+}
+/* BREADCRUMBS
+-------------------------------------------- */
+
+#Breadcrumbs {
+  color: #bfd962;
+  text-align: left;
+  font-size: 0.9em;
+  margin: 0px 5px 10px 0;
+  p {
+    margin: 0;
+  }
+  a {
+    color: #404040;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+/* MENU2 */
+
+ul#Menu2 li {
+  font-size: 0.9em;
+  margin: 1px 0 5px 15px;
+  list-style: none;
+  a {
+    display: block;
+    width: 196px;
+    font-size: 1.2em;
+    height: 1.8em;
+    line-height: 1.8em;
+    color: #512235;
+    font-weight: bold;
+  }
+  em {
+    padding-left: 8px;
+    display: block;
+  }
+  li em {
+    padding-left: 0;
+  }
+  a {
+    &:hover {
+      /*background: url(../images/bulletFlameL.png) no-repeat -5px center;*/
+      color: #512235;
+      /*#666;*/
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    &.current {
+      /*background: url(../images/bulletFlameL.png) no-repeat -5px center;*/
+      color: #512235;
+      /*#666;*/
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bold;
+      &:hover {
+        /*background: url(../images/bulletFlameL.png) no-repeat -5px center;*/
+        color: #512235;
+        /*#666;*/
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      font-weight: 700;
+    }
+    &.section {
+      /*background: #DCDCDC;*/
+      font-weight: 700;
+      width: 193px;
+      &:hover {
+        /*background: #DCDCDC;*/
+        font-weight: 700;
+        width: 193px;
+      }
+    }
+    &.levela:hover span, &.current span {
+      /*background: transparent url(../images/sidebarTopLeftHover.gif) no-repeat left top;*/
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &.section {
+      span, &:hover span {
+        /*background: transparent url(../images/sidebarTopLeftHover.gif) no-repeat left top;*/
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.current:hover span {
+      /*background: transparent url(../images/sidebarTopLeftHover.gif) no-repeat left top;*/
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &.levela:hover em, &.current em {
+      /*background: transparent url(../images/sidebarBottomLeftHover.gif) no-repeat left bottom;*/
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &.section {
+      em, &:hover em {
+        /*background: transparent url(../images/sidebarBottomLeftHover.gif) no-repeat left bottom;*/
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.current:hover em {
+      /*background: transparent url(../images/sidebarBottomLeftHover.gif) no-repeat left bottom;*/
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  ul {
+    height: 100%;
+    position: relative;
+    margin: -4px 0 0 0;
+    width: 193px;
+    padding: 4px 0 10px 0;
+    /*background: #DCDCDC url(../images/sidebarSectionBottom.png) no-repeat bottom left;*/
+    li {
+      width: 160px;
+      background: #DCDCDC;
+      padding: 0;
+      font-size: 0.8em;
+      display: inline;
+      margin: 0;
+      ul {
+        background: #DCDCDC;
+        margin-left: 0;
+      }
+    }
+  }
+  li {
+    a {
+      &.current {
+        color: #555;
+        font-weight: 700;
+        background: #DCDCDC;
+      }
+      &.section {
+        color: #555;
+        font-weight: 700;
+        background: #DCDCDC;
+        &:hover {
+          color: #555;
+          font-weight: 700;
+          background: #DCDCDC;
+        }
+      }
+      &.current:hover {
+        color: #555;
+        font-weight: 700;
+        background: #DCDCDC;
+      }
+    }
+    ul {
+      margin: 0 0 0 10px;
+      padding: 0;
+      width: 175px;
+      .roundWhite {
+        margin-bottom: -10px;
+      }
+    }
+  }
+  a.levelb {
+    font-size: 1.7em;
+    text-indent: 8px;
+    width: 188px;
+    background: transparent;
+    margin-left: 10px;
+    &:hover {
+      /*background: #BCBCBC url(../images/sidebarSideArrow2.gif) no-repeat right center;*/
+      text-decoration: none;
+      display: block;
+      color: #fff;
+    }
+  }
+  li a {
+    &.current, &.section {
+      /*background: #BCBCBC url(../images/sidebarSideArrow2.gif) no-repeat right center;*/
+      text-decoration: none;
+      display: block;
+      color: #fff;
+      &:hover {
+        /*background: #BCBCBC url(../images/sidebarSideArrow2.gif) no-repeat right center;*/
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+  }
+  a.levelb:hover span {
+    /*background: transparent url(../images/sidebarTopLeftHover2.gif) no-repeat left top;*/
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  li a {
+    &.current {
+      span, &:hover span {
+        /*background: transparent url(../images/sidebarTopLeftHover2.gif) no-repeat left top;*/
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.section {
+      span, &:hover span {
+        /*background: transparent url(../images/sidebarTopLeftHover2.gif) no-repeat left top;*/
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  a.levelb:hover em {
+    /*background: transparent url(../images/sidebarBottomLeftHover2.gif) no-repeat left bottom;*/
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  li a {
+    &.current {
+      em, &:hover em {
+        /*background: transparent url(../images/sidebarBottomLeftHover2.gif) no-repeat left bottom;*/
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.section {
+      em, &:hover em {
+        /*background: transparent url(../images/sidebarBottomLeftHover2.gif) no-repeat left bottom;*/
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/* Level 1 
+      	- We use 3 elements for the nav to get 3 background images applied.
+            * span - topleft rounded corner
+            * em - bottomleft rounded corner
+            * a - arrow on the right
+            <a><span><em></em></span></a>
+      	*/
+
+/* Sub Menu */
