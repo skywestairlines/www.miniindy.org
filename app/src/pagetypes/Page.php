@@ -13,8 +13,9 @@ use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\ORM\FieldType\DBVarchar;
 
 
-class Page extends SiteTree {
-
+class Page extends SiteTree 
+{
+    
 	private static $db = array(
 		'ShowInFooter' => DBBoolean::class,
         'FooterSortOrder' => DBInt::class,

@@ -36,6 +36,7 @@ class RegistrationPage extends Page
         'CarParts' => DBCurrency::class,
         'CarBody' => DBCurrency::class,
         "OtherPrices" => MultiValueField::class,
+        "Sponsorship" => MultiValueField::class,
         'AddTeam' => DBBoolean::class,
         'ExtraTeam' => DBBoolean::class,
         'HideTotal' => DBBoolean::class,

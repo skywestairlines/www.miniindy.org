@@ -6,7 +6,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import 'variables';
 @import '~bootstrap/scss/bootstrap.scss';
-@import 'styles';
+@import './styles';
+@import './forms';

@@ -1,15 +1,4 @@
 <form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" class="form-compact">
-    <input type="hidden" name="item" value="$Title">
-    <input type="hidden" name="sponsorType" value="$Type">
-    <input type="hidden" name="Qty" value="1">
-    <input name="t1" type="hidden" value="t-Company Name">
-    <input name="t2" type="hidden" value="t-Company Contact">
-    <input name="t3" type="hidden" value="t-Email">
-    <input name="t4" type="hidden" value="t-Phone">
-    <input name="t5" type="hidden" value="t-Player 1">
-    <input name="t6" type="hidden" value="t-Player 2">
-    <input name="t7" type="hidden" value="t-Player 3">
-    <input name="t8" type="hidden" value="t-Player 4">
 
     <div class="form-container">
         <fieldset class="mb-2">
@@ -17,7 +6,7 @@
         <div class="form-row">
             <label for="quantity" class="col-form-label col-md-3 text-md-right">Quantity</label>
             <div class="col-md-6">
-                <input type="text" class="form-control form-control-sm" name="Qty" />
+                <input type="number" class="form-control form-control-sm" name="Qty" />
             </div>
         </div>
         <% end_if %>
@@ -59,7 +48,20 @@
             </tbody>
         </table>
         </div>
-        <% else %>
+        </fieldset>
+        <% end_if %>
+        <% if $Sponsorship %>
+        <fieldset>
+        <% loop $Sponsorship.Items %>
+            <div class="form-row">
+                <label for="$Key" class="col-form-label col-md-3 text-md-right">$Value</label>
+                <div class="col-md-6">
+                    <input type="text" name="$Key" class="form-control form-control-sm" />
+                </div>
+            </div>
+        <% end_loop %>
+        </fieldset>
+        <% end_if %>
         <hr class="my-2">
         <fieldset>
             <% if $EntryPrice > 0 %>
@@ -84,9 +86,8 @@
             </div>
             <% end_if %>
         </fieldset>
-        <% end_if %>
         <div class="offset-md-3 col-md-6 my-2">
-            <button type="submit" name="submit" class="btn btn-sm btn-secondary btn-block">
+            <button type="submit" name="submit" class="btn btn-sm btn-secondary btn-block" data-toggle="modal" data-target="#cart32">
                 <% if $ActionCall %>$ActionCall
                 <% else %>Submit
                 <% end_if %>
@@ -94,3 +95,27 @@
         </div>
     </div>
 </form>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shoppingCard">
+  Launch Shopping cart
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="shoppingCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body h-100">
+        <iframe src="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" frameborder="0" class="w-100"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
