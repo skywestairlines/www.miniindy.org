@@ -66,7 +66,8 @@ class RegistrationPage extends Page
             new CheckboxField("GolfIncluded", "Golf will be included in this package"),
             new CheckboxField("RaceIncluded", "Race will be included in this package"),
             new CheckboxField("CarIncluded", "New Car will be included in this package"),
-            new KeyValueField("OtherPrices", "Other Prices Items"),
+            new KeyValueField("OtherPrices", "Other Items/Prices"),
+            new KeyValueField("Sponsorship", "Additional Sponsorship"),
             new CheckboxField("HideTotal", "Hide Total Price on Page", true),
             new CheckboxField("CompanyInfo", "Allow Company Info Registration", true),
             new CheckboxField("AddTeam", "Allow adding team players with this Package"),
@@ -74,7 +75,7 @@ class RegistrationPage extends Page
             CurrencyField::create('CarStorage')->setDescription("Allow car parts and other stuff"),
             CurrencyField::create('CarBody')->setDescription("Allow car parts and other stuff"),
             CurrencyField::create('CarParts')->setDescription("Allow car parts and other stuff"),
-            new TextField('ActionCall', 'Submit Text'),
+            new TextField('ActionCall', 'Action'),
         ], 'Comments');
 
         if(!$this->AllowQty){
@@ -100,23 +101,27 @@ class RegistrationPage extends Page
 
     public function getRegForm()
     {
-        return $this->renderWith("Includes/Forms/Registration");
+        $RegForm = "MainRegistration";
 
+        if($this->MyFormType == 'other'){
+            $RegForm = "OtherRegistration";
+        }
+        return $this->renderWith("Includes/Forms/$RegForm");
     }
 
-    public function getGolfType()
-    {
-        $template = 'Includes/Forms/GolfRegistration';
+    // public function getGolfType()
+    // {
+    //     $template = 'Includes/Forms/GolfRegistration';
 
-        return $this->renderWith($template);
-    }
+    //     return $this->renderWith($template);
+    // }
 
-    public function getRaceType()
-    {
+    // public function getRaceType()
+    // {
 
-        $template = 'Includes/Forms/RaceRegistration';
+    //     $template = 'Includes/Forms/RaceRegistration';
 
-        return $this->renderWith($template);
-    }
+    //     return $this->renderWith($template);
+    // }
 
 }

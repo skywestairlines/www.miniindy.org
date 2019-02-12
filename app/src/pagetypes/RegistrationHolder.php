@@ -34,5 +34,5 @@ class RegistrationHolder extends Page {
     //     'Registration Page' => RegistrationPage::class
 	// );
 
-	private static $icon = 'client/icons/register';
+	private static $icon = '/icons/register';
 }

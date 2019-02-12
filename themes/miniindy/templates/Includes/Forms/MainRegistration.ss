@@ -11,7 +11,7 @@
     <input name="t7" type="hidden" value="t-Player 3">
     <input name="t8" type="hidden" value="t-Player 4">
 
-    <div class="c">
+    <div class="form-container">
         <fieldset class="mb-2">
             <% if $AllowQty %>
             <div class="form-row">
@@ -109,47 +109,8 @@
                 </div>
             </div>
         </fieldset>
-        <% end_if %>
-        <% if $OtherPrices %>
-        <div class="table-responsive">
-        <table class="table table-compact">
-            <%-- Let's talk about uncommenting the following lines --%>
-            <%-- <thead>
-                <tr>
-                    <th></th>
-                    <th>Item</th>
-                    <th>Value</th>
-                    <th></th>
-                </tr>
-            </thead> --%>
-            <tbody>
-            <% loop $OtherPrices.Items %>
-                <tr>
-                    <td>$Pos</td>
-                    <td>$Key</td>
-                    <td>${$Value}</td>
-                    <td>
-                        <button type="submit" name="Price" class="btn btn-xs btn-primary" value="$Value">
-                            <% if $Top.ActionCall %>$Top.ActionCall
-                            <% else %>Submit
-                            <% end_if %>
-                        </button>
-                    </td>
-                </tr>
-                <%-- Let's talk about commenting this out instead --%>
-                <% if $TotalItems > 1 && not $Last %>
-                <tr>
-                    <td colspan="5">
-                        <div class="text-center">-OR-</div>
-                    </td>
-                </tr>
-                <% end_if %>
-            <% end_loop %>
-            </tbody>
-        </table>
-        </div>
-        <% else %>
         <hr class="my-2">
+        <% end_if %>
         <fieldset>
             <% if $EntryPrice > 0 %>
             <div class="form-row">
@@ -220,7 +181,6 @@
             </div>
             <% end_if %>
         </fieldset>
-        <% end_if %>
         <div class="offset-md-3 col-md-6 my-2">
             <button type="submit" name="submit" class="btn btn-sm btn-secondary btn-block">
                 <% if $ActionCall %>$ActionCall
@@ -229,7 +189,5 @@
             </button>
         </div>
     </div>
-
-
 
 </form>
