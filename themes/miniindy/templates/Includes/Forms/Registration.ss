@@ -110,9 +110,9 @@
             </div>
         </fieldset>
         <% end_if %>
-        <% if $OtherPrices %>
+        <% if $OtherPrices && $OtherPrices.Count > 0 %>
         <div class="table-responsive">
-        <table class="table">
+        <table class="table table-compact">
             <thead>
                 <tr>
                     <th></th>

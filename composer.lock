@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "804d29c29bc0a67c6e145e2bc84bf846",
+    "content-hash": "199164636e67bac8bb4f7e99463d2762",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -5066,7 +5066,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "silverstripe/recipe-cms": 0,
         "tractorcow/silverstripe-imagegallery": 20
     },
     "prefer-stable": true,
