@@ -1,10 +1,7 @@
     html,
     body {
+        overflow-x: hidden;
         background-color: transparent;
-    }
-    
-    .float-right {
-        float: right;
     }
     
     .search {
@@ -12,10 +9,6 @@
         .input-text {
             width: 160px !important;
         }
-    }
-    
-    .w-100 {
-        width: 100%;
     }
     
     .bold {
@@ -103,4 +96,10 @@
         .form-check-label {
             padding-top: 2px;
         }
+    }
+    
+    .btn-xs {
+        font-size: 0.75rem;
+        margin: 0;
+        padding: 2px 5px;
     }

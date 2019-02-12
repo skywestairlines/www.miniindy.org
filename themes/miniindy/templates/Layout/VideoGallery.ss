@@ -1,22 +1,29 @@
 <div class="youtubegallery typography">
     <div class="row">
         <% loop $VideosFeed %>
-        <div class="col">
-            <div class="still">
-                <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
-                    rel="prettyPhoto[iframes]" title="$VideoName">
-                    <img src="$VideoImage.URL" alt="$VideoName" />
-                </a>
-            </div>
-            <div class="info">
-                <h6>
-                    <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
-                        rel="prettyPhoto[iframes]" title="$VideoName">
-                        $VideoName
-                    </a>
-                </h6>
-                $VideoInfo
-                <div class="clearfix"></div>
+        <div class="col-md-6">
+            <div class="d-flex">
+                <div class="col-md-8">
+                    <div class="still row">
+                        <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
+                            rel="prettyPhoto[iframes]" title="$VideoName">
+                            <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid" />
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <h6>
+                            <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
+                                rel="prettyPhoto[iframes]" title="$VideoName">
+                                <strong>$VideoName</strong>
+                            </a>
+                        </h6>
+                        $VideoInfo
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <% end_loop %>

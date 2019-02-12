@@ -14,12 +14,12 @@
     <div class="c">
         <fieldset class="mb-2">
             <% if $AllowQty %>
-                <div class="form-row">
-                    <label for="quantity" class="col-form-label col-md-3 text-md-right">Quantity</label>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control form-control-sm" name="Qty" />
-                    </div>
+            <div class="form-row">
+                <label for="quantity" class="col-form-label col-md-3 text-md-right">Quantity</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control form-control-sm" name="Qty" />
                 </div>
+            </div>
             <% end_if %>
 
             <% if $CompanyInfo %>
@@ -110,6 +110,36 @@
             </div>
         </fieldset>
         <% end_if %>
+        <% if $OtherPrices %>
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Item</th>
+                    <th>Value</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% loop $OtherPrices.Items %>
+                <tr>
+                    <td>$Pos</td>
+                    <td>$Key</td>
+                    <td>${$Value}</td>
+                    <td>
+                        <button type="submit" name="Price" class="btn btn-xs btn-primary" value="$Value">
+                            <% if $ActionCall %>$ActionCall
+                            <% else %>Submit
+                            <% end_if %>
+                        </button>
+                    </td>
+                </tr>
+                <% end_loop %>
+            </tbody>
+        </table>
+        </div>
+        <% else %>
         <hr class="my-2">
         <fieldset>
             <% if $EntryPrice > 0 %>
@@ -122,16 +152,17 @@
             </div>
             <% end_if %>
             <% if $GolfPrice > 0 && Not $GolfIncluded %>
-                <div class="form-row">
-                    <label for="golf-price" class="col-form-label col-md-3 text-md-right">Golf:</label>
-                    <div class="col-md-6">
-                        <% if $GolfIncluded %>
-                        <input id="golf-price" type="text" class="form-control form-control-sm" value="Included" readonly />
-                        <% else %>
-                        <input id="golf-price" type="text" class="form-control form-control-sm" name="price[]" value="$GolfPrice" readonly />
-                        <% end_if %>
-                    </div>
+            <div class="form-row">
+                <label for="golf-price" class="col-form-label col-md-3 text-md-right">Golf:</label>
+                <div class="col-md-6">
+                    <% if $GolfIncluded %>
+                    <input id="golf-price" type="text" class="form-control form-control-sm" value="Included" readonly />
+                    <% else %>
+                    <input id="golf-price" type="text" class="form-control form-control-sm" name="price[]" value="$GolfPrice"
+                        readonly />
+                    <% end_if %>
                 </div>
+            </div>
             <% end_if %>
 
             <% if $RacePrice > 0 && Not $RaceIncluded %>
@@ -158,14 +189,15 @@
                     <input id="car-price" type="text" class="form-control form-control-sm" value="Included" readonly />
                     <% else %>
                     <div class="form-check ml-2">
-                        <input class="form-check-input" type="checkbox" value="$CarPrice" name="price[]" id="car-price"<% if not $RaceIncluded %> disabled<% end_if %>>
+                        <input class="form-check-input" type="checkbox" value="$CarPrice" name="price[]" id="car-price"
+                            <% if not $RaceIncluded %> disabled
+                        <% end_if %>>
                         <label class="form-check-label" for="race-price"> $CarPrice.Nice </label>
                     </div>
                     <% end_if %>
                 </div>
             </div>
             <% end_if %>
-
 
             <% if $HideTotal %>
             <input id="total-price" type="hidden" name="Price" value="$EntryPrice" />
@@ -180,8 +212,13 @@
             <% end_if %>
         </fieldset>
         <div class="offset-md-3 col-md-6 my-2">
-            <button type="submit" name="submit" class="btn btn-sm btn-secondary btn-block"><% if $ActionCall %>$ActionCall<% else %>Submit<% end_if %></button>
+            <button type="submit" name="submit" class="btn btn-sm btn-secondary btn-block">
+                <% if $ActionCall %>$ActionCall
+                <% else %>Submit
+                <% end_if %>
+            </button>
         </div>
+        <% end_if %>
     </div>
 
 

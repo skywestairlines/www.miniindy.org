@@ -4,6 +4,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CurrencyField;
+use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\FieldType\DBInt;
 use SilverStripe\ORM\FieldType\DBText;
 use SilverStripe\ORM\FieldType\DBBoolean;
@@ -51,6 +52,11 @@ class RegistrationPage extends Page
     {
         $fields = parent::getCMSFields();
 
+        $fields->addFieldToTab("Root.Main", $reg = new DropdownField("MyFormType", "Reg Type", [
+            "all" => "All", "golf" => "Golf", "race" => "Race", "other" => "Other", "closed" => "Closed"
+        ]), "Content");
+        $reg->setDescription("Select what type of registration this will be; select 'closed' to close registration");
+
         $fields->addFieldsToTab('Root.PackageInfo', [
             new CurrencyField("EntryPrice", "Main Price"),
             new CheckboxField("AllowQty", "Allow Quantity entry on Page", false),
@@ -65,7 +71,7 @@ class RegistrationPage extends Page
             CurrencyField::create('CarStorage')->setDescription("Allow car parts and other stuff"),
             CurrencyField::create('CarBody')->setDescription("Allow car parts and other stuff"),
             CurrencyField::create('CarParts')->setDescription("Allow car parts and other stuff"),
-            new TextField('Action', 'Submit Text'),
+            new TextField('ActionCall', 'Submit Text'),
         ], 'Comments');
 
         if(!$this->AllowQty){

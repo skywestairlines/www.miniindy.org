@@ -5,16 +5,20 @@ use SilverStripe\Forms\LabelField;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\ORM\FieldType\DBInt;
 use SilverStripe\Security\Permission;
 use SilverStripe\Forms\CompositeField;
 use SilverStripe\Forms\OptionsetField;
+use SilverStripe\ORM\FieldType\DBBoolean;
+use SilverStripe\ORM\FieldType\DBVarchar;
 
 
 class Page extends SiteTree {
 
 	private static $db = array(
-		'ShowInFooter' => 'Boolean',
-		'FooterSortOrder' => 'Int'
+		'ShowInFooter' => DBBoolean::class,
+        'FooterSortOrder' => DBInt::class,
+        'ShowSideBar' => DBVarchar::class
 	);
 
 	private static $has_one = array();
@@ -36,14 +40,13 @@ class Page extends SiteTree {
     public function getSettingsFields()
     {
         $f = parent::getSettingsFields();
+        $f->addFieldToTab("Root.Settings", OptionsetField::create("ShowSideBar", "Side Bar", [
+            "main" => 'Show Main Static Side Bar', "page" => 'Show Page Specific Side Bar', "no" => 'Don\'t Show Any Side Bar'
+        ]), "Visibility");
+
         $f->addFieldToTab("Root.Settings", $Footer = new CompositeField([
             CheckboxField::create("ShowInFooter", "Show in footer menu?"),
             NumericField::create("FooterSortOrder", "Sort Order in Footer"),
-            OptionsetField::create("ShowSideBar", "Side Bar", [
-                "main" => 'Main Side Bar',
-                "page" => 'Page Specific',
-                "hide" => 'Don\'t Show'
-            ]),
         ]));
         // $Footer->setTitle("Footer");
 

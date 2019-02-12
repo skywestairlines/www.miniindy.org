@@ -7,6 +7,7 @@
 		<% base_tag %>
 		<link rel="shortcut icon" href="/favicon.ico" />
         <% require css('dist/css/main.css') %>
+		<% require css('dist/css/vendor.css') %>
 		<% require css('dist/css/miniindy.css') %>
 
 		<!--[if IE 6]>
@@ -40,7 +41,7 @@
             <main class="card card-trans">
             $Layout
             </main>
-            <% if $ShowSideBar != 'hide' %>
+            <% if $ShowSideBar != 'no' %>
             <aside class="col-md-4 card px-0">
                 <% include SideBar %>
             </aside>
