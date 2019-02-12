@@ -20,8 +20,9 @@ class Video extends DataObject
         'VideoType' => DBVarchar::class,
         'VideoData' => DBVarchar::class,
         'VideoUser' => DBText::class,
-        'VideoInfo' => DBHTMLText::class
-
+        'VideoInfo' => DBHTMLText::class,
+        'FavedBy'   => DBVarchar::class,
+        'PlayList'  => DBVarchar::class,
     ];
 
     private static $has_one = [

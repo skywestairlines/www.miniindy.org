@@ -7,7 +7,7 @@
                     <div class="still row">
                         <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
                             rel="prettyPhoto[iframes]" title="$VideoName">
-                            <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid" />
+                            <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" />
                         </a>
                     </div>
 

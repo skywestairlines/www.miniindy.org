@@ -24,7 +24,7 @@
     },
     "extra": {
         "installer-paths": {
-            "vendor/{$name}": [
+            "vendor/silverstripe/{$name}": [
                 "tractorcow/silverstripe-imagegallery"
             ]
         },
