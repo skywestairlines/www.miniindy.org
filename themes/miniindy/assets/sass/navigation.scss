@@ -86,6 +86,7 @@
         }
     }
     .dropdown-menu{
+      margin-top: -1rem;
       background-color: $primary;
       .dropdown-item{
         &:hover{
