@@ -43,10 +43,13 @@ class RegistrationPage extends Page
         'ActionCall' => DBVarchar::class,
     );
     private static $has_one = array();
-    private static $defaults = array(); //'ShowInMenus' => false);
 
     private static $icon = 'client/icons/golfball';
     private static $can_be_root = false;
+
+    private static $defaults = [
+        "Qty" => 1
+    ];
 
     public function getCMSFields()
     {
@@ -60,14 +63,14 @@ class RegistrationPage extends Page
         $fields->addFieldsToTab('Root.PackageInfo', [
             new CurrencyField("EntryPrice", "Main Price"),
             new CheckboxField("AllowQty", "Allow Quantity entry on Page", false),
-            new CheckboxField("CompanyInfo", "Allow Company Info Registration", true),
             new CheckboxField("GolfIncluded", "Golf will be included in this package"),
             new CheckboxField("RaceIncluded", "Race will be included in this package"),
             new CheckboxField("CarIncluded", "New Car will be included in this package"),
             new KeyValueField("OtherPrices", "Other Prices Items"),
+            new CheckboxField("CompanyInfo", "Allow Company Info Registration", true),
+            new CheckboxField("HideTotal", "Hide Total Price on Page", true),
             new CheckboxField("AddTeam", "Add Team Players with this Package"),
             new CheckboxField("ExtraTeam", "Allow Extra Players with this Package"),
-            new CheckboxField("HideTotal", "Hide Total Price on Page", true),
             CurrencyField::create('CarStorage')->setDescription("Allow car parts and other stuff"),
             CurrencyField::create('CarBody')->setDescription("Allow car parts and other stuff"),
             CurrencyField::create('CarParts')->setDescription("Allow car parts and other stuff"),
@@ -75,16 +78,16 @@ class RegistrationPage extends Page
         ], 'Comments');
 
         if(!$this->AllowQty){
-            $fields->addFieldToTab('Root.PackageInfo', new NumericField("Qty", "Quantity (per price)"), 'AllowQty');
+            $fields->addFieldToTab('Root.PackageInfo', new NumericField("Qty", "Quantity (per price)"), 'GolfIncluded');
         }
         if (!$this->GolfIncluded) {
-            $fields->addFieldToTab('Root.PackageInfo', new CurrencyField("GolfPrice", " Golf Price"), 'GolfIncluded');
+            $fields->addFieldToTab('Root.PackageInfo', new CurrencyField("GolfPrice", " Golf Price"), 'RaceIncluded');
         }
         if (!$this->RaceIncluded) {
             $fields->addFieldToTab('Root.PackageInfo', new CurrencyField("RacePrice", "Race Price"), 'CarIncluded');
         }
         if (!$this->CarIncluded) {
-            $fields->addFieldToTab('Root.PackageInfo', new CurrencyField("CarPrice", "Car Price"), 'CarIncluded');
+            $fields->addFieldToTab('Root.PackageInfo', new CurrencyField("CarPrice", "Car Price"), 'OtherPrices');
         }
 
         $fields->addFieldsToTab('Root.Main', [

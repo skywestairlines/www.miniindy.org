@@ -10,14 +10,15 @@
     }
   margin: 0 auto;
   background: transparent url(../images/menuBG.png) no-repeat center bottom;
-  height: 75px;
+  background-size: cover;
+  height: 80px;
   padding-top: 0;
   color: white;
   text-shadow: 0 1px black;
   ul {
   /*float: right; */
     // margin: 10px 0;
-    .nav-item {      
+    .nav-item {
       .nav-link, .nav-brand {
         font: 24px/28px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
         //   font-size: 1rem;
@@ -73,7 +74,7 @@
         color: $success;
       }
     }
-    
+
     ul li:first-child {
       // padding-top: 10px;
     }
@@ -344,7 +345,7 @@ ul#Menu2 li {
   }
 }
 
-/* Level 1 
+/* Level 1
       	- We use 3 elements for the nav to get 3 background images applied.
             * span - topleft rounded corner
             * em - bottomleft rounded corner
