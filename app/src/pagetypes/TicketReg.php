@@ -6,10 +6,6 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 
-
-
-
-
 class TicketReg extends Page {
 
 	private static $table_name = 'TicketReg';

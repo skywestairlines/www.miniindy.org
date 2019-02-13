@@ -1,6 +1,6 @@
 <% include Menu2 %>
 <div id="Content" class="typography">
-	<% include Breadcrumbs %>
+	<% include BreadCrumbs %>
 
 	<h2>$Title</h2>
 

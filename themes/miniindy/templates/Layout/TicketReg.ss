@@ -1,7 +1,7 @@
 
 
 <div id="Content" class="typography">
-	<% include Breadcrumbs %>
+	<% include BreadCrumbs %>
 
 	<h2>$Title</h2>
 

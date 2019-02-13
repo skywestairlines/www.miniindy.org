@@ -1,7 +1,8 @@
 <?php
-use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\DataObject;
-use App\Pagetypes\HomePage;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\ORM\FieldType\DBInt;
+use SilverStripe\Forms\TreeDropdownField;
 
 
 
@@ -10,7 +11,8 @@ class SliderImage extends DataObject {
 	private static $table_name = 'SliderImage';
 
 	private static $db = array(
-		'Caption' => 'Varchar(80)'
+        'Caption' => 'Varchar(80)',
+        'SortOrder' => DBInt::class,
 	);
 
 	private static $has_one = array(
@@ -20,8 +22,14 @@ class SliderImage extends DataObject {
 	);
 
 	private static $summary_fields = [
-        "Photo.CMSThumbnail" => "Photo"
-	];
+        "Photo.CMSThumbnail" => "Photo",
+        "Title"
+    ];
+    
+    public function getTitle()
+    {
+        return $this->Caption;
+    }
 
 	public function SlideShowImage() {
 		return $this->Photo()->SetRatioSize('437', '263');
@@ -34,7 +42,7 @@ class SliderImage extends DataObject {
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
-		$f->addFieldToTab('Root.Main', $dropdown = new SimpleTreeDropdownField('LinkID', 'Page Link', SiteTree::class));
+		$f->addFieldToTab('Root.Main', $dropdown = new TreeDropdownField('LinkID', 'Page Link', SiteTree::class));
 		$dropdown->setEmptyString('Select One...');
 
 		$f->removeFieldFromTab('Root.Main', 'SortOrder');

@@ -2,7 +2,7 @@
 
 <div id="Content" class="typography">
 	<h1 class="main-title">$Title</h1>
-	<% include Breadcrumbs %>
+	<% include BreadCrumbs %>
 	$Content
 	<% if $SiteConfig.RegIsOpen %>
 		$RegForm

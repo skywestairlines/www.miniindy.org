@@ -5,6 +5,7 @@
 	<div class="slidesHolder">
 		<div class="slides_container">
 			<% loop SliderImages %>
+            $Photo.URL
 			<% if Photo %>
 			<div>
 				<% if LinkID %><a href="$SliderLink"><% end_if %>
@@ -29,15 +30,15 @@ $Content
 		<% loop MainSponsors %>
 		<a href="$customLink" class="logo" target="_blank">
 		<li class="sponsor homeFix<% if MultipleOf(3) %> Last<% end_if %><% if First %> First<% end_if %><% if MultipleOf(4) %> First<% end_if %>">
-			  
+
 				<% if Logo %>
 				$Logo.setWidth(220)
 				<% else %>
 				<div class="noLogo"></div>
 				<% end_if %>
 				<div class="name">$Name</div>
-			
-		</li> </a> 
+
+		</li> </a>
 		<% if MultipleOf(4) %><div class="clear"><!-- --></div><% end_if %>
 		<% end_loop %>
 		<div class="clear"><!-- --></div>
@@ -54,14 +55,14 @@ $Content
 		<% if customLink %>
 		<a href="$customLink" class="logo" target="_blank"> <% end_if %>
 		<li class="sponsor homeFix<% if MultipleOf(3) %> Last<% end_if %><% if First %> First<% end_if %><% if MultipleOf(4) %> First<% end_if %>">
-			  
+
 				<% if Logo %>
 				$Logo.setWidth(220)
 				<% else %>
 				<div class="noLogo"></div>
 				<% end_if %>
 				<div class="name">$Name</div>
-			
+
 		</li> <% if customLink %></a> <% end_if %>
 		<% if MultipleOf(4) %><div class="clear"><!-- --></div><% end_if %>
 		<% end_loop %>

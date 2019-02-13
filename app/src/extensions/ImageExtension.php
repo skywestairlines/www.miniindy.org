@@ -13,6 +13,21 @@ class ImageExtension extends DataExtension
         return $this->owner->ScaleWidth($width);
     }
 
+    public function SetHeight($width)
+    {
+        return $this->owner->ScaleHeight($width);
+    }
+
+    public function SetSize($width, $height)
+    {
+        return $this->owner->Fill($width, $height);
+    }
+
+    public function SetRatioSize($width, $height) 
+    {
+        return $this->owner->Fit($width, $height);
+    }
+
     // public function URL()
     // {
     //     $_this = $this->owner;

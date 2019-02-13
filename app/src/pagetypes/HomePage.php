@@ -5,6 +5,7 @@ use SilverStripe\Forms\LiteralField;
 use SilverStripe\Security\Permission;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 
 
@@ -29,8 +30,11 @@ class HomePage extends Page {
 			'SliderImages',
 			'SliderImages',
             $this->SliderImages(),
-            GridFieldConfig_RecordEditor::create()
-		);
+            $grid = GridFieldConfig_RecordEditor::create()
+        );
+        $sortable = new GridFieldSortableRows('SortOrder');
+        $grid->addComponent($sortable);
+        $sortable->setAppendToTop(true);
 
         // this should be a drop down from the Files & Images tab!
         $f->addFieldToTab('Root.SliderImages', new LiteralField('ImageFolder', '<p>Slider Images need to be at least 620x294 or at that ratio if larger.</p>'));

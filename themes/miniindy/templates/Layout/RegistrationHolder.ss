@@ -1,7 +1,7 @@
 <% include Menu2 %>
 
 <div id="Content" class="typography">
-	<% include Breadcrumbs %>
+	<% include BreadCrumbs %>
 
 	<%-- pull in reg pages --%>
 	<!-- <p><h3>Registration for Mini Indy 2012 is open!</h3>
