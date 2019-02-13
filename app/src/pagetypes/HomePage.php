@@ -55,10 +55,10 @@ class HomePage extends Page {
                          ->leftJoin("SponsorType",'"SponsorType"."ID" = "Sponsor_SponsorTypes"."SponsorTypeID"');
     }
 
-	public function getMainSponsors() {
+	public function MainSponsors() {
         return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Major' AND Approved = '1'");
 	}
-	public function getBenefitingSponsors() {
+	public function BenefitingSponsors() {
         return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Benefiting' AND Approved = '1'");
 	}
 }
