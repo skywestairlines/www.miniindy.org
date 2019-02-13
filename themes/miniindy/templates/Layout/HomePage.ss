@@ -4,8 +4,8 @@
 <div id="slides">
 	<div class="slidesHolder">
 		<div class="slides_container">
+            $Debug
 			<% loop SliderImages %>
-            $Photo.URL
 			<% if Photo %>
 			<div>
 				<% if LinkID %><a href="$SliderLink"><% end_if %>
@@ -31,8 +31,8 @@ $Content
 		<a href="$customLink" class="logo" target="_blank">
 		<li class="sponsor homeFix<% if MultipleOf(3) %> Last<% end_if %><% if First %> First<% end_if %><% if MultipleOf(4) %> First<% end_if %>">
 
-				<% if Logo %>
-				$Logo.setWidth(220)
+				<% if $Logo %>
+				$Logo.scaleWidth(220)
 				<% else %>
 				<div class="noLogo"></div>
 				<% end_if %>
