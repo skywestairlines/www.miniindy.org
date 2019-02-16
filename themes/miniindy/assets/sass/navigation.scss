@@ -19,9 +19,10 @@
   /*float: right; */
     // margin: 10px 0;
     .nav-item {
-      .nav-link, .nav-brand {
+      .nav-link, .navbar-brand {
         font: 24px/28px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
         //   font-size: 1rem;
+        margin-top: -1rem;
       }
     }
 
