@@ -8,6 +8,7 @@ $background_color_3: #262626;
 $background_color_4: #fff;
 
 /* Gold sponsor */
+
 .typography {
     h3 {
         color: $color_1;
@@ -24,26 +25,22 @@ $background_color_4: #fff;
     margin: 10px;
     text-align: center;
     position: relative;
-
     .logo {
         height: 180px;
         width: 220px;
         background-color: $background_color_1;
         color: $color_2;
-
         img {
             margin: 0 auto;
             display: block;
         }
     }
-
     .noLogo {
         background: url(../images/noLogo.png) no-repeat -40px -25px;
         width: 220px;
         height: 157px;
         margin: 0 auto;
     }
-
     .name {
         height: 40px;
         width: 100%;
@@ -53,7 +50,6 @@ $background_color_4: #fff;
         text-indent: 10px;
         text-align: left;
         text-decoration: none;
-
         .extLink {
             background: url(../images/icons/externalLink1.gif) no-repeat 5px 2px;
             width: 10px;
@@ -61,7 +57,6 @@ $background_color_4: #fff;
             padding-left: 20px;
         }
     }
-
     .regBox {
         height: 180px;
         width: 220px;
@@ -69,7 +64,6 @@ $background_color_4: #fff;
         font: italic 13px/37px Georgia, "Times New Roman", Times, serif;
         display: block;
     }
-
     .noName {
         height: 40px;
         width: 100%;
@@ -118,12 +112,10 @@ a {
     width: 960px;
     position: relative;
     top: 40px;
-
     ul {
         margin: 0 0 40px;
         list-style-type: none;
     }
-
     li {
         margin: 10px;
         list-style-type: none;
@@ -139,12 +131,10 @@ a {
     width: 100%;
     position: relative;
     top: 50px;
-
     ul {
         margin: 0 0 40px;
         list-style-type: none;
     }
-
     li {
         margin: 10px;
         list-style-type: none;
@@ -156,7 +146,6 @@ a {
 
 .GoldSponsers.homeFix {
     top: 20px;
-
     li {
         width: 195px;
         margin: 7px;
@@ -167,7 +156,6 @@ a {
     width: 960px;
     position: relative;
     top: 40px;
-
     ul {
         margin: 0 0 40px;
         list-style-type: none;
@@ -178,7 +166,6 @@ a {
         position: relative;
         left: -10px;
     }
-
     li {
         margin: 10px;
         list-style-type: none;
@@ -192,19 +179,16 @@ a {
     width: 100%;
     position: relative;
     top: 50px;
-
     ul {
         margin: 0 0 40px;
         list-style-type: none;
     }
-
     li {
         margin: 10px;
         list-style-type: none;
         background-color: $background_color_4;
         width: 200px;
         overflow: hidden;
-
         img {
             width: 200px;
         }
@@ -215,19 +199,16 @@ a {
     width: 100%;
     position: relative;
     top: 50px;
-
     ul {
         margin: 0 0 40px;
         list-style-type: none;
     }
-
     li {
         margin: 10px;
         list-style-type: none;
         background-color: $background_color_4;
         width: 172px;
         overflow: hidden;
-
         img {
             width: 172px;
         }
@@ -238,19 +219,16 @@ a {
     width: 100%;
     position: relative;
     top: 50px;
-
     ul {
         margin: 0 0 40px;
         list-style-type: none;
     }
-
     li {
         margin: 10px;
         list-style-type: none;
         background-color: $background_color_4;
         width: 140px;
         overflow: hidden;
-
         img {
             width: 140px;
         }
@@ -261,19 +239,16 @@ a {
     width: 100%;
     position: relative;
     top: 50px;
-
     ul {
         margin: 0 0 40px;
         list-style-type: none;
     }
-
     li {
         margin: 10px;
         list-style-type: none;
         background-color: $background_color_4;
         width: 117px;
         overflow: hidden;
-
         img {
             width: 117px;
         }
@@ -284,25 +259,20 @@ a {
     float: left;
     margin: 10px;
     text-align: center;
-
     .logo {
         width: 300px;
     }
-
     .noLogo {
         width: 300px;
         height: 214px;
         background-position: 0 0;
     }
-
     .regBox {
         width: 100%;
-
         p {
             width: 150px;
         }
     }
-
     .name {
         font: 14px/37px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     }
@@ -320,11 +290,9 @@ a {
     float: left;
     margin: 10px;
     text-align: center;
-
     .logo {
         width: 300px;
     }
-
     .regBox {
         height: auto;
         width: 220px;
@@ -332,7 +300,6 @@ a {
         font: italic 13px/37px Georgia, "Times New Roman", Times, serif;
         display: block;
     }
-
     .silverName {
         height: 40px;
         background-color: $background_color_2;
