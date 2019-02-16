@@ -22,7 +22,7 @@
 
 $Content
 
-<div class="GoldSponsers homeFix" style="width:100%;float:left;">
+<%-- <div class="GoldSponsers homeFix" style="width:100%;float:left;">
 	<h4><span>Major Sponsors</span></h4>
 	<% if MainSponsors %>
 	<ul>
@@ -42,6 +42,37 @@ $Content
 		<% end_loop %>
 		<div class="clear"><!-- --></div>
 		</ul>
+	<% else %>
+	<p>Car Sponsors Coming Soon.</p>
+	<% end_if %>
+</div> --%>
+
+<div class="major-sponsors">
+	<h4><span>Major Sponsors</span></h4>
+	<% if MainSponsors %>
+	<div class="row">
+		<% loop MainSponsors %>
+        <div class="col-md-4 col-sm-6 card">
+            <div class="card-body p-0">
+            <a href="$customLink" class="" target="_blank">
+				<% if $Logo %>
+				<img src="$Logo.scaleWidth(220).URL" alt="$Logo.TITLE" class="img-fluid">
+				<% else %>
+				<div class="noLogo"></div>
+				<% end_if %>
+            </a>
+            </div>
+            <div class="card-footer bg-primary row p-2">
+            <a href="$customLink" class="text-white" target="_blank">
+             $Name
+             </a>
+            </div>
+        </div>
+        <%-- <% if MultipleOf(2) %>
+            <div class="w-100"></div>
+        <% end_if %> --%>
+		<% end_loop %>
+    </div>
 	<% else %>
 	<p>Car Sponsors Coming Soon.</p>
 	<% end_if %>

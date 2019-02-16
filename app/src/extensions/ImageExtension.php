@@ -9,7 +9,7 @@ class ImageExtension extends DataExtension
     ];
     private static $has_one = [
         "MikePage" => MikePage::class,
-        "Album" => Album::class
+        // "Album" => Album::class
     ];
 
     public function SetWidth($width)
@@ -30,6 +30,11 @@ class ImageExtension extends DataExtension
     public function SetRatioSize($width, $height) 
     {
         return $this->owner->Fit($width, $height);
+    }
+
+    public function getFormattedImage($format, $arg1 = null, $arg2 = null) 
+    {
+        return $this->owner;
     }
 
     // public function URL()

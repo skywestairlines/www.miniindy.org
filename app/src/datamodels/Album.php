@@ -21,7 +21,7 @@ class Album extends DataObject
         "ImageGallery"=> ImageGallery::class,
     ];
 
-    private static $has_many = [
+    private static $many_many = [
         "Photos" => Image::class,        
     ];
 
