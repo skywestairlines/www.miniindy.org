@@ -1,15 +1,9 @@
 <?php
 
-namespace App\Controllers;
-
 use SilverStripe\View\Requirements;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ErrorPage\ErrorPage;
 use SilverStripe\Core\Convert;
-use PageController;
-
-
-
 
 class SiteMapController extends PageController
 {

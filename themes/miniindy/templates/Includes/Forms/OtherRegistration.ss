@@ -1,6 +1,6 @@
 <form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" class="form-compact">
     <input type="hidden" name="sponsorType" value="$Type">
-    <input name="Price" type="hidden" value="$EntryPrice">
+    <!--<input name="Price" type="hidden" value="$EntryPrice">-->
     <input name="t1" type="hidden" value="t-Company Name">
     <input name="t2" type="hidden" value="t-Company Contact">
     <input name="t3" type="hidden" value="t-Email">

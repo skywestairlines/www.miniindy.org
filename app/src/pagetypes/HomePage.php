@@ -48,17 +48,17 @@ class HomePage extends Page {
        	return $f;
     }
 
-    public function getAllSponsors()
-    {
-        return DataObject::get('Sponsor', "", "Sponsor.SortOrder ASC")
-                         ->leftJoin("Sponsor_SponsorTypes", '"Sponsor_SponsorTypes"."SponsorID" = "Sponsor"."ID"')
-                         ->leftJoin("SponsorType",'"SponsorType"."ID" = "Sponsor_SponsorTypes"."SponsorTypeID"');
-    }
+    // public function getAllSponsors()
+    // {
+    //     return DataObject::get('Sponsor', "", "Sponsor.SortOrder ASC")
+    //                      ->leftJoin("Sponsor_SponsorTypes", '"Sponsor_SponsorTypes"."SponsorID" = "Sponsor"."ID"')
+    //                      ->leftJoin("SponsorType",'"SponsorType"."ID" = "Sponsor_SponsorTypes"."SponsorTypeID"');
+    // }
 
-	public function MainSponsors() {
-        return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Major' AND Approved = '1'");
-	}
-	public function BenefitingSponsors() {
-        return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Benefiting' AND Approved = '1'");
-	}
+	// public function MainSponsors() {
+    //     return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Major' AND Approved = '1'");
+	// }
+	// public function BenefitingSponsors() {
+    //     return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Benefiting' AND Approved = '1'");
+	// }
 }

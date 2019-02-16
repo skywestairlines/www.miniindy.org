@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5eb0308b85c771921cef5c45d29671b",
+    "content-hash": "148941fe943092b882217019ccb4c530",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -243,16 +243,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.3.8",
+            "version": "v3.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "5a1677f19274b76ae93cfffa7626b935b7c37e51"
+                "reference": "9666691c78b25047bc6ee7e94823de3eaadce0c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/5a1677f19274b76ae93cfffa7626b935b7c37e51",
-                "reference": "5a1677f19274b76ae93cfffa7626b935b7c37e51",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/9666691c78b25047bc6ee7e94823de3eaadce0c6",
+                "reference": "9666691c78b25047bc6ee7e94823de3eaadce0c6",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +292,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2019-02-13T09:06:53+00:00"
+            "time": "2018-10-22T21:59:03+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3361,60 +3361,6 @@
                 "silverstripe"
             ],
             "time": "2017-05-25T11:05:44+00:00"
-        },
-        {
-            "name": "undefinedoffset/sortablegridfield",
-            "version": "2.0.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "af492d02675f1222197f6d1dd1d32122fb4cc1cb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/af492d02675f1222197f6d1dd1d32122fb4cc1cb",
-                "reference": "af492d02675f1222197f6d1dd1d32122fb4cc1cb",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "~4.0",
-                "silverstripe/vendor-plugin": "^1.0",
-                "silverstripe/versioned": "^1.0"
-            },
-            "type": "silverstripe-vendormodule",
-            "extra": {
-                "installer-name": "sortablegridfield",
-                "expose": [
-                    "css",
-                    "javascript"
-                ],
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "UndefinedOffset\\SortableGridField\\": "src/",
-                    "UndefinedOffset\\SortableGridField\\Tests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ed Chipman",
-                    "homepage": "http://www.edchipman.ca",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Adds drag and drop functionality to SilverStripe 4.x's GridField",
-            "keywords": [
-                "gridfield",
-                "silverstripe"
-            ],
-            "time": "2019-01-08T16:23:14+00:00"
         },
         {
             "name": "webonyx/graphql-php",

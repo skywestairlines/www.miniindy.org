@@ -24,7 +24,7 @@ class Page extends SiteTree
 
 	private static $has_one = array();
 
-	private static $icon = 'client/icons/page';
+	private static $icon = 'public/icons/page';
 
 	public function getCMSFields() {
         $f = parent::getCMSFields();
@@ -69,5 +69,25 @@ class Page extends SiteTree
     {
         return $this->renderWith("Includes/Forms/SearchForm");
     }
+
+    public function getAllSponsors()
+    {
+        return DataObject::get('Sponsor', "", "Sponsor.SortOrder ASC")
+                         ->leftJoin("Sponsor_SponsorTypes", '"Sponsor_SponsorTypes"."SponsorID" = "Sponsor"."ID"')
+                         ->leftJoin("SponsorType",'"SponsorType"."ID" = "Sponsor_SponsorTypes"."SponsorTypeID"');
+    }
+
+    public function getSponsors($type)
+    {
+        return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = '$type' AND Approved = '1'");
+
+    }
+
+	public function MainSponsors() {
+        return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Major' AND Approved = '1'");
+	}
+	public function BenefitingSponsors() {
+        return $this->getAllSponsors()->where("\"SponsorType\".\"Title\" = 'Benefiting' AND Approved = '1'");
+	}
 
 }

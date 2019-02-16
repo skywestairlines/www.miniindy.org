@@ -3,6 +3,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\FieldType\DBInt;
 use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\Assets\Image;
 
 
 
@@ -17,7 +18,7 @@ class SliderImage extends DataObject {
 
 	private static $has_one = array(
 		'Link' => SiteTree::class,
-		'Photo' => BetterImage::class,
+		'Photo' => Image::class,
 		'HomePage' => HomePage::class,
 	);
 
@@ -32,11 +33,11 @@ class SliderImage extends DataObject {
     }
 
 	public function SlideShowImage() {
-		return $this->Photo()->SetRatioSize('437', '263');
+		return $this->photo->SetRatioSize('437', '263');
 	}
 
 	public function HeroSlideShow() {
-		return $this->Photo()->SetRatioSize('620', '294');
+		return $this->photo->SetRatioSize('620', '294');
 	}
 
 	public function getCMSFields() {

@@ -1,15 +1,14 @@
 <div class="typography">
 
 <div id="Content">
-<div id="slides">
+<div id="slides" style="width:100%">
 	<div class="slidesHolder">
 		<div class="slides_container">
-            $Debug
-			<% loop SliderImages %>
-			<% if Photo %>
+			<% loop $SliderImages %>
+			<% if $Photo %>
 			<div>
 				<% if LinkID %><a href="$SliderLink"><% end_if %>
-				$HeroSlideShow
+				$Photo.SetRatioSize('580', '275')
 				<% if Caption %><div class="caption">
 					<p>$Caption</p>
 				</div><% end_if %>
@@ -23,7 +22,7 @@
 
 $Content
 
-<div class="GoldSponsers homeFix" style="width:66%;float:left;">
+<div class="GoldSponsers homeFix" style="width:100%;float:left;">
 	<h4><span>Major Sponsors</span></h4>
 	<% if MainSponsors %>
 	<ul>
@@ -47,7 +46,7 @@ $Content
 	<p>Car Sponsors Coming Soon.</p>
 	<% end_if %>
 </div>
-<div class="GoldSponsers homeFix" style="width:32%;float:left;">
+<!--<div class="GoldSponsers homeFix" style="width:32%;float:left;">
 	<h4><span>Benefiting</span></h4>
 	<% if BenefitingSponsors %>
 	<ul>
@@ -64,14 +63,14 @@ $Content
 				<div class="name">$Name</div>
 
 		</li> <% if customLink %></a> <% end_if %>
-		<% if MultipleOf(4) %><div class="clear"><!-- --></div><% end_if %>
+		<% if MultipleOf(4) %><div class="clear"></div><% end_if %>
 		<% end_loop %>
-		<div class="clear"><!-- --></div>
+		<div class="clear"></div>
 		</ul>
 	<% else %>
 	<p>Car Sponsors Coming Soon.</p>
 	<% end_if %>
-</div>
+</div>-->
 <br />
 <div class="clear"><!-- --></div>
 </div>

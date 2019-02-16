@@ -10,6 +10,7 @@ use SilverStripe\ORM\FieldType\DBVarchar;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
 
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
@@ -37,7 +38,7 @@ class Sponsor extends DataObject
 	);
 	
 	private static $has_one = array(
-		'Logo' => BetterImage::class
+		'Logo' => Image::class
 	);
 	
 	private static $summary_fields = array(

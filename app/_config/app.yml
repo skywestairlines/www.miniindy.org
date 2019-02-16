@@ -11,6 +11,17 @@ SilverStripe\SiteConfig\SiteConfig:
 SilverStripe\Assets\Image:
   extensions:
     - ImageExtension
+SilverStripe\Assets\Storage\DBFile:
+  extensions:
+    - ImageExtension
+
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\AssetAdmin\Helper\ImageThumbnailHelper:
+    constructor:
+      0: 0
+  Intervention\Image\ImageManager:
+  constructor:
+    - { driver: imagick }
 Page:
   extensions:
     - CustomShortCodes
