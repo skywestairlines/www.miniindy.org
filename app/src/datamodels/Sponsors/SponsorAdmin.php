@@ -8,7 +8,7 @@ class SponsorAdmin extends ModelAdmin
             "title" => "Sponsors List"
         ],
 		SponsorType::class => [
-            "title", "Sponsor types"
+            "title" => "Sponsor types"
         ]
 	);
 

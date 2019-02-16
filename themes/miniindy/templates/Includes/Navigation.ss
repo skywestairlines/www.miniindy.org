@@ -1,24 +1,4 @@
-<%-- <ul id="nav" class="dropdown dropdown-horizontal d-flex w-100">
- 	<li class="nvav-item flex-auto">
-     <span id="dateTemp">
-        {$SiteConfig.EventStart.Format('MMMM d')}-{$SiteConfig.EventFinish.Format('d, Y')}
-        </span>
-    </li>
-    <% loop Menu(1) %>
-    <li class="nav-item flex-1">
-        <a href="$Link" class="$LinkingMode nav-link" title="$Title"><span>$MenuTitle.XML</span></a>
-        <% if Children %>
-            <ul>
-            <% loop Children %>
-                <li>
-                    <a href="$Link" class="$LinkingMode"><span>$MenuTitle.XML</span></a>
-                </li>
-            <% end_loop %>
-            </ul>
-        <% end_if %>
-    </li>
-   	<% end_loop %>
-</ul> --%>
+
   <a class="navbar-brand" href="#">
   <span id="dateTemp">
         {$SiteConfig.EventStart.Format('MMMM d')}-{$SiteConfig.EventFinish.Format('d, Y')}
@@ -33,7 +13,7 @@
     <% loop Menu(1) %>
       <% if $Children %>
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle $LinkingMode<% if $LinkingMode != 'link' %> active<% end_if %>" href="$Link" id="menu$ID" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link $LinkingMode<% if $LinkingMode != 'link' %> active<% end_if %>" href="$Link">
           $MenuTitle
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

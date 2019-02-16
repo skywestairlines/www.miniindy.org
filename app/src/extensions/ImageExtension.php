@@ -4,8 +4,12 @@ use SilverStripe\ORM\DataExtension;
 
 class ImageExtension extends DataExtension
 {
+    private static $db = [
+        "Caption" => "Text"
+    ];
     private static $has_one = [
-        "MikePage" => MikePage::class
+        "MikePage" => MikePage::class,
+        "Album" => Album::class
     ];
 
     public function SetWidth($width)

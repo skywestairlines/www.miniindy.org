@@ -1,0 +1,368 @@
+$color_1: #222;
+$color_2: gray;
+$color_3: white;
+$color_4: #b2d45e;
+$background_color_1: white;
+$background_color_2: #1c305d;
+$background_color_3: #262626;
+$background_color_4: #fff;
+
+/* Gold sponsor */
+.typography {
+    h3 {
+        color: $color_1;
+        width: 98%;
+        font-weight: 300;
+        line-height: 25px;
+        border-bottom: 1px solid #ccc;
+        margin: 0 0 16px 0;
+    }
+}
+
+.sponsor {
+    float: left;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+
+    .logo {
+        height: 180px;
+        width: 220px;
+        background-color: $background_color_1;
+        color: $color_2;
+
+        img {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .noLogo {
+        background: url(../images/noLogo.png) no-repeat -40px -25px;
+        width: 220px;
+        height: 157px;
+        margin: 0 auto;
+    }
+
+    .name {
+        height: 40px;
+        width: 100%;
+        background-color: $background_color_2;
+        color: $color_3;
+        font: 12px/37px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        text-indent: 10px;
+        text-align: left;
+        text-decoration: none;
+
+        .extLink {
+            background: url(../images/icons/externalLink1.gif) no-repeat 5px 2px;
+            width: 10px;
+            height: 10px;
+            padding-left: 20px;
+        }
+    }
+
+    .regBox {
+        height: 180px;
+        width: 220px;
+        background-color: $background_color_3;
+        font: italic 13px/37px Georgia, "Times New Roman", Times, serif;
+        display: block;
+    }
+
+    .noName {
+        height: 40px;
+        width: 100%;
+        background-color: $background_color_3;
+        font: italic 13px/37px Georgia, "Times New Roman", Times, serif;
+        text-indent: 10px;
+        text-align: left;
+        text-decoration: none;
+        color: $color_3;
+    }
+}
+
+.sponsor.homeFix {
+    >img {
+        width: 195px;
+    }
+}
+
+.sponsor.First {
+    margin: 10px 10px 10px 0;
+}
+
+.sponsor.Last {
+    margin: 10px 0 10px 10px;
+}
+
+.sponsor.homeFix.First {
+    margin: 7px 7px 7px 0;
+}
+
+.sponsor.homeFix.Last {
+    margin: 7px 0px 7px 7px;
+}
+
+a {
+    div {
+        &:hover.name {
+            background-color: $background_color_2;
+            color: $color_4;
+            text-decoration: none;
+        }
+    }
+}
+
+.PlatinumSponsers {
+    width: 960px;
+    position: relative;
+    top: 40px;
+
+    ul {
+        margin: 0 0 40px;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px;
+        list-style-type: none;
+        background-color: $background_color_4;
+        width: 220px;
+        overflow: hidden;
+        width: 300px;
+        background-color: $background_color_1;
+    }
+}
+
+.GoldSponsers {
+    width: 100%;
+    position: relative;
+    top: 50px;
+
+    ul {
+        margin: 0 0 40px;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px;
+        list-style-type: none;
+        background-color: $background_color_4;
+        width: 220px;
+        overflow: hidden;
+    }
+}
+
+.GoldSponsers.homeFix {
+    top: 20px;
+
+    li {
+        width: 195px;
+        margin: 7px;
+    }
+}
+
+.SilverSponsers {
+    width: 960px;
+    position: relative;
+    top: 40px;
+
+    ul {
+        margin: 0 0 40px;
+        list-style-type: none;
+        list-style-type: none;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 40px;
+        position: relative;
+        left: -10px;
+    }
+
+    li {
+        margin: 10px;
+        list-style-type: none;
+        background-color: $background_color_4;
+        width: 220px;
+        overflow: hidden;
+    }
+}
+
+.Platinum {
+    width: 100%;
+    position: relative;
+    top: 50px;
+
+    ul {
+        margin: 0 0 40px;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px;
+        list-style-type: none;
+        background-color: $background_color_4;
+        width: 200px;
+        overflow: hidden;
+
+        img {
+            width: 200px;
+        }
+    }
+}
+
+.GoldSponsors-7k {
+    width: 100%;
+    position: relative;
+    top: 50px;
+
+    ul {
+        margin: 0 0 40px;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px;
+        list-style-type: none;
+        background-color: $background_color_4;
+        width: 172px;
+        overflow: hidden;
+
+        img {
+            width: 172px;
+        }
+    }
+}
+
+.GoldSponsors-5k {
+    width: 100%;
+    position: relative;
+    top: 50px;
+
+    ul {
+        margin: 0 0 40px;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px;
+        list-style-type: none;
+        background-color: $background_color_4;
+        width: 140px;
+        overflow: hidden;
+
+        img {
+            width: 140px;
+        }
+    }
+}
+
+.GoldSponsors-3_2k {
+    width: 100%;
+    position: relative;
+    top: 50px;
+
+    ul {
+        margin: 0 0 40px;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px;
+        list-style-type: none;
+        background-color: $background_color_4;
+        width: 117px;
+        overflow: hidden;
+
+        img {
+            width: 117px;
+        }
+    }
+}
+
+.PlatinumSponsor {
+    float: left;
+    margin: 10px;
+    text-align: center;
+
+    .logo {
+        width: 300px;
+    }
+
+    .noLogo {
+        width: 300px;
+        height: 214px;
+        background-position: 0 0;
+    }
+
+    .regBox {
+        width: 100%;
+
+        p {
+            width: 150px;
+        }
+    }
+
+    .name {
+        font: 14px/37px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    }
+}
+
+.PlatinumSponsor.First {
+    margin: 10px 10px 10px 0;
+}
+
+.PlatinumSponsor.Last {
+    margin: 10px 0 10px 10px;
+}
+
+.SilverSponsor {
+    float: left;
+    margin: 10px;
+    text-align: center;
+
+    .logo {
+        width: 300px;
+    }
+
+    .regBox {
+        height: auto;
+        width: 220px;
+        background-color: $background_color_3;
+        font: italic 13px/37px Georgia, "Times New Roman", Times, serif;
+        display: block;
+    }
+
+    .silverName {
+        height: 40px;
+        background-color: $background_color_2;
+        color: $color_3;
+        font: 14px/40px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        text-align: left;
+        float: left;
+        text-indent: 10px;
+        width: 220px;
+    }
+}
+
+.SilverSponsor.First {
+    margin: 5px 5px 5px 0;
+}
+
+.SilverSponsor.Last {
+    margin: 5px 0 5px 5px;
+}
+
+.noLink {
+    width: 10px;
+    height: 10px;
+    padding-left: 15px;
+}
+
+.moreInfo {
+    color: $color_3;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    cursor: pointer;
+}

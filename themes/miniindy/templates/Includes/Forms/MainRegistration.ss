@@ -26,25 +26,25 @@
             <div class="form-row">
                 <label for="t1" class="col-form-label col-md-3 text-md-right">Company Name</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="t1" />
+                    <input type="text" class="form-control form-control-sm" name="p1" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="t2" class="col-form-label col-md-3 text-md-right">Company Contact</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="t2" />
+                    <input type="text" class="form-control form-control-sm" name="p2" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="t3" class="col-form-label col-md-3 text-md-right">Email Address</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="t3" />
+                    <input type="text" class="form-control form-control-sm" name="p3" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="t4" class="col-form-label col-md-3 text-md-right">Phone Number</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="t4" />
+                    <input type="text" class="form-control form-control-sm" name="p4" />
                 </div>
             </div>
             <% end_if %>
@@ -57,25 +57,25 @@
             <div class="form-row">
                 <label for="p1" class="col-form-label col-md-3 text-md-right">Player 1</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p1" />
+                    <input type="text" class="form-control form-control-sm" name="p5" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="p2" class="col-form-label col-md-3 text-md-right">Player 2</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p2" />
+                    <input type="text" class="form-control form-control-sm" name="p6" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="p3" class="col-form-label col-md-3 text-md-right">Player 3</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p3" />
+                    <input type="text" class="form-control form-control-sm" name="p7" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="p4" class="col-form-label col-md-3 text-md-right">Player 4</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p4" />
+                    <input type="text" class="form-control form-control-sm" name="p8" />
                 </div>
             </div>
         </fieldset>
@@ -87,25 +87,25 @@
             <div class="form-row">
                 <label for="p5" class="col-form-label col-md-3 text-md-right">Player 1</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p5" />
+                    <input type="text" class="form-control form-control-sm" name="p9" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="p6" class="col-form-label col-md-3 text-md-right">Player 2</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p6" />
+                    <input type="text" class="form-control form-control-sm" name="p10" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="p7" class="col-form-label col-md-3 text-md-right">Player 3</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p7" />
+                    <input type="text" class="form-control form-control-sm" name="p11" />
                 </div>
             </div>
             <div class="form-row">
                 <label for="p8" class="col-form-label col-md-3 text-md-right">Player 4</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control form-control-sm" name="p8" />
+                    <input type="text" class="form-control form-control-sm" name="p12" />
                 </div>
             </div>
         </fieldset>

@@ -15,6 +15,6 @@ class SiteMap extends Page
     {
         $Pages = DataObject::get("Page", "ParentID = 0");
         $Pages = $this->customise( compact('Pages') );
-        return $Pages->renderWith("Includes/SiteMap");
+        return $Pages->renderWith("SiteMapper");
     }
 }

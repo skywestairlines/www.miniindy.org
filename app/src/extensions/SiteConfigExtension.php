@@ -7,6 +7,7 @@ use SilverStripe\ORM\FieldType\DBDate;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Assets\Image;
 
 class SiteConfigExtension extends DataExtension
 {
@@ -19,7 +20,7 @@ class SiteConfigExtension extends DataExtension
     ];
 
     private static $has_one = [
-        "Logo" => BetterImage::class
+        "Logo" => Image::class
     ];
 
     public function updateCMSFields(FieldList $fields)
