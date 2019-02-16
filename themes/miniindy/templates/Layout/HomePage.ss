@@ -4,7 +4,7 @@
 <div id="slides" style="width:100%">
 	<div class="slidesHolder">
 		<div class="slides_container">
-			<% loop $SliderImages %>
+			<% loop $SliderImages.Sort('SortOrder') %>
 			<% if $Photo %>
 			<div>
 				<% if LinkID %><a href="$SliderLink"><% end_if %>

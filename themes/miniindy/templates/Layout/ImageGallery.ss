@@ -1,33 +1,33 @@
 <div class="typography">
+    <div id="">
+        $Content
 
-<div id="Content">
-$Content
-<div class="row">
-<% if $AlbumContent %>
-    <% loop $AlbumContent %>
-    $Debug
-        <div class="col-md-6">
-            <div class="card p-2 bg-primary">
-                <a href="{$Up.Link}album/{$ID}" class="btn btn-block btn-primary btn-xs text-white">
-                $TITLE
-                <span class="px-3">( $Images.TotalItems )</span>
+        <% if $AlbumContent %>
+        <h2>$AlbumContent.Name</h2>
+        <div class="row">
+            <% loop $AlbumContent.Photos %>
+            <div class="col-md-3 mb-3">
+                <a href="$URL?<% if $Up.PhotoSize %>$Up.PhotoSize<% else %>width=640&height=480<% end_if %>"
+                    rel="prettyPhoto[miniindyGallery]" title="$TITLE" class="">
+                    <img src="$Square.URL" alt="$TITLE" class="img-fluid img-thumbnail" />
                 </a>
             </div>
+            <% end_loop %>
         </div>
-    <% end_loop %>
-<% else %>
-    <% loop $Albums %>
-    <div class="col-md-6">
-        <div class="card p-2 bg-primary">
-            <a href="{$Up.Link}?album={$ID}" class="btn btn-block btn-primary btn-xs text-white">
-            $Name
-            <span class="px-3">( $Images.TotalItems )</span>
-            </a>
+        <% else %>
+        <div class="row">
+            <% loop $Albums %>
+            <div class="col-md-6">
+                <div class="card p-2 bg-primary space-1">
+                    <a href="{$Up.Link}?album={$ID}" class="btn btn-block btn-primary btn-xs text-white">
+                        $Name
+                        <span class="px-3">($Photos.Count)</span>
+                    </a>
+                </div>
+            </div>
+            <% end_loop %>
         </div>
-    </div>
-    <% end_loop %>
-<% end_if %>
+        <% end_if %>
 
-</div>
-</div>
+    </div>
 </div>

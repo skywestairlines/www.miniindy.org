@@ -18,8 +18,7 @@ class ImageGalleryController extends PageController
 
         if($AlbumID == NULL) return false;
 
-        $Album = Album::get_by_id((int)$AlbumID);
-        Debug::show($Album->Photos);
+        // $Album = Album::get_by_id((int)$AlbumID);
 
         return Album::get_by_id((int)$AlbumID);
     }

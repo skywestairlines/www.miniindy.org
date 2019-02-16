@@ -5,8 +5,8 @@
             <div class="d-flex">
                 <div class="col-md-8">
                     <div class="still row">
-                        <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
-                            rel="prettyPhoto[iframes]" title="$VideoName">
+                        <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=640&height=480<% end_if %>"
+                            rel="prettyPhoto[miniindyVideos]" title="$VideoName">
                             <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" />
                         </a>
                     </div>
