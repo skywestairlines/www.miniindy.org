@@ -15,16 +15,15 @@
   padding-top: 0;
   color: white;
   text-shadow: 0 1px black;
-  ul {
-  /*float: right; */
-    // margin: 10px 0;
-    .nav-item {
-      .nav-link, .navbar-brand {
+  .nav-item, .navbar-brand {
         font: 24px/28px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
         //   font-size: 1rem;
         margin-top: -1rem;
-      }
     }
+  ul {
+  /*float: right; */
+    // margin: 10px 0;
+    
 
   li {
     list-style: none;
