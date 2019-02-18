@@ -7,8 +7,8 @@
         <div class="row">
             <% loop $AlbumContent.Photos %>
             <div class="col-md-3 mb-3">
-                <a href="$URL?<% if $Up.PhotoSize %>$Up.PhotoSize<% else %>width=640&height=480<% end_if %>"
-                    rel="prettyPhoto[miniindyGallery]" title="$TITLE" class="">
+                <a href="$URL?<% if $Up.PhotoSize %>$Up.PhotoSize<% else %>width=640&height=480<% end_if %>" rel="prettyPhoto[miniindyGallery]"
+                    title="$TITLE" class="">
                     <img src="$Square.URL" alt="$TITLE" class="img-fluid img-thumbnail" />
                 </a>
             </div>
@@ -18,8 +18,8 @@
         <div class="row">
             <% loop $Albums %>
             <div class="col-md-6">
-                <div class="card p-2 bg-primary space-1">
-                    <a href="{$Up.Link}?album={$ID}" class="btn btn-block btn-primary btn-xs text-white">
+                <div class="bg-white pb-2">
+                    <a href="{$Up.Link}?album={$ID}" class="btn btn-block btn-primary btn-sm text-white">
                         $Name
                         <span class="px-3">($Photos.Count)</span>
                     </a>

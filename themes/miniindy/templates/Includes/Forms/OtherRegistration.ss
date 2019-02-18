@@ -1,10 +1,10 @@
 <form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" class="form-compact">
-    <input type="hidden" name="sponsorType" value="$Type">
-    <!--<input name="Price" type="hidden" value="$EntryPrice">-->
+    <!--<input type="hidden" name="sponsorType" value="$Type">
+    <input name="Price" type="hidden" value="$EntryPrice">
     <input name="t1" type="hidden" value="t-Company Name">
     <input name="t2" type="hidden" value="t-Company Contact">
     <input name="t3" type="hidden" value="t-Email">
-    <input name="t4" type="hidden" value="t-Phone">
+    <input name="t4" type="hidden" value="t-Phone">-->
     <div class="form-container">
         <fieldset class="mb-2">
         <% if $AllowQty %>
@@ -37,6 +37,7 @@
                     <td>$Key</td>
                     <td>${$Value}</td>
                     <td>
+                    <input type="hidden" name="item" value="$Key">
                         <button type="submit" name="Price" class="btn btn-xs btn-primary" value="$Value">
                             <% if $Top.ActionCall %>$Top.ActionCall
                             <% else %>Submit
@@ -61,12 +62,16 @@
         <% if $Sponsorship %>
         <fieldset>
             <% loop $Sponsorship.Items %>
+                <% if $Key = 'hidden1' || $Key == 'hidden2' %>
+                <input type="hidden" name="$Key" value="$Value" class="form-control form-control-sm" />
+                <% else %>
                 <div class="form-row">
                     <label for="$Key" class="col-form-label col-md-3 text-md-right">$Value</label>
                     <div class="col-md-6">
                         <input type="text" name="$Key" class="form-control form-control-sm" />
                     </div>
                 </div>
+                <% end_if %>
             <% end_loop %>
         <% else %>
             <input type="hidden" name="item" value="$Title">
@@ -86,12 +91,28 @@
             <div class="form-row">
                 <label for="entry-price" class="col-form-label col-md-3 text-md-right">Price:</label>
                 <div class="col-md-6">
-                    <input type="hidden" name="price[]" value="$EntryPrice" />
+                    <input type="hidden" name="price" value="$EntryPrice" />
                     <input type="text" class="form-control form-control-sm" value="$EntryPrice.Nice" readonly />
                 </div>
             </div>
         <% end_if %>
-        <div class="offset-md-3 col-md-6 my-2">
+        <div class="offset-md-3 col-md-6 my-2">        
+        
+        <% if $URLSegment == "4-wheeler-drawing-tickets" %>
+            <input name="item" type="hidden" value="Purchase raffle tickets" >
+            <input type="hidden" name="sponsorType" value="Ticket">
+        <% end_if %>
+
+        <% if $URLSegment == 'race-dinner-tickets' %>
+            <input name="item" type="hidden" value="Add extra banquets tickets" >
+            <input type="hidden" name="sponsorType" value="Ticket">
+        <% end_if %>
+
+        <% if $URLSegment == 'additional-sponsorships' %>
+            <input type="hidden" name="t1" value="t-Detail">
+            <input type="hidden" name="sponsorType" value="Ticket">
+        <% end_if %>
+        
             <button type="submit" name="submit" class="btn btn-sm btn-secondary btn-block">
                 <% if $ActionCall %>$ActionCall
                 <% else %>Submit

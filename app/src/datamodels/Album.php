@@ -1,12 +1,14 @@
-<?php  
+<?php
 
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\PaginatedList;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\ORM\FieldType\DBVarchar;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\ORM\ArrayList;
 
 
 class Album extends DataObject
@@ -22,13 +24,21 @@ class Album extends DataObject
     ];
 
     private static $many_many = [
-        "Photos" => Image::class,        
+        "Photos" => Image::class,
     ];
 
     // private static $summary_fields = [
     //     "Cover.CMSThumbnail" => "Cover",
     //     "Name"
     // ];
+
+    // public function Photos()
+    // {
+    //     $photos = $this->manyMany('photos');
+    //     $photos = new ArrayList($photos);
+    //     var_dump($photos);
+    //     return new PaginatedList($photos);
+    // }
 
     public function getCMSFields()
     {
