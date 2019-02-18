@@ -15,11 +15,16 @@
   padding-top: 0;
   color: white;
   text-shadow: 0 1px black;
+
+  .navbar-nav, .navbar-brand{
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+  }
   ul {
   /*float: right; */
     // margin: 10px 0;
     .nav-item {
-      .nav-link, .nav-brand {
+      .nav-link, .navbar-brand {
         font: 24px/28px "impact", "Arial Black", Arial, Helvetica, Geneva, sans-serif;
         //   font-size: 1rem;
       }

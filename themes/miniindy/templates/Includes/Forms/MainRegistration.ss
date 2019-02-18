@@ -2,14 +2,7 @@
     <input type="hidden" name="item" value="$Title">
     <input type="hidden" name="sponsorType" value="$Type">
     <input type="hidden" name="Qty" value="1">
-    <input name="t1" type="hidden" value="t-Company Name">
-    <input name="t2" type="hidden" value="t-Company Contact">
-    <input name="t3" type="hidden" value="t-Email">
-    <input name="t4" type="hidden" value="t-Phone">
-    <input name="t5" type="hidden" value="t-Player 1">
-    <input name="t6" type="hidden" value="t-Player 2">
-    <input name="t7" type="hidden" value="t-Player 3">
-    <input name="t8" type="hidden" value="t-Player 4">
+
 
     <div class="form-container">
         <fieldset class="mb-2">
@@ -23,6 +16,10 @@
             <% end_if %>
 
             <% if $CompanyInfo %>
+                <input name="t1" type="hidden" value="t-Company Name">
+        <input name="t2" type="hidden" value="t-Company Contact">
+        <input name="t3" type="hidden" value="t-Email">
+        <input name="t4" type="hidden" value="t-Phone">
             <div class="form-row">
                 <label for="t1" class="col-form-label col-md-3 text-md-right">Company Name</label>
                 <div class="col-md-6">
@@ -51,6 +48,10 @@
         </fieldset>
 
         <% if $AddTeam %>
+        <input name="t5" type="hidden" value="t-Player 1">
+        <input name="t6" type="hidden" value="t-Player 2">
+        <input name="t7" type="hidden" value="t-Player 3">
+        <input name="t8" type="hidden" value="t-Player 4">
         <hr class="my-1">
         <fieldset class="mb-2">
             <p class="mb-1">Enter Team 1 player names if known.</p>
@@ -81,6 +82,10 @@
         </fieldset>
         <% end_if %>
         <% if $ExtraTeam %>
+        <input name="t9" type="hidden" value="t-Player 5">
+        <input name="t10" type="hidden" value="t-Player 6">
+        <input name="t11" type="hidden" value="t-Player 7">
+        <input name="t12" type="hidden" value="t-Player 8">
         <hr class="my-1">
         <fieldset class="collapse show" id="more-players">
             <p class="mb-1">Enter Team 2 player names if known.</p>

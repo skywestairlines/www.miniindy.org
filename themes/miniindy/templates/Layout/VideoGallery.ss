@@ -2,7 +2,7 @@
     <div class="row">
         <% loop $VideosFeed %>
         <div class="col-md-6">
-            <div class="d-flex">
+            <div class="d-flex mb-3">
                 <div class="col-md-8">
                     <div class="still row">
                         <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"

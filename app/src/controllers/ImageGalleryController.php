@@ -1,22 +1,25 @@
 <?php
 
+use SilverStripe\Dev\Debug;
+
+
 class ImageGalleryController extends PageController
 {
 
-    private static $allowed_actions = [
-        "album" => true
-    ];
+    private static $allowed_actions = [ "album" ];
     public function init()
     {
         return parent::init();
     }
 
-    public function album($id)
+    public function AlbumContent()
     {
-        $AlbumID = $this->urlParams["ID"];
+        $AlbumID = $this->request->getVar('album');
 
-        $Photos = Album::get()->filter( compact('AlbumID') );
+        if($AlbumID == NULL) return false;
 
-        return $Photos->renderWith("AlbumList");
+        // $Album = Album::get_by_id((int)$AlbumID);
+
+        return Album::get_by_id((int)$AlbumID);
     }
 }

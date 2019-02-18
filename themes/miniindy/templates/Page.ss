@@ -34,7 +34,7 @@
 		<header id="Header">
 			<% include Header %>
 		</header>
-		<nav id="navigation" class="navbar navbar-expand-md bg-trans p-0">
+		<nav id="navigation" class="navbar navbar-expand-md bg-trans py-0">
 			<% include Navigation %>
 	  	</nav>
 		<section class="card-deck">
