@@ -51,5 +51,11 @@
 
     price_tags.on('change click', calculatePrice);
 
+    $('#register-miniindy', document).on('submit', function(e) {
+        // e.preventDefault();
+        var inputFields = $(this).serializeArray();
+        console.log(inputFields);
+    });
+
 
 })(jQuery);

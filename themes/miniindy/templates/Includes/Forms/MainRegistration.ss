@@ -1,8 +1,7 @@
-<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" class="form-compact">
+<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" class="form-compact" id="register-miniindy">
     <input type="hidden" name="item" value="$Title">
     <input type="hidden" name="sponsorType" value="$Type">
     <input type="hidden" name="Qty" value="1">
-
 
     <div class="form-container">
         <fieldset class="mb-2">

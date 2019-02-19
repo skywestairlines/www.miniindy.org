@@ -1,6 +1,6 @@
-<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" class="form-compact">
-    <!--<input type="hidden" name="sponsorType" value="$Type">
-    <input name="Price" type="hidden" value="$EntryPrice">
+<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" class="form-compact" id="register-miniindy">
+    <input type="hidden" name="sponsorType" value="$Type">
+    <!--<input name="Price" type="hidden" value="$EntryPrice">
     <input name="t1" type="hidden" value="t-Company Name">
     <input name="t2" type="hidden" value="t-Company Contact">
     <input name="t3" type="hidden" value="t-Email">
@@ -18,7 +18,32 @@
             <input type="hidden" name="Qty" value="1">
         <% end_if %>
 
-        <% if $OtherPrices && $OtherPrices.Items.Count > 0 %>
+        <% if $URLSegment == 'car-storage' %>
+            </form>
+            <% loop $OtherPrices.Items %>
+            <form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem">
+                <input type="hidden" name="sponsorType" value="$Type">
+                <input type="hidden" name="t1"  value="$Key"/>
+                <input type="hidden" name="item" value="$Key" />
+                <%-- <input type="hidden" name="$Value" /> --%>
+                <div class="form-row">
+                    <div class="col-md-5">$Key</div>
+                    <div class="col-md-5">${$Value}</div>
+                    <div class="col-md-2">
+                    <button type="submit" name="Price" class="btn btn-xs btn-primary" value="$Value" data-for="$Pos">
+                            <% if $Top.ActionCall %>$Top.ActionCall
+                        <% else %>Submit
+                        <% end_if %>
+                    </button>
+                    </div>
+                </div>
+                <% if $TotalItems > 1 && not $Last %>
+                <div class="text-center my-3"> -- OR --</div>
+                <% end_if %>
+            </form>
+            <% end_loop %>
+        <form>
+        <% else_if $OtherPrices && $OtherPrices.Items.Count > 0 %>
         <div class="table-responsive">
         <table class="table table-compact">
             <%-- Let's talk about uncommenting the following lines --%>
@@ -37,8 +62,9 @@
                     <td>$Key</td>
                     <td>${$Value}</td>
                     <td>
-                    <input type="hidden" name="item" value="$Key">
-                        <button type="submit" name="Price" class="btn btn-xs btn-primary" value="$Value">
+                    <input type="hidden" name="t$Pos" value="$Key">
+                    <input type="hidden" name="item[t$Pos]" value="$Key">
+                        <button type="submit" name="Price" class="btn btn-xs btn-primary" value="$Value" data-for="$Pos">
                             <% if $Top.ActionCall %>$Top.ActionCall
                             <% else %>Submit
                             <% end_if %>
@@ -96,8 +122,8 @@
                 </div>
             </div>
         <% end_if %>
-        <div class="offset-md-3 col-md-6 my-2">        
-        
+        <div class="offset-md-3 col-md-6 my-2">
+
         <% if $URLSegment == "4-wheeler-drawing-tickets" %>
             <input name="item" type="hidden" value="Purchase raffle tickets" >
             <input type="hidden" name="sponsorType" value="Ticket">
@@ -112,12 +138,14 @@
             <input type="hidden" name="t1" value="t-Detail">
             <input type="hidden" name="sponsorType" value="Ticket">
         <% end_if %>
-        
+
+        <% if $URLSegment != 'car-storage' %>
             <button type="submit" name="submit" class="btn btn-sm btn-secondary btn-block">
                 <% if $ActionCall %>$ActionCall
                 <% else %>Submit
                 <% end_if %>
             </button>
+        <% end_if %>
         </div>
         </fieldset>
     </div>
