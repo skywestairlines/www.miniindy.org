@@ -1,5 +1,5 @@
 <% if GetStaticSidebar %>
-	<% loop GetStaticSidebar %>
+	<% control GetStaticSidebar %>
 	<div id="Sidebar" class="typography">
 			<div class="sidebarBox">
 		 		<h3 id="$Title">$MenuTitle.XML</h3>
@@ -8,5 +8,5 @@
 			</div>
 			<div class="sidebarBottom"></div>
 	</div>
-	<% end_loop %>
+	<% end_control %>
 <% end_if %>

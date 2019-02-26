@@ -1,4 +1,4 @@
-
+<% include SideBar %>
 
 
 <table border="0" class="homeTable">

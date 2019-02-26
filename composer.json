@@ -1,57 +1,55 @@
 {
     "name": "silverstripe/installer",
-    "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": ">=5.6.0",
-        "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "^4.3",
-        "silverstripe-themes/simple": "~3.2.0",
-        "silverstripe/recipe-blog": "^1.1",
-        "tractorcow/silverstripe-imagegallery": "dev-master",
-        "symbiote/silverstripe-multivaluefield": "^5.0",
-        "undefinedoffset/sortablegridfield": "^2.0",
-        "lekoala/silverstripe-debugbar": "^2.0"
+        "php": ">=5.3.3",
+        "silverstripe/cms": "^3.7",
+        "silverstripe/framework": "^3.7",
+        "silverstripe/reports": "^3.7",
+        "silverstripe/siteconfig": "^3.7",
+        "silverstripe-themes/simple": "3.1.*",
+
+        "silverstripe-labs/googleanalytics": "*",
+        "wilr/silverstripe-googlesitemaps": "*",
+        "tractorcow/silverstripe-imagegallery": "*",
+        "silverstripe/forum": "*",
+        "hudhaifas/silverstripe-dataobject-manager": "3"
+
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7"
-    },
-    "autoload": {
-        "files": [
-            "app/lib/loader.php",
-            "app/src/pagetypes/Page.php",
-            "app/src/controllers/PageController.php"
-        ],
-        "psr-4": {
-            "TractorCow\\ImageGallery\\": "./vendor/silverstripe/image_gallery/src/"
-        }
+        "phpunit/phpunit": "^3 || ^4 || ^5",
+        "lekoala/silverstripe-debugbar": "*"
     },
     "extra": {
-        "installer-paths": {
-            "vendor/silverstripe/{$name}": [
-                "tractorcow/silverstripe-imagegallery"
-            ]
+        "branch-alias": {
+            "3.x-dev": "3.6.x-dev"
         },
-        "project-files-installed": [
-            "app/.htaccess",
-            "app/_config.php",
-            "app/_config/blog.yml",
-            "app/_config/mysite.yml",
-            "app/src/Page.php",
-            "app/src/PageController.php"
+        "installer-paths": {
+            "vendor/{$name}": [
+                "silverstripe-labs/googleanalytics",
+                "wilr/silverstripe-googlesitemaps",
+                "tractorcow/silverstripe-imagegallery",
+                "silverstripe-labs/youtubeservice",
+                "silverstripe/forum",
+                "lekoala/silverstripe-debugbar",
+                "hudhaifas/silverstripe-dataobject-manager",
+                "samthejarvis/silverstripe-watermarking"
+            ]
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "modules/",
+            "vendor/"
         ],
-        "public-files-installed": [
-            ".htaccess",
-            "index.php",
-            "install-frameworkmissing.html",
-            "install.php",
-            "web.config"
+        "files": [
+            "modules/autoloader.php"
         ]
     },
     "scripts": {
-        "post-update-cmd": [
-            "@php -r \"file_exists('app/_config.php') || copy('app/_config.example.php', 'app/_config.php');\"",
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        "post-autoload-dump": [
+            "@php -r \"file_exists('_ss_environment.php') || copy('_ss_environment.example.php','_ss_environment.php');\"",
+            "@php -r \"file_exists('mysite/_config.php') || copy('mysite/_config.example.php','mysite/_config.php');\""
         ]
     },
     "config": {
