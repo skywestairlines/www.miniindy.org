@@ -1,15 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<!DOCTYPE html>
+<html lang="en" >
 
   <head>
-		<% base_tag %>
-		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
 		$MetaTags(false)
+		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
+		<% base_tag %>
 		<link rel="shortcut icon" href="/favicon.ico" />
-
-		<% require themedCSS(layout) %>
-		<% require themedCSS(typography) %>
-		<% require themedCSS(form) %>
+        <%--<% require css('dist/css/main.css') %>
+		<% require css('dist/css/vendor.css') %>
+		<% require css('dist/css/miniindy.css') %> --%>
 
 		<!--[if IE 6]>
 			<style type="text/css">
@@ -27,7 +26,47 @@
 			 @import url(themes/miniindy/css/ie.css);
 			</style>
 		<![endif]-->
-		<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+
+	</head>
+<body>
+	<div class="container py-3">
+		<header id="Header">
+			<% include Header %>
+		</header>
+		<nav id="navigation" class="navbar navbar-expand-md bg-trans p-0">
+			<% include Navigation %>
+	  	</nav>
+		<section class="card-deck">
+            <main class="card card-trans">
+            $Layout
+            </main>
+            <% if $ShowSideBar != 'no' %>
+            <aside class="col-md-4 px-0">
+                <% include SideBar %>
+            </aside>
+            <% end_if %>
+        </section>
+	</div>
+	<footer id="Footer">
+		<% include Footer %>
+	</footer>
+	<% if $CurrentMember %>
+	<div class="page-settings">
+		<div class="edit">
+            <a href="$CMSEditLink" class="btn btn-primary" target="_blank">
+                <i class="fa fa-edit"></i>
+            </a>
+		</div>
+	</div>
+	<% end_if %>
+
+    <%--
+    <% require javascript('dist/js/main.js') %>
+    <% require javascript('dist/js/vendor.js') %>
+    <% require javascript('dist/js/miniindy.js') %>
+    --%>
+    <script type="text/javascript">
 		startList = function() {
 			if (document.all&&document.getElementById) {
 				navRoot = document.getElementById("nav");
@@ -45,36 +84,6 @@
 			}
 		}
 		window.onload=startList;
-
-		//--><!]]></script>
-
-	</head>
-<body>
-	<div id="Container">
-		<div id="Header">
-			$SearchForm
-	   		<a href="home/" border="0"><img src="assets/Uploads/logo.png" border="0" /></a>
-	   		<!--  COMMENT OUT WHEN REGISTRATION IS CLOSED  -->
-	   		<div class="RegNavLink">
-	   			<a href="/miniindy-registration/">Registration Is Open!</a>
-	   		</div>
-		</div>
-
-		<div id="Navigation">
-			<% include Navigation %>
-	  	</div>
-
-	  	<div class="clear"><!-- --></div>
-
-		<div id="Layout">
-		  $Layout
-		</div>
-
-	   <div class="clear"><!-- --></div>
-	   <div class="push"></div>
-	</div>
-	<div id="Footer">
-		<% include Footer %>
-	</div>
+    </script>
 </body>
 </html>
