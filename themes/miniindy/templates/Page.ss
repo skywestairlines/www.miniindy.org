@@ -42,7 +42,7 @@
             $Layout
             </main>
             <% if $ShowSideBar != 'no' %>
-            <aside class="col-md-4 card px-0">
+            <aside class="col-md-4 px-0">
                 <% include SideBar %>
             </aside>
             <% end_if %>

@@ -1,5 +1,5 @@
 
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" style="margin-left: 10px" href="#">
   <span id="dateTemp">
         {$SiteConfig.EventStart.Format('MMMM d')}-{$SiteConfig.EventFinish.Format('d, Y')}
     </span>
