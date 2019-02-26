@@ -17,6 +17,7 @@ _config.php
 .phpintel
 /themes/simple
 /node_modules
+/assets
 
 *.sql
 *.bak
