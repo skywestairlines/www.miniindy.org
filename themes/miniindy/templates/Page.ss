@@ -85,5 +85,6 @@
 		}
 		window.onload=startList;
     </script>
+	<% if not $CurrentMember %>$SiteConfig.GoogleAnalytics<% end_if %>
 </body>
 </html>

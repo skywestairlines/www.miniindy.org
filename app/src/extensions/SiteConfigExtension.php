@@ -8,6 +8,7 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\TextareaField;
 
 class SiteConfigExtension extends DataExtension
 {
@@ -17,6 +18,7 @@ class SiteConfigExtension extends DataExtension
         "RegOpenDate" => DBDate::class,
         "RegCloseDate" => DBDate::class,
         "CheckAndPO" => DBHTMLText::class,
+        "GoogleAnalytics" => DBHTMLText::class
     ];
 
     private static $has_one = [
@@ -25,7 +27,8 @@ class SiteConfigExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldsToTab("Root.Main", $LOGO =  new UploadField("Logo", "MiniIndy Logo"));
+        $fields->addFieldsToTab("Root.Main", $LOGO =  new UploadField("Logo", "MiniIndy Logo"));        
+        $fields->addFieldsToTab("Root.Main", $GUA = new TextareaField("GoogleAnalytics", "Google Analytics"));
 
         $fields->addFieldsToTab("Root.Event", new DateField("EventStart", "Event Start Date"));
         $fields->addFieldsToTab("Root.Event", new DateField("EventFinish", "Event End Date"));
@@ -34,6 +37,7 @@ class SiteConfigExtension extends DataExtension
         $fields->addFieldsToTab("Root.Event", new HTMLEditorField("CheckAndPO", "Check & Payment Options"));
 
         $LOGO->setFolderName("Website/Images");
+        $GUA->setRows(10);
 
     }
 

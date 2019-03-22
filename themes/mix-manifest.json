@@ -1,0 +1,14 @@
+{
+    "/js/main.js": "/js/main.js",
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/main.css": "/css/main.css",
+    "/css/styles.css": "/css/styles.css",
+    "/css/vendor.css": "/css/vendor.css",
+    "/master/css/master.css": "/master/css/master.css",
+    "/miniindy/css/miniindy.css": "/miniindy/css/miniindy.css",
+    "/js/vendor.js": "/js/vendor.js",
+    "/miniindy/javascript/miniindy.js": "/miniindy/javascript/miniindy.js",
+    "/master/javascript/master.js": "/master/javascript/master.js",
+    "/js/scripts.js": "/js/scripts.js"
+}

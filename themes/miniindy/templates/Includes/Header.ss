@@ -7,12 +7,12 @@
     <div class="col-md-5 d-flex justify-content-end align-items-center">
     <div class="my-3 w-100">
         $ShowSearchForm
-        <!--  COMMENT OUT WHEN REGISTRATION IS CLOSED  -->
+        <!--  UNCOMMENT WHEN REGISTRATION IS OPEN 
         <div class="RegNavLink text-md-right text-center">
             <a href="/miniindy-registration/">
                 $SiteConfig.Tagline
             </a>
-        </div>
+        </div>-->
         </div>
     </div>
 </div>

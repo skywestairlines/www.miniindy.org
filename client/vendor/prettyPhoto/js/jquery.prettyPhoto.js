@@ -78,7 +78,7 @@
 										<div id="pp_full_res"></div> \
 										<div class="pp_details"> \
 											<div class="pp_nav"> \
-												<a href="#" class="pp_arrow_previous">Previous</a> \
+												<a href="#" class="pp_arrow_previous">Previou</a> \
 												<p class="currentTextHolder">0/0</p> \
 												<a href="#" class="pp_arrow_next">Next</a> \
 											</div> \
