@@ -4,7 +4,7 @@
 	<h1 class="main-title">$Title</h1>
 	<% include BreadCrumbs %>
 	$Content
-	<% if $SiteConfig.RegIsOpen %>
+	<% if $SiteConfig.RegIsOpen || $MyFormType != 'closed' %>
 		$RegForm
 		$SiteConfig.CheckAndPO
 	<% else %>
