@@ -6,6 +6,7 @@ use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 
 
 
@@ -37,21 +38,26 @@ class NewsEntry extends DataObject {
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
-		$pdf = new FileUploadField('PDF', 'Pdf File');
-		$pdf->setUploadFolder('Uploads/pdfs');
-        $pdf->setFileTypes(array('pdf'));
+		//$pdf = new FileUploadField('PDF', 'Pdf File');
+		//$pdf->setUploadFolder('Uploads/pdfs');
+		//$pdf->setFileTypes(array('pdf'));
+		
 
-		if(!Permission::check('ADMIN')) {
-			$pdf->removeFolderSelection();
-		}
+		//if(!Permission::check('ADMIN')) {
+		//	$pdf->removeFolderSelection();
+		//}
 
 		$d = new DateField('NewsDate', DBDate::class);
-		$d->setConfig('showcalendar', true);
+		//$d->setConfig('showcalendar', true);
 
 		$f->addFieldToTab('Root.Main', new TextField('Title', 'News Title'));
-		$f->addFieldToTab('Root.Main', $pdf);
+		//$f->addFieldToTab('Root.Main', $pdf);
+		$f->addFieldToTab('Root.Main', $pdf = UploadField::create('PDF'));
 		$f->addFieldToTab('Root.Main', new LiteralField('', '<p></p>'));
 		$f->addFieldToTab('Root.Main', $d);
+
+		$pdf->setFolderName('Uploads/pdfs');
+		$pdf->getValidator()->setAllowedExtensions(['pdf']);
 
 		return $f;
 	}
