@@ -18,6 +18,6 @@ _config.php
 /themes/simple
 /node_modules
 /assets
-
+/server
 *.sql
 *.bak
