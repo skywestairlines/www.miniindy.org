@@ -1,27 +1,20 @@
 <div class="typography">
-	<% if Menu(2) %>
-		<% include SideBar %>
+	<%-- <% if Menu(2) %>
 		<div id="Content">
-	<% end_if %>
-			
+	<% end_if %> --%>
+
 	<% if Level(2) %>
 	  	<% include BreadCrumbs %>
 	<% end_if %>
-	
+
 		<h2>$Title</h2>
-	
+        $Debug
+
 		<div class="sitemap">
-			
-			<!--<ul id="utilityNav">
-				<li><a href="/register">Register</a></li>
-				<li><a href="/login">Log In</a></li>
-				<li><a href="/sitemap">Site Map</a></li>
-			</ul>-->
-			
-			$SiteMap
+			<%-- $SiteMapper --%>
 		</div>
-	
-	<% if Menu(2) %>
+
+	<%-- <% if Menu(2) %>
 		</div>
-	<% end_if %>
+	<% end_if %> --%>
 </div>

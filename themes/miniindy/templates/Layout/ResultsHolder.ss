@@ -1,6 +1,6 @@
 <div class="typography">
 	<% if Menu(2) %>
-		<% include SideBar %>
+		
 		<div id="Content">
 	<% end_if %>
 			
@@ -13,11 +13,11 @@
 		<!--$Content-->
 		
 		<ul id="TeamList">
-			<% control GetResultsPages %>
+			<% loop GetResultsPages %>
 				<li>
 					<div class="teamName"><a href="$Link">$Title</a></div>
 				</li>
-			<% end_control %>
+			<% end_loop %>
 		</ul>
 		
 	<% if Menu(2) %>

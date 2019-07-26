@@ -1,24 +1,14 @@
-# ignore cache folder
-/silverstripe-cache
-/silverstripe-logs
-
-# ignore all environment files
-_ss_environment.php
-_config.php
+/silverstripe-cache/
+/.env
+/vendor/
+/node_modules/
+/themes/simple/
+/resources/
+/public/resources/
+**/_config.php
+**/logs/
 /.vscode
-/.phpintel
 
-# ignore composer vendor folder
-/vendor
-/framework
-/cms
-/siteconfig
-/reports
-.phpintel
-/themes/simple
-/node_modules
-/assets
-/server
+/app/_config.php
 *.sql
-*.bak
-.env
+/**/mix-manifest.json

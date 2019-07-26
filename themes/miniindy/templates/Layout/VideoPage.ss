@@ -35,7 +35,7 @@ This script tag will cause the Brightcove Players defined above it to be created
 as the line is read by the browser. If you wish to have the player instantiated only after
 the rest of the HTML is processed and the page load is complete, remove the line.
 -->
-<script type="text/javascript">brightcove.createExperiences();</script>
+<script type="text/javascript">brightcove.createExperiences(); </script>
 
 <!-- End of Brightcove Player -->
 	$SiteMap 

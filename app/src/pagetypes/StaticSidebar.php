@@ -29,9 +29,9 @@ class StaticSidebar extends Page
 	{
 		$fields = parent::getCMSFields();	
 	
-		$fields->addFieldToTab("Root.Content.Main", new TextField("ExternalLink"), "Content");
-		$fields->addFieldToTab("Root.Content.Main", new TreeDropdownField("InternalLinkID", "InternalLink", SiteTree::class), "Content");
-		$fields->addFieldToTab("Root.Content.Main", new UploadField(Image::class, Image::class), "Content");
+		$fields->addFieldToTab("Root.Main", new TextField("ExternalLink"), "Content");
+		$fields->addFieldToTab("Root.Main", new TreeDropdownField("InternalLinkID", "InternalLink", SiteTree::class), "Content");
+		$fields->addFieldToTab("Root.Main", new UploadField(Image::class, Image::class), "Content");
 	
 		return $fields;
     }
