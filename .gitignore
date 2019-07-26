@@ -21,3 +21,4 @@ _config.php
 /server
 *.sql
 *.bak
+.env
