@@ -1,65 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
-  <head>
-		$MetaTags(false)
-		<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
-		<% base_tag %>
-		<link rel="shortcut icon" href="/favicon.ico" />
-        <%--<% require css('dist/css/main.css') %>
-		<% require css('dist/css/vendor.css') %>
-		<% require css('dist/css/miniindy.css') %> --%>
+<head>
+    $MetaTags(false)
+    <title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
+    <% base_tag %>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <%--<% require css('dist/css/main.css') %>
+    <% require css('dist/css/vendor.css') %>
+    <% require css('dist/css/miniindy.css') %> --%>
 
-		<!--[if IE 6]>
+    <!--[if IE 6]>
 			<style type="text/css">
 			 @import url(themes/miniindy/css/ie6.css);
 			</style>
 		<![endif]-->
 
-		<!--[if IE 7]>
+    <!--[if IE 7]>
 			<style type="text/css">
 			 @import url(themes/miniindy/css/ie7.css);
 			</style>
 		<![endif]-->
-		<!--[if IE]>
+    <!--[if IE]>
 			<style type="text/css">
 			 @import url(themes/miniindy/css/ie.css);
 			</style>
 		<![endif]-->
 
 
-	</head>
+</head>
+
 <body>
-	<div class="container py-3">
-		<header id="Header">
-			<% include Header %>
-		</header>
-		<nav id="navigation" class="navbar navbar-expand-md bg-trans p-0">
-			<% include Navigation %>
-	  	</nav>
-		<section class="card-deck">
-            <main class="card card-trans">
-            $Layout
-            </main>
+    <% include Header %>
+    <main class="container py-3">
+        <section class="card-deck">
+            <div class="card card-trans">
+                $Layout
+            </div>
             <% if $ShowSideBar != 'no' %>
             <aside class="col-md-4 px-0">
                 <% include SideBar %>
             </aside>
             <% end_if %>
         </section>
-	</div>
-	<footer id="Footer">
-		<% include Footer %>
-	</footer>
-	<% if $CurrentMember %>
-	<div class="page-settings">
-		<div class="edit">
+    </main>
+    <% include Footer %>
+
+    <% if $CurrentMember %>
+    <div class="page-settings">
+        <div class="edit">
             <a href="$CMSEditLink" class="btn btn-primary" target="_blank">
                 <i class="fa fa-edit"></i>
             </a>
-		</div>
-	</div>
-	<% end_if %>
+        </div>
+    </div>
+    <% end_if %>
 
     <%--
     <% require javascript('dist/js/main.js') %>
@@ -67,24 +62,25 @@
     <% require javascript('dist/js/miniindy.js') %>
     --%>
     <script type="text/javascript">
-		startList = function() {
-			if (document.all&&document.getElementById) {
-				navRoot = document.getElementById("nav");
-				for (i=0; i<navRoot.childNodes.length; i++) {
-					node = navRoot.childNodes[i];
-					if (node.nodeName=="LI") {
-						node.onmouseover=function() {
-							this.className+=" over";
-						}
-						node.onmouseout=function() {
-							this.className=this.className.replace(" over", "");
-						}
-					}
-				}
-			}
-		}
-		window.onload=startList;
+        startList = function () {
+            if (document.all && document.getElementById) {
+                navRoot = document.getElementById("nav");
+                for (i = 0; i < navRoot.childNodes.length; i++) {
+                    node = navRoot.childNodes[i];
+                    if (node.nodeName == "LI") {
+                        node.onmouseover = function () {
+                            this.className += " over";
+                        }
+                        node.onmouseout = function () {
+                            this.className = this.className.replace(" over", "");
+                        }
+                    }
+                }
+            }
+        }
+        window.onload = startList;
     </script>
-	<% if not $CurrentMember %>$SiteConfig.GoogleAnalytics<% end_if %>
+    <% if not $CurrentMember %>$SiteConfig.GoogleAnalytics<% end_if %>
 </body>
+
 </html>

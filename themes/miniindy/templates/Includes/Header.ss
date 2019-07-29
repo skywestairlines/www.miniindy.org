@@ -1,18 +1,19 @@
-<div class="row">
-    <div class="col-md-7">
-        <a href="/" border="0">
-            <img src="$SiteConfig.Logo.URL" border="0" class="img-fluid" />
-        </a>
-    </div>
-    <div class="col-md-5 d-flex justify-content-end align-items-center">
-    <div class="my-3 w-100">
-        $ShowSearchForm
-        <!--  UNCOMMENT WHEN REGISTRATION IS OPEN 
-        <div class="RegNavLink text-md-right text-center">
-            <a href="/miniindy-registration/">
-                $SiteConfig.Tagline
-            </a>
-        </div>-->
+<header id="Header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <a href="/" border="0">
+                    <img src="$SiteConfig.Logo.URL" border="0" class="img-fluid" />
+                </a>
+            </div>
+            <div class="col-md-5 d-flex justify-content-end align-items-center">
+                <div class="my-3 w-100">
+                    $ShowSearchForm
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <% include Navigation %>
         </div>
     </div>
-</div>
+</header>
