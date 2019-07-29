@@ -1,0 +1,40 @@
+#! /usr/local/bin php
+<?php
+
+$db = [
+    'prod' => [
+        '<DB_SERVER>' => $RDS_DB_SERVER ?? '127.0.0.1',
+        '<DB_NAME>' => $RDS_DB_USERNAME ?? 'miniindydb01',
+        '<DB_USERNAME>' => $RDS_DB_USERNAME ?? 'root',
+        '<DB_PASSWORD>' => $RDS_DB_USERNAME ?? '',
+    ],
+    'qa' => [
+        '<DB_SERVER>' => $RDS_DB_SERVER ?? '127.0.0.1',
+        '<DB_NAME>' => $RDS_DB_USERNAME ?? 'miniindydb01',
+        '<DB_USERNAME>' => $RDS_DB_USERNAME ?? 'root',
+        '<DB_PASSWORD>' => $RDS_DB_USERNAME ?? '',
+    ],
+    'dev' => [
+        '<DB_SERVER>' => $RDS_DB_SERVER ?? '127.0.0.1',
+        '<DB_NAME>' => $RDS_DB_USERNAME ?? 'miniindydb01',
+        '<DB_USERNAME>' => $RDS_DB_USERNAME ?? 'root',
+        '<DB_PASSWORD>' => $RDS_DB_USERNAME ?? '',
+    ],
+    '127.0.0.1' => [
+        '<DB_SERVER>' => '127.0.0.1',
+        '<DB_NAME>' => 'miniindydb01',
+        '<DB_USERNAME>' => 'root',
+        '<DB_PASSWORD>' => '',
+    ]
+];
+
+$host = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+var_dump($host);
+
+$dbConf = $db[$host] ?? [];
+
+$env = file_get_contents(".env");
+
+$data = str_replace(array_keys($dbConf), array_values($dbConf), $env);
+
+file_put_contents(".env", $data);

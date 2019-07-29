@@ -33,7 +33,7 @@
     "extra": {
         "installer-paths": {
             "vendor/skywest/{$name}": [
-                "skywest"
+                "skywest/ss-imagegallery"
             ]
         },
         "project-files-installed": [
