@@ -33,11 +33,11 @@ class SliderImage extends DataObject {
     }
 
 	public function SlideShowImage() {
-		return $this->photo->SetRatioSize('437', '263');
+		return $this->photo->Fit('437', '263');
 	}
 
 	public function HeroSlideShow() {
-		return $this->photo->SetRatioSize('620', '294');
+		return $this->photo->Fit('620', '294');
 	}
 
 	public function getCMSFields() {

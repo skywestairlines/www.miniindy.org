@@ -1,13 +1,8 @@
 <?php
 
-namespace App\Controllers;
-
-use SilverStripe\View\Requirements;
+use SilverStripe\Control\Cookie;
 use SilverStripe\ORM\DataObject;
-use PageController;
-
-
-
+use SilverStripe\View\Requirements;
 
 class HomePageController extends PageController
 {
@@ -16,7 +11,28 @@ class HomePageController extends PageController
 		// Requirements::javascript('mysite/javascript/slides.min.jquery.js');
 		// Requirements::javascript('mysite/javascript/homeCommon.js');
 		// Requirements::CSS('sponsers/css/sponsor.css');
-    }
+
+		//dump($this->dataRecord->SliderImages);
+	}
+	
+	public function MiniIndyCookie()
+	{
+		// Set cookie name
+		$miniIndyCookie = 'watch_miniindy_video4';
+		// Check for forcing rewatch
+		$watchAgain = $this->request->getVar('force_rewatch');
+		if( $watchAgain == 'true') {
+			Cookie::force_expiry($miniIndyCookie);
+		}
+		//Set cookie
+		if (!Cookie::get($miniIndyCookie)){
+			Cookie::set($miniIndyCookie, time());	
+			return null;		
+		} 
+		return Cookie::get($miniIndyCookie);
+				
+	}
+
 
     public function getAllSponsors()
     {

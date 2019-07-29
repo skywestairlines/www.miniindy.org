@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
 
-use PageController;
+
+
 
 class RegistrationPageController extends PageController
 {

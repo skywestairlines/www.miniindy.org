@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers;
+
 
 use SilverStripe\View\Requirements;
 use SilverStripe\View\ArrayData;
-use PageController;
+
 
 
 

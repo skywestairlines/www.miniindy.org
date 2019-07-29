@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controllers;
+
 
 use SilverStripe\ORM\DataObject;
-use PageController;
+
 use App\Pagetypes\RaceReg;
 
 

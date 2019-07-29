@@ -8,8 +8,9 @@
 			<% if $Photo %>
 			<div>
 				<% if LinkID %><a href="$SliderLink"><% end_if %>
-				$Photo.SetRatioSize('580', '275')
-				<% if Caption %><div class="caption">
+				$Photo.Fit('580', '350')
+				<% if Caption %>
+				<div class="caption">
 					<p>$Caption</p>
 				</div><% end_if %>
 				<% if LinkID %></a><% end_if %>
@@ -19,6 +20,7 @@
 		</div>
 	</div><%-- END slidesHolder --%>
 </div><%-- END slides --%>
+
 
 $Content
 
@@ -105,4 +107,34 @@ $Content
 <br />
 <div class="clear"><!-- --></div>
 </div>
+</div>
+
+<div class="bg-primary px-3">
+<% if not $MiniIndyCookie %>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <%-- <h5 class="modal-title" id="exampleModalCenterTitle">Video</h5> --%>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    	<div style="max-width: 480px;">
+		<video-js data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js></div><script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
+      </div>
+      <div class="modal-footer">
+		<form class="form-inline" action="/home/doNotShowMiniIndy" id="minindy-video-form">
+			<label>
+				<input class="form-control" type="checkbox" name="dontshow" checked="$doNotShowMiniIndy" />
+				<span class="px-2">Do not show this video again</span>
+			</label>
+		</form>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<% end_if %>
 </div>

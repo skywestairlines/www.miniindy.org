@@ -70,6 +70,18 @@ class PageController extends ContentController
 		// Requirements::javascript("mysite/javascript/expandCustom.js");
 	}
 
+	// private static $owns = [
+    //     'HomepageLogo'
+    // ];
+
+    // public function onAfterWrite()
+    // {
+    //     parent::onAfterWrite();
+    //     if ($this->HomepageLogo()->exists() && !$this->HomepageLogo()->isPublished()) { 
+    //         $this->HomepageLogo()->doPublish(); 
+    //     } 
+    // }
+
 	/**
 	 * SearchForm function.
 	 *
