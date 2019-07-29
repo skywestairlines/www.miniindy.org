@@ -4,20 +4,102 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "148941fe943092b882217019ccb4c530",
+    "content-hash": "18961b3fef9f1270cc99ff2f6c3af71d",
     "packages": [
         {
-            "name": "colymba/gridfield-bulk-editing-tools",
-            "version": "3.0.0-beta4",
+            "name": "bramus/ansi-php",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "7f2045e7aa6a28650c616445bb58dd81971839f9"
+                "url": "https://github.com/bramus/ansi-php.git",
+                "reference": "79d30c30651b0c6f23cf85503c779c72ac74ab8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/7f2045e7aa6a28650c616445bb58dd81971839f9",
-                "reference": "7f2045e7aa6a28650c616445bb58dd81971839f9",
+                "url": "https://api.github.com/repos/bramus/ansi-php/zipball/79d30c30651b0c6f23cf85503c779c72ac74ab8a",
+                "reference": "79d30c30651b0c6f23cf85503c779c72ac74ab8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bramus\\Ansi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bramus Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "https://www.bram.us/"
+                }
+            ],
+            "description": "ANSI Control Functions and ANSI Control Sequences (Colors, Erasing, etc.) for PHP CLI Apps",
+            "time": "2019-02-12T15:05:30+00:00"
+        },
+        {
+            "name": "bramus/monolog-colored-line-formatter",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bramus/monolog-colored-line-formatter.git",
+                "reference": "6bff15eee00afe2690642535b0f1541f10852c2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bramus/monolog-colored-line-formatter/zipball/6bff15eee00afe2690642535b0f1541f10852c2b",
+                "reference": "6bff15eee00afe2690642535b0f1541f10852c2b",
+                "shasum": ""
+            },
+            "require": {
+                "bramus/ansi-php": "~3.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "monolog/monolog": "~1.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bramus\\Monolog\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bramus Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "https://www.bram.us/"
+                }
+            ],
+            "description": "Colored Line Formatter for Monolog",
+            "time": "2015-01-07T22:12:35+00:00"
+        },
+        {
+            "name": "colymba/gridfield-bulk-editing-tools",
+            "version": "3.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
+                "reference": "7f871a7cfa53de714078505d6920d45ff7ac2830"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/7f871a7cfa53de714078505d6920d45ff7ac2830",
+                "reference": "7f871a7cfa53de714078505d6920d45ff7ac2830",
                 "shasum": ""
             },
             "require": {
@@ -63,7 +145,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2018-03-14T20:44:41+00:00"
+            "time": "2019-03-19T03:24:17+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -242,24 +324,80 @@
             "time": "2018-08-27T06:10:37+00:00"
         },
         {
-            "name": "embed/embed",
-            "version": "v3.3.7",
+            "name": "doctrine/instantiator",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "9666691c78b25047bc6ee7e94823de3eaadce0c6"
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "a2c590166b2133a4633738648b6b064edae0814a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/9666691c78b25047bc6ee7e94823de3eaadce0c6",
-                "reference": "9666691c78b25047bc6ee7e94823de3eaadce0c6",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/a2c590166b2133a4633738648b6b064edae0814a",
+                "reference": "a2c590166b2133a4633738648b6b064edae0814a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpbench/phpbench": "^0.13",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-shim": "^0.11",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2019-03-17T17:37:11+00:00"
+        },
+        {
+            "name": "embed/embed",
+            "version": "v3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/Embed.git",
+                "reference": "960bbd5a62c5697302bd5394d58efba2e998b787"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/960bbd5a62c5697302bd5394d58efba2e998b787",
+                "reference": "960bbd5a62c5697302bd5394d58efba2e998b787",
                 "shasum": ""
             },
             "require": {
                 "composer/ca-bundle": "^1.0",
                 "ext-curl": "*",
                 "ext-mbstring": "*",
-                "php": "^5.5|^7.0"
+                "php": "^5.6|^7.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
@@ -278,9 +416,9 @@
             "authors": [
                 {
                     "name": "Oscar Otero",
+                    "role": "Developer",
                     "email": "oom@oscarotero.com",
-                    "homepage": "http://oscarotero.com",
-                    "role": "Developer"
+                    "homepage": "http://oscarotero.com"
                 }
             ],
             "description": "PHP library to retrieve page info using oembed, opengraph, etc",
@@ -292,37 +430,41 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2018-10-22T21:59:03+00:00"
+            "time": "2019-07-20T17:05:41+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.5.2",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115"
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
                 "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
+                "ext-zlib": "*",
                 "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -359,20 +501,20 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-12-04T20:46:45+00:00"
+            "time": "2019-07-01T23:21:34+00:00"
         },
         {
             "name": "intervention/image",
-            "version": "2.4.2",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb"
+                "reference": "39eaef720d082ecc54c64bf54541c55f10db546d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/e82d274f786e3d4b866a59b173f42e716f0783eb",
-                "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/39eaef720d082ecc54c64bf54541c55f10db546d",
+                "reference": "39eaef720d082ecc54c64bf54541c55f10db546d",
                 "shasum": ""
             },
             "require": {
@@ -429,7 +571,60 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2018-05-29T14:19:03+00:00"
+            "time": "2019-06-24T14:06:31+00:00"
+        },
+        {
+            "name": "jdorn/sql-formatter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "7ef9b85961956aa572413693e1194b60f50ab9ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/7ef9b85961956aa572413693e1194b60f50ab9ab",
+                "reference": "7ef9b85961956aa572413693e1194b60f50ab9ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "bin/sql-formatter"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dorn",
+                    "email": "jeremy@jeremydorn.com",
+                    "homepage": "http://jeremydorn.com/"
+                }
+            ],
+            "description": "a PHP SQL highlighting library",
+            "homepage": "https://github.com/jdorn/sql-formatter/",
+            "keywords": [
+                "highlight",
+                "sql"
+            ],
+            "time": "2015-08-30T16:36:01+00:00"
         },
         {
             "name": "league/csv",
@@ -490,16 +685,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.50",
+            "version": "1.0.53",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "dab4e7624efa543a943be978008f439c333f2249"
+                "reference": "08e12b7628f035600634a5e76d95b5eb66cea674"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/dab4e7624efa543a943be978008f439c333f2249",
-                "reference": "dab4e7624efa543a943be978008f439c333f2249",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/08e12b7628f035600634a5e76d95b5eb66cea674",
+                "reference": "08e12b7628f035600634a5e76d95b5eb66cea674",
                 "shasum": ""
             },
             "require": {
@@ -570,7 +765,66 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-02-01T08:50:36+00:00"
+            "time": "2019-06-18T20:09:29+00:00"
+        },
+        {
+            "name": "lekoala/silverstripe-debugbar",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lekoala/silverstripe-debugbar.git",
+                "reference": "f8e48c274c02a160ede880e98db5d41ed7273cc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lekoala/silverstripe-debugbar/zipball/f8e48c274c02a160ede880e98db5d41ed7273cc9",
+                "reference": "f8e48c274c02a160ede880e98db5d41ed7273cc9",
+                "shasum": ""
+            },
+            "require": {
+                "jdorn/sql-formatter": "1.3.x-dev",
+                "maximebf/debugbar": "^1.13",
+                "php": ">=5.6",
+                "silverstripe/admin": "^1.0",
+                "silverstripe/framework": "^4.0",
+                "silverstripe/siteconfig": "^4.0",
+                "tractorcow/silverstripe-proxy-db": "^0.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "assets",
+                    "javascript"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "LeKoala\\DebugBar\\": "code/",
+                    "LeKoala\\DebugBar\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "LeKoala",
+                    "email": "thomas@lekoala.be"
+                }
+            ],
+            "description": "DebugBar for SilverStripe CMS",
+            "keywords": [
+                "cms",
+                "debugbar",
+                "module",
+                "silverstripe"
+            ],
+            "time": "2019-04-05T02:56:35+00:00"
         },
         {
             "name": "m1/env",
@@ -678,6 +932,67 @@
             "time": "2016-11-19T14:58:11+00:00"
         },
         {
+            "name": "maximebf/debugbar",
+            "version": "v1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximebf/php-debugbar.git",
+                "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
+                "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "^1.0",
+                "symfony/var-dumper": "^2.6|^3.0|^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0"
+            },
+            "suggest": {
+                "kriswallsmith/assetic": "The best way to manage assets",
+                "monolog/monolog": "Log using Monolog",
+                "predis/predis": "Redis storage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.14-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DebugBar\\": "src/DebugBar/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxime Bouroumeau-Fuseau",
+                    "email": "maxime.bouroumeau@gmail.com",
+                    "homepage": "http://maximebf.com"
+                },
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Debug bar in the browser for php application",
+            "homepage": "https://github.com/maximebf/php-debugbar",
+            "keywords": [
+                "debug",
+                "debugbar"
+            ],
+            "time": "2017-12-15T11:13:46+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.24.0",
             "source": {
@@ -757,16 +1072,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.0",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "594bcae1fc0bccd3993d2f0d61a018e26ac2865a"
+                "reference": "1bd73cc04c3843ad8d6b0bfc0956026a151fc420"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/594bcae1fc0bccd3993d2f0d61a018e26ac2865a",
-                "reference": "594bcae1fc0bccd3993d2f0d61a018e26ac2865a",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
+                "reference": "1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
                 "shasum": ""
             },
             "require": {
@@ -804,7 +1119,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-01-12T16:31:37+00:00"
+            "time": "2019-05-25T20:07:01+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -854,6 +1169,221 @@
                 "random"
             ],
             "time": "2019-01-03T20:59:08+00:00"
+        },
+        {
+            "name": "phpdocumentor/reflection-common",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
+                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
+                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaap van Otterdijk",
+                    "email": "opensource@ijaap.nl"
+                }
+            ],
+            "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
+            "homepage": "http://www.phpdoc.org",
+            "keywords": [
+                "FQSEN",
+                "phpDocumentor",
+                "phpdoc",
+                "reflection",
+                "static analysis"
+            ],
+            "time": "2017-09-11T18:02:19+00:00"
+        },
+        {
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "phpdocumentor/reflection-common": "^1.0.0",
+                "phpdocumentor/type-resolver": "^0.4.0",
+                "webmozart/assert": "^1.0"
+            },
+            "require-dev": {
+                "doctrine/instantiator": "~1.0.5",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "me@mikevanriel.com"
+                }
+            ],
+            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
+            "time": "2019-04-30T17:48:53+00:00"
+        },
+        {
+            "name": "phpdocumentor/type-resolver",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/TypeResolver.git",
+                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/9c977708995954784726e25d0cd1dddf4e65b0f7",
+                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "phpdocumentor/reflection-common": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.2||^4.8.24"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "me@mikevanriel.com"
+                }
+            ],
+            "time": "2017-07-14T14:27:02+00:00"
+        },
+        {
+            "name": "phpspec/prophecy",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpspec/prophecy.git",
+                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
+                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/instantiator": "^1.0.2",
+                "php": "^5.3|^7.0",
+                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
+                "sebastian/comparator": "^1.1|^2.0|^3.0",
+                "sebastian/recursion-context": "^1.0|^2.0|^3.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^2.5|^3.2",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5 || ^7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prophecy\\": "src/Prophecy"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Konstantin Kudryashov",
+                    "email": "ever.zet@gmail.com",
+                    "homepage": "http://everzet.com"
+                },
+                {
+                    "name": "Marcello Duarte",
+                    "email": "marcello.duarte@gmail.com"
+                }
+            ],
+            "description": "Highly opinionated mocking framework for PHP 5.3+",
+            "homepage": "https://github.com/phpspec/prophecy",
+            "keywords": [
+                "Double",
+                "Dummy",
+                "fake",
+                "mock",
+                "spy",
+                "stub"
+            ],
+            "time": "2019-06-13T12:50:23+00:00"
         },
         {
             "name": "psr/cache",
@@ -1097,24 +1627,24 @@
         },
         {
             "name": "ralouphie/getallheaders",
-            "version": "2.0.5",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
             },
             "type": "library",
             "autoload": {
@@ -1133,7 +1663,243 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "time": "2016-02-11T07:05:27+00:00"
+            "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "sebastian/comparator",
+            "version": "1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/comparator.git",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sebastian/diff": "~1.2",
+                "sebastian/exporter": "~1.2 || ~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Welch",
+                    "email": "whatthejeff@gmail.com"
+                },
+                {
+                    "name": "Volker Dusch",
+                    "email": "github@wallbash.com"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@2bepublished.at"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Provides the functionality to compare PHP values for equality",
+            "homepage": "http://www.github.com/sebastianbergmann/comparator",
+            "keywords": [
+                "comparator",
+                "compare",
+                "equality"
+            ],
+            "time": "2017-01-29T09:50:25+00:00"
+        },
+        {
+            "name": "sebastian/diff",
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/diff.git",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kore Nordmann",
+                    "email": "mail@kore-nordmann.de"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Diff implementation",
+            "homepage": "https://github.com/sebastianbergmann/diff",
+            "keywords": [
+                "diff"
+            ],
+            "time": "2017-05-22T07:24:03+00:00"
+        },
+        {
+            "name": "sebastian/exporter",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/exporter.git",
+                "reference": "ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4",
+                "reference": "ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sebastian/recursion-context": "~2.0"
+            },
+            "require-dev": {
+                "ext-mbstring": "*",
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Welch",
+                    "email": "whatthejeff@gmail.com"
+                },
+                {
+                    "name": "Volker Dusch",
+                    "email": "github@wallbash.com"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@2bepublished.at"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
+                    "name": "Adam Harvey",
+                    "email": "aharvey@php.net"
+                }
+            ],
+            "description": "Provides the functionality to export PHP variables for visualization",
+            "homepage": "http://www.github.com/sebastianbergmann/exporter",
+            "keywords": [
+                "export",
+                "exporter"
+            ],
+            "time": "2016-11-19T08:54:04+00:00"
+        },
+        {
+            "name": "sebastian/recursion-context",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/recursion-context.git",
+                "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/2c3ba150cbec723aa057506e73a8d33bdb286c9a",
+                "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Welch",
+                    "email": "whatthejeff@gmail.com"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
+                    "name": "Adam Harvey",
+                    "email": "aharvey@php.net"
+                }
+            ],
+            "description": "Provides functionality to recursively process PHP variables",
+            "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
+            "time": "2016-11-19T07:33:16+00:00"
         },
         {
             "name": "silverstripe-themes/simple",
@@ -1184,16 +1950,16 @@
         },
         {
             "name": "silverstripe/admin",
-            "version": "1.3.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-admin.git",
-                "reference": "4f68e4b759c104b2690050af034a41d370d2e6e4"
+                "reference": "d31c8cbabfda8174698f86c145c10087facf031f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-admin/zipball/4f68e4b759c104b2690050af034a41d370d2e6e4",
-                "reference": "4f68e4b759c104b2690050af034a41d370d2e6e4",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-admin/zipball/d31c8cbabfda8174698f86c145c10087facf031f",
+                "reference": "d31c8cbabfda8174698f86c145c10087facf031f",
                 "shasum": ""
             },
             "require": {
@@ -1238,20 +2004,20 @@
                 "admin",
                 "silverstripe"
             ],
-            "time": "2018-12-11T04:21:33+00:00"
+            "time": "2019-06-10T04:21:57+00:00"
         },
         {
             "name": "silverstripe/akismet",
-            "version": "4.0.1",
+            "version": "4.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-akismet.git",
-                "reference": "d6f8ea8d45fcb01c6a79876f3d0a3cbc7f821c19"
+                "reference": "7b58df2121d7de6975f9281cf43ea394c9b81ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-akismet/zipball/d6f8ea8d45fcb01c6a79876f3d0a3cbc7f821c19",
-                "reference": "d6f8ea8d45fcb01c6a79876f3d0a3cbc7f821c19",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-akismet/zipball/7b58df2121d7de6975f9281cf43ea394c9b81ab1",
+                "reference": "7b58df2121d7de6975f9281cf43ea394c9b81ab1",
                 "shasum": ""
             },
             "require": {
@@ -1264,11 +2030,6 @@
                 "squizlabs/php_codesniffer": "^3.0"
             },
             "type": "silverstripe-vendormodule",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "SilverStripe\\Akismet\\": "src",
@@ -1291,20 +2052,20 @@
                 "silverstripe",
                 "spam"
             ],
-            "time": "2018-03-14T14:20:18+00:00"
+            "time": "2019-05-09T03:44:57+00:00"
         },
         {
             "name": "silverstripe/asset-admin",
-            "version": "1.3.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-asset-admin.git",
-                "reference": "c22cdfeef5f334ffccb1b2f40a878b1314fafaa5"
+                "reference": "673d8fd8c475687328ae6ae4cb1ec9753805f7b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/c22cdfeef5f334ffccb1b2f40a878b1314fafaa5",
-                "reference": "c22cdfeef5f334ffccb1b2f40a878b1314fafaa5",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/673d8fd8c475687328ae6ae4cb1ec9753805f7b7",
+                "reference": "673d8fd8c475687328ae6ae4cb1ec9753805f7b7",
                 "shasum": ""
             },
             "require": {
@@ -1320,6 +2081,9 @@
             },
             "type": "silverstripe-vendormodule",
             "extra": {
+                "branch-alias": {
+                    "1.x-dev": "1.5.x-dev"
+                },
                 "expose": [
                     "client/dist",
                     "client/lang"
@@ -1337,20 +2101,20 @@
                 "BSD-3-Clause"
             ],
             "description": "Asset management for the SilverStripe CMS",
-            "time": "2018-11-07T03:31:27+00:00"
+            "time": "2019-06-09T09:06:58+00:00"
         },
         {
             "name": "silverstripe/assets",
-            "version": "1.3.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-assets.git",
-                "reference": "75464a48ea67252dbde3b52c2ae6a0a442116743"
+                "reference": "9d598f3d061c6fee6e0afa172157a3b27b1973d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-assets/zipball/75464a48ea67252dbde3b52c2ae6a0a442116743",
-                "reference": "75464a48ea67252dbde3b52c2ae6a0a442116743",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-assets/zipball/9d598f3d061c6fee6e0afa172157a3b27b1973d5",
+                "reference": "9d598f3d061c6fee6e0afa172157a3b27b1973d5",
                 "shasum": ""
             },
             "require": {
@@ -1363,8 +2127,14 @@
                 "phpunit/phpunit": "^5.7",
                 "silverstripe/versioned": "^1@dev"
             },
+            "suggest": {
+                "ext-exif": "If you use GD backend (the default) you may want to have EXIF extension installed to elude some tricky issues"
+            },
             "type": "silverstripe-vendormodule",
             "extra": {
+                "branch-alias": {
+                    "1.x-dev": "1.5.x-dev"
+                },
                 "installer-name": "silverstripe-assets"
             },
             "autoload": {
@@ -1393,20 +2163,20 @@
                 "assets",
                 "silverstripe"
             ],
-            "time": "2018-10-19T08:44:30+00:00"
+            "time": "2019-06-10T04:24:24+00:00"
         },
         {
             "name": "silverstripe/blog",
-            "version": "3.2.1",
+            "version": "3.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "991000dddf04b83a5a3885fcc310f01b8bc8fd88"
+                "reference": "e2bf714757e363e97cb3748f0682522c0b93639b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/991000dddf04b83a5a3885fcc310f01b8bc8fd88",
-                "reference": "991000dddf04b83a5a3885fcc310f01b8bc8fd88",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/e2bf714757e363e97cb3748f0682522c0b93639b",
+                "reference": "e2bf714757e363e97cb3748f0682522c0b93639b",
                 "shasum": ""
             },
             "require": {
@@ -1456,20 +2226,20 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2018-07-09T21:35:13+00:00"
+            "time": "2019-06-30T22:15:47+00:00"
         },
         {
             "name": "silverstripe/campaign-admin",
-            "version": "1.3.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-campaign-admin.git",
-                "reference": "02415130d1bf0dd1325d52fd053bc2def815d491"
+                "reference": "ecd807686f283202e84485201b3a522c1d1ea39d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-campaign-admin/zipball/02415130d1bf0dd1325d52fd053bc2def815d491",
-                "reference": "02415130d1bf0dd1325d52fd053bc2def815d491",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-campaign-admin/zipball/ecd807686f283202e84485201b3a522c1d1ea39d",
+                "reference": "ecd807686f283202e84485201b3a522c1d1ea39d",
                 "shasum": ""
             },
             "require": {
@@ -1519,30 +2289,30 @@
                 "silverstripe",
                 "versioned"
             ],
-            "time": "2018-11-07T03:31:27+00:00"
+            "time": "2019-05-19T21:32:13+00:00"
         },
         {
             "name": "silverstripe/cms",
-            "version": "4.3.0",
+            "version": "4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "c28f5ad45fb7010b9ad71c3594161d0de15aa763"
+                "reference": "521d9504f51f353e2b426827d46a55f52b162055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/c28f5ad45fb7010b9ad71c3594161d0de15aa763",
-                "reference": "c28f5ad45fb7010b9ad71c3594161d0de15aa763",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/521d9504f51f353e2b426827d46a55f52b162055",
+                "reference": "521d9504f51f353e2b426827d46a55f52b162055",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/admin": "^1.1@dev",
-                "silverstripe/campaign-admin": "^1.1@dev",
-                "silverstripe/framework": "^4.1@dev",
-                "silverstripe/reports": "^4.1@dev",
-                "silverstripe/siteconfig": "^4.1@dev",
+                "silverstripe/admin": "^1.3@dev",
+                "silverstripe/campaign-admin": "^1.3@dev",
+                "silverstripe/framework": "^4.3@dev",
+                "silverstripe/reports": "^4.3@dev",
+                "silverstripe/siteconfig": "^4.3@dev",
                 "silverstripe/vendor-plugin": "^1.0",
-                "silverstripe/versioned": "^1.1@dev"
+                "silverstripe/versioned": "^1.3@dev"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -1581,20 +2351,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2018-12-11T03:05:59+00:00"
+            "time": "2019-06-10T05:14:04+00:00"
         },
         {
             "name": "silverstripe/comment-notifications",
-            "version": "2.0.1",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/comment-notifications.git",
-                "reference": "dd02654d735116bcc60d2b13f706b7800c5e040c"
+                "reference": "6ffe880c8966972ebfb8f2898441fe2b849050b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/comment-notifications/zipball/dd02654d735116bcc60d2b13f706b7800c5e040c",
-                "reference": "dd02654d735116bcc60d2b13f706b7800c5e040c",
+                "url": "https://api.github.com/repos/silverstripe/comment-notifications/zipball/6ffe880c8966972ebfb8f2898441fe2b849050b5",
+                "reference": "6ffe880c8966972ebfb8f2898441fe2b849050b5",
                 "shasum": ""
             },
             "require": {
@@ -1605,11 +2375,6 @@
                 "squizlabs/php_codesniffer": "^3.0"
             },
             "type": "silverstripe-vendormodule",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "SilverStripe\\CommentNotifications\\": "src/",
@@ -1627,25 +2392,25 @@
                 }
             ],
             "description": "Provides email notifications for visitor comments",
-            "time": "2018-04-03T22:17:01+00:00"
+            "time": "2018-06-11T00:16:21+00:00"
         },
         {
             "name": "silverstripe/comments",
-            "version": "3.1.5",
+            "version": "3.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-comments.git",
-                "reference": "f74d91041bbd15e953b7b91d8f785cb15eaf66d2"
+                "reference": "f65f5b569777b51db1a3c04555b6472b4f1c0bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-comments/zipball/f74d91041bbd15e953b7b91d8f785cb15eaf66d2",
-                "reference": "f74d91041bbd15e953b7b91d8f785cb15eaf66d2",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-comments/zipball/f65f5b569777b51db1a3c04555b6472b4f1c0bc2",
+                "reference": "f65f5b569777b51db1a3c04555b6472b4f1c0bc2",
                 "shasum": ""
             },
             "require": {
-                "colymba/gridfield-bulk-editing-tools": "^3.0",
-                "silverstripe/framework": "^4.0"
+                "colymba/gridfield-bulk-editing-tools": "^3.0.0-beta4",
+                "silverstripe/framework": "^4.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7",
@@ -1684,11 +2449,11 @@
                 "comments",
                 "silverstripe"
             ],
-            "time": "2018-10-28T22:05:43+00:00"
+            "time": "2019-05-09T21:33:18+00:00"
         },
         {
             "name": "silverstripe/config",
-            "version": "1.0.9",
+            "version": "1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-config.git",
@@ -1727,16 +2492,16 @@
         },
         {
             "name": "silverstripe/content-widget",
-            "version": "2.0.1",
+            "version": "2.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-content-widget.git",
-                "reference": "dd7294133896102b019615b5e4f2365c54b949a9"
+                "reference": "e6d515d3ac6d1fbb6a1b00a0fb02c0191f9b4003"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-content-widget/zipball/dd7294133896102b019615b5e4f2365c54b949a9",
-                "reference": "dd7294133896102b019615b5e4f2365c54b949a9",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-content-widget/zipball/e6d515d3ac6d1fbb6a1b00a0fb02c0191f9b4003",
+                "reference": "e6d515d3ac6d1fbb6a1b00a0fb02c0191f9b4003",
                 "shasum": ""
             },
             "require": {
@@ -1751,11 +2516,6 @@
                 "squizlabs/php_codesniffer": "^3.0"
             },
             "type": "silverstripe-vendormodule",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "SilverStripe\\ContentWidget\\": "src/",
@@ -1780,20 +2540,20 @@
                 "text",
                 "widget"
             ],
-            "time": "2017-12-13T20:42:41+00:00"
+            "time": "2019-04-15T03:31:08+00:00"
         },
         {
             "name": "silverstripe/errorpage",
-            "version": "1.3.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-errorpage.git",
-                "reference": "44ee1cc56ff70d788db29ee5d7dd0d0aeb9ee626"
+                "reference": "bfa9d752151c15a7ba5bc07962e3bb516c4c944d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-errorpage/zipball/44ee1cc56ff70d788db29ee5d7dd0d0aeb9ee626",
-                "reference": "44ee1cc56ff70d788db29ee5d7dd0d0aeb9ee626",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-errorpage/zipball/bfa9d752151c15a7ba5bc07962e3bb516c4c944d",
+                "reference": "bfa9d752151c15a7ba5bc07962e3bb516c4c944d",
                 "shasum": ""
             },
             "require": {
@@ -1832,23 +2592,24 @@
                 "errorpage",
                 "silverstripe"
             ],
-            "time": "2018-11-07T03:31:28+00:00"
+            "time": "2019-05-06T02:57:48+00:00"
         },
         {
             "name": "silverstripe/framework",
-            "version": "4.3.0",
+            "version": "4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "e18549beb08b47f63c87df3f1d727313e380bb95"
+                "reference": "c5d3f8257667543a07ace99fefcb69cd9f5aaa32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/e18549beb08b47f63c87df3f1d727313e380bb95",
-                "reference": "e18549beb08b47f63c87df3f1d727313e380bb95",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/c5d3f8257667543a07ace99fefcb69cd9f5aaa32",
+                "reference": "c5d3f8257667543a07ace99fefcb69cd9f5aaa32",
                 "shasum": ""
             },
             "require": {
+                "bramus/monolog-colored-line-formatter": "~2.0",
                 "composer/installers": "~1.0",
                 "embed/embed": "^3.0",
                 "ext-ctype": "*",
@@ -1872,7 +2633,7 @@
                 "psr/container-implementation": "1.0.0",
                 "silverstripe/assets": "^1@dev",
                 "silverstripe/config": "^1@dev",
-                "silverstripe/vendor-plugin": "^1.0",
+                "silverstripe/vendor-plugin": "^1.4",
                 "swiftmailer/swiftmailer": "~5.4",
                 "symfony/cache": "^3.3@dev",
                 "symfony/config": "^3.2",
@@ -1948,26 +2709,26 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2018-12-11T07:55:10+00:00"
+            "time": "2019-06-10T05:37:24+00:00"
         },
         {
             "name": "silverstripe/graphql",
-            "version": "3.0.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-graphql.git",
-                "reference": "11970d56f3e57f370359cf9edab4c27e9f766c3c"
+                "reference": "32b727e02dd8d9b907ff0d515d1b9b82737f2b38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-graphql/zipball/11970d56f3e57f370359cf9edab4c27e9f766c3c",
-                "reference": "11970d56f3e57f370359cf9edab4c27e9f766c3c",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-graphql/zipball/32b727e02dd8d9b907ff0d515d1b9b82737f2b38",
+                "reference": "32b727e02dd8d9b907ff0d515d1b9b82737f2b38",
                 "shasum": ""
             },
             "require": {
                 "silverstripe/framework": "^4.2",
                 "silverstripe/vendor-plugin": "^1.0",
-                "webonyx/graphql-php": "~0.8.0"
+                "webonyx/graphql-php": "~0.12.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7",
@@ -1980,12 +2741,16 @@
             "type": "silverstripe-vendormodule",
             "autoload": {
                 "psr-4": {
-                    "SilverStripe\\GraphQL\\": "src/"
+                    "SilverStripe\\GraphQL\\": "src/",
+                    "SilverStripe\\GraphQL\\Tests\\": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
             "description": "GraphQL server for SilverStripe models and other data",
-            "time": "2018-12-10T22:03:07+00:00"
+            "time": "2019-06-10T05:16:51+00:00"
         },
         {
             "name": "silverstripe/lumberjack",
@@ -2037,30 +2802,30 @@
         },
         {
             "name": "silverstripe/recipe-blog",
-            "version": "1.1.2",
+            "version": "1.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/recipe-blog.git",
-                "reference": "f895f8ed3ef3ce70774482257d4123eec56738ea"
+                "reference": "8f770f4219608ed368564ab544d63e47a5243ec5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/recipe-blog/zipball/f895f8ed3ef3ce70774482257d4123eec56738ea",
-                "reference": "f895f8ed3ef3ce70774482257d4123eec56738ea",
+                "url": "https://api.github.com/repos/silverstripe/recipe-blog/zipball/8f770f4219608ed368564ab544d63e47a5243ec5",
+                "reference": "8f770f4219608ed368564ab544d63e47a5243ec5",
                 "shasum": ""
             },
             "require": {
                 "colymba/gridfield-bulk-editing-tools": "^3.0@beta",
                 "php": ">=5.6.0",
-                "silverstripe/akismet": "4.0.1@stable",
-                "silverstripe/blog": "3.2.1@stable",
-                "silverstripe/comment-notifications": "2.0.1@stable",
-                "silverstripe/comments": "3.1.5@stable",
-                "silverstripe/content-widget": "2.0.1@stable",
-                "silverstripe/recipe-cms": "4.3.0@stable",
+                "silverstripe/akismet": "4.0.x-dev",
+                "silverstripe/blog": "3.3.x-dev",
+                "silverstripe/comment-notifications": "2.0.x-dev",
+                "silverstripe/comments": "3.2.x-dev",
+                "silverstripe/content-widget": "2.1.x-dev",
+                "silverstripe/recipe-cms": "^4.4@dev",
                 "silverstripe/recipe-plugin": "^1",
-                "silverstripe/spamprotection": "3.0.1@stable",
-                "silverstripe/widgets": "2.0.2@stable"
+                "silverstripe/spamprotection": "3.0.x-dev",
+                "silverstripe/widgets": "2.0.x-dev"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -2076,35 +2841,35 @@
                 "BSD-3-Clause"
             ],
             "description": "SilverStripe Blog Project Template",
-            "time": "2018-12-12T03:50:46+00:00"
+            "time": "2019-04-15T03:35:02+00:00"
         },
         {
             "name": "silverstripe/recipe-cms",
-            "version": "4.3.0",
+            "version": "4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/recipe-cms.git",
-                "reference": "b654eb0b59328f58cb97a099bbe93f687810d91e"
+                "reference": "cb50e18f4314117ec892cdb8d58dbbd3fb21dc00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/recipe-cms/zipball/b654eb0b59328f58cb97a099bbe93f687810d91e",
-                "reference": "b654eb0b59328f58cb97a099bbe93f687810d91e",
+                "url": "https://api.github.com/repos/silverstripe/recipe-cms/zipball/cb50e18f4314117ec892cdb8d58dbbd3fb21dc00",
+                "reference": "cb50e18f4314117ec892cdb8d58dbbd3fb21dc00",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/admin": "1.3.0@stable",
-                "silverstripe/asset-admin": "1.3.0@stable",
-                "silverstripe/campaign-admin": "1.3.0@stable",
-                "silverstripe/cms": "4.3.0@stable",
-                "silverstripe/errorpage": "1.3.0@stable",
-                "silverstripe/graphql": "3.0.0@stable",
-                "silverstripe/recipe-core": "4.3.0@stable",
+                "silverstripe/admin": "1.4.1@stable",
+                "silverstripe/asset-admin": "1.4.1@stable",
+                "silverstripe/campaign-admin": "1.4.1@stable",
+                "silverstripe/cms": "4.4.1@stable",
+                "silverstripe/errorpage": "1.4.1@stable",
+                "silverstripe/graphql": "3.1.1@stable",
+                "silverstripe/recipe-core": "4.4.1@stable",
                 "silverstripe/recipe-plugin": "^1.2",
-                "silverstripe/reports": "4.3.0@stable",
-                "silverstripe/siteconfig": "4.3.0@stable",
-                "silverstripe/versioned": "1.3.0@stable",
-                "silverstripe/versioned-admin": "1.1.0@stable"
+                "silverstripe/reports": "4.4.1@stable",
+                "silverstripe/siteconfig": "4.4.1@stable",
+                "silverstripe/versioned": "1.4.1@stable",
+                "silverstripe/versioned-admin": "1.2.1@stable"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
@@ -2113,7 +2878,8 @@
             "extra": {
                 "project-files": [
                     "app/src/*"
-                ]
+                ],
+                "resources-dir": "_resources"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2121,26 +2887,26 @@
             ],
             "description": "SilverStripe recipe for fully featured page and asset content editing",
             "homepage": "http://silverstripe.org",
-            "time": "2018-12-11T09:34:05+00:00"
+            "time": "2019-06-10T05:41:00+00:00"
         },
         {
             "name": "silverstripe/recipe-core",
-            "version": "4.3.0",
+            "version": "4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/recipe-core.git",
-                "reference": "545164bb3a330f66abee0c01a5031d29771d5e98"
+                "reference": "9b97469bbf837d846b60ddc7c41d5d61b8ad9f3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/recipe-core/zipball/545164bb3a330f66abee0c01a5031d29771d5e98",
-                "reference": "545164bb3a330f66abee0c01a5031d29771d5e98",
+                "url": "https://api.github.com/repos/silverstripe/recipe-core/zipball/9b97469bbf837d846b60ddc7c41d5d61b8ad9f3f",
+                "reference": "9b97469bbf837d846b60ddc7c41d5d61b8ad9f3f",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/assets": "1.3.0@stable",
-                "silverstripe/config": "1.0.9@stable",
-                "silverstripe/framework": "4.3.0@stable",
+                "silverstripe/assets": "1.4.1@stable",
+                "silverstripe/config": "1.0.15@stable",
+                "silverstripe/framework": "4.4.1@stable",
                 "silverstripe/recipe-plugin": "^1.2"
             },
             "require-dev": {
@@ -2157,7 +2923,8 @@
                     "index.php",
                     "install.php",
                     "install-frameworkmissing.html"
-                ]
+                ],
+                "resources-dir": "_resources"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2165,7 +2932,7 @@
             ],
             "description": "SilverStripe framework-only core recipe",
             "homepage": "http://silverstripe.org",
-            "time": "2018-12-11T09:33:31+00:00"
+            "time": "2019-06-10T05:38:56+00:00"
         },
         {
             "name": "silverstripe/recipe-plugin",
@@ -2211,16 +2978,16 @@
         },
         {
             "name": "silverstripe/reports",
-            "version": "4.3.0",
+            "version": "4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-reports.git",
-                "reference": "6e3f8ff982850d5f4ac7e86e7506964e2e45f701"
+                "reference": "9b89812058d70246991ccd12847927d9a4c5bf4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-reports/zipball/6e3f8ff982850d5f4ac7e86e7506964e2e45f701",
-                "reference": "6e3f8ff982850d5f4ac7e86e7506964e2e45f701",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-reports/zipball/9b89812058d70246991ccd12847927d9a4c5bf4b",
+                "reference": "9b89812058d70246991ccd12847927d9a4c5bf4b",
                 "shasum": ""
             },
             "require": {
@@ -2267,20 +3034,20 @@
                 "reports",
                 "silverstripe"
             ],
-            "time": "2018-11-07T03:31:28+00:00"
+            "time": "2019-04-20T23:27:08+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
-            "version": "4.3.0",
+            "version": "4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-siteconfig.git",
-                "reference": "b74a6fbf15410eaa127e39a895f336a5d2eb5615"
+                "reference": "dd618378be015e9201735ebeaa91946b5fd757c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/b74a6fbf15410eaa127e39a895f336a5d2eb5615",
-                "reference": "b74a6fbf15410eaa127e39a895f336a5d2eb5615",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/dd618378be015e9201735ebeaa91946b5fd757c4",
+                "reference": "dd618378be015e9201735ebeaa91946b5fd757c4",
                 "shasum": ""
             },
             "require": {
@@ -2313,20 +3080,20 @@
                 "silverstripe",
                 "siteconfig"
             ],
-            "time": "2018-11-07T03:31:28+00:00"
+            "time": "2019-05-06T02:57:48+00:00"
         },
         {
             "name": "silverstripe/spamprotection",
-            "version": "3.0.1",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
-                "reference": "0c445a1dbfbaac6e7b9d0663c68812de77221e54"
+                "reference": "e024613ede62f71f8431ebc86270272a38bd01e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/0c445a1dbfbaac6e7b9d0663c68812de77221e54",
-                "reference": "0c445a1dbfbaac6e7b9d0663c68812de77221e54",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/e024613ede62f71f8431ebc86270272a38bd01e4",
+                "reference": "e024613ede62f71f8431ebc86270272a38bd01e4",
                 "shasum": ""
             },
             "require": {
@@ -2368,20 +3135,20 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2018-11-07T14:35:45+00:00"
+            "time": "2019-05-09T22:13:46+00:00"
         },
         {
             "name": "silverstripe/tagfield",
-            "version": "2.2.2",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-tagfield.git",
-                "reference": "dd403bb96f50754ced6b2dde1567943d1c3fe0fa"
+                "reference": "406ad083b5f8fc742dfc71eb801dba854e86c9fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/dd403bb96f50754ced6b2dde1567943d1c3fe0fa",
-                "reference": "dd403bb96f50754ced6b2dde1567943d1c3fe0fa",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/406ad083b5f8fc742dfc71eb801dba854e86c9fd",
+                "reference": "406ad083b5f8fc742dfc71eb801dba854e86c9fd",
                 "shasum": ""
             },
             "require": {
@@ -2421,7 +3188,7 @@
                 "silverstripe",
                 "tag"
             ],
-            "time": "2019-01-24T20:44:42+00:00"
+            "time": "2019-04-15T03:49:57+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
@@ -2473,26 +3240,26 @@
         },
         {
             "name": "silverstripe/versioned",
-            "version": "1.3.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-versioned.git",
-                "reference": "efe0b317b19f820d6fed65af13d69d7a1ae7fc0e"
+                "reference": "0e165ae9b597e23072f3eb357cfdb544467d93ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-versioned/zipball/efe0b317b19f820d6fed65af13d69d7a1ae7fc0e",
-                "reference": "efe0b317b19f820d6fed65af13d69d7a1ae7fc0e",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-versioned/zipball/0e165ae9b597e23072f3eb357cfdb544467d93ea",
+                "reference": "0e165ae9b597e23072f3eb357cfdb544467d93ea",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "^4",
+                "silverstripe/framework": "^4.2",
                 "silverstripe/vendor-plugin": "^1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7",
                 "silverstripe/admin": "^1",
-                "squizlabs/php_codesniffer": "^3.0"
+                "squizlabs/php_codesniffer": "^3"
             },
             "type": "silverstripe-vendormodule",
             "autoload": {
@@ -2521,20 +3288,20 @@
                 "silverstripe",
                 "versioned"
             ],
-            "time": "2018-11-07T03:31:28+00:00"
+            "time": "2019-06-09T21:03:53+00:00"
         },
         {
             "name": "silverstripe/versioned-admin",
-            "version": "1.1.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-versioned-admin.git",
-                "reference": "9cab5525752638b97ff38762ee9f30b4fb95fad2"
+                "reference": "e13c07e83b221a3a199c39a5973ecc41fab68022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-versioned-admin/zipball/9cab5525752638b97ff38762ee9f30b4fb95fad2",
-                "reference": "9cab5525752638b97ff38762ee9f30b4fb95fad2",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-versioned-admin/zipball/e13c07e83b221a3a199c39a5973ecc41fab68022",
+                "reference": "e13c07e83b221a3a199c39a5973ecc41fab68022",
                 "shasum": ""
             },
             "require": {
@@ -2582,11 +3349,11 @@
                 "silverstripe",
                 "versioned"
             ],
-            "time": "2018-11-07T03:31:27+00:00"
+            "time": "2019-05-19T21:28:01+00:00"
         },
         {
             "name": "silverstripe/widgets",
-            "version": "2.0.2",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-widgets.git",
@@ -2755,16 +3522,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v3.4.22",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "38e5f4300cff5e70b714afd7cc658f5138514f94"
+                "reference": "8c6e162f0f7626771edbfa0a0e45b46623bbae1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/38e5f4300cff5e70b714afd7cc658f5138514f94",
-                "reference": "38e5f4300cff5e70b714afd7cc658f5138514f94",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/8c6e162f0f7626771edbfa0a0e45b46623bbae1c",
+                "reference": "8c6e162f0f7626771edbfa0a0e45b46623bbae1c",
                 "shasum": ""
             },
             "require": {
@@ -2821,20 +3588,20 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2019-01-16T13:27:11+00:00"
+            "time": "2019-06-17T17:26:15+00:00"
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.22",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "c9bc510c217075d42d4a927e285917d0c2001cf4"
+                "reference": "623fd6be3e5d4112d667003488c8c3ec12b66f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/c9bc510c217075d42d4a927e285917d0c2001cf4",
-                "reference": "c9bc510c217075d42d4a927e285917d0c2001cf4",
+                "url": "https://api.github.com/repos/symfony/config/zipball/623fd6be3e5d4112d667003488c8c3ec12b66f62",
+                "reference": "623fd6be3e5d4112d667003488c8c3ec12b66f62",
                 "shasum": ""
             },
             "require": {
@@ -2885,20 +3652,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-30T11:33:42+00:00"
+            "time": "2019-07-17T15:23:18+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.2.3",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "7c16ebc2629827d4ec915a52ac809768d060a4ee"
+                "reference": "b9896d034463ad6fd2bf17e2bf9418caecd6313d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/7c16ebc2629827d4ec915a52ac809768d060a4ee",
-                "reference": "7c16ebc2629827d4ec915a52ac809768d060a4ee",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b9896d034463ad6fd2bf17e2bf9418caecd6313d",
+                "reference": "b9896d034463ad6fd2bf17e2bf9418caecd6313d",
                 "shasum": ""
             },
             "require": {
@@ -2908,7 +3675,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -2935,20 +3702,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-16T20:35:37+00:00"
+            "time": "2019-06-23T08:51:25+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.22",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "7c0c627220308928e958a87c293108e5891cde1d"
+                "reference": "1e762fdf73ace6ceb42ba5a6ca280be86082364a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/7c0c627220308928e958a87c293108e5891cde1d",
-                "reference": "7c0c627220308928e958a87c293108e5891cde1d",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/1e762fdf73ace6ceb42ba5a6ca280be86082364a",
+                "reference": "1e762fdf73ace6ceb42ba5a6ca280be86082364a",
                 "shasum": ""
             },
             "require": {
@@ -2984,20 +3751,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-16T13:43:35+00:00"
+            "time": "2019-06-28T08:02:59+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "19e1b73bf255265ad0b568f81766ae2a3266d8d2"
+                "reference": "a502face1da6a53289480166f24de2c3c68e5c3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/19e1b73bf255265ad0b568f81766ae2a3266d8d2",
-                "reference": "19e1b73bf255265ad0b568f81766ae2a3266d8d2",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/a502face1da6a53289480166f24de2c3c68e5c3c",
+                "reference": "a502face1da6a53289480166f24de2c3c68e5c3c",
                 "shasum": ""
             },
             "require": {
@@ -3006,7 +3773,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -3040,20 +3807,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
                 "shasum": ""
             },
             "require": {
@@ -3065,7 +3832,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -3098,20 +3865,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
                 "shasum": ""
             },
             "require": {
@@ -3123,7 +3890,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -3157,11 +3924,66 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T13:07:52+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/ab50dcf166d5f577978419edd37aa2bb8eabce0c",
+                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v2.8.49",
+            "version": "v2.8.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -3224,17 +4046,93 @@
             "time": "2018-11-24T21:16:41+00:00"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v3.4.22",
+            "name": "symfony/var-dumper",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "ba11776e9e6c15ad5759a07bffb15899bac75c2d"
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "e4110b992d2cbe198d7d3b244d079c1c58761d07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/ba11776e9e6c15ad5759a07bffb15899bac75c2d",
-                "reference": "ba11776e9e6c15ad5759a07bffb15899bac75c2d",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e4110b992d2cbe198d7d3b244d079c1c58761d07",
+                "reference": "e4110b992d2cbe198d7d3b244d079c1c58761d07",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php72": "~1.5"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
+            },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2019-07-27T06:42:46+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.4.30",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "051d045c684148060ebfc9affb7e3f5e0899d40b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/051d045c684148060ebfc9affb7e3f5e0899d40b",
+                "reference": "051d045c684148060ebfc9affb7e3f5e0899d40b",
                 "shasum": ""
             },
             "require": {
@@ -3280,7 +4178,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-16T10:59:17+00:00"
+            "time": "2019-07-24T13:01:31+00:00"
         },
         {
             "name": "tijsverkoyen/akismet",
@@ -3320,6 +4218,45 @@
             "description": "Akismet is a wrapper-class to communicate with the Akismet API.",
             "homepage": "https://github.com/tijsverkoyen/Akismet",
             "time": "2012-10-13T17:59:41+00:00"
+        },
+        {
+            "name": "tractorcow/classproxy",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tractorcow/classproxy.git",
+                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tractorcow/classproxy/zipball/95e988a37917a3d44805ab907f79778f24e6bf8e",
+                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e",
+                "shasum": ""
+            },
+            "require": {
+                "phpspec/prophecy": "^1.7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TractorCow\\ClassProxy\\": "src/",
+                    "TractorCow\\ClassProxy\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                }
+            ],
+            "time": "2018-03-20T01:57:54+00:00"
         },
         {
             "name": "tractorcow/silverstripe-imagegallery",
@@ -3363,38 +4300,188 @@
             "time": "2017-05-25T11:05:44+00:00"
         },
         {
-            "name": "webonyx/graphql-php",
-            "version": "v0.8.0",
+            "name": "tractorcow/silverstripe-proxy-db",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "49453174061bbbe61a8189f87bad0b708495ff9c"
+                "url": "https://github.com/tractorcow/silverstripe-proxy-db.git",
+                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/49453174061bbbe61a8189f87bad0b708495ff9c",
-                "reference": "49453174061bbbe61a8189f87bad0b708495ff9c",
+                "url": "https://api.github.com/repos/tractorcow/silverstripe-proxy-db/zipball/9850a12fbf229c7ee576064be89b875aa65bdcbc",
+                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4@dev",
+                "silverstripe/vendor-plugin": "^1.0",
+                "tractorcow/classproxy": "^0.1.1"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "TractorCow\\SilverStripeProxyDB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                }
+            ],
+            "keywords": [
+                "db",
+                "proxy",
+                "silverstripe"
+            ],
+            "time": "2018-02-16T01:16:44+00:00"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "af492d02675f1222197f6d1dd1d32122fb4cc1cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/af492d02675f1222197f6d1dd1d32122fb4cc1cb",
+                "reference": "af492d02675f1222197f6d1dd1d32122fb4cc1cb",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~4.0",
+                "silverstripe/vendor-plugin": "^1.0",
+                "silverstripe/versioned": "^1.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "sortablegridfield",
+                "expose": [
+                    "css",
+                    "javascript"
+                ],
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "UndefinedOffset\\SortableGridField\\": "src/",
+                    "UndefinedOffset\\SortableGridField\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 4.x's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2019-01-08T16:23:14+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Assert\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "time": "2018-12-25T11:19:39+00:00"
+        },
+        {
+            "name": "webonyx/graphql-php",
+            "version": "v0.12.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webonyx/graphql-php.git",
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=5.4,<8.0-DEV"
+                "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8"
+                "phpunit/phpunit": "^4.8",
+                "psr/http-message": "^1.0",
+                "react/promise": "2.*"
+            },
+            "suggest": {
+                "psr/http-message": "To use standard GraphQL server",
+                "react/promise": "To leverage async resolving on React PHP platform"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/deprecated.php"
-                ],
                 "psr-4": {
                     "GraphQL\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD"
+                "MIT"
             ],
             "description": "A PHP port of GraphQL reference implementation",
             "homepage": "https://github.com/webonyx/graphql-php",
@@ -3402,249 +4489,22 @@
                 "api",
                 "graphql"
             ],
-            "time": "2016-11-25T11:45:38+00:00"
+            "time": "2018-09-02T14:59:54+00:00"
         }
     ],
     "packages-dev": [
         {
-            "name": "doctrine/instantiator",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "athletic/athletic": "~0.1.8",
-                "ext-pdo": "*",
-                "ext-phar": "*",
-                "phpunit/phpunit": "^6.2.3",
-                "squizlabs/php_codesniffer": "^3.0.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com",
-                    "homepage": "http://ocramius.github.com/"
-                }
-            ],
-            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
-            "homepage": "https://github.com/doctrine/instantiator",
-            "keywords": [
-                "constructor",
-                "instantiate"
-            ],
-            "time": "2017-07-22T11:58:36+00:00"
-        },
-        {
-            "name": "jdorn/sql-formatter",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "7ef9b85961956aa572413693e1194b60f50ab9ab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/7ef9b85961956aa572413693e1194b60f50ab9ab",
-                "reference": "7ef9b85961956aa572413693e1194b60f50ab9ab",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "bin": [
-                "bin/sql-formatter"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "lib"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Dorn",
-                    "email": "jeremy@jeremydorn.com",
-                    "homepage": "http://jeremydorn.com/"
-                }
-            ],
-            "description": "a PHP SQL highlighting library",
-            "homepage": "https://github.com/jdorn/sql-formatter/",
-            "keywords": [
-                "highlight",
-                "sql"
-            ],
-            "time": "2015-08-30T16:36:01+00:00"
-        },
-        {
-            "name": "lekoala/silverstripe-debugbar",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lekoala/silverstripe-debugbar.git",
-                "reference": "7058480c77b4265d832ff1a4b430ad606192129a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lekoala/silverstripe-debugbar/zipball/7058480c77b4265d832ff1a4b430ad606192129a",
-                "reference": "7058480c77b4265d832ff1a4b430ad606192129a",
-                "shasum": ""
-            },
-            "require": {
-                "jdorn/sql-formatter": "1.3.x-dev",
-                "maximebf/debugbar": "^1.13",
-                "php": ">=5.6",
-                "silverstripe/admin": "^1.0",
-                "silverstripe/framework": "^4.0",
-                "silverstripe/siteconfig": "^4.0",
-                "tractorcow/silverstripe-proxy-db": "^0.1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7",
-                "squizlabs/php_codesniffer": "^3.0"
-            },
-            "type": "silverstripe-vendormodule",
-            "extra": {
-                "expose": [
-                    "assets",
-                    "javascript"
-                ]
-            },
-            "autoload": {
-                "psr-4": {
-                    "LeKoala\\DebugBar\\": "code/",
-                    "LeKoala\\DebugBar\\Test\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "LeKoala",
-                    "email": "thomas@lekoala.be"
-                }
-            ],
-            "description": "DebugBar for SilverStripe CMS",
-            "keywords": [
-                "cms",
-                "debugbar",
-                "module",
-                "silverstripe"
-            ],
-            "time": "2018-11-16T12:38:35+00:00"
-        },
-        {
-            "name": "maximebf/debugbar",
-            "version": "v1.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/maximebf/php-debugbar.git",
-                "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
-                "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "^1.0",
-                "symfony/var-dumper": "^2.6|^3.0|^4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0|^5.0"
-            },
-            "suggest": {
-                "kriswallsmith/assetic": "The best way to manage assets",
-                "monolog/monolog": "Log using Monolog",
-                "predis/predis": "Redis storage"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.14-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "DebugBar\\": "src/DebugBar/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Maxime Bouroumeau-Fuseau",
-                    "email": "maxime.bouroumeau@gmail.com",
-                    "homepage": "http://maximebf.com"
-                },
-                {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
-                }
-            ],
-            "description": "Debug bar in the browser for php application",
-            "homepage": "https://github.com/maximebf/php-debugbar",
-            "keywords": [
-                "debug",
-                "debugbar"
-            ],
-            "time": "2017-12-15T11:13:46+00:00"
-        },
-        {
             "name": "myclabs/deep-copy",
-            "version": "1.8.1",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8"
+                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
-                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
+                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
                 "shasum": ""
             },
             "require": {
@@ -3679,222 +4539,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-06-11T23:09:50+00:00"
-        },
-        {
-            "name": "phpdocumentor/reflection-common",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
-                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": [
-                        "src"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jaap van Otterdijk",
-                    "email": "opensource@ijaap.nl"
-                }
-            ],
-            "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
-            "homepage": "http://www.phpdoc.org",
-            "keywords": [
-                "FQSEN",
-                "phpDocumentor",
-                "phpdoc",
-                "reflection",
-                "static analysis"
-            ],
-            "time": "2017-09-11T18:02:19+00:00"
-        },
-        {
-            "name": "phpdocumentor/reflection-docblock",
-            "version": "4.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94fd0001232e47129dd3504189fa1c7225010d08",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0",
-                "phpdocumentor/reflection-common": "^1.0.0",
-                "phpdocumentor/type-resolver": "^0.4.0",
-                "webmozart/assert": "^1.0"
-            },
-            "require-dev": {
-                "doctrine/instantiator": "~1.0.5",
-                "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^6.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": [
-                        "src/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "me@mikevanriel.com"
-                }
-            ],
-            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-30T07:14:17+00:00"
-        },
-        {
-            "name": "phpdocumentor/type-resolver",
-            "version": "0.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/9c977708995954784726e25d0cd1dddf4e65b0f7",
-                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5 || ^7.0",
-                "phpdocumentor/reflection-common": "^1.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^5.2||^4.8.24"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": [
-                        "src/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "me@mikevanriel.com"
-                }
-            ],
-            "time": "2017-07-14T14:27:02+00:00"
-        },
-        {
-            "name": "phpspec/prophecy",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "4ba436b55987b4bf311cb7c6ba82aa528aac0a06"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4ba436b55987b4bf311cb7c6ba82aa528aac0a06",
-                "reference": "4ba436b55987b4bf311cb7c6ba82aa528aac0a06",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/instantiator": "^1.0.2",
-                "php": "^5.3|^7.0",
-                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
-                "sebastian/comparator": "^1.1|^2.0|^3.0",
-                "sebastian/recursion-context": "^1.0|^2.0|^3.0"
-            },
-            "require-dev": {
-                "phpspec/phpspec": "^2.5|^3.2",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5 || ^7.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Prophecy\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                },
-                {
-                    "name": "Marcello Duarte",
-                    "email": "marcello.duarte@gmail.com"
-                }
-            ],
-            "description": "Highly opinionated mocking framework for PHP 5.3+",
-            "homepage": "https://github.com/phpspec/prophecy",
-            "keywords": [
-                "Double",
-                "Dummy",
-                "fake",
-                "mock",
-                "spy",
-                "stub"
-            ],
-            "time": "2018-08-05T17:53:17+00:00"
+            "time": "2019-04-07T13:18:21+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4284,6 +4929,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-06-30T09:13:00+00:00"
         },
         {
@@ -4330,122 +4976,6 @@
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
             "time": "2017-03-04T06:30:41+00:00"
-        },
-        {
-            "name": "sebastian/comparator",
-            "version": "1.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
-                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "sebastian/diff": "~1.2",
-                "sebastian/exporter": "~1.2 || ~2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jeff Welch",
-                    "email": "whatthejeff@gmail.com"
-                },
-                {
-                    "name": "Volker Dusch",
-                    "email": "github@wallbash.com"
-                },
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@2bepublished.at"
-                },
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                }
-            ],
-            "description": "Provides the functionality to compare PHP values for equality",
-            "homepage": "http://www.github.com/sebastianbergmann/comparator",
-            "keywords": [
-                "comparator",
-                "compare",
-                "equality"
-            ],
-            "time": "2017-01-29T09:50:25+00:00"
-        },
-        {
-            "name": "sebastian/diff",
-            "version": "1.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
-                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kore Nordmann",
-                    "email": "mail@kore-nordmann.de"
-                },
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                }
-            ],
-            "description": "Diff implementation",
-            "homepage": "https://github.com/sebastianbergmann/diff",
-            "keywords": [
-                "diff"
-            ],
-            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -4496,73 +5026,6 @@
                 "hhvm"
             ],
             "time": "2016-11-26T07:53:53+00:00"
-        },
-        {
-            "name": "sebastian/exporter",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4",
-                "reference": "ce474bdd1a34744d7ac5d6aad3a46d48d9bac4c4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "sebastian/recursion-context": "~2.0"
-            },
-            "require-dev": {
-                "ext-mbstring": "*",
-                "phpunit/phpunit": "~4.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jeff Welch",
-                    "email": "whatthejeff@gmail.com"
-                },
-                {
-                    "name": "Volker Dusch",
-                    "email": "github@wallbash.com"
-                },
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@2bepublished.at"
-                },
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                },
-                {
-                    "name": "Adam Harvey",
-                    "email": "aharvey@php.net"
-                }
-            ],
-            "description": "Provides the functionality to export PHP variables for visualization",
-            "homepage": "http://www.github.com/sebastianbergmann/exporter",
-            "keywords": [
-                "export",
-                "exporter"
-            ],
-            "time": "2016-11-19T08:54:04+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -4662,59 +5125,6 @@
             "time": "2017-02-18T15:18:39+00:00"
         },
         {
-            "name": "sebastian/recursion-context",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/2c3ba150cbec723aa057506e73a8d33bdb286c9a",
-                "reference": "2c3ba150cbec723aa057506e73a8d33bdb286c9a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jeff Welch",
-                    "email": "whatthejeff@gmail.com"
-                },
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                },
-                {
-                    "name": "Adam Harvey",
-                    "email": "aharvey@php.net"
-                }
-            ],
-            "description": "Provides functionality to recursively process PHP variables",
-            "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-11-19T07:33:16+00:00"
-        },
-        {
             "name": "sebastian/resource-operations",
             "version": "1.0.0",
             "source": {
@@ -4798,269 +5208,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php72",
-            "version": "v1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
-                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2018-09-21T13:07:52+00:00"
-        },
-        {
-            "name": "symfony/var-dumper",
-            "version": "v4.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "223bda89f9be41cf7033eeaf11bc61a280489c17"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/223bda89f9be41cf7033eeaf11bc61a280489c17",
-                "reference": "223bda89f9be41cf7033eeaf11bc61a280489c17",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/polyfill-mbstring": "~1.0",
-                "symfony/polyfill-php72": "~1.5"
-            },
-            "conflict": {
-                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
-                "symfony/console": "<3.4"
-            },
-            "require-dev": {
-                "ext-iconv": "*",
-                "symfony/console": "~3.4|~4.0",
-                "symfony/process": "~3.4|~4.0",
-                "twig/twig": "~1.34|~2.4"
-            },
-            "suggest": {
-                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
-                "ext-intl": "To show region name in time zone dump",
-                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
-            },
-            "bin": [
-                "Resources/bin/var-dump-server"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "Resources/functions/dump.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Component\\VarDumper\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony mechanism for exploring and dumping PHP variables",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "debug",
-                "dump"
-            ],
-            "time": "2019-01-30T11:44:30+00:00"
-        },
-        {
-            "name": "tractorcow/classproxy",
-            "version": "0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tractorcow/classproxy.git",
-                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tractorcow/classproxy/zipball/95e988a37917a3d44805ab907f79778f24e6bf8e",
-                "reference": "95e988a37917a3d44805ab907f79778f24e6bf8e",
-                "shasum": ""
-            },
-            "require": {
-                "phpspec/prophecy": "^1.7"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "TractorCow\\ClassProxy\\": "src/",
-                    "TractorCow\\ClassProxy\\Tests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Damian Mooyman",
-                    "email": "damian@silverstripe.com"
-                }
-            ],
-            "time": "2018-03-20T01:57:54+00:00"
-        },
-        {
-            "name": "tractorcow/silverstripe-proxy-db",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tractorcow/silverstripe-proxy-db.git",
-                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tractorcow/silverstripe-proxy-db/zipball/9850a12fbf229c7ee576064be89b875aa65bdcbc",
-                "reference": "9850a12fbf229c7ee576064be89b875aa65bdcbc",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "^4@dev",
-                "silverstripe/vendor-plugin": "^1.0",
-                "tractorcow/classproxy": "^0.1.1"
-            },
-            "type": "silverstripe-vendormodule",
-            "autoload": {
-                "psr-4": {
-                    "TractorCow\\SilverStripeProxyDB\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Damian Mooyman",
-                    "email": "damian@silverstripe.com"
-                }
-            ],
-            "keywords": [
-                "db",
-                "proxy",
-                "silverstripe"
-            ],
-            "time": "2018-02-16T01:16:44+00:00"
-        },
-        {
-            "name": "webmozart/assert",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
-                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
-                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3 || ^7.0",
-                "symfony/polyfill-ctype": "^1.8"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "sebastian/version": "^1.0.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Assert\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Assertions to validate method input/output with nice error messages.",
-            "keywords": [
-                "assert",
-                "check",
-                "validate"
-            ],
-            "time": "2018-12-25T11:19:39+00:00"
         }
     ],
     "aliases": [],

@@ -1,17 +1,11 @@
 <?php
 
-namespace App\Controllers;
-
 use SilverStripe\View\Requirements;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\CMS\Search\SearchForm;
 use SilverStripe\ORM\DataObject;
-use PageController;
-
-
-
 
 class MediaPageController extends PageController
 {
@@ -33,32 +27,32 @@ class MediaPageController extends PageController
 	 */
 	/**
 	 * allowed_actions
-	 * 
+	 *
 	 * @var mixed
 	 * @access public
 	 * @static
 	 */
-	private static $allowed_actions = array (
-	);
+	private static $allowed_actions = array();
 
 	/**
 	 * init function.
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
-	public function init() {
+	public function init()
+	{
 		parent::init();
 
-		// Note: you should use SS template require tags inside your templates 
-		// instead of putting Requirements calls here.  However these are 
+		// Note: you should use SS template require tags inside your templates
+		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
-		Requirements::themedCSS('layout'); 
-		Requirements::themedCSS('typography'); 
+		Requirements::themedCSS('layout');
+		Requirements::themedCSS('typography');
 		Requirements::themedCSS('form');
 		Requirements::themedCSS('dropdown');
 		//$themeFolder . '/css/dropdown.css',
-		
+
 		// clearing search box when user clicks in it
 		// this conflicts with FlickrServices
 		Requirements::javascript("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
@@ -70,54 +64,58 @@ class MediaPageController extends PageController
 		#Requirements::javascript( "gallery/javascript/effects.js" );
 		#Requirements::javascript( "gallery/javascript/lightwindow.js" );
 	}
-	
+
 	/**
 	 * SearchForm function.
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
-	function SearchForm() {
+	function SearchForm()
+	{
 		$searchText = isset($_REQUEST['Search']) ? $_REQUEST['Search'] : '';
 		$fields = new FieldList(
-	      	new TextField("Search", "", $searchText)
-	  	);
+			new TextField("Search", "", $searchText)
+		);
 		$actions = new FieldList(
-	      	new FormAction('results', 'Search')
-	  	);
+			new FormAction('results', 'Search')
+		);
 
-	  	return new SearchForm($this, SearchForm::class, $fields, $actions);
+		return new SearchForm($this, SearchForm::class, $fields, $actions);
 	}
-	
+
 	/**
 	 * Process and render search results function.
-	 * 
+	 *
 	 * @access public
 	 * @param mixed $data
 	 * @param mixed $form
 	 * @return void
 	 */
-	function results($data, $form){
-	  	$data = array(
-	     	'Results' => $form->getResults(),
-	     	'Query' => $form->getSearchQuery(),
-	      	'Title' => 'Search Results'
-	  	);
+	function results($data, $form)
+	{
+		$data = array(
+			'Results' => $form->getResults(),
+			'Query' => $form->getSearchQuery(),
+			'Title' => 'Search Results'
+		);
 
-	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
+		return $this->customise($data)->renderWith(array('Page_results', 'Page'));
 	}
-	
+
 	/**
 	 * GetStaticSidebar function. custom side bars for Reg & hotels
-	 * 
+	 *
 	 * @access public
 	 * @return void
 	 */
-	public function GetStaticSidebar() {
+	public function GetStaticSidebar()
+	{
 		return DataObject::get('StaticSidebar');
 	}
-	
-	public function showFooterLinks() {
+
+	public function showFooterLinks()
+	{
 		return DataObject::get('Page', 'ShowInFooter = 1', 'FooterSortOrder ASC');
 	}
 }

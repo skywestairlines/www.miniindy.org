@@ -49,9 +49,16 @@
         ]
     },
     "scripts": {
-        "post-update-cmd": [
+        "generate-conf": [
             "@php -r \"file_exists('app/_config.php') || copy('app/_config.example.php', 'app/_config.php');\"",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "delete-original": [
+            "@php -r \"!file_exists('app/src/PageController.php') || unlink('app/src/PageController.php');\"",
+            "@php -r \"!file_exists('app/src/Page.php') || unlink('app/src/Page.php');\""
+        ],
+        "post-update-cmd": [
+            "@generate-conf", "@delete-original"
         ]
     },
     "config": {

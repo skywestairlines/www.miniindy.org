@@ -1,22 +1,16 @@
 <?php
 
-namespace App\Controllers;
-
-use PageController;
-
-
-
-
 class TicketRegController extends PageController
 {
-	function getTicketType() {
-		if($this->MyFormType == 'banquet') {
+	function getTicketType()
+	{
+		if ($this->MyFormType == 'banquet') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
-                      
+
                       <input type=hidden name="item" value="Add extra banquets tickets">
                       <input type=hidden name="Price" value="40">
                       <input type=hidden name="sponsorType" value="Ticket">
-                      Qty: 
+                      Qty:
                       <input type=text name="Qty" value="1" size=3>
                       <br>
                       <br>
@@ -26,7 +20,7 @@ class TicketRegController extends PageController
 </form><br />
 ';
 		}
-		if($this->MyFormType == 'raffle') {
+		if ($this->MyFormType == 'raffle') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 			  <input type=hidden name="item" value="Purchase raffle tickets">
 			  <input type=hidden name="sponsorType" value="Ticket">
@@ -43,7 +37,7 @@ class TicketRegController extends PageController
 			</form><br />
 ';
 		}
-		if($this->MyFormType == 'other') {
+		if ($this->MyFormType == 'other') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 			<input type=hidden name="sponsorType" value="Ticket">
 			   Sponsorship:
@@ -63,7 +57,7 @@ class TicketRegController extends PageController
 			<br />
 ';
 		}
-		if($this->MyFormType == 'extraBody') {
+		if ($this->MyFormType == 'extraBody') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 			  <input type=hidden name="item" value="Extra Car Body">
 			  <input type=hidden name="sponsorType" value="Ticket">

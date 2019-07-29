@@ -1,27 +1,29 @@
 <?php
 
-namespace App\Controllers;
+
 
 use SilverStripe\View\Requirements;
 use SilverStripe\View\ArrayData;
-use PageController;
+
 
 
 
 
 class GolfRegController extends PageController
 {
-	public function init() {
+	public function init()
+	{
 		parent::init();
 		Requirements::javascript('mysite/javascript/registration.js');
 	}
 
-	function getGolfType() {
+	function getGolfType()
+	{
 		$accessKey = $this->getRequest()->getVar('key');
-		if($accessKey) {
-				$this->MyFormType = trim(base64_decode($accessKey));
+		if ($accessKey) {
+			$this->MyFormType = trim(base64_decode($accessKey));
 		}
-		if($this->MyFormType == 'indy') {
+		if ($this->MyFormType == 'indy') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post" id="form-id">
 				        <input type="hidden" name="item" value="Indy Level Sponsor With Car">
 				        <input type="hidden" name="Qty" value="1" size="3">
@@ -90,7 +92,7 @@ class GolfRegController extends PageController
 				        </table>
 				    </form>';
 		}
-		if($this->MyFormType == 'indy2') {
+		if ($this->MyFormType == 'indy2') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 				        <input type="hidden" name="item" value="Indy Level Sponsor without Car">
 				        <input type="hidden" name="Qty" value="1" size="3">
@@ -154,7 +156,7 @@ class GolfRegController extends PageController
 				        </table>
 				    </form>';
 		}
-		if($this->MyFormType == 'dont-use') {
+		if ($this->MyFormType == 'dont-use') {
 			// before you enable this form FIX IT!!!!!!!!!!!!
 			/**********************************************************/
 			/*	this form is not being use, DO NOT ACTIVATE IT!!!!!!! */
@@ -173,7 +175,7 @@ class GolfRegController extends PageController
 				        <input type="hidden" name="t2" value="t-Player 2"> <input name="submit" type="submit" value="Submit">
 				    </form>';
 		}
-		if($this->MyFormType == 'daytona') {
+		if ($this->MyFormType == 'daytona') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 				        <input type="hidden" name="item" value="Daytona Level Sponsor">
 				        <input type="hidden" name="Price" value="350">
@@ -225,7 +227,7 @@ class GolfRegController extends PageController
 				        </table>
 				    </form>';
 		}
-		if($this->MyFormType == 'extra') {
+		if ($this->MyFormType == 'extra') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 				        <input type="hidden" name="item" value="Add extra golfers">
 				        <input type="hidden" name="Price" value="150">
@@ -279,7 +281,7 @@ class GolfRegController extends PageController
 				        </table>
 				    </form>';
 		}
-		if($this->MyFormType == 'TuesdayGolf') {
+		if ($this->MyFormType == 'TuesdayGolf') {
 			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 				        <input type="hidden" name="item" value="Tuesday Golf">
 				        <input type="hidden" name="Price" value="75">
@@ -296,7 +298,7 @@ class GolfRegController extends PageController
 				    </form><br />';
 		}
 
-		if($this->MyFormType == 'DiamondFormulaOne'){
+		if ($this->MyFormType == 'DiamondFormulaOne') {
 			$RegistrationData = new ArrayData(array(
 				'Item' => 'Diamond/Formula One',
 				'Price' => 20000,
@@ -305,8 +307,7 @@ class GolfRegController extends PageController
 				'Players' => 4
 			));
 			return $RegistrationData->renderWith('Forms/DiamondFormulaOneReg');
-		}
-		elseif($this->MyFormType == 'PlatinumIndy'){
+		} elseif ($this->MyFormType == 'PlatinumIndy') {
 			$RegistrationData = new ArrayData(array(
 				'Item'      => 'Platinum/Indy',
 				'GolfPrice' => 10000, 'PriceTag' => '$10,000',
@@ -315,8 +316,7 @@ class GolfRegController extends PageController
 				'ExtraTeam' => false, 'Players' => 4
 			));
 			return $RegistrationData->renderWith('Forms/GolfRegistration');
-		}
-		elseif($this->MyFormType == 'GoldDaytona'){
+		} elseif ($this->MyFormType == 'GoldDaytona') {
 			$RegistrationData = new ArrayData(array(
 				'Item'      => 'Gold/Daytona',
 				'GolfPrice' => 5000, 'PriceTag' => '$5,000',
