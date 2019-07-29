@@ -1,14 +1,20 @@
 {
     "name": "silverstripe/installer",
     "type": "silverstripe-recipe",
-    "description": "The SilverStripe Framework Installer",
+    "description": "The SkyWest Image Gallery Module",
+    "repositories": {
+        "skywest/ss-imagegallery": {
+            "type": "vcs",
+            "url": "https://github.com/skywestairlines/ss-imagegallery.git"
+        }
+    },
     "require": {
         "php": ">=5.6.0",
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "^4.3",
         "silverstripe-themes/simple": "~3.2.0",
         "silverstripe/recipe-blog": "^1.1",
-        "tractorcow/silverstripe-imagegallery": "dev-master",
+        "skywest/ss-imagegallery": "*",
         "symbiote/silverstripe-multivaluefield": "^5.0",
         "undefinedoffset/sortablegridfield": "^2.0",
         "lekoala/silverstripe-debugbar": "^2.0"
@@ -22,14 +28,12 @@
             "app/src/pagetypes/Page.php",
             "app/src/controllers/PageController.php"
         ],
-        "psr-4": {
-            "TractorCow\\ImageGallery\\": "./vendor/silverstripe/image_gallery/src/"
-        }
+        "psr-4": []
     },
     "extra": {
         "installer-paths": {
-            "vendor/silverstripe/{$name}": [
-                "tractorcow/silverstripe-imagegallery"
+            "vendor/skywest/{$name}": [
+                "skywest"
             ]
         },
         "project-files-installed": [
@@ -58,7 +62,8 @@
             "@php -r \"!file_exists('app/src/Page.php') || unlink('app/src/Page.php');\""
         ],
         "post-update-cmd": [
-            "@generate-conf", "@delete-original"
+            "@generate-conf",
+            "@delete-original"
         ]
     },
     "config": {

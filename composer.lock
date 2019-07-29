@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18961b3fef9f1270cc99ff2f6c3af71d",
+    "content-hash": "1a95822d81b2e56c893c8443f4c0a829",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -3410,6 +3410,50 @@
             "time": "2018-10-16T13:29:38+00:00"
         },
         {
+            "name": "skywest/ss-imagegallery",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:skywestairlines/ss-imagegallery.git",
+                "reference": "cd77fba7f08a8013d2c50ec2e332b3eb3245b0cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skywestairlines/ss-imagegallery/zipball/cd77fba7f08a8013d2c50ec2e332b3eb3245b0cc",
+                "reference": "cd77fba7f08a8013d2c50ec2e332b3eb3245b0cc",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "image_gallery"
+            },
+            "authors": [
+                {
+                    "name": "Aaron Carlino",
+                    "homepage": "http://leftandmain.com",
+                    "email": "unclecheese@leftandmain.com"
+                },
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian.mooyman@gmail.com"
+                }
+            ],
+            "description": "Simple image gallery module for Silverstripe",
+            "keywords": [
+                "gallery",
+                "image",
+                "silverstripe"
+            ],
+            "support": {
+                "source": "https://github.com/skywestairlines/ss-imagegallery/tree/v1.0",
+                "issues": "https://github.com/skywestairlines/ss-imagegallery/issues"
+            },
+            "time": "2019-07-26T06:51:43+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.12",
             "source": {
@@ -4257,47 +4301,6 @@
                 }
             ],
             "time": "2018-03-20T01:57:54+00:00"
-        },
-        {
-            "name": "tractorcow/silverstripe-imagegallery",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tractorcow/ImageGallery.git",
-                "reference": "2d687702c6a1fed640cb280eb60c9b88ab505b62"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tractorcow/ImageGallery/zipball/2d687702c6a1fed640cb280eb60c9b88ab505b62",
-                "reference": "2d687702c6a1fed640cb280eb60c9b88ab505b62",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "^4.0"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "installer-name": "image_gallery"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Damian Mooyman",
-                    "email": "damian.mooyman@gmail.com"
-                },
-                {
-                    "name": "Aaron Carlino",
-                    "email": "unclecheese@leftandmain.com",
-                    "homepage": "http://leftandmain.com"
-                }
-            ],
-            "description": "Simple image gallery module for Silverstripe",
-            "keywords": [
-                "gallery",
-                "image",
-                "silverstripe"
-            ],
-            "time": "2017-05-25T11:05:44+00:00"
         },
         {
             "name": "tractorcow/silverstripe-proxy-db",
@@ -5212,9 +5215,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "tractorcow/silverstripe-imagegallery": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
