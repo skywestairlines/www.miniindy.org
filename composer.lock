@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a95822d81b2e56c893c8443f4c0a829",
+    "content-hash": "9a4005f56c2c844cf7ec258d03c851e6",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -3414,7 +3414,7 @@
             "version": "v1.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:skywestairlines/ss-imagegallery.git",
+                "url": "https://github.com/skywestairlines/ss-imagegallery.git",
                 "reference": "cd77fba7f08a8013d2c50ec2e332b3eb3245b0cc"
             },
             "dist": {

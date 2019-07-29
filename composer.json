@@ -27,8 +27,7 @@
             "app/lib/loader.php",
             "app/src/pagetypes/Page.php",
             "app/src/controllers/PageController.php"
-        ],
-        "psr-4": []
+        ]
     },
     "extra": {
         "installer-paths": {
