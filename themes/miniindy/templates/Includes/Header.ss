@@ -12,8 +12,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-                <% include Navigation %>
-        </div>
+        <% include Navigation %>
     </div>
 </header>

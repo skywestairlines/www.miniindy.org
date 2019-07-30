@@ -38,7 +38,7 @@
                 $Layout
             </div>
             <% if $ShowSideBar != 'no' %>
-            <aside class="col-md-4 px-0">
+            <aside class="col-md-4">
                 <% include SideBar %>
             </aside>
             <% end_if %>
