@@ -1,1 +1,264 @@
-!function(e){var n={};function t(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,t),r.l=!0,r.exports}t.m=e,t.c=n,t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:o})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="",t(t.s=22)}({22:function(e,n,t){e.exports=t(23)},23:function(e,n,t){t(24),t(25),t(26)},24:function(e,n){var t;(t=jQuery)(document).ready(function(){t("#slides").slides({preload:!0,effect:"fade",crossfade:!0,play:5e3,preloadImage:"/themes/miniindy/images/ajax-loaderHome.gif",generateNextPrev:!0}),t(".dropdown",document).on("mouseenter mouseleave",function(){t(this).toggleClass("show"),t(this).find(".dropdown-menu").toggleClass("show")}),t("#RulesList .holder, #ruleslist .holder",document).on("click",function(){t("#RulesList .bobo, #ruleslist .bobo",document).hide(),t(this).next(".bobo").show()})})},25:function(e,n){var t;(t=jQuery).fn.simpleMoneyFormat=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"$";function n(n,o,r){for(var i="",c=r.split(""),a=[],s=0,l="",u=c.length-1;u>=0;u--)l+=c[u],3==++s&&(a.push(l),s=0,l="");for(s>0&&a.push(l),u=a.length-1;u>=0;u--){for(var p=a[u].split(""),d=p.length-1;d>=0;d--)i+=p[d];u>0&&(i+=",")}i=e+i,"input"==o?t(n).val(i):t(n).empty().text(i)}this.each(function(e,o){var r=null,i=null;t(o).is("input")||t(o).is("textarea")?(i=t(o).val().replace(/,/g,""),r="input"):(i=t(o).text().replace(/,/g,""),r="other"),t(o).on("paste keyup",function(){i=t(o).val().replace(/,/g,""),n(o,r,i)}),n(o,r,i)})}},26:function(e,n){var t,o,r;t=jQuery,o=t('[name="price[]"',document),r=function(){var e,n=0,r=1;o.each(function(){void 0===e&&(e=t(this).closest("form").find('[name="Qty"]'));var o=t(this).val();t(this).is(":checkbox")&&!t(this).prop("checked")&&(o=0),n+=parseInt(o)}),void 0!==e&&(r=parseInt(e.last().val())||1),n*=r,t("#total-price",document).val(n),t("#display-price",document).val(n).simpleMoneyFormat()},t("#race-price",document).on("change click load",function(){var e=t("#car-price",document);t(this).prop("checked")?e.prop("disabled",!1):(e.prop("disabled",!0),e.prop("checked",!1))}),t(document).ready(r),o.on("change click",r),t("#register-miniindy",document).on("submit",function(e){var n=t(this).serializeArray();console.log(n)})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 22:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(23);
+
+
+/***/ }),
+
+/***/ 23:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(24);
+__webpack_require__(25);
+__webpack_require__(26);
+
+;(function ($) {
+    $(document).ready(function () {
+
+        $('#exampleModalCenter', document).modal('show');
+    });
+
+    // $('[name="dontshow"]', document).on('change click', function(){
+    //     console.log(this)
+    //     var $form = $(this).closest('form');
+    //     var $action = $form.attr('action');
+    //     var $donotshow = $(this).val();
+
+    //     console.log($form, $action, $donotshow);
+
+    // $.post($action, {donotshow: $donotshow}, funcion(res){
+    //     res
+    // });
+    //});
+
+})(jQuery);
+
+/***/ }),
+
+/***/ 24:
+/***/ (function(module, exports) {
+
+(function ($) {
+    $(document).ready(function () {
+        $('#slides').slides({
+            preload: true,
+            effect: 'fade',
+            crossfade: true,
+            play: 5000,
+            preloadImage: '/themes/miniindy/images/ajax-loaderHome.gif',
+            generateNextPrev: true
+        });
+
+        $('.dropdown', document).on('mouseenter mouseleave', function () {
+            var show = 'show';
+            $(this).toggleClass(show);
+            $(this).find('.dropdown-menu').toggleClass(show);
+        });
+
+        $('#RulesList .holder, #ruleslist .holder', document).on('click', function () {
+            $('#RulesList .bobo, #ruleslist .bobo', document).hide();
+            $(this).next('.bobo').show();
+        });
+    });
+})(jQuery);
+
+/***/ }),
+
+/***/ 25:
+/***/ (function(module, exports) {
+
+(function ($) {
+    $.fn.simpleMoneyFormat = function () {
+        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '$';
+
+        this.each(function (index, el) {
+            var elType = null; // input or other
+            var value = null;
+            // get value
+            if ($(el).is('input') || $(el).is('textarea')) {
+                value = $(el).val().replace(/,/g, '');
+                elType = 'input';
+            } else {
+                value = $(el).text().replace(/,/g, '');
+                elType = 'other';
+            }
+            // if value changes
+            $(el).on('paste keyup', function () {
+                value = $(el).val().replace(/,/g, '');
+                formatElement(el, elType, value); // format element
+            });
+            formatElement(el, elType, value); // format element
+        });
+
+        function formatElement(el, elType, value) {
+            var result = '';
+            var valueArray = value.split('');
+            var resultArray = [];
+            var counter = 0;
+            var temp = '';
+            for (var i = valueArray.length - 1; i >= 0; i--) {
+                temp += valueArray[i];
+                counter++;
+                if (counter == 3) {
+                    resultArray.push(temp);
+                    counter = 0;
+                    temp = '';
+                }
+            };
+            if (counter > 0) {
+                resultArray.push(temp);
+            }
+            for (var i = resultArray.length - 1; i >= 0; i--) {
+                var resTemp = resultArray[i].split('');
+                for (var j = resTemp.length - 1; j >= 0; j--) {
+                    result += resTemp[j];
+                };
+                if (i > 0) {
+                    result += ',';
+                }
+            };
+            result = prefix + result;
+            if (elType == 'input') {
+                $(el).val(result);
+            } else {
+                $(el).empty().text(result);
+            }
+        }
+    };
+})(jQuery);
+
+/***/ }),
+
+/***/ 26:
+/***/ (function(module, exports) {
+
+(function ($) {
+
+    var price_tags = $('[name="price[]"', document);
+
+    var calculatePrice = function calculatePrice() {
+
+        var total_price = 0,
+            total_items = 1,
+            qty;
+
+        price_tags.each(function () {
+
+            if (qty === undefined) {
+                qty = $(this).closest('form').find('[name="Qty"]');
+            }
+
+            var thisValue = $(this).val();
+
+            if ($(this).is(':checkbox') && !$(this).prop('checked')) {
+                thisValue = 0;
+            }
+            total_price += parseInt(thisValue);
+        });
+
+        if (qty !== undefined) {
+            total_items = parseInt(qty.last().val()) || 1;
+        }
+
+        total_price = total_price * total_items;
+        $('#total-price', document).val(total_price);
+
+        var displayPrice = $('#display-price', document);
+        displayPrice.val(total_price).simpleMoneyFormat();
+    };
+
+    $('#race-price', document).on('change click load', function () {
+
+        var carPricer = $('#car-price', document);
+        var raceIsOn = $(this).prop('checked');
+
+        if (raceIsOn) {
+            carPricer.prop('disabled', false);
+        } else {
+            carPricer.prop('disabled', true);
+            carPricer.prop('checked', false);
+        }
+    });
+
+    $(document).ready(calculatePrice);
+
+    price_tags.on('change click', calculatePrice);
+
+    $('#register-miniindy', document).on('submit', function (e) {
+        // e.preventDefault();
+        var inputFields = $(this).serializeArray();
+        console.log(inputFields);
+    });
+})(jQuery);
+
+/***/ })
+
+/******/ });
