@@ -8,7 +8,6 @@
 **/_config.php
 **/logs/
 /.vscode
-
-/app/_config.php
+/public/assets
 *.sql
 /**/mix-manifest.json
