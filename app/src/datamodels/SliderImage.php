@@ -13,7 +13,8 @@ class SliderImage extends DataObject {
 
 	private static $db = array(
         'Caption' => 'Varchar(80)',
-        'SortOrder' => DBInt::class,
+		'SortOrder' => DBInt::class,
+		'Anchor' => 'Varchar(255)',
 	);
 
 	private static $has_one = array(
@@ -33,11 +34,11 @@ class SliderImage extends DataObject {
     }
 
 	public function SlideShowImage() {
-		return $this->photo->SetRatioSize('437', '263');
+		return $this->photo->Fit('437', '263');
 	}
 
 	public function HeroSlideShow() {
-		return $this->photo->SetRatioSize('620', '294');
+		return $this->photo->Fit('620', '294');
 	}
 
 	public function getCMSFields() {
@@ -57,4 +58,54 @@ class SliderImage extends DataObject {
 			return $pageLink->Link();
 		}
 	}
+
+
+	// private static $types = [
+    //     'SiteTree' => 'Page on this website',
+    // ];
+    // /**
+    //  * @param FieldList $fields
+    //  */
+    public function updateCMSFields(FieldList $fields)
+    {
+        // Site tree field as a combination of tree drop down and anchor text field
+        $siteTreeField = Wrapper::create(
+            TreeDropdownField::create(
+                'SiteTreeID',
+                _t('Linkable.PAGE', 'Page'),
+                SiteTree::class
+            ),
+            TextField::create(
+                'Anchor',
+                _t('Linkable.ANCHOR', 'Anchor/Querystring')
+            )->setRightTitle(
+                _t(
+                    'Linkable.ANCHORINFO',
+                    'Include # at the start of your anchor name or, ? at the start of your querystring'
+                )
+            )
+        );
+        // $siteTreeField
+        //     ->displayIf('Type')
+        //     ->isEqualTo('SiteTree')
+        //     ->end();
+        // $fields->addFieldToTab(
+        //     'Root.Main',
+        //     $siteTreeField,
+        //     'OpenInNewWindow'
+        // );
+//        // Insert site tree field after the file selection field
+//        $fields->insertAfter('Type', $siteTreeField);
+        // Display warning if the selected page is deleted or unpublished
+        // if ($this->owner->SiteTreeID && !$this->owner->SiteTree()->isPublished()) {
+        //     $fields
+        //         ->dataFieldByName('SiteTreeID')
+        //         ->setRightTitle(
+        //             _t(
+        //                 'Linkable.DELETEDWARNING',
+        //                 'Warning: The selected page appears to have been deleted or unpublished. This link may not appear or may be broken in the frontend'
+        //             )
+        //         );
+        // }
+    }
 }
