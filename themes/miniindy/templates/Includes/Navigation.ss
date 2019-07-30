@@ -15,11 +15,11 @@
             <% loop Menu(1) %>
             <% if $Children %>
             <li class="nav-item dropdown">
-                <a class="nav-link $LinkingMode<% if $LinkingMode != 'link' %> active<% end_if %>" href="$Link">
+                <a class="nav-link $LinkingMode<% if $LinkingMode != 'link' %> active show<% end_if %>" href="$Link">
                     $MenuTitle
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <span class="careti-up"></span>
+                    <%-- <span class="caret-up"></span> --%>
                     <% loop $Children %>
                     <a class="dropdown-item" href="$Link">$MenuTItle</a>
                     <% end_loop %>
