@@ -19,7 +19,7 @@ $val .= '
 if ($scope->locally()->hasValue('LinkID', null, true)) { 
 $val .= '<a href="';
 
-$val .= $scope->locally()->XML_val('SliderLink', null, true);
+$val .= $scope->locally()->XML_val('Anchor', null, true);
 $val .= '">';
 
 
@@ -273,6 +273,7 @@ $val .= '
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
+	  	<img src="/assets/website/images/newlogo.png" alt="new_logo">
         ';
 
 

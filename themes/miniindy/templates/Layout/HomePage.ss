@@ -7,7 +7,7 @@
 			<% loop $SliderImages.Sort('SortOrder') %>
 			<% if $Photo %>
 			<div>
-				<% if LinkID %><a href="$SliderLink"><% end_if %>
+				<% if LinkID %><a href="$Anchor"><% end_if %>
 				$Photo.Fit('580', '350')
 				<% if Caption %>
 				<div class="caption">
@@ -115,6 +115,7 @@ $Content
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
+	  	<img src="/assets/website/images/newlogo.png" alt="new_logo">
         <%-- <h5 class="modal-title" id="exampleModalCenterTitle">Video</h5> --%>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
