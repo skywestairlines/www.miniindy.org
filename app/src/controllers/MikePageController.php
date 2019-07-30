@@ -1,28 +1,24 @@
 <?php
 
-
-
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\Form;
 use SilverStripe\Control\Director;
 
-
-
-
-
 class MikePageController extends PageController
 {
-	public function init() {
-		parent::init();
-		//Requirements::Javascript('mysite/javascript/slides.min.jquery.js');
-		//Requirements::Javascript('mysite/javascript/homeCommon.js');
-		//Requirements::CSS('sponsers/css/sponsor.css');
-	}
-	
-	function getRaceType() {
-		if($this->MyFormType == 'other') {
-			return '<form method="post" action="https://shoppingcartsecure.com/cart32.exe/4356343682-additem" name="Form">
+    public function init()
+    {
+        parent::init();
+        //Requirements::Javascript('mysite/javascript/slides.min.jquery.js');
+        //Requirements::Javascript('mysite/javascript/homeCommon.js');
+        //Requirements::CSS('sponsers/css/sponsor.css');
+    }
+
+    function getRaceType()
+    {
+        if ($this->MyFormType == 'other') {
+            return '<form method="post" action="https://shoppingcartsecure.com/cart32.exe/4356343682-additem" name="Form">
 				<table border="0" style="width:425px;">
 					<tr >
 						<td align="right"style="text-align:right;">Name you would like to appear on the presentation:</td>
@@ -44,36 +40,37 @@ class MikePageController extends PageController
 				<input type="hidden" name="Qty" value="1">
 				</p>
 				</form><br />';
-		}else{
-			return '';
-		}
-	
-	}
-	
-	public function uploadMike(){
-	
-		$form = new Form(
-			$this,
-			"uploadMike",
-			new FieldList(
-				$upload = new MultipleFileUploadField('upload','<p style="color:#244673;font-weight:bold;">Upload Images of Mike Gibson</p>')
-			),
-			new FieldList(
-				new FormAction("done","Done")
-			)	
-		);
-		
-		$upload->setFileTypes(
-			array('jpg','gif','png','jpeg')
-		);
-		$upload->setUploadFolder('Uploads/MikeImages');
-		//$upload->uploadOnSubmit();
-		return $form;
-	}
-	
-	public function done($data, $form){
-		$form->sessionMessage("Files Uploaded! Thank you!","good");
-		return Director::redirectBack();
-		return;
-	}
+        } else {
+            return '';
+        }
+    }
+
+    public function uploadMike()
+    {
+
+        $form = new Form(
+            $this,
+            "uploadMike",
+            new FieldList(
+                $upload = new MultipleFileUploadField('upload', '<p style="color:#244673;font-weight:bold;">Upload Images of Mike Gibson</p>')
+            ),
+            new FieldList(
+                new FormAction("done", "Done")
+            )
+        );
+
+        $upload->setFileTypes(
+            array('jpg', 'gif', 'png', 'jpeg')
+        );
+        $upload->setUploadFolder('Uploads/MikeImages');
+        //$upload->uploadOnSubmit();
+        return $form;
+    }
+
+    public function done($data, $form)
+    {
+        $form->sessionMessage("Files Uploaded! Thank you!", "good");
+        return Director::redirectBack();
+        return;
+    }
 }

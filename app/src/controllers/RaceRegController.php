@@ -1,31 +1,24 @@
 <?php
 
-
-
-
-
-
-
-
 class RaceRegController extends PageController
 {
-	// do individual forms for each type?
+  // do individual forms for each type?
 
+  function getRaceType()
+  {
+    $MyFormType = $this->MyFormType;
+    switch ($MyFormType) {
+      case 'first':
+        $template = 'hilkiah';
+        break;
 
-	function getRaceType() {
-        $MyFormType = $this->MyFormType;
-        switch ($MyFormType) {
-            case 'first':
-                $template = 'hilkiah';
-                break;
-
-            default:
-                $template = 'makemo';
-                break;
-        }
-        return (new ArrayData([]))->renderWith($template);
-		if($this->MyFormType == 'first') {
-			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
+      default:
+        $template = 'makemo';
+        break;
+    }
+    return (new ArrayData([]))->renderWith($template);
+    if ($this->MyFormType == 'first') {
+      return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 
   <input type=hidden name="item" value="First Time Car Sponsor">
   <input type=hidden name="Qty" value="1">
@@ -60,9 +53,9 @@ class RaceRegController extends PageController
     </tr>
   </table>
 </form>';
-		}
-		if($this->MyFormType == 'returnNew') {
-			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
+    }
+    if ($this->MyFormType == 'returnNew') {
+      return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 
           <input type=hidden name="item" value="Returning Car Sponsor (new car)">
           <input type=hidden name="Qty" value="1" size=3>
@@ -103,49 +96,12 @@ class RaceRegController extends PageController
             </tr>
           </table>
         </form>';
-		}
-		if($this->MyFormType == 'returnCar') {
-			$today = date('Ymd');
-			if($today >= 20140201){
+    }
+    if ($this->MyFormType == 'returnCar') {
+      $today = date('Ymd');
+      if ($today >= 20140201) {
 
-				return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
-
-          <input type=hidden name="item" value="Returning Car Sponsor">
-          <input type=hidden name="Qty" value="1" size=3>
-          <input type=hidden name="Price" value="3200">
-          <input type=hidden name="t1" value="t-Company Name">
-		  <input type=hidden name="t2" value="t-Company Contact">
-		  <input type=hidden name="t3" value="t-Email">
-		  <input type=hidden name="t4" value="t-Phone">
-		  <input type=hidden name="sponsorType" value="Car">
-          <table border="0" cellpadding="3" class=main>
-            <tr>
-              <td align="right">Company Name:</td>
-              <td><input name="p1" type=text size="30"></td>
-            </tr>
-            <tr>
-              <td align="right">Company Contact:</td>
-              <td><input name="p2" type=text size="30"></td>
-            </tr>
-            <tr>
-              <td align="right">Email:</td>
-              <td><input name="p3" type=text size="30"></td>
-            </tr>
-            <tr>
-              <td align="right">Phone:</td>
-              <td><input name="p4" type=text size="30"></td>
-            </tr>
-            <tr>
-              <td align="right">&nbsp;</td>
-              <td><b>Price:</b> $3200<br>        <br>
-              <input type=submit value="Add to the pit" name="submit2"></td>
-            </tr>
-          </table>
-        </form>';
-
-				}else{
-			//<input type=hidden name="t1" value="d-Select body color;White;Red;Blue;Black;Green;Yellow">
-			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
+        return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 
           <input type=hidden name="item" value="Returning Car Sponsor">
           <input type=hidden name="Qty" value="1" size=3>
@@ -179,10 +135,46 @@ class RaceRegController extends PageController
             </tr>
           </table>
         </form>';
-        	}
-		}
-		if($this->MyFormType == 'extraBody') {
-			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
+      } else {
+        //<input type=hidden name="t1" value="d-Select body color;White;Red;Blue;Black;Green;Yellow">
+        return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
+
+          <input type=hidden name="item" value="Returning Car Sponsor">
+          <input type=hidden name="Qty" value="1" size=3>
+          <input type=hidden name="Price" value="3200">
+          <input type=hidden name="t1" value="t-Company Name">
+		  <input type=hidden name="t2" value="t-Company Contact">
+		  <input type=hidden name="t3" value="t-Email">
+		  <input type=hidden name="t4" value="t-Phone">
+		  <input type=hidden name="sponsorType" value="Car">
+          <table border="0" cellpadding="3" class=main>
+            <tr>
+              <td align="right">Company Name:</td>
+              <td><input name="p1" type=text size="30"></td>
+            </tr>
+            <tr>
+              <td align="right">Company Contact:</td>
+              <td><input name="p2" type=text size="30"></td>
+            </tr>
+            <tr>
+              <td align="right">Email:</td>
+              <td><input name="p3" type=text size="30"></td>
+            </tr>
+            <tr>
+              <td align="right">Phone:</td>
+              <td><input name="p4" type=text size="30"></td>
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td><b>Price:</b> $3200<br>        <br>
+              <input type=submit value="Add to the pit" name="submit2"></td>
+            </tr>
+          </table>
+        </form>';
+      }
+    }
+    if ($this->MyFormType == 'extraBody') {
+      return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
 			  <input type=hidden name="item" value="Extra Car Body">
 			  <input type=hidden name="sponsorType" value="Car">
 			  Qty:
@@ -194,9 +186,9 @@ class RaceRegController extends PageController
 			  <br>
 			  <input name="submit" type=submit value="Submit">
 			</form><br />';
-		}
-		if($this->MyFormType == 'other') {
-			return '<form method="post" action="https://shoppingcartsecure.com/cart32.exe/4356343682-additem" name="Form">
+    }
+    if ($this->MyFormType == 'other') {
+      return '<form method="post" action="https://shoppingcartsecure.com/cart32.exe/4356343682-additem" name="Form">
 				<p align="center"><b>Parts or Other</b>
 				<input type="hidden" name="PartNo" value="Partsoth">
 				<input type="text" name="Item" value="Parts or Other">
@@ -207,9 +199,9 @@ class RaceRegController extends PageController
 				<input type="submit" value="Add to Cart" name="submit">
 				</p>
 				</form><br />';
-		}
-		if($this->MyFormType == 'storage') {
-			return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
+    }
+    if ($this->MyFormType == 'storage') {
+      return '<form action="https://shoppingcartsecure.com/cart32.exe/4356343682-AddItem" method="post">
           <input type=hidden name="item" value="Car Storage">
           <input type=hidden name="Qty" value="1" size=3>
           <input type=hidden name="Price" value="225">
@@ -240,7 +232,6 @@ class RaceRegController extends PageController
             </tr>
           </table>
         </form>';
-		}
-
-	}
+    }
+  }
 }

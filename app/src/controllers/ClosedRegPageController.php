@@ -1,17 +1,11 @@
 <?php
 
-
-
 use SilverStripe\View\Requirements;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\CMS\Search\SearchForm;
 use SilverStripe\ORM\DataObject;
-
-
-
-
 
 class ClosedRegPageController extends PageController
 {
@@ -38,8 +32,7 @@ class ClosedRegPageController extends PageController
 	 * @access public
 	 * @static
 	 */
-	private static $allowed_actions = array (
-	);
+	private static $allowed_actions = array();
 
 	/**
 	 * init function.
@@ -47,7 +40,8 @@ class ClosedRegPageController extends PageController
 	 * @access public
 	 * @return void
 	 */
-	public function init() {
+	public function init()
+	{
 		parent::init();
 
 		// Note: you should use SS template require tags inside your templates
@@ -77,16 +71,17 @@ class ClosedRegPageController extends PageController
 	 * @access public
 	 * @return void
 	 */
-	function SearchForm() {
+	function SearchForm()
+	{
 		$searchText = isset($_REQUEST['Search']) ? $_REQUEST['Search'] : '';
 		$fields = new FieldList(
-	      	new TextField("Search", "", $searchText)
-	  	);
+			new TextField("Search", "", $searchText)
+		);
 		$actions = new FieldList(
-	      	new FormAction('results', 'Search')
-	  	);
+			new FormAction('results', 'Search')
+		);
 
-	  	return new SearchForm($this, SearchForm::class, $fields, $actions);
+		return new SearchForm($this, SearchForm::class, $fields, $actions);
 	}
 
 	/**
@@ -97,14 +92,15 @@ class ClosedRegPageController extends PageController
 	 * @param mixed $form
 	 * @return void
 	 */
-	function results($data, $form){
-	  	$data = array(
-	     	'Results' => $form->getResults(),
-	     	'Query' => $form->getSearchQuery(),
-	      	'Title' => 'Search Results'
-	  	);
+	function results($data, $form)
+	{
+		$data = array(
+			'Results' => $form->getResults(),
+			'Query' => $form->getSearchQuery(),
+			'Title' => 'Search Results'
+		);
 
-	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
+		return $this->customise($data)->renderWith(array('Page_results', 'Page'));
 	}
 
 	/**
@@ -113,11 +109,13 @@ class ClosedRegPageController extends PageController
 	 * @access public
 	 * @return void
 	 */
-	public function GetStaticSidebar() {
+	public function GetStaticSidebar()
+	{
 		return DataObject::get('StaticSidebar');
 	}
 
-	public function showFooterLinks() {
+	public function showFooterLinks()
+	{
 		return DataObject::get('Page', 'ShowInFooter = 1', 'FooterSortOrder ASC');
 	}
 }

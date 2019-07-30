@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 class RegistrationPageController extends PageController
 {
 
@@ -11,7 +7,7 @@ class RegistrationPageController extends PageController
     {
         parent::init();
     }
-    
+
     public function getRegForm()
     {
         // return $this->renderWith("Includes/Forms/Registration");
