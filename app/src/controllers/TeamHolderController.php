@@ -2,7 +2,7 @@
 
 use SilverStripe\ORM\DataObject;
 
-use App\Pagetypes\TeamPage;
+
 
 class TeamHolderController extends PageController
 {

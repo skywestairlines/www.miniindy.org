@@ -1,7 +1,7 @@
 <?php
 
 use SilverStripe\ORM\DataObject;
-use App\Pagetypes\ResultsPage;
+
 
 class ResultsHolderController extends PageController
 {
