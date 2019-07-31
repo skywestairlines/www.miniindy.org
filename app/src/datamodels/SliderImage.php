@@ -1,9 +1,10 @@
 <?php
+use SilverStripe\Assets\Image;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\TextField;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\FieldType\DBInt;
 use SilverStripe\Forms\TreeDropdownField;
-use SilverStripe\Assets\Image;
 
 
 
@@ -46,7 +47,7 @@ class SliderImage extends DataObject {
 
 		$f->addFieldToTab('Root.Main', $dropdown = new TreeDropdownField('LinkID', 'Page Link', SiteTree::class));
 		$dropdown->setEmptyString('Select One...');
-
+        $f->addFieldToTab('Root.Main', TextField::create('Anchor','Custom Link'));
 		$f->removeFieldFromTab('Root.Main', 'SortOrder');
 
 		return $f;
@@ -58,27 +59,4 @@ class SliderImage extends DataObject {
 			return $pageLink->Link();
 		}
 	}
-
-
-    public function updateCMSFields(FieldList $fields)
-    {
-        // Site tree field as a combination of tree drop down and anchor text field
-        $siteTreeField = Wrapper::create(
-            TreeDropdownField::create(
-                'SiteTreeID',
-                _t('Linkable.PAGE', 'Page'),
-                SiteTree::class
-            ),
-            TextField::create(
-                'Anchor',
-                _t('Linkable.ANCHOR', 'Anchor/Querystring')
-            )->setRightTitle(
-                _t(
-                    'Linkable.ANCHORINFO',
-                    'Include # at the start of your anchor name or, ? at the start of your querystring'
-                )
-            )
-        );
-
-    }
 }
