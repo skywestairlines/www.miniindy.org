@@ -112,26 +112,31 @@ $Content
 <div class="bg-primary px-3">
 <% if not $MiniIndyCookie %>
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-	  	<img src="/assets/website/images/newlogo.png" alt="new_logo">
+      <div class="modal-header" id="modalheaderpadding">
+	  	<div class="mx-auto w-75">
+		  <img class="img-fluid" src="/assets/website/images/newlogo.png" alt="new_logo" id="new_logo">
+		</div>
         <%-- <h5 class="modal-title" id="exampleModalCenterTitle">Video</h5> --%>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-    	<div style="max-width: 480px;">
-		<video-js data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js></div><script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
-      </div>
+      <div class="modal-body" id="videopadding">
+    	<div class="film-background">
+		<%-- <img src="/assets/Uploads/videocover.jpg" alt="video_cover"> --%>
+		<video-js data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+		<script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
+		</div>
+	  </div>
       <div class="modal-footer">
-		<form class="form-inline" action="/home/doNotShowMiniIndy" id="minindy-video-form">
+		<%-- <form class="form-inline" action="/home/doNotShowMiniIndy" id="minindy-video-form">
 			<label>
 				<input class="form-control" type="checkbox" name="dontshow" checked="$doNotShowMiniIndy" />
 				<span class="px-2">Do not show this video again</span>
 			</label>
-		</form>
+		</form> --%>
       </div>
     </div>
   </div>

@@ -60,12 +60,6 @@ class SliderImage extends DataObject {
 	}
 
 
-	// private static $types = [
-    //     'SiteTree' => 'Page on this website',
-    // ];
-    // /**
-    //  * @param FieldList $fields
-    //  */
     public function updateCMSFields(FieldList $fields)
     {
         // Site tree field as a combination of tree drop down and anchor text field
@@ -85,27 +79,6 @@ class SliderImage extends DataObject {
                 )
             )
         );
-        // $siteTreeField
-        //     ->displayIf('Type')
-        //     ->isEqualTo('SiteTree')
-        //     ->end();
-        // $fields->addFieldToTab(
-        //     'Root.Main',
-        //     $siteTreeField,
-        //     'OpenInNewWindow'
-        // );
-//        // Insert site tree field after the file selection field
-//        $fields->insertAfter('Type', $siteTreeField);
-        // Display warning if the selected page is deleted or unpublished
-        // if ($this->owner->SiteTreeID && !$this->owner->SiteTree()->isPublished()) {
-        //     $fields
-        //         ->dataFieldByName('SiteTreeID')
-        //         ->setRightTitle(
-        //             _t(
-        //                 'Linkable.DELETEDWARNING',
-        //                 'Warning: The selected page appears to have been deleted or unpublished. This link may not appear or may be broken in the frontend'
-        //             )
-        //         );
-        // }
+
     }
 }

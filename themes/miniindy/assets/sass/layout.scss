@@ -3,42 +3,6 @@
 
 /* Misc Styles and defaults
 -------------------------------------------- */
-#exampleModalCenter {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-  background-color: #192247;
-  border-radius: 0;
-}
-
-.modal-header {
-  border-style: none;
-}
-
-.modal-body {
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 10%;
-}
-
-.modal-footer {
-  border-style: none;
-}
-
-// .vjs-big-play-button {
-//   background-color: #B37D5B;
-//   opacity: .6;
-// }
-
-.video-js .vjs-big-play-button {
-  background-color: none;
-  opacity: .6;
-  border-style: solid;
-  border-width: 8px;
-}
-
-
 * {
     margin: 0;
     padding: 0;
