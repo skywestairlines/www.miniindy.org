@@ -5,10 +5,11 @@
             <div class="d-flex mb-3">
                 <div class="col-md-8">
                     <div class="still row">
-                        <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
+                        <%-- <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
                             rel="prettyPhoto[iframes]" title="$VideoName">
                             <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" />
-                        </a>
+                        </a> --%>
+                        <a href="$VideoLink"> <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" /></a>
                     </div>
 
                 </div>
@@ -19,6 +20,7 @@
                                 rel="prettyPhoto[iframes]" title="$VideoName">
                                 <strong>$VideoName</strong>
                             </a>
+                             <%-- <a href="$VideoLink"><strong>$VideoName</strong></a> --%>
                         </h6>
                         $VideoInfo
                         <div class="clearfix"></div>

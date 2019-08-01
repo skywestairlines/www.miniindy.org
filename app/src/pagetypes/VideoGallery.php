@@ -10,6 +10,7 @@ use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\ORM\FieldType\DBVarchar;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 
 class VideoGallery extends Page {
@@ -34,7 +35,7 @@ class VideoGallery extends Page {
    private static $defaults = array(
 		"Method" => 1,
 		"PerPage" => 10,
-		"Sortby" => 'relevance'
+		"Sortby" => 'upload'
 	);
 
   private static $icon = "youtubeservice/images/youtube";
@@ -82,8 +83,10 @@ class VideoGallery extends Page {
         "Videos", "Videos", $this->Videos(),
         GridFieldConfig_RecordEditor::create()
     ));
-
-      return $fields;
+	// $sortvideogrid = new GridFieldSortableRows('SortOrder');
+	// $videogrid->addComponent($sortvideogrid);
+	// $sortvideogrid->setAppendToTop(true);
+    	 return $fields;
    }
 
    public function VideosFeed(){

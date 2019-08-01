@@ -66,6 +66,8 @@ class Video extends DataObject
             UploadField::create("VideoImage")->setFolderName("Uploads/videos"),
             HTMLEditorField::create("VideoInfo")->setRows(2)
         ]);
+
+        
         return $fields;
     }
 }

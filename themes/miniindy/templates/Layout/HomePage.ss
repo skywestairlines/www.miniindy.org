@@ -111,7 +111,7 @@ $Content
 
 <div class="bg-primary px-3">
 <% if not $MiniIndyCookie %>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="popupvideo" tabindex="-1" role="dialog" aria-labelledby="popupvideoTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header" id="modalheaderpadding">

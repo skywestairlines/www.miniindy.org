@@ -5,7 +5,7 @@ require('./register');
 ;(function($){
     $(document).ready(function(){
         
-        $('#exampleModalCenter', document).modal('show');
+        $('#popupvideo', document).modal('show');
     });
 
     // $('[name="dontshow"]', document).on('change click', function(){
