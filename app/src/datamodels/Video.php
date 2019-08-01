@@ -5,6 +5,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\DropdownField;
+use SilverStripe\ORM\FieldType\DBInt;
 use SilverStripe\ORM\FieldType\DBText;
 use SilverStripe\ORM\FieldType\DBVarchar;
 use SilverStripe\ORM\FieldType\DBHTMLText;
@@ -23,6 +24,7 @@ class Video extends DataObject
         'VideoInfo' => DBHTMLText::class,
         'FavedBy'   => DBVarchar::class,
         'PlayList'  => DBVarchar::class,
+        'SortOrder' => DBInt::class
     ];
 
     private static $has_one = [

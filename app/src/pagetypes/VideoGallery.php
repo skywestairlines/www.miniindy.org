@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\ORM\DataList;
+use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
@@ -35,7 +36,7 @@ class VideoGallery extends Page {
    private static $defaults = array(
 		"Method" => 1,
 		"PerPage" => 10,
-		"Sortby" => 'upload'
+		"Sortby" => 'SortOrder'
 	);
 
   private static $icon = "youtubeservice/images/youtube";
@@ -76,18 +77,24 @@ class VideoGallery extends Page {
 				'viewCount' => 'Most Viewed',
 				'rating' => 'Most Rated',
 				'daterecorded' => 'Date Recorded',
+				'SortOrder' => 'Sort Order',
         ])
       ]);
 
     $fields->addFieldToTab("Root.VideosList", new GridField(
         "Videos", "Videos", $this->Videos(),
-        GridFieldConfig_RecordEditor::create()
+        $videogrid = GridFieldConfig_RecordEditor::create()
     ));
-	// $sortvideogrid = new GridFieldSortableRows('SortOrder');
-	// $videogrid->addComponent($sortvideogrid);
-	// $sortvideogrid->setAppendToTop(true);
+	$sortvideogrid = new GridFieldSortableRows('SortOrder');
+	$videogrid->addComponent($sortvideogrid);
+	$sortvideogrid->setAppendToTop(true);
     	 return $fields;
    }
+
+//    public function getvideo(){
+// 	$data = DataObject::get("Video", "", 'updated DESC', "", "");
+// 		return $data;
+//    }
 
    public function VideosFeed(){
 		if($this->_cachedVideos) return $this->_cachedVideos;
@@ -97,6 +104,8 @@ class VideoGallery extends Page {
         );
 		$page = isset($_GET['page'])? (int)$_GET['page']: 1;
 		$start_index = (($page-1) * $this->PerPage) + 1 ;
+
+		
 
 		switch ($this->Method){
 			case 1:

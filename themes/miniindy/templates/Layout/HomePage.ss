@@ -7,13 +7,13 @@
 			<% loop $SliderImages.Sort('SortOrder') %>
 			<% if $Photo %>
 			<div>
-				<% if LinkID %><a href="$Anchor"><% end_if %>
+				<% if $Link %><a href="$Link.Link"><% else_if $Anchor %><a href="$Anchor"><% end_if %>
 				$Photo.Fit('580', '350')
 				<% if Caption %>
 				<div class="caption">
 					<p>$Caption</p>
 				</div><% end_if %>
-				<% if LinkID %></a><% end_if %>
+				<% if $Link || $Anchor %></a><% end_if %>
 			</div>
 			<% end_if %>
 			<% end_loop %>
@@ -112,11 +112,11 @@ $Content
 <div class="bg-primary px-3">
 <% if not $MiniIndyCookie %>
 <div class="modal fade" id="popupvideo" tabindex="-1" role="dialog" aria-labelledby="popupvideoTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" id="modalheaderpadding">
 	  	<div class="mx-auto w-75">
-		  <img class="img-fluid" src="/assets/website/images/newlogo.png" alt="new_logo" id="new_logo">
+		  <img class="img-fluid" src="/assets/Website/Images/newlogo.png" alt="new_logo" id="new_logo">
 		</div>
         <%-- <h5 class="modal-title" id="exampleModalCenterTitle">Video</h5> --%>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
