@@ -61,16 +61,19 @@
     margin-left: -9%;
     margin-top: -8%;
     visibility: hidden;
-
   }
 
-  
+ span {
+    margin-left:114%;
+  }
+
   .vjs-icon-play {
     line-height: 1.6;
   }
 
+  
   #new_logo {
-      margin-left:40px;
+      margin-left:10px;
   }
 
   .modal-header .close {

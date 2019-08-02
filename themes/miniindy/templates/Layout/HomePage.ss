@@ -114,14 +114,15 @@ $Content
 <div class="modal fade" id="popupvideo" tabindex="-1" role="dialog" aria-labelledby="popupvideoTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
+	    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span style="margin-left:115%;"aria-hidden="true" id="closebutton">&times;</span>
+        </button>
       <div class="modal-header" id="modalheaderpadding">
 	  	<div class="mx-auto w-75">
 		  <img class="img-fluid" src="/assets/Website/Images/newlogo.png" alt="new_logo" id="new_logo">
 		</div>
         <%-- <h5 class="modal-title" id="exampleModalCenterTitle">Video</h5> --%>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+
       </div>
       <div class="modal-body" id="videopadding">
     	<div class="film-background">

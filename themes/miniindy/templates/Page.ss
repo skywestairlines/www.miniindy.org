@@ -34,13 +34,18 @@
     <% include Header %>
     <main class="container py-3">
         <section class="card-deck">
+            <%-- <div class="card card-trans">
+                $Layout
+            </div> --%>
+            <% if $ShowSideBar != 'no' %>
             <div class="card card-trans">
                 $Layout
             </div>
-            <% if $ShowSideBar != 'no' %>
             <aside class="col-md-4">
                 <% include SideBar %>
             </aside>
+            <% else %>
+            $Layout
             <% end_if %>
         </section>
     </main>

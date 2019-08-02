@@ -138,4 +138,5 @@ class VideoGallery extends Page {
 
 		unset($this->_cachedVideos);
 	}
+
 }

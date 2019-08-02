@@ -50,7 +50,7 @@ class Video extends DataObject
         return $this->VideoType.$this->VideoData;
     }
 
-
+    
 
     public function getCMSFields()
     {
@@ -59,8 +59,10 @@ class Video extends DataObject
             new TextField("VideoName"),
             new TextField("VideoUser"),
             new DropdownField("VideoType", "Video Type", [
-                "https://bcove.video/" => "BrightCove (video)",
-                "https://bcove.me/" => "BrightCove (me)",
+                "https://bcove.video/" => "BrightCove (video) Short Link",
+                "https://players.brightcove.net/pages/v1/index.html?accountId=1589608515001&playerId=HyJPGnaE&videoId=" => "BrightCove (video) Full Link",
+                "https://bcove.me/" => "BrightCove (me) Short Link",
+                "http://link.brightcove.com/services/player/bcpid4753221242001?bckey=AQ~~,AAABchwNBbk~,jxXk22NHrvEL-3Dlk-x2HkoseXWXrulL&bctid=" => "BrightCove (me) Full Link",
                 "https://www.youtube.com/watch?v=" => "Youtube",
                 "Other" => 'Other Links',
             ]),
@@ -72,4 +74,9 @@ class Video extends DataObject
         
         return $fields;
     }
+
+    // public function getVideoLastCharacters($VideoLinkToExplode){
+	// 	$videoexplode = explode("/", $VideoLinkToExplode);
+	// 	return end($videoexplode); 
+	// }
 }

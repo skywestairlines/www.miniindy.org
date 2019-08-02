@@ -515,6 +515,11 @@ ul.dropdown ul li a {
 /* Misc Styles and defaults
 -------------------------------------------- */
 
+#popupvideogalleryTitle {
+  color: white;
+  padding-left: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1930,12 +1935,16 @@ a div:hover.name {
   visibility: hidden;
 }
 
+span {
+  margin-left: 114%;
+}
+
 .vjs-icon-play {
   line-height: 1.6;
 }
 
 #new_logo {
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
 .modal-header .close {
