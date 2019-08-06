@@ -3,10 +3,69 @@
 
 /* Misc Styles and defaults
 -------------------------------------------- */
-#popupvideogalleryTitle {
-    color:white;
-    padding-left:20px;
+a.pp_expand, a.pp_contract {
+
+    cursor: pointer;
+    height: 48px;
+    position: absolute;
+    text-indent: -10000px;
+    top: 0;
+    left:20px;
+    width: 89px;
+    z-index: -999999999;
+    background-color: #eee;
+    right: 446px;
 }
+
+.pp_content_container {
+    position: relative;
+    margin-top:100px;
+}
+
+
+div[style]{
+    top:0px !important;
+}
+
+.pp_close::after {
+    content: "\2715";
+    font-size:20px;
+    display: block;
+    position: absolute;
+    line-height: 48px;
+    width: 3rem;
+    height: 3rem;
+    background: #eee;
+    top: 0rem !important;
+  }
+  
+  a.pp_close {
+    position: absolute;
+    right: 20px;
+    bottom: 4px;
+    display: block;
+    line-height: 20px;
+    text-indent: 17px;
+  }
+  
+  .pp_close {
+    // visibility: hidden;
+    width: 3rem;
+    height: 3rem;
+    background: #eee;
+    top: 0rem !important;
+  }
+
+  .pp_content_container {
+    position: relative;
+    top:0px;
+  }
+
+
+  .pp_pic_holder element{
+    top: 0px;
+  }
+  
 
 
 * {

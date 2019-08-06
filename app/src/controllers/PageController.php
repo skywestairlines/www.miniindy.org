@@ -1,11 +1,12 @@
 <?php
-use SilverStripe\Control\Director;
-use SilverStripe\View\Requirements;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\FormAction;
-use SilverStripe\CMS\Search\SearchForm;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Control\Director;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\View\Requirements;
+use SilverStripe\Versioned\Versioned;
+use SilverStripe\CMS\Search\SearchForm;
 use SilverStripe\CMS\Controllers\ContentController;
 
 
@@ -124,5 +125,19 @@ class PageController extends ContentController
 	 * @access public
 	 * @return void
 	 */
+
+	// public function getPublishedPages() {
+	// 	$PublishedPages = Versioned::get_by_stage('SiteTree', 'Live');
+	// 		return $PublishedPages;
+	// 	}
+
+	// public function redirection() {
+	// 	if($this->getPublishPages() == true){
+	// 		return $this->Director::currentPage();
+	// 	}
+	// 	else{
+	// 		return $this->redirect('/');
+	// 	}
+	// }
 
 }

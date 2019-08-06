@@ -515,9 +515,64 @@ ul.dropdown ul li a {
 /* Misc Styles and defaults
 -------------------------------------------- */
 
-#popupvideogalleryTitle {
-  color: white;
-  padding-left: 20px;
+a.pp_expand,
+a.pp_contract {
+  cursor: pointer;
+  height: 48px;
+  position: absolute;
+  text-indent: -10000px;
+  top: 0;
+  left: 20px;
+  width: 89px;
+  z-index: -999999999;
+  background-color: #eee;
+  right: 446px;
+}
+
+.pp_content_container {
+  position: relative;
+  margin-top: 100px;
+}
+
+div[style] {
+  top: 0px !important;
+}
+
+.pp_close::after {
+  content: "\2715";
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  line-height: 48px;
+  width: 3rem;
+  height: 3rem;
+  background: #eee;
+  top: 0rem !important;
+}
+
+a.pp_close {
+  position: absolute;
+  right: 20px;
+  bottom: 4px;
+  display: block;
+  line-height: 20px;
+  text-indent: 17px;
+}
+
+.pp_close {
+  width: 3rem;
+  height: 3rem;
+  background: #eee;
+  top: 0rem !important;
+}
+
+.pp_content_container {
+  position: relative;
+  top: 0px;
+}
+
+.pp_pic_holder element {
+  top: 0px;
 }
 
 * {
@@ -1870,60 +1925,60 @@ a div:hover.name {
   cursor: pointer;
 }
 
-#exampleModalCenter {
+.HomePage #exampleModalCenter {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-#exampleModalCenter .modal-dialog {
+.HomePage #exampleModalCenter .modal-dialog {
   max-width: 900px;
 }
 
-.video-js .vjs-big-play-button .vjs-icon-placeholder::before,
-.video-js .vjs-play-control .vjs-icon-placeholder,
-.vjs-icon-play {
+.HomePage .video-js .vjs-big-play-button .vjs-icon-placeholder::before,
+.HomePage .video-js .vjs-play-control .vjs-icon-placeholder,
+.HomePage .vjs-icon-play {
   line-height: 2.9;
 }
 
-.vjs-poster {
+.HomePage .vjs-poster {
   background-image: url("/assets/Uploads/videocover.jpg") !important;
 }
 
-#videopadding {
+.HomePage #videopadding {
   padding-top: 5px;
   padding-left: 50px;
   padding-right: 50px;
 }
 
-#modalheaderpadding {
+.HomePage #modalheaderpadding {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-.modal-content {
+.HomePage .modal-content {
   padding-top: 0px;
   padding-left: 110px;
   padding-right: 110px;
 }
 
-.modal-content {
+.HomePage .modal-content {
   background-color: #192247;
   border-radius: 0;
 }
 
-.modal-header {
+.HomePage .modal-header {
   border-style: none;
 }
 
-.modal-footer {
+.HomePage .modal-footer {
   border-style: none;
 }
 
-.vjs-poster {
+.HomePage .vjs-poster {
   background-image: none;
   background-size: cover;
 }
 
-.video-js .vjs-big-play-button {
+.HomePage .video-js .vjs-big-play-button {
   background-color: none;
   opacity: .6;
   border-style: solid;
@@ -1935,29 +1990,29 @@ a div:hover.name {
   visibility: hidden;
 }
 
-span {
+.HomePage span {
   margin-left: 114%;
 }
 
-.vjs-icon-play {
+.HomePage .vjs-icon-play {
   line-height: 1.6;
 }
 
-#new_logo {
+.HomePage #new_logo {
   margin-left: 10px;
 }
 
-.modal-header .close {
+.HomePage .modal-header .close {
   padding: 1rem 1rem;
   margin: 0;
 }
 
-.close {
+.HomePage .close {
   color: white;
   text-shadow: none;
 }
 
-.close:hover {
+.HomePage .close:hover {
   color: white;
   text-shadow: none;
 }
