@@ -516,7 +516,44 @@ ul.dropdown ul li a {
 -------------------------------------------- */
 
 .ppt {
-  padding-top: 100px;
+  padding-top: 50px;
+}
+
+.pp_nav {
+  margin: 0;
+}
+
+p.currentTextHolder {
+  visibility: hidden;
+}
+
+p.pp_description {
+  visibility: hidden;
+}
+
+a.pp_arrow_previous {
+  z-index: 999999;
+  line-height: 20px;
+  text-indent: 17px;
+  width: 87px;
+  height: 31px;
+  background: #eee;
+  font-size: 15px;
+  padding-top: 4px;
+}
+
+a.pp_arrow_next {
+  z-index: 999999;
+  line-height: 20px;
+  text-indent: 17px;
+  width: 87px;
+  height: 31px;
+  background: #eee;
+  font-size: 15px;
+  padding-top: 4px;
+  margin-right: 23px;
+  padding-left: 9px;
+  margin-left: -20px;
 }
 
 a.pp_expand,
@@ -561,9 +598,6 @@ a.pp_close {
   display: block;
   line-height: 20px;
   text-indent: 17px;
-}
-
-.pp_close {
   width: 3rem;
   height: 3rem;
   background: #eee;
@@ -1205,7 +1239,6 @@ p#Remember label {
     padding-top: 20px;
     padding-bottom: 5px;
     padding-right: 30px;
-    margin-top: 11px;
     margin-right: 500px;
   }
 }

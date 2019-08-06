@@ -5,8 +5,47 @@
 -------------------------------------------- */
 .ppt {
 
-    padding-top: 100px;
+    padding-top: 50px;
 
+}
+
+.pp_nav{
+    margin: 0;
+}
+
+p.currentTextHolder{
+    visibility: hidden;
+}
+
+p.pp_description{
+    visibility: hidden;
+}
+
+
+
+a.pp_arrow_previous{
+    z-index:999999;
+    line-height: 20px;
+    text-indent: 17px;
+    width: 87px;
+    height: 31px;
+    background: #eee;
+    font-size: 15px;
+    padding-top: 4px;
+}
+
+a.pp_arrow_next{
+    z-index:999999;
+    line-height: 20px;
+    text-indent: 17px;
+    width: 87px;
+    height: 31px;
+    background: #eee;
+    font-size: 15px;
+    padding-top: 4px;
+    margin-right: 23px;
+    padding-left: 9px;
+    margin-left: -20px;
 }
 
 a.pp_expand, a.pp_contract {
@@ -52,15 +91,18 @@ div[style]{
     display: block;
     line-height: 20px;
     text-indent: 17px;
-  }
-  
-  .pp_close {
-    // visibility: hidden;
     width: 3rem;
     height: 3rem;
     background: #eee;
     top: 0rem !important;
   }
+  
+//   .pp_close {
+//     width: 3rem;
+//     height: 3rem;
+//     background: #eee;
+//     top: 0rem !important;
+//   }
 
   .pp_content_container {
     position: relative;

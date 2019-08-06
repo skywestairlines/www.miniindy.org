@@ -78,9 +78,9 @@ class MediaPage_Controller extends Page_Controller {
 		// clearing search box when user clicks in it
 		// this conflicts with FlickrServices
 		Requirements::javascript("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js");
-		Requirements::javascript("mysite/javascript/jquery.color.fade.js");
-		Requirements::javascript("mysite/javascript/jquery.expanding.menu.js");
-		Requirements::javascript("mysite/javascript/expandCustom.js");
+		// Requirements::javascript("mysite/javascript/jquery.color.fade.js");
+		// Requirements::javascript("mysite/javascript/jquery.expanding.menu.js");
+		// Requirements::javascript("mysite/javascript/expandCustom.js");
 		#Requirements::javascript("gallery/javascript/prototype.js");
 		//Requirements::javascript("http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js");
 		#Requirements::javascript( "gallery/javascript/effects.js" );
