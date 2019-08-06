@@ -515,6 +515,10 @@ ul.dropdown ul li a {
 /* Misc Styles and defaults
 -------------------------------------------- */
 
+.ppt {
+  padding-top: 100px;
+}
+
 a.pp_expand,
 a.pp_contract {
   cursor: pointer;
@@ -531,7 +535,7 @@ a.pp_contract {
 
 .pp_content_container {
   position: relative;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 div[style] {
@@ -1179,6 +1183,32 @@ p#Remember label {
 
 /* MAIN NAVIGATION - TABS
 ----------------------------------------- */
+
+@media only screen and (max-width: 766px) {
+  .navbar-toggler {
+    margin-bottom: 10px;
+  }
+
+  .navbar-brand {
+    padding-top: 25px;
+  }
+
+  .navbar-brand div#dateTemp {
+    margin-bottom: 15px;
+  }
+
+  div#navbarSupportedContent {
+    z-index: 999999;
+    background-color: #1c305d;
+    max-width: 152px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    margin-top: 11px;
+    margin-right: 500px;
+  }
+}
 
 #navigation {
   margin: 0 auto;

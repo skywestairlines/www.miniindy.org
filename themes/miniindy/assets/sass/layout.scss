@@ -3,6 +3,12 @@
 
 /* Misc Styles and defaults
 -------------------------------------------- */
+.ppt {
+
+    padding-top: 100px;
+
+}
+
 a.pp_expand, a.pp_contract {
 
     cursor: pointer;
@@ -19,7 +25,7 @@ a.pp_expand, a.pp_contract {
 
 .pp_content_container {
     position: relative;
-    margin-top:100px;
+    margin-top:30px;
 }
 
 
