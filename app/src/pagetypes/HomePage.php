@@ -32,7 +32,7 @@ class HomePage extends Page {
 
         $f = parent::getCMSFields();
 
-        $f->addFieldToTab('Root.PopupVideo', new CheckboxField("ShowHomepagePopup", "Show home page popup video everytime you go to home page"));
+        $f->addFieldToTab('Root.PopupVideo', new CheckboxField("ShowHomepagePopup", "Show home page popup video everytime visiting home page"));
 
         $dom = new GridField(
 			'SliderImages',

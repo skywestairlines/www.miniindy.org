@@ -3,6 +3,27 @@
 
 /* Misc Styles and defaults
 -------------------------------------------- */
+
+// Remove the repeat prev and next buttons in the photo gallery
+.pp_gallery a.pp_arrow_previous {
+    visibility: hidden;
+}
+
+.pp_gallery a.pp_arrow_next {
+    visibility: hidden;
+}
+// --------------------------------------------------------------
+
+// These two layer covered on close button in image gallery, moved aroung those two layer and made close button appear
+.pp_hoverContainer {
+    margin-top: 50px;
+}
+
+.pp_gallery {
+    z-index: -999999;
+    margin-top: -83px;
+}
+// --------------------------------------------------------------
 .ppt {
 
     padding-top: 50px;

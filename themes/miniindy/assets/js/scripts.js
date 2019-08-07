@@ -7,6 +7,9 @@ require('./register');
         
         $('#popupvideo', document).modal('show');
 
+        $(".pp_close").on("click", function(){
+            $.prettyPhoto.close();
+          });
     });
 
     // $('[name="dontshow"]', document).on('change click', function(){

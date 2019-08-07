@@ -85,6 +85,10 @@ __webpack_require__(26);
     $(document).ready(function () {
 
         $('#popupvideo', document).modal('show');
+
+        $(".pp_close").on("click", function () {
+            $.prettyPhoto.close();
+        });
     });
 
     // $('[name="dontshow"]', document).on('change click', function(){

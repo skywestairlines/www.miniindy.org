@@ -515,6 +515,23 @@ ul.dropdown ul li a {
 /* Misc Styles and defaults
 -------------------------------------------- */
 
+.pp_gallery a.pp_arrow_previous {
+  visibility: hidden;
+}
+
+.pp_gallery a.pp_arrow_next {
+  visibility: hidden;
+}
+
+.pp_hoverContainer {
+  margin-top: 50px;
+}
+
+.pp_gallery {
+  z-index: -999999;
+  margin-top: -83px;
+}
+
 .ppt {
   padding-top: 50px;
 }
