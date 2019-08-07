@@ -1,3 +1,10 @@
+<div id="Content" class="typography">
+    <h1 class="main-title">$Title</h1>
+    <% include BreadCrumbs %>
+    $Content
+</div>
+
+<%--
 <div class="typography">
 	<div id="Content">
 	<% if Level(2) %>
@@ -5,14 +12,14 @@
 	<% end_if %>
 	<h2>$Title</h2>
 	$Content
-	$SiteMap 
+	$SiteMap
 	$Form
 	$PageComments
-	
+
 <section class="card-deck">
 <main class="card card-trans">
 <div class="typography">
-	
+
 	<div id="Content">
 	<div class="card-deck">
 		<div class="card mb-3">
@@ -59,6 +66,7 @@
 </div>
 
 	</main>
-	
+
 </section>
 </div>
+--%>
