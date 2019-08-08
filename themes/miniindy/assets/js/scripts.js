@@ -12,6 +12,7 @@ require('./register');
           });
     });
 
+
     // $('[name="dontshow"]', document).on('change click', function(){
     //     console.log(this)
     //     var $form = $(this).closest('form');

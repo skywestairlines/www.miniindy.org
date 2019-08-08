@@ -89,17 +89,17 @@ class PageController extends ContentController
 	 * @access public
 	 * @return void
 	 */
-	function SearchForm() {
-		$searchText = isset($_REQUEST['Search']) ? $_REQUEST['Search'] : '';
-		$fields = new FieldList(
-	      	new TextField("Search", "", $searchText)
-	  	);
-		$actions = new FieldList(
-	      	new FormAction('results', 'Search')
-	  	);
+	// function SearchForm() {
+	// 	$searchText = isset($_REQUEST['Search']) ? $_REQUEST['Search'] : '';
+	// 	// $fields = new FieldList(
+	//     //   	new TextField("Search", "", $searchText)
+	//   	// );
+	// 	$actions = new FieldList(
+	//       	new FormAction('results', 'Search')
+	//   	);
 
-	  	return new SearchForm($this, SearchForm::class, $fields, $actions);
-	}
+	//   	return new SearchForm($this, SearchForm::class, $fields, $actions);
+	// }
 
 	/**
 	 * Process and render search results function.
@@ -109,15 +109,15 @@ class PageController extends ContentController
 	 * @param mixed $form
 	 * @return void
 	 */
-	function results($data, $form){
-	  	$data = array(
-	     	'Results' => $form->getResults(),
-	     	'Query' => $form->getSearchQuery(),
-	      	'Title' => 'Search Results'
-	  	);
+	// function results($data, $form){
+	//   	$data = array(
+	//      	'Results' => $form->getResults(),
+	//      	'Query' => $form->getSearchQuery(),
+	//       	'Title' => 'Search Results'
+	//   	);
 
-	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
-	}
+	//   	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
+	// }
 
 	/**
 	 * GetStaticSidebar function. custom side bars for Reg & hotels

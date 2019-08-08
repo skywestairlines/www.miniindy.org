@@ -8,7 +8,8 @@
             </div>
             <div class="col-md-5 d-flex justify-content-end align-items-center">
                 <div class="my-3 w-100">
-                    $ShowSearchForm
+                    <%-- $SearchForm --%>
+                    <% include /Includes/Forms/SearchForm %>
                 </div>
             </div>
         </div>

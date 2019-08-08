@@ -21,7 +21,6 @@
 	</div><%-- END slidesHolder --%>
 </div><%-- END slides --%>
 
-
 $Content
 
 <%-- <div class="GoldSponsers homeFix" style="width:100%;float:left;">
