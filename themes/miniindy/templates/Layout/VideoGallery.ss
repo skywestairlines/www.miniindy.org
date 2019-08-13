@@ -1,53 +1,51 @@
-<div class="youtubegallery typography">
-    <div class="row">
+<%-- <div class="youtubegallery typography"> --%>
+    <%-- <div class="row"> --%>
     <% loop $VideosFeed %>
         <div class="col-md-6">
             <div class="d-flex mb-3">
                 <div class="col-md-8">
                     <div class="still row">
-                        <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
-                            rel="prettyPhoto[iframes]" title="$VideoName">
+                        <%-- <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
+                            rel="prettyPhoto[iframes]:first" title="$VideoName">
                             <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" />
-                        </a>
+                        </a> --%>
                         <%-- <a href="$VideoLink"> <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" /></a> --%>
-                        <%-- <img style="cursor:pointer;"data-toggle="modal" data-target="#popupvideogallery" src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" /> --%>
+                        <img style="cursor:pointer;"data-toggle="modal" data-target="#popupvideogallery$Pos" src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" />
                     </div>
 
                 </div>
                 <div class="col-md-4">
                     <div class="info">
-                        <h6>
-                            <%-- <a href="$VideoLink">$VideoName</a> --%>
-                        
+                        <%-- <h6>
                             <a href="$VideoLink?iframe=true&<% if $Up.VideoSize %>$Up.VideoSize<% else %>width=960&height=540<% end_if %>"
-                                rel="prettyPhoto[iframes]" title="$VideoName">
+                                rel="prettyPhoto[iframes]:second" title="$VideoName">
                                 <strong>$VideoName</strong>
                             </a>
-                             <%-- <a href="$VideoLink"> --%>
-                            <%-- <div style="cursor:pointer;"data-toggle="modal" data-target="#popupvideogallery">
+                        </h6>     --%>
+                        <h6>
+                            <div style="cursor:pointer;"data-toggle="modal" data-target="#popupvideogallery$Pos">
                             <strong style="color: #244673; font-size:13px;">$VideoName</strong>
-                            <strong style="color: #244673; font-size:13px;">$VideoData</strong> --%>
-                             <%-- </a> --%>
-                            <%-- </div> --%>
+                            <strong style="color: #244673; font-size:13px;">$VideoData</strong>
+                            </div>
                         </h6>
                       <!-- Modal -->
-                        <%-- <div class="modal fade" id="popupvideogallery" tabindex="-1" role="dialog" aria-labelledby="popupvideogalleryTitle" aria-hidden="true">
+                        <div class="modal fade" id="popupvideogallery$Pos" tabindex="-1" role="dialog" aria-labelledby="popupvideogalleryTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="popupvideogalleryTitle" style="color:black; font-size:20px;">$VideoName</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span style="margin-left:500%;" aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                             		<video-js data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="$VideoData" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+                             		<video-js id="myPlayer" data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="$VideoData" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
                                     <script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
                             </div>
                             </div>
                             </div>
                         </div>
-                        </div> --%>
+                        </div>
 
 
                         $VideoInfo
@@ -59,7 +57,7 @@
     <% end_loop %>
 
 
-    </div>
+    <%-- </div> --%>
     <%-- <div class="row"> --%>
 
 
@@ -829,4 +827,4 @@
         </div> --%>
 
     <%-- </div> --%>
-</div>       
+<%-- </div>        --%>

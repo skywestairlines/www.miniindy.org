@@ -34,8 +34,8 @@
 </head>
 
 <body class="$ClassName.ShortName">
-<%--   <% include Header %>
     <main class="container py-3">
+      <% include Header %>
         <section class="card-deck">
             <% if $ShowSideBar != 'no' %>
             <div class="card card-trans">
@@ -49,10 +49,10 @@
             <% end_if %>
         </section>
     </main>
-    <% include Footer %> --%>
+    <% include Footer %>
 
+    <%-- <main class="container py-3">
     <% include Header %>
-    <main class="container py-3">
         <section class="card-deck">
             <div class="card card-trans">
                 $Layout
@@ -64,7 +64,7 @@
             <% end_if %>
         </section>
     </main>
-    <% include Footer %>
+    <% include Footer %> --%>
 
 
     <% if $CurrentMember %>

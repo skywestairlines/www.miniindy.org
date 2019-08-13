@@ -4,35 +4,139 @@
 /* Misc Styles and defaults
 -------------------------------------------- */
 
+.pp_gallery ul{
+    max-width: 100% !important;
+    margin-right:5%;
+}
+
+.pp_gallery div{
+    max-width: 100% !important;
+}
+
+
+
+.ImageGallery .pp_gallery a.pp_arrow_next {
+    margin-left: 93%;
+    margin-top:-34px !important;
+}
+
+.ImageGallery .pp_gallery a.pp_arrow_previous {
+    margin-top:2px !important;
+    margin-left:-10%;
+}
+
+.pp_content_container .pp_details {
+    width: 280px !important;
+    margin-top:25px !important;
+    right: -222px;
+}
+
+//put.pp_default before the class can seperate pp_arrow_previous of image from pp_arrow_previous of video
+.pp_default a.pp_arrow_previous {
+
+    background: url(/images/sprite.png?97c3d8ec927e085bc19cee70b600489d) 2px -68px no-repeat !important;
+    height: 20px;
+    margin: 4px 0 0 0;
+    width: 20px;
+
+}
+
+.pp_default a.pp_arrow_next {
+
+    background-position: -16px -68px !important;
+
+}    
+
+// -------------------------------------------------
+
+.download-btn{ 
+    margin-top: 28px;
+    padding: 6px 15px;
+    font-size:15px;
+    line-height: 20px;
+    background: #eee;
+    float: left;
+    margin-left: 0;
+    margin-right: -53px;
+    z-index: 9999999999 !important;
+}
+
+.pp_default .pp_close {
+    margin-top: -748px;
+    margin-right: 71px;
+}
+
+.pp_default .pp_content {
+
+    background: none !important;
+    height: 50% !important;
+    max-width: 93% !important;
+
+}
+
+.pp_play{
+    display: none !important;
+}
+
+.pp_top{
+    display:none;
+}
+
+div.pp_default .pp_bottom .pp_middle {
+    background: none !important;
+}
+
+div.pp_default .pp_content_container .pp_right {
+    background: none !important;
+    padding-right: 0 !important;
+}
+
+div.pp_default .pp_left{
+    background: none !important;
+}
+
+// [class*="pp_"]{
+//     border: 1px solid red;
+// }
+
+//remove the facebook icon
+.facebook {
+    display:none;
+}
+
+.twitter {
+    display:none;
+}
 
 // Remove the repeat prev and next buttons in the photo gallery
-.pp_gallery a.pp_arrow_previous {
-    visibility: hidden;
-}
+// .pp_gallery a.pp_arrow_previous {
+//     visibility: hidden;
+// }
 
-.pp_gallery a.pp_arrow_next {
-    visibility: hidden;
-}
+// .pp_gallery a.pp_arrow_next {
+//     visibility: hidden;
+// }
 // --------------------------------------------------------------
 
-// These two layer covered on close button in image gallery, moved aroung those two layer and made close button appear
+//solve the photo gallery thumbnail problem 
 .pp_hoverContainer {
-    margin-top: 50px;
+    margin-top: -55px;
 }
 
 .pp_gallery {
-    z-index: -999999;
+ 
     margin-top: -83px;
 }
 // --------------------------------------------------------------
 .ppt {
-
+    color: transparent !important;
     padding-top: 50px;
 
 }
 
 .pp_nav{
     margin: 0;
+    float:right !important;
 }
 
 p.currentTextHolder{
@@ -117,6 +221,7 @@ div[style]{
     height: 3rem;
     background: #eee;
     top: 0rem !important;
+    z-index:999999;
   }
   
 //   .pp_close {

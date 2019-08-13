@@ -11,6 +11,20 @@
                     title="$TITLE" class="">
                     <img src="$Square.URL" alt="$TITLE" class="img-fluid img-thumbnail" />
                 </a>
+
+                <%-- if moving the script to other file, it will mess up the css in video gallery popup --%>
+                <script>
+                $(document).ready(function() { 
+                $("a[rel^='prettyPhoto']").prettyPhoto({
+                        theme: 'light-rounded',
+                        image_markup: '<img id="fullResImage" src="{path}" /><span class="download-btn"><a href="{path}" download>Download</a></span>',
+                        changepicturecallback: function(){
+                            $(".pp_content").css("height", $(".pp_content").height() + $(".download-btn").outerHeight() + 10);
+                        }
+                    });
+                });
+                </script>
+
             </div>
             <% end_loop %>
         </div>
