@@ -10,7 +10,9 @@
                             <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" />
                         </a> --%>
                         <%-- <a href="$VideoLink"> <img src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" /></a> --%>
-                        <img style="cursor:pointer;"data-toggle="modal" data-target="#popupvideogallery$Pos" src="$VideoImage.URL" alt="$VideoName" class="img-fluid w-100" />
+                        <img style="cursor:pointer;" data-toggle="modal" data-target="#popupvideogallery" src="$VideoImage.URL" 
+                        data-link="http://players.brightcove.net/1589608515001/default_default/index.html?directedMigration=true&videoId={$VideoData}" 
+                        alt="$VideoName" class="img-fluid w-100" data-video-name="$VideoName" data-video-id="$VideoData" data-player-id="myBCPlayer$Pos" data-account-id="1589608515001" />
                     </div>
 
                 </div>
@@ -23,13 +25,12 @@
                             </a>
                         </h6>     --%>
                         <h6>
-                            <div style="cursor:pointer;"data-toggle="modal" data-target="#popupvideogallery$Pos">
+                            <div style="cursor:pointer;" data-toggle="modal" data-target="#popupvideogallery$Pos" data-video-name="$VideoName" data-video-id="$VideoData" data-player="myBCPlayer$Pos">
                             <strong style="color: #244673; font-size:13px;">$VideoName</strong>
-                            <strong style="color: #244673; font-size:13px;">$VideoData</strong>
                             </div>
                         </h6>
                       <!-- Modal -->
-                        <div class="modal fade" id="popupvideogallery$Pos" tabindex="-1" role="dialog" aria-labelledby="popupvideogalleryTitle" aria-hidden="true">
+                        <%-- <div class="modal fade" id="popupvideogallery$Pos" tabindex="-1" role="dialog" aria-labelledby="popupvideogalleryTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                             <div class="modal-header">
@@ -39,13 +40,13 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                             		<video-js id="myPlayer" data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="$VideoData" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+                             		<video-js id="myPlayer$Pos" data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="$VideoData" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
                                     <script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
                             </div>
                             </div>
                             </div>
                         </div>
-                        </div>
+                        </div> --%>
 
 
                         $VideoInfo
@@ -56,6 +57,26 @@
         </div>
     <% end_loop %>
 
+<div class="modal fade" id="popupvideogallery" tabindex="-1" role="dialog" aria-labelledby="popupvideogalleryTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="popupvideogalleryTitle" style="color:black; font-size:20px;"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+                <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src=""></iframe>
+                </div>
+                <%-- <video-js id="HyJPGnaE" data-player="HyJPGnaE" data-account="1589608515001" data-embed="default" controls=""  data-application-id="" class="vjs-fluid"></video-js>
+                <script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script> --%>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <%-- </div> --%>
     <%-- <div class="row"> --%>

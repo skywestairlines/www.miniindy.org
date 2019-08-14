@@ -515,6 +515,16 @@ ul.dropdown ul li a {
 /* Misc Styles and defaults
 -------------------------------------------- */
 
+iframe #myExperience .BrightcoveExperience .BrightcoveExperienceID_8733 {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#vjs_video_3_html5_api {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .pp_gallery ul {
   max-width: 100% !important;
   margin-right: 5%;
