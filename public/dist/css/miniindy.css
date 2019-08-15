@@ -515,39 +515,30 @@ ul.dropdown ul li a {
 /* Misc Styles and defaults
 -------------------------------------------- */
 
-iframe #myExperience .BrightcoveExperience .BrightcoveExperienceID_8733 {
-  width: 100% !important;
-  height: 100% !important;
+/* Pretty Photo Image Gallery
+----------------------------------------- */
+
+.pp_gallery .pp_arrow_previous {
+  margin-top: 0 !important;
+  padding-left: -5px;
 }
 
-#vjs_video_3_html5_api {
-  width: 100% !important;
-  height: 100% !important;
+.pp_gallery .pp_arrow_next {
+  margin-top: 0 !important;
+  margin-left: 7px;
 }
 
-.pp_gallery ul {
-  max-width: 100% !important;
-  margin-right: 5%;
+.pp_gallery {
+  left: 35%;
 }
 
-.pp_gallery div {
-  max-width: 100% !important;
-}
-
-.ImageGallery .pp_gallery a.pp_arrow_next {
-  margin-left: 93%;
-  margin-top: -34px !important;
-}
-
-.ImageGallery .pp_gallery a.pp_arrow_previous {
-  margin-top: 2px !important;
-  margin-left: -10%;
+#pp_full_res img {
+  margin-left: -40px !important;
 }
 
 .pp_content_container .pp_details {
-  width: 280px !important;
-  margin-top: 25px !important;
-  right: -222px;
+  margin-top: -35px !important;
+  margin-left: -15px !important;
 }
 
 .pp_default a.pp_arrow_previous {
@@ -568,8 +559,7 @@ iframe #myExperience .BrightcoveExperience .BrightcoveExperienceID_8733 {
   line-height: 20px;
   background: #eee;
   float: left;
-  margin-left: 0;
-  margin-right: -53px;
+  margin-left: -40px;
   z-index: 9999999999 !important;
 }
 
@@ -614,11 +604,7 @@ div.pp_default .pp_left {
 }
 
 .pp_hoverContainer {
-  margin-top: -55px;
-}
-
-.pp_gallery {
-  margin-top: -83px;
+  margin-top: -100px;
 }
 
 .ppt {
@@ -647,7 +633,7 @@ a.pp_arrow_previous {
   height: 31px;
   background: #eee;
   font-size: 15px;
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
 a.pp_arrow_next {
@@ -658,10 +644,10 @@ a.pp_arrow_next {
   height: 31px;
   background: #eee;
   font-size: 15px;
-  padding-top: 4px;
+  padding-top: 5px;
   margin-right: 23px;
   padding-left: 9px;
-  margin-left: -20px;
+  margin-left: -24px;
 }
 
 a.pp_expand,
@@ -701,7 +687,7 @@ div[style] {
 
 a.pp_close {
   position: absolute;
-  right: 20px;
+  right: 60px;
   bottom: 4px;
   display: block;
   line-height: 20px;

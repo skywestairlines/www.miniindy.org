@@ -4,57 +4,45 @@
 /* Misc Styles and defaults
 -------------------------------------------- */
 
-iframe #myExperience .BrightcoveExperience .BrightcoveExperienceID_8733{
-    width: 100% !important;
-    height: 100% !important;
+/* Pretty Photo Image Gallery
+----------------------------------------- */
+
+.pp_gallery .pp_arrow_previous{
+    margin-top: 0 !important;
+    padding-left:-5px;
 }
 
-#vjs_video_3_html5_api{
-    width: 100% !important;
-    height: 100% !important;
+.pp_gallery .pp_arrow_next {
+    margin-top: 0 !important;
+    margin-left: 7px;
 }
 
-.pp_gallery ul{
-    max-width: 100% !important;
-    margin-right:5%;
+.pp_gallery{
+    left:35%;
 }
 
-
-
-
-.ImageGallery .pp_gallery a.pp_arrow_next {
-    margin-left: 93%;
-    margin-top:-34px !important;
-}
-
-.ImageGallery .pp_gallery a.pp_arrow_previous {
-    margin-top:2px !important;
-    margin-left:-10%;
+#pp_full_res img{
+    margin-left:-40px !important;
 }
 
 .pp_content_container .pp_details {
-    width: 280px !important;
-    margin-top:25px !important;
-    right: -222px;
+    // width: 280px !important;
+    margin-top:-35px !important;
+    margin-left:-15px !important;
+    // right: -222px;
 }
 
 //put.pp_default before the class can seperate pp_arrow_previous of image from pp_arrow_previous of video
 .pp_default a.pp_arrow_previous {
-
     background: url(/images/sprite.png?97c3d8ec927e085bc19cee70b600489d) 2px -68px no-repeat !important;
     height: 20px;
     margin: 4px 0 0 0;
     width: 20px;
-
 }
 
 .pp_default a.pp_arrow_next {
-
     background-position: -16px -68px !important;
-
 }    
-
-// -------------------------------------------------
 
 .download-btn{ 
     margin-top: 28px;
@@ -63,8 +51,7 @@ iframe #myExperience .BrightcoveExperience .BrightcoveExperienceID_8733{
     line-height: 20px;
     background: #eee;
     float: left;
-    margin-left: 0;
-    margin-right: -53px;
+    margin-left: -40px;
     z-index: 9999999999 !important;
 }
 
@@ -74,11 +61,9 @@ iframe #myExperience .BrightcoveExperience .BrightcoveExperienceID_8733{
 }
 
 .pp_default .pp_content {
-
     background: none !important;
     height: 50% !important;
     max-width: 93% !important;
-
 }
 
 .pp_play{
@@ -115,30 +100,15 @@ div.pp_default .pp_left{
     display:none;
 }
 
-// Remove the repeat prev and next buttons in the photo gallery
-// .pp_gallery a.pp_arrow_previous {
-//     visibility: hidden;
-// }
-
-// .pp_gallery a.pp_arrow_next {
-//     visibility: hidden;
-// }
-// --------------------------------------------------------------
-
 //solve the photo gallery thumbnail problem 
 .pp_hoverContainer {
-    margin-top: -55px;
+    margin-top: -100px;
 }
 
-.pp_gallery {
- 
-    margin-top: -83px;
-}
 // --------------------------------------------------------------
 .ppt {
     color: transparent !important;
     padding-top: 50px;
-
 }
 
 .pp_nav{
@@ -154,8 +124,6 @@ p.pp_description{
     visibility: hidden;
 }
 
-
-
 a.pp_arrow_previous{
     z-index:999999;
     line-height: 20px;
@@ -164,7 +132,7 @@ a.pp_arrow_previous{
     height: 31px;
     background: #eee;
     font-size: 15px;
-    padding-top: 4px;
+    padding-top: 5px;
 }
 
 a.pp_arrow_next{
@@ -175,14 +143,13 @@ a.pp_arrow_next{
     height: 31px;
     background: #eee;
     font-size: 15px;
-    padding-top: 4px;
+    padding-top: 5px;
     margin-right: 23px;
     padding-left: 9px;
-    margin-left: -20px;
+    margin-left: -24px;
 }
 
 a.pp_expand, a.pp_contract {
-
     cursor: pointer;
     height: 48px;
     position: absolute;
@@ -200,7 +167,6 @@ a.pp_expand, a.pp_contract {
     margin-top:30px;
 }
 
-
 div[style]{
     top:0px !important;
 }
@@ -215,11 +181,11 @@ div[style]{
     height: 3rem;
     background: #eee;
     top: 0rem !important;
-  }
+}
   
-  a.pp_close {
+a.pp_close {
     position: absolute;
-    right: 20px;
+    right: 60px;
     bottom: 4px;
     display: block;
     line-height: 20px;
@@ -229,26 +195,16 @@ div[style]{
     background: #eee;
     top: 0rem !important;
     z-index:999999;
-  }
+}
   
-//   .pp_close {
-//     width: 3rem;
-//     height: 3rem;
-//     background: #eee;
-//     top: 0rem !important;
-//   }
-
-  .pp_content_container {
+.pp_content_container {
     position: relative;
     top:0px;
-  }
+}
 
-
-  .pp_pic_holder element{
+.pp_pic_holder element{
     top: 0px;
-  }
-  
-
+}
 
 * {
     margin: 0;
