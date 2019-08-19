@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="/" border="0">
-                    <img src="$SiteConfig.Logo.URL" border="0" class="img-fluid" />
+                    <img src="$SiteConfig.Logo.URL" border="0" class="img-fluid" id="miniindylogo"/>
                 </a>
             </div>
             <div class="col-md-5 d-flex justify-content-end align-items-center">

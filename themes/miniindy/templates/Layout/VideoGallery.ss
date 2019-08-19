@@ -68,7 +68,7 @@
         </div>
         <div class="modal-body">
                 <div class="embed-responsive embed-responsive-4by3">
-                <iframe class="embed-responsive-item" src=""></iframe>
+                <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
                 </div>
                 <%-- <video-js id="HyJPGnaE" data-player="HyJPGnaE" data-account="1589608515001" data-embed="default" controls=""  data-application-id="" class="vjs-fluid"></video-js>
                 <script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script> --%>
