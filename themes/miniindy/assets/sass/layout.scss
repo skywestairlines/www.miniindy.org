@@ -4,6 +4,27 @@
 /* Misc Styles and defaults
 -------------------------------------------- */
 
+@media only screen and (max-width: 766px) {
+    .bg-white img{
+        width:100% !important;
+        max-height: 400px !important;
+    }
+}    
+
+.bg-white img{
+    width:100%;
+    max-height: 187px;
+}
+
+.bg-white .btn{
+    border-radius: 0 !important;
+}
+
+.card-deck{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
 /* Pretty Photo Image Gallery
 ----------------------------------------- */
 
@@ -18,7 +39,7 @@
 }
 
 .pp_gallery{
-    left:35%;
+    left:31%;
 }
 
 #pp_full_res img{
@@ -28,7 +49,7 @@
 .pp_content_container .pp_details {
     // width: 280px !important;
     margin-top:-35px !important;
-    margin-left:-15px !important;
+    margin-left:64px !important;
     // right: -222px;
 }
 
@@ -112,7 +133,7 @@ div.pp_default .pp_left{
 }
 
 .pp_nav{
-    margin: 0;
+    margin: 0 82px 0 0;
     float:right !important;
 }
 
@@ -127,7 +148,7 @@ p.pp_description{
 a.pp_arrow_previous{
     z-index:999999;
     line-height: 20px;
-    text-indent: 17px;
+    text-indent: 14px;
     width: 87px;
     height: 31px;
     background: #eee;
