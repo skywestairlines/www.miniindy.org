@@ -36,6 +36,16 @@
 /* Pretty Photo Image Gallery
 ----------------------------------------- */
 
+.pp_default .pp_next:hover {
+    background: transparent !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+.pp_overlay {
+    visibility: visible !important;
+}
+}
+
 .pp_gallery .pp_arrow_previous{
     margin-top: 0 !important;
     padding-left:-5px;

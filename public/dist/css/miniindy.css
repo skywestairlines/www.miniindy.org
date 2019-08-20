@@ -198,7 +198,7 @@
 	margin:2em 5em;
 	padding:0.5em;
 	border:1px #ccc solid;
-	background:#eee;;
+	background:#eee;
 }
 
 /* TABLE STYLING 
@@ -546,6 +546,16 @@ ul.dropdown ul li a {
 
 /* Pretty Photo Image Gallery
 ----------------------------------------- */
+
+.pp_default .pp_next:hover {
+  background: transparent !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .pp_overlay {
+    visibility: visible !important;
+  }
+}
 
 .pp_gallery .pp_arrow_previous {
   margin-top: 0 !important;
@@ -2110,6 +2120,26 @@ a div:hover.name {
   font-weight: normal;
   font-style: normal;
   cursor: pointer;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .HomePage #modalheaderpadding {
+    margin-bottom: -1704px;
+  }
+}
+
+.HomePage #closebutton {
+  float: right;
+  background-color: #80808096;
+  padding: 8px 15px 10px 15px;
+}
+
+.HomePage button.close {
+  width: 119%;
+}
+
+.HomePage .modal-content {
+  max-height: 495px !important;
 }
 
 .HomePage #exampleModalCenter {

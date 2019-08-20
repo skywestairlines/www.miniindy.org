@@ -212,8 +212,12 @@ __webpack_require__(26);
                         //     modalPopup.modal();
                 });
 
-                $('.modal', document).on('hide.bs.modal', function (e) {
+                $('.modal', document).on('hidden.bs.modal', function (e) {
                         $('iframe').attr('src', '');
+
+                        myPlayer = bc("myPlayerID");
+                        myPlayer.pause();
+                        myPlayer.resetProgressBar_();
                 });
 
                 // $('.vjs-icon-placeholder', document).on('click', function(){
@@ -304,6 +308,20 @@ __webpack_require__(26);
                 //     res
                 // });
                 //});
+        });
+
+        $(document).ready(function () {
+                var hash = window.location.hash;
+
+                if (hash == undefined || hash.indexOf('get') == -1) return;
+
+                var videoId = hash.split('get')[1];
+                if (videoId === undefined) return;
+
+                var videoModal = $('[data-video-id="' + videoId + '"]', document);
+                if (videoModal.length == 0) return;
+
+                videoModal.trigger('click');
         });
 
         /**
@@ -432,7 +450,7 @@ __webpack_require__(26);
 
 (function ($) {
 
-    var price_tags = $('[name="price[]"', document);
+    var price_tags = $('[name="price[]"]', document);
 
     var calculatePrice = function calculatePrice() {
 

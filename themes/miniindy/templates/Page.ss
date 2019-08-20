@@ -6,9 +6,9 @@
     <title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
     <% base_tag %>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-    <%-- <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" /> --%>
-    <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <%-- <script src="/dist/js/jquery.js" type="text/javascript" charset="utf-8"></script> --%>
+    <link rel="stylesheet" href="/dist/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+    
     <%--<% require css('dist/css/main.css') %>
     <% require css('dist/css/vendor.css') %>
     <% require css('dist/css/miniindy.css') %> --%>
@@ -82,6 +82,7 @@
     <% require javascript('dist/js/vendor.js') %>
     <% require javascript('dist/js/miniindy.js') %>
     --%>
+    <script src="/dist/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         startList = function () {
             if (document.all && document.getElementById) {
@@ -102,11 +103,12 @@
         window.onload = startList;
     </script>
     <% if not $CurrentMember %>$SiteConfig.GoogleAnalytics<% end_if %>
-    <%-- <script type="text/javascript" charset="utf-8">
-    $(document).ready(function(){
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-  });
-</script> --%>
+    <script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto();
+	});
+
+    </script>
 </body>
 
 </html>

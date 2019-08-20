@@ -1,5 +1,24 @@
 .HomePage{
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #modalheaderpadding{
+  margin-bottom: -1704px;
+  }
+}
+
+#closebutton{
+  float: right;
+  background-color: #80808096;
+  padding: 8px 15px 10px 15px;
+}
+
+button.close{
+  width:119%;
+}
+
+.modal-content {
+  max-height:495px !important;
+}
 
 #exampleModalCenter {
     background-color: rgba(0, 0, 0, 0.6);

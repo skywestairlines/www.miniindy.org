@@ -137,9 +137,14 @@ require('./register');
         
         });
 
-        $('.modal', document).on('hide.bs.modal', function(e){
+        $('.modal', document).on('hidden.bs.modal', function(e){
             $('iframe').attr('src','');
+            
+            myPlayer = bc("myPlayerID");
+            myPlayer.pause();
+            myPlayer.resetProgressBar_();
         });
+        
 
         // $('.vjs-icon-placeholder', document).on('click', function(){
         //     var modalPopup = $('#popupvideogallery', document);
@@ -229,6 +234,20 @@ require('./register');
             //     res
             // });
         //});
+    });
+
+    $(document).ready(function(){
+        var hash = window.location.hash;
+
+        if(hash == undefined || hash.indexOf('get') == -1) return;
+
+        var videoId = hash.split('get')[1];
+            if(videoId === undefined) return;    
+
+            var videoModal = $('[data-video-id="'+videoId+'"]', document);
+            if(videoModal.length == 0) return;
+
+            videoModal.trigger('click');
     });
 
 

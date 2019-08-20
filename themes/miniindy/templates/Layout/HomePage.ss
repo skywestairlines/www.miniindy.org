@@ -114,7 +114,7 @@ $Content
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
 	    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span style="margin-left:115%;"aria-hidden="true" id="closebutton">&times;</span>
+          <div aria-hidden="true" id="closebutton">&times;</div>
         </button>
       <div class="modal-header" id="modalheaderpadding">
 	  	<div class="mx-auto w-75">
@@ -126,7 +126,7 @@ $Content
       <div class="modal-body" id="videopadding">
     	<div class="film-background">
 		<%-- <img src="/assets/Uploads/videocover.jpg" alt="video_cover"> --%>
-		<video-js data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+		<video-js id="myPlayerID" data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
 		<script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
 		</div>
 	  </div>
@@ -150,7 +150,7 @@ $Content
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
 	    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span style="margin-left:115%;"aria-hidden="true" id="closebutton">&times;</span>
+          <div aria-hidden="true" id="closebutton">&times;</div>
         </button>
       <div class="modal-header" id="modalheaderpadding">
 	  	<div class="mx-auto w-75">
@@ -162,7 +162,7 @@ $Content
       <div class="modal-body" id="videopadding">
     	<div class="film-background">
 		<%-- <img src="/assets/Uploads/videocover.jpg" alt="video_cover"> --%>
-		<video-js data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+		<video-js id="myPlayerID" data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
 		<script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
 		</div>
 	  </div>
@@ -179,5 +179,6 @@ $Content
 </div>
 
 <% end_if %>
+
 
 </div>

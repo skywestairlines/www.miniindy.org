@@ -32,7 +32,7 @@
             default_height: 344,
             counter_separator_label: '/',
             /* The separator for the gallery counter 1 "of" 2 */
-            theme: 'pp_default',
+            theme: 'light-rounded',
             /* light_rounded / dark_rounded / light_square / dark_square / facebook */
             horizontal_padding: 20,
             /* The padding on each side of the picture */
