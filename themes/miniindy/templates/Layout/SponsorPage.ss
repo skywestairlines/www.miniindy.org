@@ -228,6 +228,7 @@
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/wells-fargo.jpg" alt="Wells Fargo">
 				<div class="text-white bg-primary p-2">Wells Fargo</div>
 			</li>
+			<li class="col p-0 mr-0" style="background: none;"></li>
 		</ul>
 	</div>
 	<br />
