@@ -3,14 +3,14 @@
     <div class="container">
         <div class="row">
             <p class="col ">
-                <a class="d-inline-block" href="http://www.youtube.com/MiniIndySGU" target="_blank">
+                <%-- <a class="d-inline-block" href="http://www.youtube.com/MiniIndySGU" target="_blank"> --%>
                     <i class="fa fa-youtube-square fa-2x text-danger bg-white p-1"></i>
                     <%-- <img src="assets/HomePageImages/youtube.png" border="0" /> --%>
-                </a>
-                <a class="d-inline-block" href="http://www.flickr.com/photos/miniindysgu/" target="_blank">
+                <%-- </a> --%>
+                <%-- <a class="d-inline-block" href="http://www.flickr.com/photos/miniindysgu/" target="_blank"> --%>
                     <i class="fa fa-flickr fa-2x bg-white p-1" style="color:#ff0084"></i>
                     <%-- <img src="assets/HomePageImages/flickr.png" border="0" /> --%>
-                </a>
+                <%-- </a> --%>
                 <a class="d-inline-block" href="https://www.facebook.com/SkyWestMiniIndy/" target="_blank">
                     <i class="fa fa-facebook-square fa-2x text-primary bg-white p-1"></i>
                     <%-- <img src="assets/HomePageImages/flogo.png" border="0" /> --%>
