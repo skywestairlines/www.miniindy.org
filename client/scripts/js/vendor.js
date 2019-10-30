@@ -14,10 +14,18 @@ window.$ = window.jQuery || document.write('<script src="https://ajax.googleapis
     
     $(document).ready(function() {
         
-        $("a[rel^='prettyPhoto']", document).prettyPhoto(prettyPhotoOptions);
+        // $("a[rel^='prettyPhoto']", document).prettyPhoto(prettyPhotoOptions);
 
-        $(document).on('click', "a[rel^='prettyPhoto']", function() {
-            $(this).prettyPhoto($.extend({}, prettyPhotoOptions, $(this).data()));
+        // $("a[rel^='prettyPhoto']", document).each(function(){
+        //     var ppOptions = $.extend({}, prettyPhotoOptions, $(this).data());
+        //     console.log( $(this).data(), ppOptions );
+        //     $(this).prettyPhoto(ppOptions);
+        // });
+
+        $("a[rel^='prettyPhoto']", document).on('click', function() {
+            var ppOptions = $.extend({}, prettyPhotoOptions, $(this).data());
+            console.log( $(this).data(), ppOptions );
+            $(this).prettyPhoto(ppOptions);
             
         });
     });

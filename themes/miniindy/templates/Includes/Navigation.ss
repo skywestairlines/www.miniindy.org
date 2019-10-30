@@ -1,8 +1,8 @@
 <nav id="navigation" class="navbar navbar-expand-md bg-trans w-100 p-0">
     <a class="navbar-brand" style="margin-left: 10px" href="#">
-        <span id="dateTemp">
+        <div id="dateTemp">
             {$SiteConfig.EventStart.Format('MMMM d')}-{$SiteConfig.EventFinish.Format('d, Y')}
-        </span>
+        </div>
     </a>
     <button class="navbar-toggler border ml-auto" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

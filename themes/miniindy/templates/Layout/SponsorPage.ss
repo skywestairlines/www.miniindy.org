@@ -140,33 +140,33 @@
 	<div class="GoldSponsors-7k">
 		<h3 style="border-bottom: 1px solid #ccc;"><span>Gold Sponsors $7,000</span></h3>
 		<ul class="row mb-0">
-			<li class="col p-0 ml-0">
+			<li class="col-md p-0 ml-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Collins-Aerospace_Primary_Black.jpg" alt="Collins Aerospace">
 				<div class="text-white bg-primary p-2">Collins Aerospace</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-md p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Aviation-Technical-Services-Logo.jpg" alt="ATS Components">
 				<div class="text-white bg-primary p-2">ATS Components</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-md p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/AQRD.jpg" alt="AQRD">
 				<div class="text-white bg-primary p-2">AQRD</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-md p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/futureaviation.jpg" alt="Future Aviation">
 				<div class="text-white bg-primary p-2">Future Aviation</div>
 			</li>
-			<li class="col p-0 mr-0">
+			<li class="col-md p-0 mr-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Safran2.jpg" alt="Safran Cabin Services">
 				<div class="text-white bg-primary p-2">Safran Cabin Services</div>
 			</li>
 		</ul>
 		<ul class="row mb-0">
-			<li class="col p-0 ml-0">
+			<li class="col-md p-0 ml-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/WencorGroup.jpg" alt="Wencor Group">
 				<div class="text-white bg-primary p-2">Wencor Group</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-md p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Trelleborg.jpg" alt="Trelleborg">
 				<div class="text-white bg-primary p-2">Trelleborg</div>
 			</li>
@@ -182,49 +182,49 @@
 	<div class="GoldSponsors-5k">
 		<h3 style="border-bottom: 1px solid #ccc;"><span>Gold Sponsors $5,000</span></h3>
 		<ul class="row mb-0">
-			<li class="col p-0 ml-0">
+			<li class="col-sm p-0 ml-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/API-logo.jpg" alt="Accommodations Plus International">
 				<div class="text-white bg-primary p-2">API</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/dbPaint.png" alt="Dean Baldwin">
 				<div class="text-white bg-primary p-2">Dean Baldwin</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/DT-Logo-Square.jpg" alt="Dixie Tech">
 				<div class="text-white bg-primary p-2">Dixie Tech</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/GAT-logo.jpg" alt="GA Telesis">
 				<div class="text-white bg-primary p-2">GA Telesis</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Marsh-and-McLennan-logo.jpg" alt="Marsh & McLennan">
 				<div class="text-white bg-primary p-2">Marsh & McLennan</div>
 			</li>
-			<li class="col p-0 mr-0">
+			<li class="col-sm p-0 mr-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/NIACC.jpg" alt="">
 				<div class="text-white bg-primary p-2">NIACC-AVITECH</div>
 			</li>
 		</ul>
 		<ul class="row mb-0">
-			<li class="col p-0 ml-0">
+			<li class="col-sm p-0 ml-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/PrattWhitney-New2017.jpg" alt="Pratt & Whitney">
 				<div class="text-white bg-primary p-2">Pratt & Whitney</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Proviti-Logo.jpg" alt="Protiviti">
 				<div class="text-white bg-primary p-2">Protiviti</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/RegionalOne.jpg" alt="Regional One">
 				<div class="text-white bg-primary p-2">Regional One</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/STS.jpg" alt="STS Avitation Group">
 				<div class="text-white bg-primary p-2">STS Avitation Group</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/wells-fargo.jpg" alt="Wells Fargo">
 				<div class="text-white bg-primary p-2">Wells Fargo</div>
 			</li>
@@ -238,11 +238,11 @@
 	<div class="GoldSponsors-5k">
 		<h3 style="border-bottom: 1px solid #ccc;"><span>Car Sponsors $5,000</span></h3>
 		<ul class="row mb-0">
-			<li class="col p-0 ml-0">
+			<li class="col-sm p-0 ml-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/AeroKool-Logo.jpg" alt="Aerokool Aviation">
 				<div class="text-white bg-primary p-2">AeroKool Aviation</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-sm p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Meggitt-w-secureplane-cropped.jpg" alt="Securaplane Technologies">
 				<div class="text-white bg-primary p-2">Securaplane</div>
 			</li>
@@ -259,53 +259,53 @@
 	<div class="GoldSponsors-3_2k">
 		<h3 style="border-bottom: 1px solid #ccc;"><span>Car Sponsors $3,200</span></h3>
 		<ul class="row mb-0">
-			<li class="col p-0 ml-0">
+			<li class="col-xs p-0 ml-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Bombardier.png" alt="Bombardier">
 				<div class="text-white bg-primary p-2">Bombardier</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/michelin2.png" alt="Michelin">
 				<div class="text-white bg-primary p-2">Michelin</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Aero-Parts-Mart_logo.jpg" alt="Aero Parts Mart">
 				<div class="text-white bg-primary p-2">Aero Parts Mart</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/parker.png" alt="Parker Aerospace">
 				<div class="text-white bg-primary p-2">Parker Aerospace</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/aviall2.png" alt="Aviall">
 				<div class="text-white bg-primary p-2">Aviall</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/UnitedHealthcareWeb.jpg" alt="United Healthcare">
 				<div class="text-white bg-primary p-2">United Healthcare</div>
 			</li>
-			<li class="col p-0 mr-0">
+		</ul>
+		<ul class="row mb-0">
+			<li class="col-xs p-0 ml-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Parr-Brown-Logo.jpg" alt="Parr Brown">
 				<div class="text-white bg-primary p-2">Parr Brown</div>
 			</li>
-		</ul>
-		<ul class="row mb-0">
-			<li class="col p-0 ml-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Safran2.jpg" alt="Safran Landing Systems">
 				<div class="text-white bg-primary p-2">Safran</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Embraer-blue.jpg" alt="Embraer">
 				<div class="text-white bg-primary p-2">Embraer</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Thales-logo.jpg" alt="Thales">
 				<div class="text-white bg-primary p-2">Thales</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/Enterprise.jpg" alt="Enterprise">
 				<div class="text-white bg-primary p-2">Enterprise</div>
 			</li>
-			<li class="col p-0">
+			<li class="col-xs p-0">
 				<img class="img-fluid" src="/assets/Uploads/TeamLogos/walmart.jpg" alt="Walmart Distribution">
 				<div class="text-white bg-primary p-2">Walmart</div>
 			</li>

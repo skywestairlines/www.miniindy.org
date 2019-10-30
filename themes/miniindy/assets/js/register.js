@@ -1,6 +1,6 @@
 (function($) {
 
-    var price_tags = $('[name="price[]"', document);
+    var price_tags = $('[name="price[]"]', document);
 
     var calculatePrice = function() {
 

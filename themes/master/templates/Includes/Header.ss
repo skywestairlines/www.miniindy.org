@@ -6,7 +6,7 @@
             </a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainMenu"
                 aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <div class="navbar-toggler-icon"></div>
             </button>
             $SearchForm
         </div>

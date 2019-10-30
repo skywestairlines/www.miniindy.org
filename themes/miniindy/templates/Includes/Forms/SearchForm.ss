@@ -1,4 +1,4 @@
-<form id="SearchForm_SilverStripe_CMS_Search_SearchForm" action="/home/SilverStripe\CMS\Search\SearchForm/" method="get" enctype="application/x-www-form-urlencoded">
+<form id="SearchForm_SilverStripe_CMS_Search_SearchForm" action="/home/SearchForm/" method="get" enctype="application/x-www-form-urlencoded">
 	<p id="SearchForm_SilverStripe_CMS_Search_SearchForm_error" class="message" style="display: none"></p>
 	<fieldset class="search">
 		<div id="SearchForm_SilverStripe_CMS_Search_SearchForm_Search_Holder" class="field text form-group--no-label">
