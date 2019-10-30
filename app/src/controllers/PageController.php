@@ -1,11 +1,12 @@
 <?php
-use SilverStripe\Control\Director;
-use SilverStripe\View\Requirements;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\FormAction;
-use SilverStripe\CMS\Search\SearchForm;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Control\Director;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\View\Requirements;
+use SilverStripe\Versioned\Versioned;
+use SilverStripe\CMS\Search\SearchForm;
 use SilverStripe\CMS\Controllers\ContentController;
 
 
@@ -88,17 +89,17 @@ class PageController extends ContentController
 	 * @access public
 	 * @return void
 	 */
-	function SearchForm() {
-		$searchText = isset($_REQUEST['Search']) ? $_REQUEST['Search'] : '';
-		$fields = new FieldList(
-	      	new TextField("Search", "", $searchText)
-	  	);
-		$actions = new FieldList(
-	      	new FormAction('results', 'Search')
-	  	);
+	// function SearchForm() {
+	// 	$searchText = isset($_REQUEST['Search']) ? $_REQUEST['Search'] : '';
+	// 	// $fields = new FieldList(
+	//     //   	new TextField("Search", "", $searchText)
+	//   	// );
+	// 	$actions = new FieldList(
+	//       	new FormAction('results', 'Search')
+	//   	);
 
-	  	return new SearchForm($this, SearchForm::class, $fields, $actions);
-	}
+	//   	return new SearchForm($this, SearchForm::class, $fields, $actions);
+	// }
 
 	/**
 	 * Process and render search results function.
@@ -108,15 +109,15 @@ class PageController extends ContentController
 	 * @param mixed $form
 	 * @return void
 	 */
-	function results($data, $form){
-	  	$data = array(
-	     	'Results' => $form->getResults(),
-	     	'Query' => $form->getSearchQuery(),
-	      	'Title' => 'Search Results'
-	  	);
+	// function results($data, $form){
+	//   	$data = array(
+	//      	'Results' => $form->getResults(),
+	//      	'Query' => $form->getSearchQuery(),
+	//       	'Title' => 'Search Results'
+	//   	);
 
-	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
-	}
+	//   	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
+	// }
 
 	/**
 	 * GetStaticSidebar function. custom side bars for Reg & hotels
@@ -124,5 +125,19 @@ class PageController extends ContentController
 	 * @access public
 	 * @return void
 	 */
+
+	// public function getPublishedPages() {
+	// 	$PublishedPages = Versioned::get_by_stage('SiteTree', 'Live');
+	// 		return $PublishedPages;
+	// 	}
+
+	// public function redirection() {
+	// 	if($this->getPublishPages() == true){
+	// 		return $this->Director::currentPage();
+	// 	}
+	// 	else{
+	// 		return $this->redirect('/');
+	// 	}
+	// }
 
 }

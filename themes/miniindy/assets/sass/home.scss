@@ -1,0 +1,116 @@
+.HomePage{
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #modalheaderpadding{
+  margin-bottom: -1704px;
+  }
+}
+
+#closebutton{
+  float: right;
+  background-color: #80808096;
+  padding: 8px 15px 10px 15px;
+}
+
+button.close{
+  width:119%;
+}
+
+.modal-content {
+  max-height:495px !important;
+}
+
+#exampleModalCenter {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+#exampleModalCenter .modal-dialog {
+    max-width: 900px;
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder::before, .video-js .vjs-play-control .vjs-icon-placeholder, .vjs-icon-play {
+    line-height: 2.9;
+}
+
+.vjs-poster{
+    background-image: url("/assets/Uploads/videocover.jpg") !important;
+}
+
+
+#videopadding {
+    padding-top:5px;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+#modalheaderpadding {
+    padding-top: 0px;
+    padding-bottom:0px;
+}
+
+.modal-content {
+    padding-top:0px;
+    padding-left:110px;
+    padding-right:110px;
+}
+
+  .modal-content {
+    background-color: #192247;
+    border-radius: 0;
+  }
+  
+  .modal-header {
+    border-style: none;
+  }
+  
+  .modal-footer {
+    border-style: none;
+  }
+  
+  
+  .vjs-poster {
+      background-image: none;
+      background-size: cover;
+  }
+  
+  .video-js .vjs-big-play-button {
+    background-color: none;
+    opacity: .6;
+    border-style: solid;
+    border-width: 10px;
+    height:150px;
+    width:150px;
+    margin-left: -9%;
+    margin-top: -8%;
+    visibility: hidden;
+  }
+
+ span {
+    margin-left:114%;
+  }
+
+  .vjs-icon-play {
+    line-height: 1.6;
+  }
+
+  
+  #new_logo {
+      margin-left:10px;
+  }
+
+  .modal-header .close {
+    padding: 1rem 1rem;
+    margin: 0;
+}
+  
+.close {
+    color:white;
+    text-shadow:none;
+}
+
+.close:hover {
+    color:white;
+    text-shadow:none;
+}
+
+}

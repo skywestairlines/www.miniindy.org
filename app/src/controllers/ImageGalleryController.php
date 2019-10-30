@@ -1,7 +1,5 @@
 <?php
 
-use SilverStripe\Dev\Debug;
-
 
 class ImageGalleryController extends PageController
 {

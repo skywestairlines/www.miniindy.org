@@ -1,7 +1,39 @@
 /* MAIN NAVIGATION - TABS
 ----------------------------------------- */
+@media only screen and (max-width: 766px) {
+.navbar-toggler {
+  margin-bottom: 10px;
+}
+.navbar-brand {
+  padding-top:25px;
 
+  div#dateTemp {
+    margin-bottom: 15px;
+}
+}
 
+// button.navbar-toggler.border.ml-auto {
+//   margin-top: 20px;
+// }
+
+div#navbarSupportedContent {
+  z-index: 999999;
+  background-color: #1c305d;
+  max-width: 152px;
+  padding-left: 30px;
+  padding-top:20px;
+  padding-bottom:5px;
+  padding-right:30px;
+  // margin-top: 11px;
+  margin-right: 500px;
+}
+}
+
+// @media only screen and (max-width: 319px) {
+//   #dateTemp {
+//     margin-top:22px;
+//   }
+// }
 
 #navigation{
     #dateTemp {

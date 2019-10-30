@@ -32,7 +32,7 @@
             default_height: 344,
             counter_separator_label: '/',
             /* The separator for the gallery counter 1 "of" 2 */
-            theme: 'pp_default',
+            theme: 'light-rounded',
             /* light_rounded / dark_rounded / light_square / dark_square / facebook */
             horizontal_padding: 20,
             /* The padding on each side of the picture */
@@ -48,7 +48,7 @@
             /* Allow prettyPhoto to update the url to enable deeplinking. */
             overlay_gallery: true,
             /* If set to true, a gallery will overlay the fullscreen image on mouse over */
-            overlay_gallery_max: 30,
+            overlay_gallery_max: 50,
             /* Maximum number of pictures in the overlay gallery */
             keyboard_shortcuts: true,
             /* Set to false if you open forms inside prettyPhoto */
@@ -859,7 +859,7 @@
                         $pp_pic_holder.find('.pp_gallery:not(.disabled)').fadeIn();
                     },
                     function() {
-                        $pp_pic_holder.find('.pp_gallery:not(.disabled)').fadeOut();
+                        // $pp_pic_holder.find('.pp_gallery:not(.disabled)').fadeOut();
                     });
 
                 itemWidth = 52 + 5; // 52 beign the thumb width, 5 being the right margin.

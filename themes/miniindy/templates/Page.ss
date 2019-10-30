@@ -6,6 +6,9 @@
     <title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; Mini Indy</title>
     <% base_tag %>
     <link rel="shortcut icon" href="/favicon.ico" />
+    <%-- <script src="/dist/js/jquery.js" type="text/javascript" charset="utf-8"></script> --%>
+    <link rel="stylesheet" href="/dist/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+    
     <%--<% require css('dist/css/main.css') %>
     <% require css('dist/css/vendor.css') %>
     <% require css('dist/css/miniindy.css') %> --%>
@@ -30,9 +33,26 @@
 
 </head>
 
-<body>
-    <% include Header %>
+<body class="$ClassName.ShortName">
     <main class="container py-3">
+      <% include Header %>
+        <section class="card-deck">
+            <% if $ShowSideBar != 'no' %>
+            <div class="card card-trans">
+                $Layout
+            </div>
+            <aside class="col-md-4">
+                <% include SideBar %>
+            </aside>
+            <% else %>
+            $Layout
+            <% end_if %>
+        </section>
+    </main>
+    <% include Footer %>
+
+    <%-- <main class="container py-3">
+    <% include Header %>
         <section class="card-deck">
             <div class="card card-trans">
                 $Layout
@@ -44,7 +64,8 @@
             <% end_if %>
         </section>
     </main>
-    <% include Footer %>
+    <% include Footer %> --%>
+
 
     <% if $CurrentMember %>
     <div class="page-settings">
@@ -61,6 +82,7 @@
     <% require javascript('dist/js/vendor.js') %>
     <% require javascript('dist/js/miniindy.js') %>
     --%>
+    <script src="/dist/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         startList = function () {
             if (document.all && document.getElementById) {
@@ -81,6 +103,12 @@
         window.onload = startList;
     </script>
     <% if not $CurrentMember %>$SiteConfig.GoogleAnalytics<% end_if %>
+    <script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto();
+	});
+
+    </script>
 </body>
 
 </html>

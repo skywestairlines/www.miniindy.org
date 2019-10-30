@@ -153,6 +153,7 @@
 		* @param description {String,Array} The description to be displayed with the picture, can also be an array containing all the descriptions.
 		*/
 		$.prettyPhoto.open = function(gallery_images,gallery_titles,gallery_descriptions) {
+			
 			// To fix the bug with IE select boxes
 			if($.browser.msie && $.browser.version == 6){
 				$('select').css('visibility','hidden');

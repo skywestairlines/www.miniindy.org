@@ -3,41 +3,249 @@
 
 /* Misc Styles and defaults
 -------------------------------------------- */
-#exampleModalCenter {
-  background-color: rgba(0, 0, 0, 0.6);
+
+#miniindylogo{
+    max-width: 92%;
+    height: auto;
+    margin-top: -21px;
+    margin-bottom: -10px;
+    margin-left: -5px;
 }
 
-.modal-content {
-  background-color: #192247;
-  border-radius: 0;
+@media only screen and (max-width: 766px) {
+    .bg-white img{
+        width:100% !important;
+        max-height: 400px !important;
+    }
+}    
+
+.bg-white img{
+    width:100%;
+    max-height: 187px;
+    min-height: 187px;
+
 }
 
-.modal-header {
-  border-style: none;
+.bg-white .btn{
+    border-radius: 0 !important;
 }
 
-.modal-body {
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 10%;
+.card-deck{
+    margin-left:0 !important;
+    margin-right:0 !important;
 }
 
-.modal-footer {
-  border-style: none;
+/* Pretty Photo Image Gallery
+----------------------------------------- */
+
+.pp_default .pp_next:hover {
+    background: transparent !important;
 }
 
-// .vjs-big-play-button {
-//   background-color: #B37D5B;
-//   opacity: .6;
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+.pp_overlay {
+    visibility: visible !important;
+}
+}
+
+.pp_gallery .pp_arrow_previous{
+    margin-top: 0 !important;
+    padding-left:-5px;
+}
+
+.pp_gallery .pp_arrow_next {
+    margin-top: 0 !important;
+    margin-left: 7px;
+}
+
+.pp_gallery{
+    left:31%;
+}
+
+#pp_full_res img{
+    margin-left:-40px !important;
+}
+
+.pp_content_container .pp_details {
+    // width: 280px !important;
+    margin-top:-35px !important;
+    margin-left:64px !important;
+    // right: -222px;
+}
+
+//put.pp_default before the class can seperate pp_arrow_previous of image from pp_arrow_previous of video
+.pp_default a.pp_arrow_previous {
+    background: url(/images/sprite.png?97c3d8ec927e085bc19cee70b600489d) 2px -68px no-repeat !important;
+    height: 20px;
+    margin: 4px 0 0 0;
+    width: 20px;
+}
+
+.pp_default a.pp_arrow_next {
+    background-position: -16px -68px !important;
+}    
+
+.download-btn{ 
+    margin-top: 28px;
+    padding: 6px 15px;
+    font-size:15px;
+    line-height: 20px;
+    background: #eee;
+    float: left;
+    margin-left: -40px;
+    z-index: 9999999999 !important;
+}
+
+.pp_default .pp_close {
+    margin-top: -748px;
+    margin-right: 71px;
+}
+
+.pp_default .pp_content {
+    background: none !important;
+    height: 50% !important;
+    max-width: 93% !important;
+}
+
+.pp_play{
+    display: none !important;
+}
+
+.pp_top{
+    display:none;
+}
+
+div.pp_default .pp_bottom .pp_middle {
+    background: none !important;
+}
+
+div.pp_default .pp_content_container .pp_right {
+    background: none !important;
+    padding-right: 0 !important;
+}
+
+div.pp_default .pp_left{
+    background: none !important;
+}
+
+// [class*="pp_"]{
+//     border: 1px solid red;
 // }
 
-.video-js .vjs-big-play-button {
-  background-color: none;
-  opacity: .6;
-  border-style: solid;
-  border-width: 8px;
+//remove the facebook icon
+.facebook {
+    display:none;
 }
 
+.twitter {
+    display:none;
+}
+
+//solve the photo gallery thumbnail problem 
+.pp_hoverContainer {
+    margin-top: -100px;
+}
+
+// --------------------------------------------------------------
+.ppt {
+    color: transparent !important;
+    padding-top: 50px;
+}
+
+.pp_nav{
+    margin: 0 82px 0 0;
+    float:right !important;
+}
+
+p.currentTextHolder{
+    visibility: hidden;
+}
+
+p.pp_description{
+    visibility: hidden;
+}
+
+a.pp_arrow_previous{
+    z-index:999999;
+    line-height: 20px;
+    text-indent: 14px;
+    width: 87px;
+    height: 31px;
+    background: #eee;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+a.pp_arrow_next{
+    z-index:999999;
+    line-height: 20px;
+    text-indent: 17px;
+    width: 87px;
+    height: 31px;
+    background: #eee;
+    font-size: 15px;
+    padding-top: 5px;
+    margin-right: 23px;
+    padding-left: 9px;
+    margin-left: -24px;
+}
+
+a.pp_expand, a.pp_contract {
+    cursor: pointer;
+    height: 48px;
+    position: absolute;
+    text-indent: -10000px;
+    top: 0;
+    left:20px;
+    width: 89px;
+    z-index: -999999999;
+    background-color: #eee;
+    right: 446px;
+}
+
+.pp_content_container {
+    position: relative;
+    margin-top:30px;
+}
+
+div[style]{
+    top:0px !important;
+}
+
+.pp_close::after {
+    content: "\2715";
+    font-size:20px;
+    display: block;
+    position: absolute;
+    line-height: 48px;
+    width: 3rem;
+    height: 3rem;
+    background: #eee;
+    top: 0rem !important;
+}
+  
+a.pp_close {
+    position: absolute;
+    right: 60px;
+    bottom: 4px;
+    display: block;
+    line-height: 20px;
+    text-indent: 17px;
+    width: 3rem;
+    height: 3rem;
+    background: #eee;
+    top: 0rem !important;
+    z-index:999999;
+}
+  
+.pp_content_container {
+    position: relative;
+    top:0px;
+}
+
+.pp_pic_holder element{
+    top: 0px;
+}
 
 * {
     margin: 0;

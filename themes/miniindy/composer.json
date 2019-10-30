@@ -1,6 +1,6 @@
 {
-    "name": "skywest/ss-theme-master",
-    "description": "The SilverStripe master theme ",
+    "name": "skywest/ss-theme-miniindy",
+    "description": "The SilverStripe miniindy theme ",
     "type": "silverstripe-theme",
     "keywords": ["silverstripe", "theme"],
     "license": "BSD-3-Clause",

@@ -17,14 +17,19 @@
         <% else %>
         <div class="row">
             <% loop $Albums %>
+            <% if $Photos.Count > 0  %>
             <div class="col-md-6">
                 <div class="bg-white pb-2">
+                    <a href="{$Up.Link}?album={$ID}">
+                    $cover
+                    </a>
                     <a href="{$Up.Link}?album={$ID}" class="btn btn-block btn-primary btn-sm text-white">
                         $Name
                         <span class="px-3">($Photos.Count)</span>
                     </a>
                 </div>
             </div>
+            <% end_if %>            
             <% end_loop %>
         </div>
         <% end_if %>
