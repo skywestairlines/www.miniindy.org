@@ -3,14 +3,9 @@
 /vendor/
 /node_modules/
 /themes/simple/
-/resources/
-/public/resources/
 **/_config.php
 **/logs/
 /.vscode
 /public/assets
 *.sql
 /**/mix-manifest.json
-.env
-/node_modules
-/vendor
