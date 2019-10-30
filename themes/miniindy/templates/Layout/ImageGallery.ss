@@ -29,7 +29,7 @@
                     </a>
                 </div>
             </div>
-            <% end_if %>            
+            <% end_if %>
             <% end_loop %>
         </div>
         <% end_if %>

@@ -49,7 +49,7 @@ $Content
 </div> --%>
 
 <div class="major-sponsors">
-	<h4><span>Major Sponsors</span></h4>
+	<h4><div>Major Sponsors</div></h4>
 	<% if MainSponsors %>
 	<div class="row">
 		<% loop MainSponsors %>
@@ -162,7 +162,7 @@ $Content
       <div class="modal-body" id="videopadding">
     	<div class="film-background">
 		<%-- <img src="/assets/Uploads/videocover.jpg" alt="video_cover"> --%>
-		<video-js id="myPlayerID" data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+		<video-js id="myPlayerID"  data-account="1589608515001" data-player="HyJPGnaE" data-embed="default" controls="" data-video-id="6063516313001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
 		<script src="https://players.brightcove.net/1589608515001/HyJPGnaE_default/index.min.js"></script>
 		</div>
 	  </div>
@@ -179,6 +179,5 @@ $Content
 </div>
 
 <% end_if %>
-
 
 </div>
