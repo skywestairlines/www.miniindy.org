@@ -11,3 +11,6 @@
 /public/assets
 *.sql
 /**/mix-manifest.json
+.env
+/node_modules
+/vendor
