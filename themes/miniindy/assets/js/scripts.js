@@ -76,6 +76,20 @@ require('./register');
 
         // };
 
+        $(document).ready(function(){
+            var hash = window.location.hash;
+    
+            if(hash == undefined || hash.indexOf('get') == -1) return;
+    
+            var videoId = hash.split('get')[1];
+                if(videoId === undefined) return;    
+    
+                var videoModal = $('[data-video-id="'+videoId+'"]', document);
+                if(videoModal.length == 0) return;
+    
+                videoModal.trigger('click');
+        });
+
      
 
     $(function(){
@@ -85,7 +99,7 @@ require('./register');
             console.log($(this).data());
 
             var modalPopup = $('#popupvideogallery', document);
-            var modalTitle = modalPopup.find('.modal-title');
+            // var modalTitle = modalPopup.find('.modal-title');
             var modalLink = modalPopup.find('iframe');
             // var modalVideo = modalPopup.find('video-js');
             
@@ -94,13 +108,13 @@ require('./register');
             
             // // store data attributes in memory
             // var videoId = $(this).data('videoId');
-            var videoName = $(this).data('videoName');
+            // var videoName = $(this).data('videoName');
             var videoLink = $(this).data('link');
             console.log(videoLink);
             // var videoPlayer = $(this).data('player');
             
             // // Update the modal title
-            modalTitle.text(videoName);
+            // modalTitle.text(videoName);
             modalLink.attr('src', videoLink);
             
             // //Update video-js attributes with id and player
@@ -140,11 +154,11 @@ require('./register');
         $('.modal', document).on('hidden.bs.modal', function(e){
             $('iframe').attr('src','');
             
+            //for homepage popupvideo
             myPlayer = bc("myPlayerID");
             myPlayer.pause();
             myPlayer.resetProgressBar_();
         });
-        
 
         // $('.vjs-icon-placeholder', document).on('click', function(){
         //     var modalPopup = $('#popupvideogallery', document);
@@ -234,20 +248,6 @@ require('./register');
             //     res
             // });
         //});
-    });
-
-    $(document).ready(function(){
-        var hash = window.location.hash;
-
-        if(hash == undefined || hash.indexOf('get') == -1) return;
-
-        var videoId = hash.split('get')[1];
-            if(videoId === undefined) return;    
-
-            var videoModal = $('[data-video-id="'+videoId+'"]', document);
-            if(videoModal.length == 0) return;
-
-            videoModal.trigger('click');
     });
 
 

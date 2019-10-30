@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 use SilverStripe\ORM\Search\FulltextSearchable;
 

@@ -17,18 +17,17 @@
         width:100% !important;
         max-height: 400px !important;
     }
-}    
+}  
 
 .bg-white img{
     width:100%;
     max-height: 187px;
     min-height: 187px;
-
 }
 
-.bg-white .btn{
+.bg-white .btn {
     border-radius: 0 !important;
-}
+  }
 
 .card-deck{
     margin-left:0 !important;
@@ -43,9 +42,9 @@
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
-.pp_overlay {
-    visibility: visible !important;
-}
+    .pp_overlay {
+        visibility: visible !important;
+    }
 }
 
 .pp_gallery .pp_arrow_previous{

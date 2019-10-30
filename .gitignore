@@ -3,8 +3,6 @@
 /vendor/
 /node_modules/
 /themes/simple/
-/resources/
-/public/resources/
 **/_config.php
 **/logs/
 /.vscode
