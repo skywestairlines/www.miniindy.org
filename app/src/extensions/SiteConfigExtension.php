@@ -21,13 +21,16 @@ class SiteConfigExtension extends DataExtension
         "GoogleAnalytics" => DBHTMLText::class
     ];
 
-    private static $has_one = [
-        "Logo" => Image::class
+    private static $many_many = [
+        "Logos" => Image::class
+    ];
+    private static $owns = [
+        "Logos"
     ];
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldsToTab("Root.Main", $LOGO =  new UploadField("Logo", "MiniIndy Logo"));        
+        $fields->addFieldsToTab("Root.Main", $LOGOs =  new UploadField("Logos", "MiniIndy Logos"));        
         $fields->addFieldsToTab("Root.Main", $GUA = new TextareaField("GoogleAnalytics", "Google Analytics"));
 
         $fields->addFieldsToTab("Root.Event", new DateField("EventStart", "Event Start Date"));
@@ -36,10 +39,22 @@ class SiteConfigExtension extends DataExtension
         $fields->addFieldsToTab("Root.Event", new DateField("RegCloseDate", "Registration Close"));
         $fields->addFieldsToTab("Root.Event", new HTMLEditorField("CheckAndPO", "Check & Payment Options"));
 
-        $LOGO->setFolderName("Website/Images");
+        $LOGOs->setFolderName("Website/Images")->getValidator()
+              ->setAllowedExtensions(["jpg","jpeg","png","eps","pdf"])
+              ;
+
         $GUA->setRows(10);
 
     }
+
+    public function Logo()
+    {
+        $Logos = $this->owner->obj('Logos');
+        if($Logos) return $Logos->First();
+        return null;
+    }
+
+    
 
     public function getRegIsOpen()
     {

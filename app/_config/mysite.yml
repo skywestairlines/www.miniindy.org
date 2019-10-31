@@ -1,3 +1,8 @@
 ---
 Name: mysite
 ---
+SilverStripe\Assets\Image:
+  file_types:
+    ai: 'Adobe Illustrator'
+    psd: 'Adobe Photoshop File'
+    eps: 'Adobe Illustrator'
