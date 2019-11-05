@@ -8,9 +8,9 @@ class RegistrationPageController extends PageController
         parent::init();
     }
 
-    public function getRegForm()
-    {
-        // return $this->renderWith("Includes/Forms/Registration");
+    // public function getRegForm()
+    // {
+    //     return $this->renderWith("Includes/Forms/Registration");
 
-    }
+    // }
 }
