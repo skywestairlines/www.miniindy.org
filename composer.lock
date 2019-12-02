@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "10fe9f4d304e2dab58fc83412f1973ee",
@@ -3094,12 +3094,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
-                "reference": "e024613ede62f71f8431ebc86270272a38bd01e4"
+                "reference": "dce36b8fe7ce65f0c073014e1d3a8f5dd7e019db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/e024613ede62f71f8431ebc86270272a38bd01e4",
-                "reference": "e024613ede62f71f8431ebc86270272a38bd01e4",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/dce36b8fe7ce65f0c073014e1d3a8f5dd7e019db",
+                "reference": "dce36b8fe7ce65f0c073014e1d3a8f5dd7e019db",
                 "shasum": ""
             },
             "require": {
@@ -3141,7 +3141,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2019-05-09T22:13:46+00:00"
+            "time": "2019-11-20T08:18:27+00:00"
         },
         {
             "name": "silverstripe/tagfield",
@@ -3364,12 +3364,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-widgets.git",
-                "reference": "ade80474619852371c2f2092ef6147e948b24d31"
+                "reference": "007b6fcdfae0b26b24b8e55ea4e0b674acc7f78d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-widgets/zipball/ade80474619852371c2f2092ef6147e948b24d31",
-                "reference": "ade80474619852371c2f2092ef6147e948b24d31",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-widgets/zipball/007b6fcdfae0b26b24b8e55ea4e0b674acc7f78d",
+                "reference": "007b6fcdfae0b26b24b8e55ea4e0b674acc7f78d",
                 "shasum": ""
             },
             "require": {
@@ -3414,7 +3414,7 @@
                 "silverstripe",
                 "widgets"
             ],
-            "time": "2018-10-16T13:29:38+00:00"
+            "time": "2019-11-18T01:35:17+00:00"
         },
         {
             "name": "skywest/ss-imagegallery",
@@ -3593,16 +3593,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v3.4.33",
+            "version": "v3.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "9307cc18f444d0b4f6b56daceaa7e55174dfdfb5"
+                "reference": "3d9f46a6960fd5cd7f030f86adc5b4b63bcfa4e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/9307cc18f444d0b4f6b56daceaa7e55174dfdfb5",
-                "reference": "9307cc18f444d0b4f6b56daceaa7e55174dfdfb5",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/3d9f46a6960fd5cd7f030f86adc5b4b63bcfa4e3",
+                "reference": "3d9f46a6960fd5cd7f030f86adc5b4b63bcfa4e3",
                 "shasum": ""
             },
             "require": {
@@ -3659,7 +3659,7 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2019-10-24T15:33:53+00:00"
+            "time": "2019-12-01T10:45:41+00:00"
         },
         {
             "name": "symfony/config",
@@ -3826,16 +3826,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.12.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "71ce80635d5dcd67772b4dda00b86068595f64d5"
+                "reference": "a8e961c841b9ec52927a87914f8820a1ad8f8116"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/71ce80635d5dcd67772b4dda00b86068595f64d5",
-                "reference": "71ce80635d5dcd67772b4dda00b86068595f64d5",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/a8e961c841b9ec52927a87914f8820a1ad8f8116",
+                "reference": "a8e961c841b9ec52927a87914f8820a1ad8f8116",
                 "shasum": ""
             },
             "require": {
@@ -3844,7 +3844,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -3878,7 +3878,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-08-06T08:03:45+00:00"
+            "time": "2019-11-27T13:56:44+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
