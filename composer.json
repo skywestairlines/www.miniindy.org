@@ -9,9 +9,9 @@
         }
     },
     "require": {
-        "php": ">=5.6.0",
+        "php": ">=7.1.0",
         "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "^4.4",
+        "silverstripe/recipe-cms": "^4",
         "silverstripe-themes/simple": "~3.2",
         "silverstripe/recipe-blog": "^1.1",
         "skywest/ss-imagegallery": "master",
@@ -39,6 +39,7 @@
             "app/.htaccess",
             "app/_config.php",
             "app/_config/blog.yml",
+            "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
             "app/src/PageController.php"
