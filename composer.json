@@ -9,7 +9,7 @@
         }
     },
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.4.0",
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "^4",
         "silverstripe-themes/simple": "~3.2",
