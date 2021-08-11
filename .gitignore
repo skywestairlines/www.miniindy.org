@@ -3,7 +3,7 @@
 /vendor/
 /node_modules/
 /themes/simple/
-**/_config.php
+/_config.php
 **/logs/
 /.vscode
 *.sql
