@@ -30,7 +30,3 @@ fs.readdirSync(lib).forEach(function(mod) {
 
     if (fs.existsSync(appScss)) mix.sass(appScss, mixCss);
 });
-
-// if (mix.inProduction()) {
-//     mix.version();
-// }
