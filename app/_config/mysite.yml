@@ -1,8 +1,13 @@
 ---
 Name: mysite
 ---
+
+SilverStripe\Control\Director:
+  alternate_base_url: '`SS_BASE_URL`'
+
 SilverStripe\Assets\Image:
   file_types:
     ai: 'Adobe Illustrator'
     psd: 'Adobe Photoshop File'
     eps: 'Adobe Illustrator'
+
