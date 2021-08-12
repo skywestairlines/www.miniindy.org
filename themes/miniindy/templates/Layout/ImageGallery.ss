@@ -9,6 +9,7 @@
             <div class="col-md-3 mb-3">
                 <a href="$URL?<% if $Up.PhotoSize %>$Up.PhotoSize<% else %>width=640&height=480<% end_if %>" rel="prettyPhoto[miniindyGallery]"
                     title="$TITLE" class="">
+                    <!-- what is square.URL and why isn't it thumbnail size? -->
                     <img src="$Square.URL" alt="$TITLE" class="img-fluid img-thumbnail" />
                 </a>
             </div>
@@ -21,6 +22,7 @@
             <div class="col-md-6">
                 <div class="bg-white pb-2">
                     <a href="{$Up.Link}?album={$ID}">
+                        <!-- this is the bit (cover) that seems to be handling the image. it is set in CMS/media/images/ Album>Album Cover -->
                     $cover
                     </a>
                     <a href="{$Up.Link}?album={$ID}" class="btn btn-block btn-primary btn-sm text-white">

@@ -50,7 +50,10 @@ class ImageExtension extends DataExtension
     //     return "//placehold.it/{$width}X{$height}?text=".$title;
     // }
 
-    public function Square($width = NULL)
+    //public function Square($width = NULL)
+    // ALEX - I changed the default from NULL (which used native size) to 125 in an attempt to prevent memory errors. Ideally, I want to 
+    // bring the old default back and designate the width as it is needed OR not generate these on demand, use a stored version????
+    public function Square($width = 125)
     {
         if($width == NULL) $width = $this->owner->getWidth();
         $variant = $this->owner->variantName(__FUNCTION__, $width);
