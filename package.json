@@ -25,6 +25,6 @@
         "materialize-css": "^1.0.0",
         "popper.js": "^1.14.6",
         "vue": "^2.5.21",
-        "webpack-mix": "^2.0.2"
+        "webpack-mix": "^3.0.0"
     }
 }
