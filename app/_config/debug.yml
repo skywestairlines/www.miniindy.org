@@ -1,8 +1,0 @@
----
-Name: mydebugbar
----
-LeKoala\DebugBar\DebugBar:
-  disabled: true
-  enabled_in_admin: true
-  query_limit: 500
-  include_jquery: false

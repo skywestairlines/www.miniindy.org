@@ -1,0 +1,140 @@
+body {
+    color: #333;
+    font-size: 62.5%;
+    font-family: Verdana,Lucida,sans-serif;
+    height: 100%;
+	margin: 0;
+	font-weight: 400;
+    line-height: 1.5;
+}
+
+body, html {
+    overflow-x: hidden;
+    background-color: transparent;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400,700|Oswald);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@font-face {
+    font-family: impact;
+    src: url(../fonts/321impact-webfont.eot?90e96242508bf944efd1bdb2490897ca);
+    src: url(../fonts/321impact-webfont.eot?90e96242508bf944efd1bdb2490897ca) format("embedded-opentype"),url(../fonts/321impact-webfont.woff?d743ca1fdbaa29428be88adc85099950) format("woff"),url(/fonts/321impact-webfont.ttf?48e33bbd0fbf94e56fe346ec2d10846b) format("truetype"),url(../fonts/321impact-webfont.svg?6b75ec0744b558bdab034ff1378bfb5c) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+html {
+    background: #626467 url(../images/bg.jpg) repeat fixed;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.container {
+    max-width: 720px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#Header {
+    margin: 0 auto;
+}
+
+#miniindylogo {
+    max-width: 720px;
+    height: auto;
+    margin-top: -21px;
+    margin-bottom: -10px;
+    margin-left: -5px;
+}
+
+#navigation {
+    margin: 0px 14px;
+    background: transparent url(../images/menuBG.png) no-repeat bottom;
+    background-size: cover;
+    height: 80px;
+    padding-top: 0;
+    color: #fff;
+    text-shadow: 0 1px #000;
+    width: 664px;
+}
+
+#navigation .navbar-brand, #navigation .navbar-nav {
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 0.8rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+a {
+    color: #1c305d;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#navigation .nav-link, #navigation .navbar-brand {
+    font: 24px/28px impact,Arial Black,Arial,Helvetica,Geneva,sans-serif;
+}
+
+#navigation #dateTemp {
+    font: 24px/27px impact,Arial Black,Arial,Helvetica,Geneva,sans-serif;
+    color: #fff;
+	padding-top: 18px;
+    padding-left: 16px;
+}
+
+#Footer {
+    clear: both;
+    width: 100%;
+    height: 168px;
+    background: transparent url(../images/footerBG.png) repeat-x 0 100%;
+    text-align: center;
+
+}
+#Footer a:hover {
+    color: #dbdfe8;
+    text-decoration: underline;
+}
+
+#Footer a {
+    color: #dbdfe8;
+    text-decoration: none;
+}
+a:hover {
+    color: #0a1222;
+    text-decoration: underline;
+}
+a {
+    color: #1c305d;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#Footer p {
+    color: #dbdfe8;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#content {
+	margin: 16px 38px 36px;
+}
